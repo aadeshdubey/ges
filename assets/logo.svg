@@ -1,0 +1,11 @@
+<svg width="350" height="40" viewBox="0 0 350 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      fill: #FFA726; /* Primary orange color */
+    }
+  </style>
+  <text x="0" y="28" class="logo-text">GAYATRI ELECTRICALS</text>
+</svg>

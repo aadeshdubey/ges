@@ -1,88 +1,2176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-    <!-- Google tag (gtag.js) 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-10YLFJ7XE2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-10YLFJ7XE2');
-</script>
--->
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K2CN9DK5');</script>
-<!-- End Google Tag Manager -->
-    
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K2CN9DK5');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Upgradation</title>
+    <title>Gayatri Electrical Services | Engineering the Future of Power</title>
+    <meta name="description"
+        content="Industry leaders in comprehensive electrical services for industrial and commercial sectors. Specializing in Transformer Lifecycle Management, HT Sub-Station Liasoning, and Emergency Maintenance.">
+    <meta name="keywords"
+        content="electrical services, transformer repair, ht substation, express feeder, chemical earthing, electrical testing, AIS bay, GIS bay, Bhiwandi">
+    <meta name="author" content="Gayatri Electrical Services">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        :root {
+            --primary-orange: #FFA726;
+            --primary-orange-dark: #FB8C00;
+            --light-bg: #F8F9FA;
+            --white-bg: #FFFFFF;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --footer-bg: #1a1a1a;
+            --success-green: #28a745;
+            --error-red: #dc3545;
+            --font-heading: 'Inter', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
         }
 
         .container {
-            background-color: #fff;
-            padding: 40px 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
         h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 1080px;
+            margin: 0 auto 50px;
         }
 
         p {
-            font-size: 1.1em;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            color: var(--text-muted);
         }
 
-        .contact-info {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #555;
+        /* Header & Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-header.scrolled {
+            background: var(--white-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-orange);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1100;
+        }
+
+        .menu-toggle .bar {
+            width: 30px;
+            height: 3px;
+            background-color: var(--text-dark);
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
+
+        .menu-toggle.open .bar {
+            background-color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* UPDATED: Dark overlay for better text contrast */
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            /* UPDATED: White text color and stronger shadow */
+            color: var(--white-bg);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content .subheadline {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            /* UPDATED: White text color */
+            color: var(--white-bg);
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-orange);
+            color: var(--white-bg);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 167, 38, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            background: var(--primary-orange-dark);
+            box-shadow: 0 6px 20px rgba(251, 140, 0, 0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+
+        }
+
+        #about {
+            background: var(--white-bg);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 3;
+        }
+
+        .about-image {
+            flex: 2;
+            max-width: 800px;            
+            max-height: 600px;   
+        }
+
+        .about-image img {
+            width: 100%;      
+            height: 100%;  
+            object-fit: cover;     
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        #services {
+            background-color: var(--primary-orange);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white-bg);
+            color: var(--text-dark);
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px -5px rgba(251, 140, 0, 0.5);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--primary-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-out;
+            transform-origin: left;
+        }
+
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            opacity: 1;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+
+        .modal-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-content ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .modal-content ul li::before {
+            content: '✓';
+            color: var(--primary-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        /* Parallax Section */
+        .parallax-section {
+            padding: 120px 0;
+            background-image: url('images/parallax-background.png');
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            text-align: center;
+            color: var(--white-bg);
+        }
+
+        .parallax-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .parallax-content h2 {
+            font-size: 2.8rem;
+            color: var(--white-bg);
+            margin-bottom: 30px;
+        }
+
+        #contact {
+            background-color: var(--primary-orange);
+            color: var(--white-bg);
+        }
+
+        #contact h2,
+        #contact .section-subtitle {
+            color: var(--white-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            background: var(--light-bg);
+            border: 1px solid #ddd;
+            color: var(--text-dark);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: var(--font-body);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+        }
+
+        /* NEW: Redesigned Contact Card Styling */
+        .contact-card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: var(--white-bg);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--primary-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-out;
+            transform-origin: left;
+        }
+
+        .contact-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-card:hover::before {
+            opacity: 1;
+        }
+
+        .contact-card-icon {
+            flex-shrink: 0;
+            background-color: var(--primary-orange);
+            color: var(--white-bg);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-card-info h4 {
+            font-family: var(--font-heading);
+            color: var(--text-dark);
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-card-info p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        #form-status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        #form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* 1. Makes the country code container full-width */
+        .iti {
+            width: 100%;
+        }
+
+        /* 2. Adds the correct 20px spacing below the phone field container */
+        .contact-form .iti {
+            margin-bottom: 20px;
+        }
+
+        /* 3. Removes the default spacing from the phone input itself to prevent double-spacing */
+        .contact-form input#phone {
+            margin-bottom: 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: var(--text-muted)
+        }
+
+        .contact-info strong {
+            color: var(--text-dark);
         }
 
         .contact-info a {
-            color: #007bff;
+            color: var(--text-dark);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* New styling for the submit button to match white cards */
+        .contact-form .cta-button {
+            background: var(--white-bg);
+            color: var(--text-dark);
+            border: none;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form .cta-button:hover {
+            transform: translateY(-5px);
+            background: var(--white-bg);
+            color: var(--text-dark);
+            border-color: var(--primary-orange);
+            box-shadow: 0 6px 20px rgba(251, 140, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--footer-bg);
+            color: #aaa;
+            padding-top: 60px;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-column .logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--white-bg);
+            margin-bottom: 20px;
+        }
+
+        .footer-column p {
+            color: #aaa;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .footer-column ul a:hover {
+            color: var(--primary-orange);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social-links a {
+            color: #aaa;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-social-links a:hover {
+            color: var(--primary-orange);
+            transform: translateY(-3px);
+        }
+
+        .footer-social-links svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-link {
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
             text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-orange);
+        }
+
+
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-container.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--white-bg);
+            padding: 30px 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            animation: fadeInModal 0.4s ease-out;
+        }
+
+        @keyframes fadeInModal {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: #aaa;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-close-btn:hover {
+            color: var(--text-dark);
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 820px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 100%;
+                background-color: var(--white-bg);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 1000;
+            }
+
+            .nav-links.open {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu-toggle.open .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .menu-toggle.open .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.open .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .parallax-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                text-align: center;
+            }
+
+            .footer-social-links {
+                justify-content: center;
+            }
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
     </style>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2CN9DK5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-    <div class="container">
-        <h1>Website Under Upgradation</h1>
-        <p>We are working hard to bring you a better and more exciting experience.</p>
-        <p>Our website is currently undergoing scheduled maintenance and upgrades.</p>        
-        <p>Please check back soon!</p>
-        <div class="contact-info">
-            <p>For urgent inquiries, please contact us at: <a href="mailto:support@gayatrielectrical.in">support@gayatrielectrical.in</a></p>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2CN9DK5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="main-header">
+        <nav class="container main-nav">
+            <a href="#home" class="logo">
+                <img src="assets/logo.svg" alt="Gayatri Electricals Logo">
+            </a>
+            <ul class="nav-links" id="mobile-menu">
+                <li><a href="#home" class="active nav-link-item">Home</a></li>
+                <li><a href="#about" class="nav-link-item">About Us</a></li>
+                <li><a href="#services" class="nav-link-item">Services</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="images/carousel-ht-substation.png"
+                        alt="A high-tension substation with electrical equipment">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-power-lines.png"
+                        alt="Electrical power lines stretching across a rural landscape">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-engineer-working.png"
+                        alt="An electrical engineer checking a panel with a tablet">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-insulators-closeup.png"
+                        alt="A close-up view of a high-voltage electrical insulator">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-transmission-tower.png"
+                        alt="A large electrical transmission tower against a blue sky">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/carousel-transformer-bank.png"
+                        alt="A bank of industrial electrical transformers at a facility">
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container" data-aos="fade-up">
+                <h1>Engineering the Future of Power</h1>
+                <p class="subheadline">Authoritative, reliable, and innovative electrical solutions for industrial and
+                    commercial projects of all sizes.</p>
+                <a href="#contact" class="cta-button">Get a Consultation</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>The Current That Drives Progress</h2>
+                    <p>For over two decades, Gayatri Electricals has been more than a service provider; we are the
+                        silent, steadfast current running through the core of industry and commerce. We don't just
+                        manage power—we empower potential. Our foundation is built on a legacy of unwavering commitment
+                        to excellence, translating complex electrical challenges into streamlined, robust solutions.</p>
+                    <p>Our team of seasoned professionals operates at the intersection of experience and innovation. As
+                        a Govt. Authorized Electrical Contractor and Govt. Authorized Lift Contractor, our work is
+                        backed by official credentials and a deep commitment to compliance and safety. We view every
+                        project, from a critical emergency repair to a full-scale substation installation, as a
+                        partnership. We are dedicated to building a future where your operations are not only safer and
+                        more efficient but are also primed for the growth and technological demands of tomorrow.</p>
+                    <p>We believe that reliable power is the foundation of progress. That's why we're constantly
+                        adapting to new technologies, from advanced diagnostics to sustainable energy solutions like
+                        solar. Our goal is to ensure your operations are not only safer and more efficient today but are
+                        also primed for the growth and technological demands of tomorrow.</p>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="images/about-us-team.png" alt="A team of Gayatri Electricals Services employees">
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 data-aos="fade-up" style="color: var(--white-bg);">Our Areas of Expertise</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="color: #fff;">We provide a
+                    complete spectrum of electrical solutions, organized by our core specializations for clarity and
+                    precision.</p>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200"
+                        data-modal-target="#modal-transformer">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="ad9203441a">
+                                    <path
+                                        d="M 11.273438 13.042969 L 48.726562 13.042969 L 48.726562 46.75 L 11.273438 46.75 Z M 11.273438 13.042969 " />
+                                </clipPath>
+                            </defs>
+                            <g id="06aacb7f85">
+                                <g clip-rule="nonzero" clip-path="url(#ad9203441a)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 11.824219 29.683594 L 13.480469 29.683594 L 13.480469 39.519531 L 11.824219 39.519531 C 11.519531 39.519531 11.273438 39.273438 11.273438 38.96875 L 11.273438 30.230469 C 11.273438 29.921875 11.519531 29.675781 11.824219 29.675781 Z M 41.808594 13.050781 L 39.980469 13.050781 L 39.980469 14.175781 L 41.808594 14.175781 Z M 37.683594 15.976562 L 44.101562 15.976562 C 44.324219 15.976562 44.503906 15.796875 44.503906 15.570312 C 44.503906 15.347656 44.324219 15.167969 44.101562 15.167969 L 37.683594 15.167969 C 37.457031 15.167969 37.28125 15.347656 37.28125 15.570312 C 37.28125 15.796875 37.457031 15.976562 37.683594 15.976562 Z M 37.683594 17.765625 L 44.101562 17.765625 C 44.324219 17.765625 44.503906 17.585938 44.503906 17.363281 C 44.503906 17.140625 44.324219 16.960938 44.101562 16.960938 L 37.683594 16.960938 C 37.457031 16.960938 37.28125 17.140625 37.28125 17.363281 C 37.28125 17.585938 37.457031 17.765625 37.683594 17.765625 Z M 37.683594 19.558594 L 44.101562 19.558594 C 44.324219 19.558594 44.503906 19.378906 44.503906 19.152344 C 44.503906 18.929688 44.324219 18.75 44.101562 18.75 L 37.683594 18.75 C 37.457031 18.75 37.28125 18.929688 37.28125 19.152344 C 37.28125 19.378906 37.457031 19.558594 37.683594 19.558594 Z M 30.839844 13.050781 L 29.011719 13.050781 L 29.011719 14.175781 L 30.839844 14.175781 Z M 26.71875 15.976562 L 33.136719 15.976562 C 33.363281 15.976562 33.539062 15.796875 33.539062 15.570312 C 33.539062 15.347656 33.363281 15.167969 33.136719 15.167969 L 26.71875 15.167969 C 26.496094 15.167969 26.316406 15.347656 26.316406 15.570312 C 26.316406 15.796875 26.496094 15.976562 26.71875 15.976562 Z M 26.71875 17.765625 L 33.136719 17.765625 C 33.363281 17.765625 33.539062 17.585938 33.539062 17.363281 C 33.539062 17.140625 33.363281 16.960938 33.136719 16.960938 L 26.71875 16.960938 C 26.496094 16.960938 26.316406 17.140625 26.316406 17.363281 C 26.316406 17.585938 26.496094 17.765625 26.71875 17.765625 Z M 26.71875 19.558594 L 33.136719 19.558594 C 33.363281 19.558594 33.539062 19.378906 33.539062 19.152344 C 33.539062 18.929688 33.363281 18.75 33.136719 18.75 L 26.71875 18.75 C 26.496094 18.75 26.316406 18.929688 26.316406 19.152344 C 26.316406 19.378906 26.496094 19.558594 26.71875 19.558594 Z M 19.875 13.050781 L 18.046875 13.050781 L 18.046875 14.175781 L 19.875 14.175781 Z M 15.757812 15.976562 L 22.175781 15.976562 C 22.398438 15.976562 22.578125 15.796875 22.578125 15.570312 C 22.578125 15.347656 22.398438 15.167969 22.175781 15.167969 L 15.757812 15.167969 C 15.535156 15.167969 15.355469 15.347656 15.355469 15.570312 C 15.355469 15.796875 15.535156 15.976562 15.757812 15.976562 Z M 15.757812 17.765625 L 22.175781 17.765625 C 22.398438 17.765625 22.578125 17.585938 22.578125 17.363281 C 22.578125 17.140625 22.398438 16.960938 22.175781 16.960938 L 15.757812 16.960938 C 15.535156 16.960938 15.355469 17.140625 15.355469 17.363281 C 15.355469 17.585938 15.535156 17.765625 15.757812 17.765625 Z M 15.757812 19.558594 L 22.175781 19.558594 C 22.398438 19.558594 22.578125 19.378906 22.578125 19.152344 C 22.578125 18.929688 22.398438 18.75 22.175781 18.75 L 15.757812 18.75 C 15.535156 18.75 15.355469 18.929688 15.355469 19.152344 C 15.355469 19.378906 15.535156 19.558594 15.757812 19.558594 Z M 45.792969 20.550781 L 14.0625 20.550781 L 14.0625 22.207031 L 45.792969 22.207031 Z M 16.347656 23.207031 L 16.347656 25.371094 L 43.503906 25.371094 L 43.503906 23.207031 Z M 43.59375 43.734375 L 16.265625 43.734375 L 16.265625 45.542969 L 13.921875 45.542969 L 13.921875 46.742188 L 45.9375 46.742188 L 45.9375 45.542969 L 43.59375 45.542969 Z M 48.03125 29.683594 L 46.375 29.683594 L 46.375 39.519531 L 48.03125 39.519531 C 48.339844 39.519531 48.585938 39.273438 48.585938 38.96875 L 48.585938 30.230469 C 48.585938 29.921875 48.339844 29.675781 48.03125 29.675781 Z M 25.675781 34.601562 C 25.675781 32.257812 27.585938 30.347656 29.929688 30.347656 C 32.273438 30.347656 34.183594 32.257812 34.183594 34.601562 C 34.183594 36.945312 32.273438 38.855469 29.929688 38.855469 C 27.585938 38.855469 25.675781 36.945312 25.675781 34.601562 Z M 27.699219 34.789062 C 27.773438 34.976562 27.957031 35.101562 28.160156 35.101562 L 30.429688 35.101562 L 28.726562 36.667969 C 28.527344 36.855469 28.511719 37.167969 28.699219 37.371094 C 28.792969 37.476562 28.929688 37.535156 29.0625 37.535156 C 29.199219 37.535156 29.300781 37.488281 29.398438 37.398438 L 32.039062 34.976562 C 32.191406 34.832031 32.242188 34.617188 32.167969 34.429688 C 32.09375 34.234375 31.90625 34.117188 31.703125 34.117188 L 29.398438 34.117188 L 31.039062 32.542969 C 31.242188 32.355469 31.242188 32.042969 31.054688 31.839844 C 30.867188 31.640625 30.546875 31.632812 30.355469 31.824219 L 27.816406 34.25 C 27.667969 34.394531 27.621094 34.609375 27.699219 34.796875 Z M 14.472656 26.363281 L 45.382812 26.363281 L 45.382812 42.742188 L 14.472656 42.742188 Z M 41.027344 40.75 C 41.027344 41.027344 41.25 41.25 41.527344 41.25 C 41.800781 41.25 42.027344 41.027344 42.027344 40.75 L 42.027344 28.363281 C 42.027344 28.085938 41.800781 27.863281 41.527344 27.863281 C 41.25 27.863281 41.027344 28.085938 41.027344 28.363281 Z M 36.390625 40.75 C 36.390625 41.027344 36.617188 41.25 36.890625 41.25 C 37.167969 41.25 37.390625 41.027344 37.390625 40.75 L 37.390625 28.363281 C 37.390625 28.085938 37.167969 27.863281 36.890625 27.863281 C 36.617188 27.863281 36.390625 28.085938 36.390625 28.363281 Z M 24.683594 34.601562 C 24.683594 36.460938 25.652344 38.085938 27.117188 39.019531 L 27.117188 40.75 C 27.117188 41.027344 27.339844 41.25 27.617188 41.25 C 27.890625 41.25 28.117188 41.027344 28.117188 40.75 L 28.117188 39.519531 C 28.683594 39.730469 29.292969 39.855469 29.9375 39.855469 C 30.578125 39.855469 31.191406 39.734375 31.757812 39.519531 L 31.757812 40.75 C 31.757812 41.027344 31.980469 41.25 32.257812 41.25 C 32.535156 41.25 32.757812 41.027344 32.757812 40.75 L 32.757812 39.019531 C 34.21875 38.085938 35.191406 36.460938 35.191406 34.601562 C 35.191406 32.742188 34.21875 31.117188 32.757812 30.183594 L 32.757812 28.363281 C 32.757812 28.085938 32.535156 27.863281 32.257812 27.863281 C 31.980469 27.863281 31.757812 28.085938 31.757812 28.363281 L 31.757812 29.691406 C 31.191406 29.484375 30.578125 29.355469 29.9375 29.355469 C 29.292969 29.355469 28.683594 29.476562 28.117188 29.691406 L 28.117188 28.363281 C 28.117188 28.085938 27.890625 27.863281 27.617188 27.863281 C 27.339844 27.863281 27.117188 28.085938 27.117188 28.363281 L 27.117188 30.183594 C 25.652344 31.117188 24.683594 32.742188 24.683594 34.601562 Z M 22.472656 40.75 C 22.472656 41.027344 22.699219 41.25 22.972656 41.25 C 23.25 41.25 23.472656 41.027344 23.472656 40.75 L 23.472656 28.363281 C 23.472656 28.085938 23.25 27.863281 22.972656 27.863281 C 22.699219 27.863281 22.472656 28.085938 22.472656 28.363281 Z M 17.839844 40.75 C 17.839844 41.027344 18.0625 41.25 18.339844 41.25 C 18.617188 41.25 18.839844 41.027344 18.839844 40.75 L 18.839844 28.363281 C 18.839844 28.085938 18.617188 27.863281 18.339844 27.863281 C 18.0625 27.863281 17.839844 28.085938 17.839844 28.363281 Z M 17.839844 40.75 " />
+                                </g>
+                            </g>
+                        </svg>
+                        <h3>Transformer Lifecycle Management</h3>
+                        <p>Complete end-to-end services for your most critical assets, from supply and repair to ongoing
+                            maintenance.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-modal-target="#modal-ht">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="d4ca2bc897">
+                                    <path d="M 41 20 L 48.726562 20 L 48.726562 25 L 41 25 Z M 41 20 " />
+                                </clipPath>
+                                <clipPath id="311b4526d3">
+                                    <path d="M 25 12.078125 L 47 12.078125 L 47 44 L 25 44 Z M 25 12.078125 " />
+                                </clipPath>
+                                <clipPath id="05a5b47c33">
+                                    <path d="M 11.273438 35 L 28 35 L 28 44 L 11.273438 44 Z M 11.273438 35 " />
+                                </clipPath>
+                                <clipPath id="1a15912c5b">
+                                    <path d="M 11.273438 43 L 27 43 L 27 47 L 11.273438 47 Z M 11.273438 43 " />
+                                </clipPath>
+                            </defs>
+                            <g id="93a63c18b4">
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.226562 24.816406 L 30.417969 24.816406 C 30.652344 24.816406 30.84375 24.625 30.84375 24.390625 C 30.84375 24.15625 30.652344 23.964844 30.417969 23.964844 L 28.40625 23.964844 L 25.433594 20.996094 L 30.417969 20.996094 C 30.652344 20.996094 30.84375 20.804688 30.84375 20.570312 C 30.84375 20.335938 30.652344 20.144531 30.417969 20.144531 L 24.40625 20.144531 C 24.03125 20.144531 23.839844 20.601562 24.105469 20.871094 L 27.925781 24.691406 C 28.007812 24.773438 28.117188 24.816406 28.226562 24.816406 Z M 28.226562 24.816406 " />
+                                <g clip-rule="nonzero" clip-path="url(#d4ca2bc897)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 48.082031 20.144531 L 42.070312 20.144531 C 41.835938 20.144531 41.648438 20.335938 41.648438 20.570312 C 41.648438 20.804688 41.835938 20.996094 42.070312 20.996094 L 47.058594 20.996094 L 44.085938 23.964844 L 42.070312 23.964844 C 41.835938 23.964844 41.648438 24.15625 41.648438 24.390625 C 41.648438 24.625 41.835938 24.816406 42.070312 24.816406 L 44.261719 24.816406 C 44.375 24.816406 44.484375 24.773438 44.5625 24.691406 L 48.382812 20.871094 C 48.652344 20.601562 48.460938 20.144531 48.082031 20.144531 Z M 48.082031 20.144531 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#311b4526d3)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 46.332031 12.0625 C 39.03125 12.0625 33.6875 12.0625 26.15625 12.0625 C 25.691406 12.0625 25.453125 12.628906 25.785156 12.960938 L 29.070312 16.242188 C 29.386719 16.5625 29.804688 16.734375 30.253906 16.734375 L 30.335938 16.734375 C 30.570312 16.734375 30.761719 16.542969 30.761719 16.308594 C 30.761719 16.074219 30.570312 15.882812 30.335938 15.882812 L 30.253906 15.882812 C 30.035156 15.882812 29.828125 15.800781 29.671875 15.644531 L 26.941406 12.914062 L 32.714844 12.914062 C 32.710938 12.972656 30.601562 42.945312 30.601562 42.886719 C 30.585938 43.25 31.058594 43.464844 31.320312 43.210938 L 40.476562 34.316406 L 41.085938 42.9375 C 41.101562 43.160156 41.285156 43.332031 41.507812 43.332031 C 41.519531 43.332031 41.527344 43.332031 41.539062 43.332031 C 41.773438 43.3125 41.949219 43.109375 41.933594 42.875 L 39.820312 12.914062 L 45.550781 12.914062 L 42.820312 15.644531 C 42.53125 15.929688 42.210938 15.875 42.15625 15.882812 C 41.921875 15.882812 41.730469 16.074219 41.730469 16.308594 C 41.730469 16.542969 41.921875 16.734375 42.15625 16.734375 C 42.210938 16.722656 42.859375 16.804688 43.421875 16.242188 L 46.703125 12.960938 C 47.035156 12.632812 46.804688 12.0625 46.332031 12.0625 Z M 33.015625 20.855469 L 39.097656 14.773438 L 40.035156 28.050781 L 33.074219 21.09375 C 33.050781 21.070312 33.023438 21.054688 32.996094 21.039062 L 33.007812 20.859375 C 33.011719 20.859375 33.015625 20.855469 33.015625 20.855469 Z M 32.917969 22.136719 L 40.105469 29.328125 C 40.113281 29.332031 40.121094 29.332031 40.125 29.339844 L 40.296875 31.765625 L 32.769531 24.238281 Z M 40.371094 33.230469 L 31.527344 41.824219 L 32.691406 25.359375 L 40.386719 33.058594 L 40.398438 33.214844 C 40.390625 33.222656 40.378906 33.222656 40.371094 33.230469 Z M 39.023438 13.703125 C 38.96875 13.722656 38.917969 13.753906 38.871094 13.796875 L 33.097656 19.570312 L 33.566406 12.914062 C 33.75 12.914062 39.023438 12.914062 38.964844 12.914062 Z M 39.023438 13.703125 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 44.824219 27.140625 L 44.015625 27.140625 L 44.015625 25.761719 C 44.015625 25.527344 43.824219 25.335938 43.589844 25.335938 C 43.355469 25.335938 43.164062 25.527344 43.164062 25.761719 L 43.164062 27.140625 L 42.355469 27.140625 C 42.117188 27.140625 41.929688 27.328125 41.929688 27.566406 C 41.929688 27.800781 42.117188 27.988281 42.355469 27.988281 L 44.824219 27.988281 C 45.058594 27.988281 45.25 27.800781 45.25 27.566406 C 45.25 27.328125 45.058594 27.140625 44.824219 27.140625 Z M 44.824219 27.140625 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.800781 27.566406 C 30.800781 27.328125 30.613281 27.140625 30.378906 27.140625 L 29.566406 27.140625 L 29.566406 25.761719 C 29.566406 25.527344 29.378906 25.335938 29.140625 25.335938 C 28.90625 25.335938 28.71875 25.527344 28.71875 25.761719 L 28.71875 27.140625 L 27.90625 27.140625 C 27.671875 27.140625 27.480469 27.328125 27.480469 27.566406 C 27.480469 27.800781 27.671875 27.988281 27.90625 27.988281 L 30.378906 27.988281 C 30.613281 27.988281 30.800781 27.800781 30.800781 27.566406 Z M 30.800781 27.566406 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 42.425781 17.039062 C 42.191406 17.039062 42 17.230469 42 17.464844 L 42 18.011719 L 41.757812 18.011719 C 41.523438 18.011719 41.332031 18.203125 41.332031 18.4375 C 41.332031 18.671875 41.523438 18.863281 41.757812 18.863281 L 43.089844 18.863281 C 43.328125 18.863281 43.515625 18.671875 43.515625 18.4375 C 43.515625 18.203125 43.328125 18.011719 43.089844 18.011719 L 42.851562 18.011719 L 42.851562 17.464844 C 42.851562 17.230469 42.660156 17.039062 42.425781 17.039062 Z M 42.425781 17.039062 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.304688 17.058594 C 30.070312 17.058594 29.882812 17.246094 29.882812 17.480469 L 29.882812 18.09375 L 29.59375 18.09375 C 29.359375 18.09375 29.171875 18.285156 29.171875 18.519531 C 29.171875 18.753906 29.359375 18.945312 29.59375 18.945312 L 31.015625 18.945312 C 31.25 18.945312 31.441406 18.753906 31.441406 18.519531 C 31.441406 18.285156 31.25 18.09375 31.015625 18.09375 L 30.730469 18.09375 L 30.730469 17.480469 C 30.730469 17.246094 30.539062 17.058594 30.304688 17.058594 Z M 30.304688 17.058594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 42.957031 43.933594 L 28.929688 43.933594 C 28.382812 43.933594 27.9375 44.378906 27.9375 44.929688 L 27.9375 46.632812 C 27.9375 46.867188 28.128906 47.058594 28.363281 47.058594 L 43.527344 47.058594 C 43.761719 47.058594 43.953125 46.867188 43.953125 46.632812 L 43.953125 44.929688 C 43.953125 44.378906 43.507812 43.933594 42.957031 43.933594 Z M 43.101562 46.207031 L 28.785156 46.207031 L 28.785156 44.929688 C 28.785156 44.847656 28.851562 44.785156 28.929688 44.785156 L 42.957031 44.785156 C 43.039062 44.785156 43.101562 44.847656 43.101562 44.929688 Z M 43.101562 46.207031 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.828125 46.316406 C 24.59375 46.316406 24.402344 46.503906 24.402344 46.742188 L 24.402344 46.957031 L 23.574219 46.957031 L 23.125 46.511719 C 22.960938 46.347656 22.691406 46.347656 22.523438 46.511719 C 22.359375 46.679688 22.359375 46.945312 22.523438 47.113281 L 23.019531 47.605469 C 23.148438 47.734375 23.324219 47.808594 23.507812 47.808594 L 24.558594 47.808594 C 24.941406 47.808594 25.25 47.496094 25.25 47.113281 L 25.25 46.742188 C 25.25 46.503906 25.0625 46.316406 24.828125 46.316406 Z M 24.828125 46.316406 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 15.164062 42.320312 L 15.164062 38.300781 C 15.164062 38.066406 14.976562 37.875 14.738281 37.875 C 14.503906 37.875 14.316406 38.066406 14.316406 38.300781 L 14.316406 42.320312 C 14.316406 42.554688 14.503906 42.746094 14.738281 42.746094 C 14.976562 42.746094 15.164062 42.554688 15.164062 42.320312 Z M 15.164062 42.320312 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 17.015625 42.320312 L 17.015625 38.300781 C 17.015625 38.066406 16.824219 37.875 16.589844 37.875 C 16.355469 37.875 16.164062 38.066406 16.164062 38.300781 L 16.164062 42.320312 C 16.164062 42.554688 16.355469 42.746094 16.589844 42.746094 C 16.824219 42.746094 17.015625 42.554688 17.015625 42.320312 Z M 17.015625 42.320312 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 18.863281 42.320312 L 18.863281 38.300781 C 18.863281 38.066406 18.671875 37.875 18.4375 37.875 C 18.203125 37.875 18.011719 38.066406 18.011719 38.300781 L 18.011719 42.320312 C 18.011719 42.554688 18.203125 42.746094 18.4375 42.746094 C 18.671875 42.746094 18.863281 42.554688 18.863281 42.320312 Z M 18.863281 42.320312 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 20.710938 42.320312 L 20.710938 38.300781 C 20.710938 38.066406 20.523438 37.875 20.289062 37.875 C 20.054688 37.875 19.863281 38.066406 19.863281 38.300781 L 19.863281 42.320312 C 19.863281 42.554688 20.054688 42.746094 20.289062 42.746094 C 20.523438 42.746094 20.710938 42.554688 20.710938 42.320312 Z M 20.710938 42.320312 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 22.5625 42.320312 L 22.5625 38.300781 C 22.5625 38.066406 22.371094 37.875 22.136719 37.875 C 21.902344 37.875 21.710938 38.066406 21.710938 38.300781 L 21.710938 42.320312 C 21.710938 42.554688 21.902344 42.746094 22.136719 42.746094 C 22.371094 42.746094 22.5625 42.554688 22.5625 42.320312 Z M 22.5625 42.320312 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.410156 42.320312 L 24.410156 38.300781 C 24.410156 38.066406 24.21875 37.875 23.984375 37.875 C 23.75 37.875 23.5625 38.066406 23.5625 38.300781 L 23.5625 42.320312 C 23.5625 42.554688 23.75 42.746094 23.984375 42.746094 C 24.21875 42.746094 24.410156 42.554688 24.410156 42.320312 Z M 24.410156 42.320312 " />
+                                <g clip-rule="nonzero" clip-path="url(#05a5b47c33)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 26.589844 35.84375 C 19.929688 35.84375 18.785156 35.84375 11.929688 35.84375 C 11.695312 35.84375 11.503906 36.035156 11.503906 36.269531 C 11.503906 36.503906 11.695312 36.695312 11.929688 36.695312 L 12.441406 36.695312 L 12.441406 42.90625 C 12.441406 43.140625 12.628906 43.332031 12.867188 43.332031 C 13.101562 43.332031 13.289062 43.140625 13.289062 42.90625 L 13.289062 36.695312 L 25.382812 36.695312 L 25.382812 42.90625 C 25.382812 43.140625 25.574219 43.332031 25.808594 43.332031 C 26.042969 43.332031 26.234375 43.140625 26.234375 42.90625 L 26.234375 36.695312 L 26.589844 36.695312 C 26.824219 36.695312 27.015625 36.503906 27.015625 36.269531 C 27.015625 36.035156 26.824219 35.84375 26.589844 35.84375 Z M 26.589844 35.84375 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#1a15912c5b)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 25.75 43.792969 L 12.515625 43.792969 C 11.886719 43.792969 11.378906 44.304688 11.378906 44.933594 C 11.378906 45.5625 11.886719 46.074219 12.515625 46.074219 L 25.75 46.074219 C 26.378906 46.074219 26.890625 45.5625 26.890625 44.933594 C 26.890625 44.304688 26.378906 43.792969 25.75 43.792969 Z M 25.75 45.222656 L 12.515625 45.222656 C 12.359375 45.222656 12.226562 45.089844 12.226562 44.933594 C 12.226562 44.777344 12.359375 44.644531 12.515625 44.644531 L 25.75 44.644531 C 25.90625 44.644531 26.039062 44.777344 26.039062 44.933594 C 26.039062 45.089844 25.90625 45.222656 25.75 45.222656 Z M 25.75 45.222656 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 23.59375 35.535156 C 23.773438 35.535156 23.9375 35.417969 23.996094 35.238281 L 24.402344 33.988281 C 24.996094 34.167969 25.015625 34.195312 25.128906 34.195312 C 25.308594 34.195312 25.476562 34.082031 25.535156 33.898438 C 25.605469 33.675781 25.480469 33.4375 25.257812 33.367188 L 23.242188 32.730469 C 23.015625 32.660156 22.777344 32.785156 22.707031 33.007812 C 22.636719 33.234375 22.761719 33.472656 22.984375 33.542969 L 23.59375 33.734375 L 23.1875 34.976562 C 23.097656 35.253906 23.304688 35.535156 23.59375 35.535156 Z M 23.59375 35.535156 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 25.972656 32.503906 C 26.046875 32.277344 25.921875 32.039062 25.695312 31.96875 L 25.09375 31.777344 L 25.304688 31.132812 C 25.375 30.910156 25.253906 30.667969 25.03125 30.597656 C 24.808594 30.523438 24.566406 30.644531 24.492188 30.867188 L 24.28125 31.523438 L 23.679688 31.332031 C 23.457031 31.261719 23.21875 31.386719 23.148438 31.609375 C 23.078125 31.835938 23.199219 32.074219 23.425781 32.144531 C 25.527344 32.800781 25.445312 32.800781 25.570312 32.800781 C 25.75 32.800781 25.917969 32.683594 25.972656 32.503906 Z M 25.972656 32.503906 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 20.714844 33.105469 C 20.949219 33.105469 21.140625 32.917969 21.140625 32.683594 C 21.144531 32.449219 20.957031 32.257812 20.71875 32.253906 C 20.59375 32.253906 20.75 32.257812 18.601562 32.238281 C 18.371094 32.238281 18.179688 32.425781 18.175781 32.660156 C 18.175781 32.894531 18.363281 33.085938 18.597656 33.089844 L 19.226562 33.09375 L 19.226562 34.40625 C 19.226562 34.644531 19.417969 34.832031 19.652344 34.832031 C 19.886719 34.832031 20.078125 34.644531 20.078125 34.40625 L 20.078125 33.101562 C 20.128906 33.101562 19.867188 33.097656 20.714844 33.105469 Z M 20.714844 33.105469 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 20.730469 30.828125 L 20.085938 30.820312 L 20.085938 30.019531 C 20.085938 29.785156 19.894531 29.59375 19.660156 29.59375 C 19.425781 29.59375 19.234375 29.785156 19.234375 30.019531 L 19.234375 30.816406 L 18.617188 30.808594 C 18.617188 30.808594 18.613281 30.808594 18.613281 30.808594 C 18.378906 30.808594 18.191406 30.996094 18.1875 31.230469 C 18.1875 31.464844 18.375 31.65625 18.609375 31.660156 C 18.734375 31.660156 18.578125 31.660156 20.726562 31.675781 C 20.960938 31.675781 21.148438 31.488281 21.152344 31.257812 C 21.152344 31.019531 20.964844 30.828125 20.730469 30.828125 Z M 20.730469 30.828125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 15.433594 46.511719 L 14.988281 46.957031 L 14.160156 46.957031 L 14.160156 46.742188 C 14.160156 46.503906 13.96875 46.316406 13.734375 46.316406 C 13.5 46.316406 13.308594 46.503906 13.308594 46.742188 L 13.308594 47.113281 C 13.308594 47.496094 13.621094 47.808594 14.003906 47.808594 L 15.050781 47.808594 C 15.234375 47.808594 15.414062 47.734375 15.542969 47.605469 L 16.035156 47.113281 C 16.199219 46.945312 16.199219 46.679688 16.035156 46.511719 C 15.867188 46.347656 15.597656 46.347656 15.433594 46.511719 Z M 15.433594 46.511719 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.660156 18.519531 C 28.660156 18.285156 28.46875 18.09375 28.234375 18.09375 L 16.027344 18.09375 C 14.746094 18.09375 13.703125 19.140625 13.703125 20.421875 L 13.703125 28.121094 C 13.703125 28.355469 13.894531 28.542969 14.128906 28.542969 C 14.363281 28.542969 14.550781 28.355469 14.550781 28.121094 L 14.550781 20.421875 C 14.550781 19.609375 15.214844 18.945312 16.027344 18.945312 L 28.234375 18.945312 C 28.46875 18.945312 28.660156 18.753906 28.660156 18.519531 Z M 28.660156 18.519531 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 16.746094 33.007812 C 16.675781 32.785156 16.4375 32.660156 16.214844 32.730469 L 14.195312 33.367188 C 13.972656 33.4375 13.847656 33.675781 13.917969 33.898438 C 13.976562 34.082031 14.144531 34.195312 14.324219 34.195312 C 14.441406 34.195312 14.480469 34.160156 15.050781 33.988281 L 15.457031 35.238281 C 15.53125 35.46875 15.777344 35.585938 15.992188 35.511719 C 16.214844 35.441406 16.339844 35.199219 16.265625 34.976562 L 15.863281 33.734375 L 16.46875 33.542969 C 16.691406 33.472656 16.816406 33.234375 16.746094 33.007812 Z M 16.746094 33.007812 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 13.480469 32.503906 C 13.535156 32.683594 13.703125 32.800781 13.882812 32.800781 C 14.007812 32.800781 13.910156 32.804688 16.027344 32.144531 C 16.253906 32.074219 16.378906 31.835938 16.304688 31.609375 C 16.234375 31.386719 15.996094 31.261719 15.773438 31.332031 L 15.171875 31.523438 L 14.960938 30.867188 C 14.886719 30.644531 14.648438 30.523438 14.425781 30.597656 C 14.199219 30.667969 14.078125 30.910156 14.152344 31.132812 L 14.359375 31.777344 L 13.757812 31.96875 C 13.53125 32.039062 13.410156 32.277344 13.480469 32.503906 Z M 13.480469 32.503906 " />
+                            </g>
+                        </svg>
+                        <h3>High-Voltage (HV) Substations</h3>
+                        <p>Turnkey solutions for MV & HV substation erection, testing, and commissioning of both AIS and
+                            GIS
+                            bays.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400" data-modal-target="#modal-panels">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="aa1e5cd6ab">
+                                    <path
+                                        d="M 11.273438 12.171875 L 48.726562 12.171875 L 48.726562 48 L 11.273438 48 Z M 11.273438 12.171875 " />
+                                </clipPath>
+                            </defs>
+                            <g id="9b46a03a3f">
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.804688 42.296875 C 29 42.410156 29.210938 42.464844 29.421875 42.464844 C 29.851562 42.464844 30.269531 42.242188 30.496094 41.84375 L 33.972656 35.828125 C 34.191406 35.441406 34.191406 34.96875 33.972656 34.585938 C 33.75 34.203125 33.339844 33.96875 32.898438 33.96875 L 29.25 33.96875 L 31.648438 29.808594 C 31.992188 29.214844 31.789062 28.457031 31.195312 28.117188 C 30.601562 27.773438 29.84375 27.976562 29.503906 28.570312 L 26.027344 34.585938 C 25.808594 34.96875 25.808594 35.441406 26.027344 35.828125 C 26.25 36.210938 26.660156 36.445312 27.101562 36.445312 L 30.75 36.445312 L 28.351562 40.605469 C 28.007812 41.195312 28.210938 41.957031 28.804688 42.296875 Z M 28.804688 42.296875 " />
+                                <g clip-rule="nonzero" clip-path="url(#aa1e5cd6ab)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 43.679688 22.652344 L 41.476562 22.652344 C 40.945312 20.859375 39.285156 19.550781 37.324219 19.550781 C 34.933594 19.550781 32.984375 21.496094 32.984375 23.886719 C 32.984375 26.28125 34.933594 28.226562 37.324219 28.226562 C 39.28125 28.226562 40.941406 26.917969 41.476562 25.132812 L 43.679688 25.132812 C 45.023438 25.132812 46.117188 26.226562 46.117188 27.570312 L 46.117188 42.84375 C 46.117188 44.1875 45.023438 45.28125 43.679688 45.28125 L 16.320312 45.28125 C 14.976562 45.28125 13.882812 44.1875 13.882812 42.84375 L 13.882812 27.570312 C 13.882812 26.226562 14.976562 25.132812 16.320312 25.132812 L 18.523438 25.132812 C 19.058594 26.917969 20.71875 28.226562 22.675781 28.226562 C 25.070312 28.226562 27.015625 26.28125 27.015625 23.886719 C 27.015625 23.140625 26.824219 22.441406 26.492188 21.828125 L 33.910156 14.410156 C 34.394531 13.925781 34.394531 13.140625 33.910156 12.65625 C 33.425781 12.171875 32.640625 12.171875 32.15625 12.65625 L 24.738281 20.074219 C 24.125 19.742188 23.421875 19.550781 22.675781 19.550781 C 20.714844 19.550781 19.058594 20.859375 18.523438 22.652344 L 16.320312 22.652344 C 13.609375 22.652344 11.402344 24.859375 11.402344 27.570312 L 11.402344 42.84375 C 11.402344 45.554688 13.609375 47.761719 16.320312 47.761719 L 43.679688 47.761719 C 46.390625 47.761719 48.597656 45.554688 48.597656 42.84375 L 48.597656 27.570312 C 48.597656 24.859375 46.390625 22.652344 43.679688 22.652344 Z M 37.324219 25.746094 C 36.296875 25.746094 35.464844 24.914062 35.464844 23.886719 C 35.464844 22.863281 36.296875 22.03125 37.324219 22.03125 C 38.347656 22.03125 39.179688 22.863281 39.179688 23.886719 C 39.179688 24.914062 38.347656 25.746094 37.324219 25.746094 Z M 22.675781 22.03125 C 23.703125 22.03125 24.535156 22.863281 24.535156 23.886719 C 24.535156 24.914062 23.703125 25.746094 22.675781 25.746094 C 21.652344 25.746094 20.820312 24.914062 20.820312 23.886719 C 20.820312 22.863281 21.652344 22.03125 22.675781 22.03125 Z M 22.675781 22.03125 " />
+                                </g>
+                            </g>
+                        </svg>
+                        <h3>Panel (HT, LT & APFC)</h3>
+                        <p>Supply, installation, and maintenance for a full range of panels, including DG Synchronizer
+                            systems.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200"
+                        data-modal-target="#modal-cabling">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="f3ab27279e">
+                                    <path
+                                        d="M 11.273438 18 L 48.726562 18 L 48.726562 31 L 11.273438 31 Z M 11.273438 18 " />
+                                </clipPath>
+                            </defs>
+                            <g id="cdbf8c95a5">
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.050781 3.609375 C 23.707031 2.261719 22.878906 1.183594 21.648438 0.566406 C 20.480469 -0.0195312 19.121094 -0.0507812 17.890625 0.296875 C 16.640625 0.65625 15.609375 1.511719 14.996094 2.671875 C 14.378906 3.847656 14.367188 5.265625 14.71875 6.523438 C 15.074219 7.789062 15.9375 8.871094 17.085938 9.46875 C 18.128906 10.015625 19.277344 9.949219 20.683594 9.585938 C 23.746094 8.792969 24.699219 6.136719 24.050781 3.609375 Z M 24.050781 3.609375 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.492188 32.464844 C 28.839844 31.257812 28.140625 30.304688 27.933594 29.285156 C 27.730469 26.921875 27.410156 24.5625 27.121094 22.203125 C 26.90625 20.449219 26.636719 18.355469 26.464844 16.40625 C 29.734375 18.707031 32.410156 19.078125 33.933594 19.425781 C 35.464844 19.777344 38.101562 19.585938 39.613281 19.085938 C 41.554688 18.445312 40.507812 17.316406 39.066406 17.390625 C 35.941406 17.554688 32.332031 16.667969 29.808594 14.707031 C 28.792969 13.917969 27.652344 12.976562 26.542969 12.339844 C 23.765625 10.746094 16.242188 9.710938 15.160156 13.941406 C 14.882812 15.023438 15.140625 16.167969 15.511719 17.21875 C 16.082031 18.832031 16.621094 20.28125 16.84375 21.976562 C 16.945312 22.742188 17.042969 23.507812 17.144531 24.273438 C 17.332031 25.730469 17.523438 27.183594 17.710938 28.636719 C 18.195312 32.355469 20.683594 39.84375 19.585938 44.558594 C 19.058594 46.835938 17.953125 49.503906 16.628906 51.664062 C 15.699219 53.183594 14.328125 54.335938 14.371094 56.199219 C 14.394531 57.160156 14.78125 57.8125 15.730469 57.664062 C 16.269531 57.582031 18.71875 54.386719 20.160156 52.226562 C 22.246094 49.109375 23.554688 46.753906 24.414062 40.191406 C 24.730469 37.777344 22.917969 33.011719 25.585938 35.695312 C 27.214844 37.335938 30.371094 42.042969 31.082031 44.226562 C 32.296875 47.960938 31.820312 51.542969 31.558594 55.308594 C 31.515625 55.96875 31.378906 56.765625 31.851562 57.234375 C 34.496094 59.863281 35.011719 52.171875 35.128906 50.871094 C 35.386719 48.136719 35.609375 44.644531 34.441406 41.300781 C 33.519531 38.65625 30.539062 34.410156 29.492188 32.464844 Z M 29.492188 32.464844 " />
+                                <g clip-rule="nonzero" clip-path="url(#f3ab27279e)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#212529;fill-opacity:1;"
+                                        d="M 47.367188 18.078125 C 41.886719 18.074219 40.808594 18.066406 35.328125 18.0625 C 34.199219 18.0625 28.046875 18.605469 24.960938 19.601562 C 23.214844 20.164062 21.550781 20.984375 20.082031 22.085938 C 18.71875 23.101562 17.609375 24.328125 16.457031 25.566406 C 15.347656 26.761719 14.148438 27.957031 12.519531 28.363281 C 11.269531 28.675781 11.800781 30.601562 13.050781 30.292969 C 16.210938 29.503906 17.941406 26.59375 20.214844 24.539062 C 22.835938 22.175781 26.226562 21.03125 29.691406 20.652344 C 31.75 20.429688 34.34375 20.140625 36.683594 20.0625 C 41.710938 20.066406 42.339844 20.074219 47.367188 20.078125 C 48.652344 20.082031 48.652344 18.082031 47.367188 18.078125 Z M 47.367188 18.078125 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 23.007812 21.992188 C 24.25 22.101562 25.457031 21.976562 26.699219 21.941406 C 27.871094 21.90625 31.125 21.578125 32.257812 21.199219 C 34.375 20.492188 33.230469 19.402344 31.652344 19.316406 C 30.839844 19.269531 28.015625 19.429688 27.199219 19.480469 C 26.382812 19.53125 25.5625 19.519531 24.746094 19.445312 C 21.828125 19.171875 19.550781 17.199219 18.144531 14.746094 C 17.84375 14.214844 17.523438 13.667969 17.011719 13.332031 C 16.503906 12.996094 15.746094 12.953125 15.332031 13.398438 C 15.089844 13.664062 15.007812 14.039062 14.96875 14.394531 C 14.667969 16.988281 16.515625 19.03125 18.507812 20.453125 C 19.722656 21.316406 21.1875 21.777344 22.664062 21.957031 C 22.78125 21.972656 22.894531 21.984375 23.007812 21.992188 Z M 23.007812 21.992188 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffffff;fill-opacity:1;"
+                                    d="M 15.375 13.335938 C 15.738281 13.066406 16.519531 13.246094 16.902344 13.5 C 17.382812 13.816406 17.695312 14.363281 17.972656 14.84375 C 19.574219 17.644531 21.882812 19.199219 24.574219 19.453125 C 25.292969 19.515625 26.070312 19.53125 26.792969 19.5 C 26.785156 19.46875 26.761719 19.21875 26.753906 19.140625 C 26.066406 19.167969 25.296875 19.117188 24.609375 19.054688 C 22.054688 18.8125 19.855469 17.332031 18.320312 14.644531 C 18.019531 14.125 17.683594 13.535156 17.121094 13.164062 C 16.691406 12.882812 15.996094 12.867188 15.507812 13.070312 C 15.433594 13.164062 15.375 13.335938 15.375 13.335938 Z M 15.375 13.335938 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffffff;fill-opacity:1;"
+                                    d="M 27.09375 21.914062 C 27.027344 21.917969 24.394531 22.058594 23.027344 21.792969 C 22.914062 21.773438 22.800781 21.773438 22.691406 21.757812 C 21.085938 21.5625 19.71875 21.070312 18.625 20.289062 C 17.328125 19.363281 16.144531 18.355469 15.570312 17.347656 C 15.671875 17.753906 15.851562 18.210938 15.851562 18.210938 C 16.453125 19.027344 17.332031 19.855469 18.394531 20.613281 C 19.542969 21.433594 20.972656 21.953125 22.640625 22.15625 C 22.757812 22.171875 22.875 22.183594 22.992188 22.191406 C 23.355469 22.222656 23.800781 22.308594 24.160156 22.308594 C 24.703125 22.308594 27.058594 22.316406 27.132812 22.3125 C 27.121094 22.179688 27.105469 22.046875 27.09375 21.914062 Z M 27.09375 21.914062 " />
+                            </g>
+                        </svg>
+                        <h3>Cabling Works (HT & LT)</h3>
+                        <p>Professional laying and jointing for all High-Tension and Low-Tension, underground and
+                            overhead, cabling needs.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300"
+                        data-modal-target="#modal-testing">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="a397d8caa8">
+                                    <path d="M 38 11.238281 L 40 11.238281 L 40 14 L 38 14 Z M 38 11.238281 " />
+                                </clipPath>
+                                <clipPath id="6b5ecdd797">
+                                    <path d="M 43 11.238281 L 45 11.238281 L 45 14 L 43 14 Z M 43 11.238281 " />
+                                </clipPath>
+                                <clipPath id="79ab75edc8">
+                                    <path d="M 28 23 L 45 23 L 45 48.691406 L 28 48.691406 Z M 28 23 " />
+                                </clipPath>
+                                <clipPath id="8b00b66557">
+                                    <path d="M 14 11.238281 L 33 11.238281 L 33 40 L 14 40 Z M 14 11.238281 " />
+                                </clipPath>
+                            </defs>
+                            <g id="8cf662dbc3">
+                                <g clip-rule="nonzero" clip-path="url(#a397d8caa8)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 39.363281 13.257812 L 39.363281 11.882812 C 39.363281 11.527344 39.074219 11.238281 38.71875 11.238281 C 38.363281 11.238281 38.074219 11.527344 38.074219 11.882812 L 38.074219 13.257812 C 38.277344 13.199219 38.492188 13.175781 38.71875 13.175781 C 38.945312 13.175781 39.15625 13.199219 39.363281 13.257812 Z M 39.363281 13.257812 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#6b5ecdd797)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 44.53125 13.257812 L 44.53125 11.882812 C 44.53125 11.527344 44.238281 11.238281 43.882812 11.238281 C 43.53125 11.238281 43.238281 11.527344 43.238281 11.882812 L 43.238281 13.257812 C 43.445312 13.199219 43.660156 13.175781 43.882812 13.175781 C 44.109375 13.175781 44.324219 13.199219 44.53125 13.257812 Z M 44.53125 13.257812 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#79ab75edc8)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 43.238281 41.910156 C 43.238281 44.9375 40.777344 47.402344 37.75 47.402344 C 37.640625 47.402344 37.53125 47.390625 37.421875 47.382812 C 38.609375 46.375 39.363281 44.878906 39.363281 43.203125 L 39.363281 23.507812 L 38.074219 23.507812 L 38.074219 43.203125 C 38.074219 44.875 37.089844 46.316406 35.671875 46.992188 C 33.671875 46.167969 32.261719 44.203125 32.261719 41.910156 L 32.261719 40.941406 L 30.96875 40.941406 L 30.96875 41.910156 C 30.96875 44.167969 32.078125 46.164062 33.777344 47.394531 C 31.507812 47.34375 29.675781 45.484375 29.675781 43.203125 L 29.675781 40.941406 L 28.386719 40.941406 L 28.386719 43.203125 C 28.386719 46.230469 30.847656 48.691406 33.875 48.691406 C 34.515625 48.691406 35.128906 48.578125 35.699219 48.375 C 36.347656 48.582031 37.035156 48.691406 37.75 48.691406 C 41.488281 48.691406 44.53125 45.652344 44.53125 41.910156 L 44.53125 23.507812 L 43.238281 23.507812 Z M 43.238281 41.910156 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.445312 25.675781 L 28.433594 25.664062 L 28.429688 25.664062 L 28.445312 25.679688 Z M 28.445312 25.675781 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 23.863281 24.152344 C 21.015625 24.152344 18.699219 26.46875 18.699219 29.320312 C 18.699219 30.011719 18.84375 30.695312 19.113281 31.332031 L 25.875 24.566406 C 25.238281 24.296875 24.558594 24.152344 23.863281 24.152344 Z M 23.863281 24.152344 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 40.007812 15.757812 C 40.007812 15.042969 39.433594 14.464844 38.71875 14.464844 C 38.003906 14.464844 37.425781 15.042969 37.425781 15.757812 L 37.425781 22.214844 L 40.007812 22.214844 Z M 40.007812 15.757812 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 43.882812 14.464844 C 43.171875 14.464844 42.59375 15.042969 42.59375 15.757812 L 42.59375 22.214844 L 45.175781 22.214844 L 45.175781 15.757812 C 45.175781 15.042969 44.597656 14.464844 43.882812 14.464844 Z M 43.882812 14.464844 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 19.296875 32.972656 L 27.519531 24.753906 L 28.429688 25.664062 L 20.210938 33.886719 Z M 19.296875 32.972656 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 21.851562 34.070312 C 22.488281 34.339844 23.171875 34.484375 23.863281 34.484375 C 26.714844 34.484375 29.03125 32.167969 29.03125 29.320312 C 29.03125 28.625 28.886719 27.945312 28.617188 27.308594 L 21.855469 34.070312 Z M 21.851562 34.070312 " />
+                                <g clip-rule="nonzero" clip-path="url(#8b00b66557)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 32.90625 38.359375 L 32.90625 12.527344 C 32.90625 11.816406 32.328125 11.238281 31.613281 11.238281 L 16.117188 11.238281 C 15.402344 11.238281 14.824219 11.816406 14.824219 12.527344 L 14.824219 38.359375 C 14.824219 39.074219 15.402344 39.652344 16.117188 39.652344 L 31.613281 39.652344 C 32.328125 39.652344 32.90625 39.074219 32.90625 38.359375 Z M 23.863281 35.777344 C 22.808594 35.777344 21.773438 35.503906 20.839844 35.007812 C 20.648438 35.113281 20.4375 35.175781 20.210938 35.175781 C 19.867188 35.175781 19.542969 35.042969 19.296875 34.796875 L 18.386719 33.886719 C 18.140625 33.640625 18.007812 33.316406 18.007812 32.972656 C 18.007812 32.746094 18.070312 32.53125 18.175781 32.34375 C 17.679688 31.410156 17.40625 30.375 17.40625 29.320312 C 17.40625 25.757812 20.304688 22.859375 23.863281 22.859375 C 24.925781 22.859375 25.957031 23.136719 26.894531 23.632812 C 27.382812 23.371094 28.03125 23.4375 28.429688 23.839844 L 29.34375 24.753906 C 29.589844 24.996094 29.722656 25.320312 29.722656 25.664062 C 29.722656 25.890625 29.660156 26.105469 29.550781 26.296875 C 30.046875 27.230469 30.320312 28.261719 30.320312 29.320312 C 30.320312 32.878906 27.425781 35.777344 23.863281 35.777344 Z M 30.324219 18.984375 L 17.40625 18.984375 C 16.695312 18.984375 16.117188 18.40625 16.117188 17.695312 L 16.117188 13.820312 C 16.117188 13.109375 16.695312 12.527344 17.40625 12.527344 L 30.324219 12.527344 C 31.035156 12.527344 31.613281 13.109375 31.613281 13.820312 L 31.613281 17.695312 C 31.613281 18.40625 31.035156 18.984375 30.324219 18.984375 Z M 30.324219 18.984375 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 17.40625 13.820312 L 30.324219 13.820312 L 30.324219 17.695312 L 17.40625 17.695312 Z M 17.40625 13.820312 " />
+                            </g>
+                        </svg>
+                        <h3>Electrical Testing & Safety</h3>
+                        <p>Comprehensive diagnostic services, including Transformer testing, Substation testing, and
+                            specialized HIGH-POT testing.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400"
+                        data-modal-target="#modal-liasoning">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="f66edd63b8">
+                                    <path d="M 28 36 L 32 36 L 32 48.960938 L 28 48.960938 Z M 28 36 " />
+                                </clipPath>
+                                <clipPath id="121c7273cf">
+                                    <path d="M 15 37 L 28 37 L 28 48.960938 L 15 48.960938 Z M 15 37 " />
+                                </clipPath>
+                                <clipPath id="42ee707abf">
+                                    <path d="M 11.273438 30 L 20 30 L 20 44 L 11.273438 44 Z M 11.273438 30 " />
+                                </clipPath>
+                                <clipPath id="dfa00a5dde">
+                                    <path d="M 15 42 L 17 42 L 17 48.960938 L 15 48.960938 Z M 15 42 " />
+                                </clipPath>
+                                <clipPath id="f552460c5f">
+                                    <path d="M 13 47 L 19 47 L 19 48.960938 L 13 48.960938 Z M 13 47 " />
+                                </clipPath>
+                                <clipPath id="1ce2a03b22">
+                                    <path d="M 32 37 L 45 37 L 45 48.960938 L 32 48.960938 Z M 32 37 " />
+                                </clipPath>
+                                <clipPath id="dcde4f73d7">
+                                    <path d="M 40 30 L 48.726562 30 L 48.726562 44 L 40 44 Z M 40 30 " />
+                                </clipPath>
+                                <clipPath id="c88a784cc9">
+                                    <path d="M 43 42 L 45 42 L 45 48.960938 L 43 48.960938 Z M 43 42 " />
+                                </clipPath>
+                                <clipPath id="bb9529274d">
+                                    <path d="M 41 47 L 47 47 L 47 48.960938 L 41 48.960938 Z M 41 47 " />
+                                </clipPath>
+                                <clipPath id="210e67d7f2">
+                                    <path d="M 19 10.757812 L 36 10.757812 L 36 25 L 19 25 Z M 19 10.757812 " />
+                                </clipPath>
+                            </defs>
+                            <g id="51cfd0078b">
+                                <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                    d="M 22.609375 35.835938 L 37.1875 35.835938 L 37.1875 37.699219 L 22.609375 37.699219 Z M 22.609375 35.835938 " />
+                                <g clip-rule="nonzero" clip-path="url(#f66edd63b8)">
+                                    <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                        d="M 28.621094 36.59375 L 31.175781 36.59375 L 31.175781 48.960938 L 28.621094 48.960938 Z M 28.621094 36.59375 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 19.5 38.667969 C 19.363281 40.117188 18.050781 41.15625 16.597656 40.949219 C 15.148438 40.808594 14.109375 39.496094 14.316406 38.046875 L 15.214844 30.515625 C 15.355469 29.066406 16.667969 28.027344 18.117188 28.234375 C 19.570312 28.375 20.605469 29.6875 20.398438 31.136719 Z M 19.5 38.667969 " />
+                                <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                    d="M 18.601562 21.535156 C 20.121094 21.535156 21.363281 22.777344 21.363281 24.296875 C 21.363281 25.816406 20.121094 27.0625 18.601562 27.0625 C 17.082031 27.0625 15.839844 25.816406 15.839844 24.296875 C 15.839844 22.777344 17.082031 21.535156 18.601562 21.535156 Z M 18.601562 21.535156 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 17.980469 30.652344 C 17.566406 30.171875 17.632812 29.480469 18.050781 29.132812 C 18.53125 28.71875 19.222656 28.789062 19.570312 29.203125 L 22.332031 32.378906 L 24.957031 32.378906 C 25.578125 32.378906 26.0625 32.863281 26.0625 33.484375 C 26.0625 34.109375 25.578125 34.589844 24.957031 34.589844 L 21.847656 34.589844 C 21.574219 34.589844 21.226562 34.453125 21.019531 34.246094 L 17.910156 30.722656 Z M 17.980469 30.652344 " />
+                                <g clip-rule="nonzero" clip-path="url(#121c7273cf)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 16.667969 40.949219 C 15.976562 40.808594 15.355469 39.359375 15.421875 38.667969 C 15.5625 37.976562 16.253906 37.492188 16.945312 37.632812 C 16.945312 37.632812 24.128906 38.804688 27.238281 46.75 C 27.515625 47.441406 27.167969 48.203125 26.476562 48.410156 C 25.785156 48.683594 25.027344 48.339844 24.820312 47.648438 C 22.332031 41.085938 16.734375 40.949219 16.734375 40.949219 Z M 16.667969 40.949219 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#42ee707abf)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 19.292969 42.398438 C 19.5 42.46875 19.636719 42.742188 19.570312 42.949219 C 19.5 43.160156 19.222656 43.296875 19.015625 43.226562 C 19.015625 43.226562 18.324219 43.019531 17.425781 42.8125 C 16.804688 42.675781 16.113281 42.675781 15.492188 42.675781 C 13.835938 42.675781 12.453125 42.675781 12.039062 40.738281 C 11.96875 40.394531 11.898438 39.980469 11.832031 39.496094 C 11.832031 39.082031 11.761719 38.597656 11.761719 38.113281 C 11.761719 37.492188 11.761719 36.941406 11.761719 36.457031 C 11.761719 34.453125 11.761719 32.863281 11.347656 30.515625 C 11.277344 30.308594 11.484375 30.03125 11.691406 30.03125 C 11.898438 29.960938 12.175781 30.171875 12.175781 30.378906 C 12.589844 32.796875 12.589844 34.382812 12.589844 36.457031 C 12.589844 37.007812 12.589844 37.492188 12.589844 38.113281 C 12.589844 38.53125 12.589844 39.011719 12.660156 39.425781 C 12.660156 39.84375 12.730469 40.1875 12.796875 40.53125 C 13.074219 41.777344 14.179688 41.777344 15.421875 41.777344 C 16.113281 41.777344 16.804688 41.777344 17.496094 41.914062 C 18.464844 42.121094 19.152344 42.328125 19.152344 42.328125 Z M 19.292969 42.398438 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#dfa00a5dde)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 15.007812 42.261719 L 16.113281 42.261719 L 16.113281 48.617188 L 15.007812 48.617188 Z M 15.007812 42.261719 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#f552460c5f)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 17.566406 47.785156 C 17.839844 47.785156 18.117188 48.0625 18.117188 48.339844 C 18.117188 48.617188 17.839844 48.890625 17.566406 48.890625 L 13.558594 48.890625 C 13.28125 48.890625 13.003906 48.617188 13.003906 48.339844 C 13.003906 48.0625 13.28125 47.785156 13.558594 47.785156 Z M 17.566406 47.785156 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 40.292969 38.667969 C 40.433594 40.117188 41.746094 41.15625 43.195312 40.949219 C 44.648438 40.808594 45.683594 39.496094 45.476562 38.046875 L 44.578125 30.515625 C 44.441406 29.066406 43.128906 28.027344 41.675781 28.234375 C 40.226562 28.375 39.191406 29.6875 39.398438 31.136719 Z M 40.292969 38.667969 " />
+                                <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                    d="M 41.191406 21.535156 C 39.671875 21.535156 38.429688 22.777344 38.429688 24.296875 C 38.429688 25.816406 39.671875 27.0625 41.191406 27.0625 C 42.710938 27.0625 43.957031 25.816406 43.957031 24.296875 C 43.957031 22.777344 42.710938 21.535156 41.191406 21.535156 Z M 41.191406 21.535156 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 41.816406 30.652344 C 42.230469 30.171875 42.160156 29.480469 41.746094 29.132812 C 41.261719 28.71875 40.570312 28.789062 40.226562 29.203125 L 37.460938 32.378906 L 34.835938 32.378906 C 34.214844 32.378906 33.730469 32.863281 33.730469 33.484375 C 33.730469 34.109375 34.214844 34.589844 34.835938 34.589844 L 37.945312 34.589844 C 38.222656 34.589844 38.566406 34.453125 38.773438 34.246094 L 41.882812 30.722656 Z M 41.816406 30.652344 " />
+                                <g clip-rule="nonzero" clip-path="url(#1ce2a03b22)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 43.195312 40.949219 C 43.886719 40.808594 44.507812 39.359375 44.441406 38.667969 C 44.300781 37.976562 43.609375 37.492188 42.921875 37.632812 C 42.921875 37.632812 35.734375 38.804688 32.625 46.75 C 32.351562 47.441406 32.695312 48.203125 33.386719 48.410156 C 34.078125 48.683594 34.835938 48.339844 35.042969 47.648438 C 37.53125 41.085938 43.128906 40.949219 43.128906 40.949219 Z M 43.195312 40.949219 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#dcde4f73d7)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 40.503906 42.398438 C 40.292969 42.46875 40.15625 42.742188 40.226562 42.949219 C 40.292969 43.160156 40.570312 43.296875 40.777344 43.226562 C 40.777344 43.226562 41.46875 43.019531 42.367188 42.8125 C 42.988281 42.675781 43.679688 42.675781 44.300781 42.675781 C 45.960938 42.675781 47.339844 42.675781 47.757812 40.738281 C 47.824219 40.394531 47.894531 39.980469 47.964844 39.496094 C 47.964844 39.082031 48.03125 38.597656 48.03125 38.113281 C 48.03125 37.492188 48.03125 36.941406 48.03125 36.457031 C 48.03125 34.453125 48.03125 32.863281 48.445312 30.515625 C 48.515625 30.308594 48.308594 30.03125 48.101562 30.03125 C 47.894531 29.960938 47.617188 30.171875 47.617188 30.378906 C 47.203125 32.796875 47.203125 34.382812 47.203125 36.457031 C 47.203125 37.007812 47.203125 37.492188 47.203125 38.113281 C 47.203125 38.53125 47.203125 39.011719 47.132812 39.425781 C 47.132812 39.84375 47.066406 40.1875 46.996094 40.53125 C 46.71875 41.777344 45.613281 41.777344 44.371094 41.777344 C 43.679688 41.777344 42.988281 41.777344 42.296875 41.914062 C 41.332031 42.121094 40.640625 42.328125 40.640625 42.328125 Z M 40.503906 42.398438 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#c88a784cc9)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 43.679688 42.261719 L 43.679688 48.617188 L 44.785156 48.617188 L 44.785156 42.261719 Z M 43.679688 42.261719 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#bb9529274d)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 42.230469 47.785156 C 41.953125 47.785156 41.675781 48.0625 41.675781 48.339844 C 41.675781 48.617188 41.953125 48.890625 42.230469 48.890625 L 46.234375 48.890625 C 46.511719 48.890625 46.789062 48.617188 46.789062 48.339844 C 46.789062 48.0625 46.511719 47.785156 46.234375 47.785156 Z M 42.230469 47.785156 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                    d="M 25.097656 23.398438 C 25.304688 23.46875 25.511719 23.46875 25.648438 23.46875 L 31.726562 23.46875 L 34.976562 26.714844 L 34.976562 23.46875 C 36.632812 23.46875 38.015625 22.085938 38.015625 20.429688 L 38.015625 16.351562 C 38.015625 15.109375 37.253906 14.003906 36.21875 13.519531 C 36.21875 13.660156 36.21875 13.726562 36.21875 13.867188 L 36.21875 14.832031 C 36.632812 15.179688 36.910156 15.730469 36.910156 16.351562 L 36.910156 20.429688 C 36.910156 21.535156 36.011719 22.433594 34.90625 22.433594 L 33.800781 22.433594 L 33.800781 24.160156 L 32.074219 22.433594 L 25.992188 22.433594 L 24.957031 23.46875 Z M 25.097656 23.398438 " />
+                                <g clip-rule="nonzero" clip-path="url(#210e67d7f2)">
+                                    <path style=" stroke:none;fill-rule:evenodd;fill:#ffa726;fill-opacity:1;"
+                                        d="M 23.023438 10.757812 L 32.351562 10.757812 C 34.007812 10.757812 35.390625 12.136719 35.390625 13.796875 L 35.390625 17.871094 C 35.390625 19.53125 34.007812 20.914062 32.351562 20.914062 L 26.269531 20.914062 L 23.023438 24.160156 L 23.023438 20.914062 C 21.363281 20.914062 19.984375 19.53125 19.984375 17.871094 L 19.984375 13.796875 C 19.984375 12.136719 21.363281 10.757812 23.023438 10.757812 Z M 24.058594 14.695312 C 24.679688 14.695312 25.234375 15.246094 25.234375 15.867188 C 25.234375 16.492188 24.679688 17.042969 24.058594 17.042969 C 23.4375 17.042969 22.886719 16.492188 22.886719 15.867188 C 22.886719 15.246094 23.4375 14.695312 24.058594 14.695312 Z M 27.722656 14.695312 C 28.34375 14.695312 28.894531 15.246094 28.894531 15.867188 C 28.894531 16.492188 28.34375 17.042969 27.722656 17.042969 C 27.097656 17.042969 26.546875 16.492188 26.546875 15.867188 C 26.546875 15.246094 27.097656 14.695312 27.722656 14.695312 Z M 31.382812 14.695312 C 32.003906 14.695312 32.558594 15.246094 32.558594 15.867188 C 32.558594 16.492188 32.003906 17.042969 31.382812 17.042969 C 30.761719 17.042969 30.207031 16.492188 30.207031 15.867188 C 30.207031 15.246094 30.761719 14.695312 31.382812 14.695312 Z M 31.382812 14.695312 " />
+                                </g>
+                            </g>
+                        </svg>
+                        <h3>Liasoning & Regulatory Consulting</h3>
+                        <p>Seamless administrative liasoning with all major power authorities like PWD, MSEDCL, MSETCL &
+                            Torrent Power.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200"
+                        data-modal-target="#modal-projects">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="84eef85335">
+                                    <path
+                                        d="M 11.273438 42 L 36 42 L 36 46.421875 L 11.273438 46.421875 Z M 11.273438 42 " />
+                                </clipPath>
+                                <clipPath id="a3aeed2073">
+                                    <path d="M 34 24 L 48.726562 24 L 48.726562 38 L 34 38 Z M 34 24 " />
+                                </clipPath>
+                                <clipPath id="649bf04c07">
+                                    <path d="M 42 13.460938 L 48 13.460938 L 48 20 L 42 20 Z M 42 13.460938 " />
+                                </clipPath>
+                                <clipPath id="5a3efbe968">
+                                    <path
+                                        d="M 17 13.460938 L 43 13.460938 L 43 46.421875 L 17 46.421875 Z M 17 13.460938 " />
+                                </clipPath>
+                            </defs>
+                            <g id="9d1ff8924d">
+                                <g clip-rule="nonzero" clip-path="url(#84eef85335)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 35.09375 46.425781 L 15.691406 46.425781 C 13.492188 46.425781 11.675781 44.765625 11.421875 42.632812 L 32.917969 42.632812 C 33.066406 44.191406 33.890625 45.550781 35.09375 46.425781 Z M 35.09375 46.425781 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#a3aeed2073)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 46.546875 32.257812 C 46.609375 32.035156 46.808594 31.882812 47.039062 31.882812 L 48.523438 31.882812 L 48.523438 29.898438 L 47.039062 29.898438 C 46.8125 29.898438 46.609375 29.746094 46.546875 29.527344 C 46.4375 29.140625 46.28125 28.777344 46.09375 28.449219 C 45.980469 28.25 46.015625 27.996094 46.179688 27.832031 L 47.230469 26.78125 L 45.824219 25.375 L 44.777344 26.425781 C 44.613281 26.589844 44.363281 26.625 44.167969 26.511719 C 43.816406 26.320312 43.453125 26.167969 43.078125 26.0625 C 42.859375 26 42.707031 25.796875 42.707031 25.566406 L 42.707031 24.085938 L 40.722656 24.085938 L 40.722656 25.566406 C 40.722656 25.796875 40.570312 26 40.351562 26.0625 C 39.976562 26.167969 39.613281 26.320312 39.261719 26.511719 C 39.066406 26.625 38.816406 26.589844 38.65625 26.425781 L 37.605469 25.375 L 36.199219 26.78125 L 37.253906 27.832031 C 37.414062 27.996094 37.449219 28.25 37.335938 28.449219 C 37.148438 28.777344 36.996094 29.140625 36.882812 29.527344 C 36.820312 29.746094 36.621094 29.898438 36.390625 29.898438 L 34.90625 29.898438 L 34.90625 31.882812 L 36.390625 31.882812 C 36.621094 31.882812 36.820312 32.035156 36.882812 32.257812 C 36.992188 32.632812 37.144531 32.996094 37.335938 33.339844 C 37.449219 33.539062 37.414062 33.792969 37.253906 33.953125 L 36.199219 35.003906 L 37.605469 36.40625 L 38.65625 35.355469 C 38.820312 35.191406 39.070312 35.160156 39.273438 35.273438 C 39.601562 35.460938 39.964844 35.609375 40.351562 35.722656 C 40.574219 35.785156 40.722656 35.988281 40.722656 36.214844 L 40.722656 37.699219 L 42.707031 37.699219 L 42.707031 36.214844 C 42.707031 35.988281 42.859375 35.785156 43.078125 35.722656 C 43.464844 35.609375 43.828125 35.460938 44.15625 35.273438 C 44.359375 35.15625 44.609375 35.191406 44.773438 35.355469 L 45.824219 36.40625 L 47.230469 35.003906 L 46.179688 33.953125 C 46.015625 33.792969 45.980469 33.539062 46.09375 33.339844 C 46.285156 32.996094 46.441406 32.632812 46.546875 32.257812 Z M 44.714844 31.34375 C 44.648438 31.820312 44.449219 32.296875 44.144531 32.703125 C 43.976562 32.941406 43.761719 33.148438 43.523438 33.328125 C 43.125 33.628906 42.644531 33.824219 42.144531 33.890625 C 42.019531 33.914062 41.867188 33.925781 41.714844 33.925781 L 41.703125 33.925781 C 41.554688 33.925781 41.40625 33.910156 41.265625 33.886719 C 40.785156 33.824219 40.304688 33.628906 39.902344 33.320312 C 39.667969 33.148438 39.453125 32.941406 39.28125 32.695312 C 38.980469 32.296875 38.78125 31.820312 38.714844 31.324219 C 38.691406 31.195312 38.683594 31.046875 38.683594 30.890625 C 38.683594 30.738281 38.691406 30.585938 38.714844 30.445312 C 38.78125 29.964844 38.980469 29.488281 39.289062 29.078125 C 39.460938 28.84375 39.671875 28.636719 39.90625 28.460938 C 40.304688 28.15625 40.785156 27.960938 41.289062 27.894531 C 41.539062 27.847656 41.871094 27.847656 42.164062 27.898438 C 42.644531 27.960938 43.125 28.15625 43.53125 28.464844 C 43.757812 28.632812 43.964844 28.839844 44.144531 29.078125 C 44.453125 29.488281 44.648438 29.96875 44.71875 30.460938 C 44.738281 30.585938 44.75 30.738281 44.75 30.890625 C 44.75 31.046875 44.738281 31.195312 44.714844 31.34375 Z M 44.714844 31.34375 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#649bf04c07)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 47.734375 16.214844 L 47.734375 19.976562 L 42.226562 19.976562 L 42.226562 16.214844 C 42.226562 14.695312 43.460938 13.457031 44.984375 13.457031 C 46.5 13.457031 47.734375 14.695312 47.734375 16.214844 Z M 47.734375 16.214844 " />
+                                </g>
+                                <g clip-rule="nonzero" clip-path="url(#5a3efbe968)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 20.757812 13.457031 C 18.816406 13.457031 17.234375 15.035156 17.234375 16.976562 L 17.234375 41.609375 L 33.402344 41.609375 C 33.6875 41.609375 33.914062 41.835938 33.914062 42.121094 C 33.914062 44.40625 35.703125 46.273438 37.953125 46.410156 C 39.769531 46.285156 41.203125 44.75 41.203125 42.90625 L 41.203125 38.726562 L 40.210938 38.726562 C 39.925781 38.726562 39.699219 38.496094 39.699219 38.210938 L 39.699219 36.589844 C 39.496094 36.515625 39.304688 36.4375 39.117188 36.34375 L 37.96875 37.496094 C 37.765625 37.695312 37.445312 37.695312 37.242188 37.496094 L 35.113281 35.367188 C 35.015625 35.273438 34.960938 35.140625 34.960938 35.003906 C 34.960938 34.867188 35.015625 34.738281 35.113281 34.644531 L 36.261719 33.492188 C 36.167969 33.300781 36.085938 33.109375 36.019531 32.910156 L 34.394531 32.910156 C 34.109375 32.910156 33.882812 32.679688 33.882812 32.394531 L 33.882812 29.386719 C 33.882812 29.105469 34.109375 28.875 34.394531 28.875 L 36.019531 28.875 C 36.089844 28.671875 36.167969 28.476562 36.261719 28.289062 L 35.113281 27.144531 C 35.015625 27.046875 34.960938 26.914062 34.960938 26.777344 C 34.960938 26.644531 35.015625 26.511719 35.113281 26.414062 L 37.242188 24.289062 C 37.445312 24.089844 37.765625 24.089844 37.96875 24.289062 L 39.113281 25.4375 C 39.304688 25.347656 39.5 25.265625 39.699219 25.195312 L 39.699219 23.570312 C 39.699219 23.289062 39.925781 23.058594 40.210938 23.058594 L 41.203125 23.058594 L 41.203125 16.214844 C 41.203125 15.125 41.667969 14.148438 42.402344 13.457031 Z M 31.035156 17.097656 C 31.035156 16.953125 31.144531 16.832031 31.277344 16.832031 L 32.941406 16.832031 C 33.074219 16.832031 33.183594 16.953125 33.183594 17.097656 C 33.183594 17.246094 33.074219 17.367188 32.941406 17.367188 L 31.863281 17.367188 C 31.726562 17.367188 31.617188 17.480469 31.617188 17.628906 L 31.617188 17.796875 C 31.617188 17.941406 31.726562 18.0625 31.863281 18.0625 L 32.832031 18.0625 C 32.964844 18.0625 33.074219 18.179688 33.074219 18.328125 C 33.074219 18.472656 32.964844 18.59375 32.832031 18.59375 L 31.863281 18.59375 C 31.726562 18.59375 31.617188 18.710938 31.617188 18.855469 L 31.617188 19.179688 C 31.617188 19.328125 31.726562 19.449219 31.863281 19.449219 L 32.996094 19.449219 C 33.128906 19.449219 33.238281 19.5625 33.238281 19.710938 C 33.238281 19.859375 33.128906 19.976562 32.996094 19.976562 L 31.277344 19.976562 C 31.144531 19.976562 31.035156 19.859375 31.035156 19.710938 Z M 28.785156 18.976562 L 28.863281 18.964844 C 28.988281 18.953125 29.101562 19.042969 29.128906 19.175781 C 29.140625 19.234375 29.160156 19.285156 29.175781 19.316406 C 29.242188 19.429688 29.335938 19.488281 29.46875 19.488281 C 29.597656 19.488281 29.691406 19.449219 29.746094 19.367188 C 29.800781 19.285156 29.828125 19.121094 29.828125 18.863281 L 29.828125 17.097656 C 29.828125 16.953125 29.9375 16.832031 30.070312 16.832031 L 30.164062 16.832031 C 30.296875 16.832031 30.410156 16.953125 30.410156 17.097656 L 30.410156 18.820312 C 30.410156 19.082031 30.386719 19.285156 30.347656 19.421875 C 30.289062 19.605469 30.183594 19.753906 30.039062 19.863281 C 29.886719 19.972656 29.691406 20.027344 29.445312 20.027344 C 29.160156 20.027344 28.941406 19.945312 28.785156 19.769531 C 28.675781 19.644531 28.605469 19.476562 28.570312 19.269531 C 28.550781 19.125 28.652344 18.992188 28.785156 18.976562 Z M 25.636719 17.617188 C 25.703125 17.457031 25.796875 17.3125 25.90625 17.1875 C 26.023438 17.058594 26.148438 16.964844 26.285156 16.902344 C 26.464844 16.820312 26.675781 16.777344 26.910156 16.777344 C 27.335938 16.777344 27.679688 16.925781 27.9375 17.210938 C 28.191406 17.5 28.320312 17.894531 28.320312 18.410156 C 28.320312 18.917969 28.191406 19.3125 27.9375 19.601562 C 27.683594 19.886719 27.34375 20.027344 26.917969 20.027344 C 26.484375 20.027344 26.144531 19.890625 25.886719 19.601562 C 25.632812 19.316406 25.503906 18.925781 25.503906 18.425781 C 25.503906 18.105469 25.550781 17.832031 25.636719 17.617188 Z M 22.699219 17.097656 C 22.699219 16.953125 22.808594 16.832031 22.945312 16.832031 L 23.933594 16.832031 C 24.242188 16.832031 24.46875 16.859375 24.609375 16.917969 C 24.75 16.972656 24.863281 17.074219 24.945312 17.21875 C 25.027344 17.363281 25.074219 17.53125 25.074219 17.714844 C 25.074219 17.949219 25.007812 18.144531 24.878906 18.300781 C 24.753906 18.453125 24.5625 18.546875 24.304688 18.589844 C 24.433594 18.667969 24.535156 18.757812 24.617188 18.851562 C 24.699219 18.949219 24.8125 19.121094 24.953125 19.363281 L 25.074219 19.570312 C 25.175781 19.75 25.058594 19.976562 24.863281 19.976562 L 24.738281 19.976562 C 24.65625 19.976562 24.582031 19.933594 24.535156 19.859375 L 24.183594 19.292969 C 24.035156 19.046875 23.933594 18.894531 23.875 18.828125 C 23.820312 18.765625 23.761719 18.722656 23.699219 18.699219 C 23.636719 18.675781 23.539062 18.664062 23.402344 18.664062 L 23.285156 18.664062 L 23.285156 19.710938 C 23.285156 19.859375 23.175781 19.976562 23.039062 19.976562 L 22.945312 19.976562 C 22.808594 19.976562 22.699219 19.859375 22.699219 19.710938 Z M 19.992188 17.097656 C 19.992188 16.953125 20.101562 16.832031 20.234375 16.832031 L 20.933594 16.832031 C 21.289062 16.832031 21.519531 16.847656 21.628906 16.878906 C 21.792969 16.929688 21.933594 17.03125 22.046875 17.1875 C 22.160156 17.34375 22.214844 17.550781 22.214844 17.800781 C 22.214844 17.992188 22.183594 18.15625 22.121094 18.285156 C 22.054688 18.417969 21.972656 18.519531 21.875 18.597656 C 21.773438 18.671875 21.671875 18.722656 21.570312 18.746094 C 21.429688 18.773438 21.226562 18.792969 20.960938 18.792969 L 20.824219 18.792969 C 20.6875 18.792969 20.578125 18.90625 20.578125 19.054688 L 20.578125 19.710938 C 20.578125 19.859375 20.46875 19.976562 20.335938 19.976562 L 20.234375 19.976562 C 20.101562 19.976562 19.992188 19.859375 19.992188 19.710938 Z M 19.480469 22.660156 C 19.480469 22.378906 19.707031 22.148438 19.992188 22.148438 L 29.015625 22.148438 C 29.300781 22.148438 29.527344 22.378906 29.527344 22.660156 L 29.527344 26.261719 C 29.527344 26.546875 29.300781 26.773438 29.015625 26.773438 L 19.992188 26.773438 C 19.707031 26.773438 19.480469 26.546875 19.480469 26.261719 Z M 19.992188 29.429688 L 31.574219 29.429688 C 31.855469 29.429688 32.085938 29.65625 32.085938 29.941406 C 32.085938 30.226562 31.855469 30.453125 31.574219 30.453125 L 19.992188 30.453125 C 19.707031 30.453125 19.480469 30.226562 19.480469 29.941406 C 19.480469 29.65625 19.707031 29.429688 19.992188 29.429688 Z M 19.992188 33.40625 L 32.136719 33.40625 C 32.421875 33.40625 32.652344 33.632812 32.652344 33.917969 C 32.652344 34.203125 32.421875 34.429688 32.136719 34.429688 L 19.992188 34.429688 C 19.707031 34.429688 19.480469 34.203125 19.480469 33.917969 C 19.480469 33.632812 19.707031 33.40625 19.992188 33.40625 Z M 34.863281 37.378906 C 35.148438 37.378906 35.375 37.605469 35.375 37.890625 C 35.375 38.175781 35.148438 38.402344 34.863281 38.402344 L 19.992188 38.402344 C 19.707031 38.402344 19.480469 38.175781 19.480469 37.890625 C 19.480469 37.605469 19.707031 37.378906 19.992188 37.378906 Z M 36.078125 19.285156 C 35.988281 19.496094 35.875 19.660156 35.726562 19.78125 C 35.527344 19.945312 35.269531 20.027344 34.957031 20.027344 C 34.574219 20.027344 34.253906 19.890625 34.007812 19.601562 C 33.757812 19.316406 33.636719 18.929688 33.636719 18.433594 C 33.636719 17.910156 33.757812 17.503906 34.007812 17.210938 C 34.257812 16.925781 34.585938 16.777344 34.992188 16.777344 C 35.347656 16.777344 35.636719 16.894531 35.859375 17.121094 C 35.925781 17.191406 35.988281 17.277344 36.039062 17.382812 C 36.113281 17.535156 36.039062 17.726562 35.882812 17.769531 L 35.789062 17.792969 C 35.683594 17.820312 35.5625 17.777344 35.515625 17.667969 C 35.476562 17.585938 35.421875 17.519531 35.359375 17.464844 C 35.25 17.367188 35.121094 17.320312 34.960938 17.320312 C 34.746094 17.320312 34.574219 17.40625 34.4375 17.574219 C 34.304688 17.738281 34.238281 18.011719 34.238281 18.382812 C 34.238281 18.785156 34.304688 19.066406 34.433594 19.234375 C 34.570312 19.402344 34.738281 19.488281 34.953125 19.488281 C 35.105469 19.488281 35.238281 19.433594 35.351562 19.328125 C 35.421875 19.257812 35.484375 19.164062 35.53125 19.042969 C 35.578125 18.921875 35.707031 18.859375 35.828125 18.902344 L 35.921875 18.933594 C 36.054688 18.980469 36.132812 19.144531 36.078125 19.285156 Z M 38.519531 17.367188 L 38.148438 17.367188 C 38.015625 17.367188 37.90625 17.480469 37.90625 17.628906 L 37.90625 19.710938 C 37.90625 19.859375 37.796875 19.976562 37.660156 19.976562 L 37.5625 19.976562 C 37.425781 19.976562 37.316406 19.859375 37.316406 19.710938 L 37.316406 17.628906 C 37.316406 17.480469 37.207031 17.367188 37.074219 17.367188 L 36.703125 17.367188 C 36.566406 17.367188 36.457031 17.246094 36.457031 17.097656 C 36.457031 16.953125 36.566406 16.832031 36.703125 16.832031 L 38.519531 16.832031 C 38.65625 16.832031 38.765625 16.953125 38.765625 17.097656 C 38.765625 17.246094 38.65625 17.367188 38.519531 17.367188 Z M 38.519531 17.367188 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 41.203125 28.957031 L 41.203125 32.832031 C 40.957031 32.765625 40.722656 32.65625 40.511719 32.496094 C 40.359375 32.382812 40.222656 32.25 40.105469 32.089844 C 39.902344 31.820312 39.777344 31.515625 39.726562 31.167969 C 39.714844 31.082031 39.707031 30.988281 39.707031 30.890625 C 39.707031 30.796875 39.714844 30.703125 39.730469 30.597656 C 39.777344 30.277344 39.90625 29.960938 40.113281 29.691406 C 40.222656 29.539062 40.359375 29.402344 40.519531 29.285156 C 40.71875 29.132812 40.949219 29.023438 41.203125 28.957031 Z M 41.203125 28.957031 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 43.726562 30.890625 C 43.726562 30.988281 43.714844 31.082031 43.699219 31.1875 C 43.652344 31.515625 43.53125 31.820312 43.320312 32.09375 C 43.210938 32.25 43.074219 32.382812 42.910156 32.503906 C 42.710938 32.65625 42.476562 32.765625 42.226562 32.832031 L 42.226562 28.953125 C 42.472656 29.019531 42.707031 29.128906 42.914062 29.285156 C 43.070312 29.402344 43.207031 29.539062 43.324219 29.691406 C 43.527344 29.960938 43.65625 30.277344 43.703125 30.613281 C 43.714844 30.703125 43.726562 30.796875 43.726562 30.890625 Z M 43.726562 30.890625 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 21.613281 17.808594 C 21.613281 17.902344 21.589844 17.984375 21.546875 18.050781 C 21.5 18.125 21.4375 18.175781 21.363281 18.207031 C 21.285156 18.242188 21.132812 18.257812 20.898438 18.257812 L 20.824219 18.257812 C 20.6875 18.257812 20.578125 18.136719 20.578125 17.992188 L 20.578125 17.628906 C 20.578125 17.480469 20.6875 17.367188 20.824219 17.367188 L 20.859375 17.367188 C 21.074219 17.367188 21.214844 17.371094 21.28125 17.386719 C 21.378906 17.402344 21.457031 17.449219 21.519531 17.527344 C 21.578125 17.601562 21.613281 17.695312 21.613281 17.808594 Z M 21.613281 17.808594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.46875 17.753906 C 24.46875 17.847656 24.449219 17.925781 24.410156 17.992188 C 24.371094 18.050781 24.316406 18.097656 24.246094 18.125 C 24.175781 18.148438 24 18.164062 23.71875 18.164062 L 23.527344 18.164062 C 23.394531 18.164062 23.285156 18.042969 23.285156 17.898438 L 23.285156 17.628906 C 23.285156 17.480469 23.394531 17.367188 23.527344 17.367188 L 23.738281 17.367188 C 23.980469 17.367188 24.125 17.367188 24.171875 17.375 C 24.261719 17.394531 24.339844 17.433594 24.390625 17.5 C 24.441406 17.5625 24.46875 17.648438 24.46875 17.753906 Z M 24.46875 17.753906 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 27.714844 18.394531 C 27.714844 18.757812 27.640625 19.03125 27.492188 19.214844 C 27.339844 19.394531 27.148438 19.488281 26.917969 19.488281 C 26.679688 19.488281 26.488281 19.394531 26.339844 19.210938 C 26.183594 19.027344 26.109375 18.757812 26.109375 18.402344 C 26.109375 18.042969 26.183594 17.769531 26.332031 17.589844 C 26.480469 17.410156 26.675781 17.320312 26.917969 17.320312 C 27.15625 17.320312 27.351562 17.410156 27.496094 17.585938 C 27.640625 17.765625 27.714844 18.03125 27.714844 18.394531 Z M 27.714844 18.394531 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.503906 23.175781 L 20.503906 23.175781 L 20.503906 25.75 L 28.503906 25.75 Z M 28.503906 23.175781 " />
+                            </g>
+                        </svg>
+                        <h3>Turnkey Projects & Special Works</h3>
+                        <p>Management of specialized projects, including Express Feeder installation, Line Shifting, and
+                            Lift Erection.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-modal-target="#modal-solar">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="6d0829703c">
+                                    <path d="M 29 2.773438 L 31 2.773438 L 31 6 L 29 6 Z M 29 2.773438 " />
+                                </clipPath>
+                                <clipPath id="f126f49eb9">
+                                    <path
+                                        d="M 11.273438 19 L 48.726562 19 L 48.726562 52 L 11.273438 52 Z M 11.273438 19 " />
+                                </clipPath>
+                            </defs>
+                            <g id="708a8c672e">
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.574219 24.476562 L 36.972656 24.476562 L 36.757812 22.066406 L 30.574219 22.066406 Z M 30.574219 24.476562 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.367188 25.683594 L 22.863281 25.683594 L 22.542969 29.300781 L 29.367188 29.300781 Z M 29.367188 25.683594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 22.117188 34.125 L 29.367188 34.125 L 29.367188 30.507812 L 22.4375 30.507812 Z M 22.117188 34.125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.574219 25.683594 L 30.574219 29.300781 L 37.398438 29.300781 L 37.078125 25.683594 Z M 30.574219 25.683594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.367188 22.066406 L 23.179688 22.066406 L 22.96875 24.476562 L 29.367188 24.476562 Z M 29.367188 22.066406 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 21.652344 25.683594 L 16.378906 25.683594 L 15.742188 29.300781 L 21.332031 29.300781 Z M 21.652344 25.683594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 20.90625 34.125 L 21.226562 30.507812 L 15.527344 30.507812 L 14.890625 34.125 Z M 20.90625 34.125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.574219 34.125 L 37.824219 34.125 L 37.503906 30.507812 L 30.574219 30.507812 Z M 30.574219 34.125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 20.800781 35.328125 L 14.675781 35.328125 L 14.039062 38.949219 L 20.480469 38.949219 Z M 20.800781 35.328125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 39.140625 35.328125 L 39.457031 38.949219 L 45.902344 38.949219 L 45.261719 35.328125 Z M 39.140625 35.328125 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 21.757812 24.476562 L 21.96875 22.066406 L 17.019531 22.066406 L 16.59375 24.476562 Z M 21.757812 24.476562 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 43.558594 25.683594 L 38.289062 25.683594 L 38.609375 29.300781 L 44.199219 29.300781 Z M 43.558594 25.683594 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 44.410156 30.507812 L 38.714844 30.507812 L 39.035156 34.125 L 45.050781 34.125 Z M 44.410156 30.507812 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 38.183594 24.476562 L 43.347656 24.476562 L 42.921875 22.066406 L 37.96875 22.066406 Z M 38.183594 24.476562 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.96875 6.992188 C 27.976562 6.992188 26.351562 8.617188 26.351562 10.609375 C 26.523438 15.398438 33.417969 15.398438 33.585938 10.609375 C 33.585938 8.617188 31.964844 6.992188 29.96875 6.992188 Z M 29.96875 6.992188 " />
+                                <g clip-rule="nonzero" clip-path="url(#6d0829703c)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 29.96875 5.789062 C 30.304688 5.789062 30.574219 5.519531 30.574219 5.183594 L 30.574219 3.375 C 30.574219 3.042969 30.304688 2.773438 29.96875 2.773438 C 29.636719 2.773438 29.367188 3.042969 29.367188 3.375 L 29.367188 5.183594 C 29.367188 5.519531 29.636719 5.789062 29.96875 5.789062 Z M 29.96875 5.789062 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 26.871094 6.917969 C 27.125 6.703125 27.15625 6.320312 26.945312 6.066406 L 25.78125 4.683594 C 25.566406 4.425781 25.1875 4.394531 24.933594 4.605469 C 24.675781 4.820312 24.644531 5.203125 24.859375 5.457031 L 26.019531 6.84375 C 26.234375 7.097656 26.617188 7.128906 26.871094 6.917969 Z M 26.871094 6.917969 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.625 10.273438 C 25.34375 10.277344 25.445312 9.199219 24.730469 9.074219 C 24.730469 9.074219 22.949219 8.761719 22.949219 8.761719 C 22.167969 8.636719 21.960938 9.796875 22.738281 9.949219 C 22.738281 9.949219 24.519531 10.261719 24.519531 10.261719 C 24.558594 10.269531 24.59375 10.273438 24.625 10.273438 Z M 24.625 10.273438 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 24.96875 12.800781 L 23.402344 13.707031 C 22.722656 14.117188 23.316406 15.136719 24.007812 14.75 C 24.007812 14.75 25.570312 13.847656 25.570312 13.847656 C 26.25 13.4375 25.660156 12.417969 24.96875 12.800781 Z M 24.96875 12.800781 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.320312 15.144531 C 28.007812 15.03125 27.660156 15.191406 27.546875 15.503906 L 26.929688 17.203125 C 26.816406 17.515625 26.976562 17.863281 27.289062 17.976562 C 27.59375 18.089844 27.949219 17.933594 28.0625 17.617188 C 28.0625 17.617188 28.679688 15.914062 28.679688 15.914062 C 28.792969 15.601562 28.632812 15.257812 28.320312 15.144531 Z M 28.320312 15.144531 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 32.390625 15.503906 C 32.109375 14.761719 31 15.167969 31.257812 15.917969 C 31.257812 15.917969 31.878906 17.617188 31.878906 17.617188 C 32.15625 18.359375 33.277344 17.941406 33.011719 17.203125 C 33.011719 17.203125 32.390625 15.503906 32.390625 15.503906 Z M 32.390625 15.503906 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 36.535156 13.707031 L 34.96875 12.800781 C 34.277344 12.417969 33.6875 13.4375 34.367188 13.847656 C 34.574219 13.933594 36.019531 14.890625 36.234375 14.832031 C 36.828125 14.855469 37.070312 13.992188 36.535156 13.707031 Z M 36.535156 13.707031 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 36.988281 8.761719 L 35.207031 9.074219 C 34.492188 9.199219 34.59375 10.277344 35.3125 10.273438 C 35.347656 10.273438 35.382812 10.269531 35.417969 10.261719 L 37.199219 9.949219 C 37.976562 9.796875 37.769531 8.636719 36.988281 8.761719 Z M 36.988281 8.761719 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 35.007812 4.605469 C 34.753906 4.394531 34.371094 4.425781 34.160156 4.679688 L 32.996094 6.066406 C 32.78125 6.320312 32.816406 6.703125 33.070312 6.917969 C 33.324219 7.128906 33.703125 7.097656 33.917969 6.84375 C 33.917969 6.84375 35.082031 5.457031 35.082031 5.457031 C 35.296875 5.203125 35.261719 4.820312 35.007812 4.605469 Z M 35.007812 4.605469 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.367188 38.375 L 29.367188 35.328125 L 22.011719 35.328125 L 21.691406 38.949219 L 26.847656 38.949219 C 27.636719 38.632812 28.484375 38.4375 29.367188 38.375 Z M 29.367188 38.375 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 33.089844 38.949219 L 38.25 38.949219 L 37.929688 35.328125 L 30.574219 35.328125 L 30.574219 38.375 C 31.457031 38.4375 32.300781 38.632812 33.089844 38.949219 Z M 33.089844 38.949219 " />
+                                <g clip-rule="nonzero" clip-path="url(#f126f49eb9)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 48.648438 40.699219 C 48.699219 40.660156 45.011719 20.195312 45.03125 20.152344 C 44.980469 19.863281 44.730469 19.65625 44.4375 19.65625 L 15.5 19.65625 C 15.207031 19.65625 14.957031 19.863281 14.90625 20.152344 C 14.917969 20.28125 11.253906 40.648438 11.28125 40.757812 C 11.28125 40.757812 11.28125 43.167969 11.28125 43.167969 C 11.28125 43.5 11.550781 43.769531 11.882812 43.769531 L 14.898438 43.769531 L 14.898438 50.402344 L 13.691406 50.402344 C 12.902344 50.414062 12.898438 51.59375 13.691406 51.609375 C 14.707031 51.609375 16.882812 51.609375 17.910156 51.609375 C 17.910156 51.609375 19.71875 51.609375 19.71875 51.609375 C 20.511719 51.59375 20.515625 50.414062 19.71875 50.402344 C 19.71875 50.402344 18.515625 50.402344 18.515625 50.402344 L 18.515625 43.769531 L 22.09375 43.769531 C 22.644531 42.335938 23.570312 41.089844 24.757812 40.152344 L 12.601562 40.152344 L 16.007812 20.859375 L 43.933594 20.859375 L 47.339844 40.152344 L 35.179688 40.152344 C 36.367188 41.089844 37.296875 42.335938 37.847656 43.769531 L 41.425781 43.769531 L 41.425781 50.402344 L 40.21875 50.402344 C 39.429688 50.414062 39.425781 51.59375 40.21875 51.609375 C 41.234375 51.609375 43.410156 51.609375 44.441406 51.609375 C 44.441406 51.609375 46.25 51.609375 46.25 51.609375 C 47.039062 51.59375 47.042969 50.414062 46.25 50.402344 C 46.25 50.402344 45.042969 50.402344 45.042969 50.402344 L 45.042969 43.769531 L 48.058594 43.769531 C 48.390625 43.769531 48.660156 43.5 48.660156 43.167969 L 48.660156 40.757812 C 48.660156 40.734375 48.648438 40.71875 48.648438 40.699219 Z M 48.648438 40.699219 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 29.96875 55.828125 C 24.984375 55.828125 20.925781 51.773438 20.925781 46.785156 C 21.421875 34.789062 38.519531 34.792969 39.011719 46.785156 C 39.011719 51.773438 34.957031 55.828125 29.96875 55.828125 Z M 29.96875 38.949219 C 25.648438 38.949219 22.132812 42.464844 22.132812 46.785156 C 22.5625 57.183594 37.378906 57.179688 37.808594 46.785156 C 37.808594 42.464844 34.292969 38.949219 29.96875 38.949219 Z M 29.96875 38.949219 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 28.605469 41.71875 L 26.730469 45.9375 C 26.550781 46.335938 26.84375 46.785156 27.28125 46.785156 L 29.367188 46.785156 L 28.160156 52.210938 L 33.445312 45.34375 C 33.75 44.949219 33.464844 44.375 32.964844 44.375 L 31.175781 44.375 L 32.4375 42.273438 C 32.675781 41.871094 32.386719 41.359375 31.917969 41.359375 L 29.15625 41.359375 C 28.917969 41.359375 28.703125 41.5 28.605469 41.71875 Z M 28.605469 41.71875 " />
+                            </g>
+                        </svg>
+                        <h3>Solar Power Solutions</h3>
+                        <p>Harness renewable energy with our end-to-end solar installation and liasoning services for
+                            your property.</p>
+                    </div>
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400"
+                        data-modal-target="#modal-earthing">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                            zoomAndPan="magnify" viewBox="0 0 60 67.92" height="150" preserveAspectRatio="xMidYMid meet"
+                            version="1.2">
+                            <defs>
+                                <clipPath id="222969edd9">
+                                    <path
+                                        d="M 11.273438 8.714844 L 48.726562 8.714844 L 48.726562 41 L 11.273438 41 Z M 11.273438 8.714844 " />
+                                </clipPath>
+                                <clipPath id="c18171a898">
+                                    <path d="M 22 47 L 40 47 L 40 51.414062 L 22 51.414062 Z M 22 47 " />
+                                </clipPath>
+                            </defs>
+                            <g id="31fead908e">
+                                <g clip-rule="nonzero" clip-path="url(#222969edd9)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 28.058594 36.988281 C 28.058594 36.664062 28.058594 36.40625 28.058594 36.148438 C 28.058594 27.8125 28.058594 19.480469 28.066406 11.144531 C 28.066406 10.785156 28.070312 10.417969 28.132812 10.066406 C 28.28125 9.269531 28.875 8.757812 29.617188 8.738281 C 30.390625 8.714844 31.015625 9.210938 31.1875 10.035156 C 31.257812 10.363281 31.261719 10.710938 31.261719 11.050781 C 31.265625 19.402344 31.261719 27.757812 31.261719 36.113281 C 31.261719 36.371094 31.261719 36.628906 31.261719 36.9375 C 31.476562 36.953125 31.648438 36.976562 31.824219 36.972656 C 36.351562 36.9375 40.882812 36.898438 45.414062 36.855469 C 45.773438 36.851562 46.132812 36.824219 46.496094 36.824219 C 46.945312 36.820312 47.371094 36.90625 47.738281 37.191406 C 48.707031 37.945312 48.511719 39.4375 47.367188 39.882812 C 47.097656 39.988281 46.78125 40.023438 46.488281 40.027344 C 35.484375 40.132812 24.480469 40.230469 13.476562 40.324219 C 13.214844 40.324219 12.953125 40.324219 12.695312 40.285156 C 11.925781 40.164062 11.375 39.5625 11.328125 38.824219 C 11.285156 38.09375 11.769531 37.433594 12.53125 37.230469 C 12.777344 37.164062 13.042969 37.152344 13.304688 37.148438 C 17.992188 37.101562 22.683594 37.058594 27.375 37.015625 C 27.570312 37.015625 27.765625 37 28.058594 36.988281 Z M 28.058594 36.988281 " />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                    d="M 30.441406 45.433594 C 26.957031 45.464844 23.472656 45.5 19.988281 45.523438 C 19.648438 45.527344 19.300781 45.511719 18.976562 45.433594 C 18.300781 45.273438 17.832031 44.675781 17.800781 44.003906 C 17.769531 43.3125 18.210938 42.664062 18.894531 42.457031 C 19.160156 42.375 19.445312 42.339844 19.722656 42.339844 C 26.832031 42.285156 33.941406 42.238281 41.050781 42.195312 C 41.289062 42.191406 41.535156 42.203125 41.765625 42.257812 C 42.496094 42.433594 42.96875 43.054688 42.957031 43.789062 C 42.949219 44.535156 42.421875 45.171875 41.671875 45.3125 C 41.4375 45.355469 41.195312 45.359375 40.953125 45.359375 C 37.449219 45.394531 33.945312 45.421875 30.441406 45.453125 C 30.441406 45.445312 30.441406 45.441406 30.441406 45.433594 Z M 30.441406 45.433594 " />
+                                <g clip-rule="nonzero" clip-path="url(#c18171a898)">
+                                    <path style=" stroke:none;fill-rule:nonzero;fill:#ffa726;fill-opacity:1;"
+                                        d="M 30.859375 51.179688 C 28.675781 51.179688 26.492188 51.183594 24.308594 51.175781 C 23.96875 51.171875 23.625 51.15625 23.292969 51.085938 C 22.582031 50.929688 22.105469 50.332031 22.089844 49.625 C 22.070312 48.917969 22.511719 48.285156 23.214844 48.101562 C 23.558594 48.011719 23.925781 47.992188 24.285156 47.992188 C 28.152344 47.984375 32.019531 47.992188 35.882812 47.992188 C 36.484375 47.992188 37.085938 47.960938 37.6875 47.984375 C 38.019531 48 38.371094 48.058594 38.675781 48.183594 C 39.304688 48.441406 39.644531 49.066406 39.585938 49.730469 C 39.535156 50.363281 39.109375 50.914062 38.476562 51.085938 C 38.15625 51.171875 37.808594 51.199219 37.46875 51.203125 C 35.265625 51.210938 33.0625 51.207031 30.859375 51.207031 C 30.859375 51.199219 30.859375 51.1875 30.859375 51.179688 Z M 30.859375 51.179688 " />
+                                </g>
+                            </g>
+                        </svg>
+                        <h3>Earthing Solutions</h3>
+                        <p>A robust earthing system is critical for the safety of your personnel and the protection of
+                            your
+                            expensive equipment. We provide reliable and long-lasting solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="parallax-section" id="parallax-cta">
+            <div class="overlay"></div>
+            <div class="container parallax-content" data-aos="zoom-in">
+                <h2 style="color: var(--white-bg);">Ready to Power Up Your Project?</h2>
+                <p style="color: #eee; font-size: 1.2rem;">Let our expertise be your asset. Partner with the best.</p>
+                <a href="#contact" class="cta-button">Discuss Your Needs</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 data-aos="fade-up">Contact Us</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's discuss how we can power your
+                    project's success. Reach out for a consultation.</p>
+                <div class="contact-grid">
+                    <div class="contact-info" data-aos="fade-right">
+                        <h3>Get In Touch</h3>
+
+                        <div class="contact-card-container">
+                            <a href="mailto:support@gayatrielectrical.in" class="contact-card">
+                                <div class="contact-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <h4>Send an Email</h4>
+                                    <p>support@gayatrielectrical.in</p>
+                                </div>
+                            </a>
+                            <div class="contact-card">
+                                <div class="contact-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <h4>Give Us a Call</h4>
+                                    <p>
+                                        <a href="tel:+918693893333">+91 86938 93333</a><br>
+                                        <a href="tel:+918390597000">+91 83905 97000</a><br>
+                                        <a href="tel:+919822789699">+91 98227 89699</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="https://www.google.com/maps/place/Gayatri+Electricals+Services/@19.2877821,73.0817132,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!2sGayatri+Electricals+Services!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj!3m5!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
+                                class="contact-card">
+                                <div class="contact-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="contact-card-info">
+                                    <h4>Our Office</h4>
+                                    <p>Shop No 7, Tirupati Heights, Bhadwad, Bhiwandi, Maharashtra - 421302</p>
+                                </div>
+                            </a>
+
+                            <div class="map-container"
+                                style="border-radius: 10px; overflow: hidden; border: 1px solid #ddd; height: 450px;">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.875443135328!2d73.0817132!3d19.2877821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd5b59fd911b%3A0x3658c6b8e8f6d9ba!2sGayatri%20Electricals%20Services!5e0!3m2!1sen!2sin!4v1754726234857!5m2!1sen!2sin"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/meozvqdb" method="POST"
+                        data-aos="fade-left">
+
+                        <h3>Send Us a Message</h3>
+
+                        <label for="name" class="visually-hidden">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                        <label for="email" class="visually-hidden">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                        <label for="phone" class="visually-hidden">Your Mobile No.</label>
+                        <input id="phone" type="tel" name="mobile" placeholder="Your Mobile No." required>
+
+                        <input type="hidden" name="full_phone">
+
+                        <label for="message" class="visually-hidden">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="cta-button">Submit Inquiry</button>
+                    </form>
+                    <div id="form-status"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+
+            <div id="modal-transformer" class="modal">
+                <img src="images/service-transformer-management.png"
+                    alt="A large power transformer at an industrial site">
+                <h3>Transformer Lifecycle Management</h3>
+                <p>Complete end-to-end services for your most critical assets, from supply and repair to ongoing
+                    maintenance.</p>
+                <ul>
+                    <li>Transformer Supply (New & Service Units)</li>
+                    <li>Comprehensive Repair & Refurbishment</li>
+                    <li>Preventative Maintenance Programs</li>
+                    <li>Advanced Oil Filtration & Dehydration</li>
+                    <li>Diagnostic Transformer Testing</li>
+                </ul>
+            </div>
+
+            <div id="modal-ht" class="modal">
+                <img src="images/service-ht-substation.png" alt="An outdoor high-tension electrical substation">
+                <h3>High-Tension (HT) Substations</h3>
+                <p>We specialize in the design and execution of high-tension infrastructure, the core of industrial
+                    power distribution. Our expertise includes:</p>
+                <ul>
+                    <li>Outdoor & Indoor HT Sub-Station Erection</li>
+                    <li>Comprehensive HT Sub-station Testing</li>
+                    <li>Air Insulated (AIS) Bay Installation & Commissioning</li>
+                    <li>Gas Insulated (GIS) Bay Installation & Commissioning</li>
+                </ul>
+            </div>
+
+            <div id="modal-panels" class="modal">
+                <img src="images/service-lt-panels.png" alt="An open electrical control panel with circuit breakers">
+                <h3>Panel Systems (HT, LT & APFC)</h3>
+                <p>We supply, install, and maintain the full spectrum of electrical panels that control and protect your
+                    operations. Our offerings cover:</p>
+                <ul>
+                    <li>HT Panel Supply, Installation & Maintenance</li>
+                    <li>LT Panel Supply, Installation & Maintenance</li>
+                    <li>Automatic Power Factor Correction (APFC) Panel Supply & Maintenance</li>
+                </ul>
+            </div>
+
+            <div id="modal-cabling" class="modal">
+                <img src="images/service-cabling-works.png"
+                    alt="Cables laid underground for a large electrical project">
+                <h3>Cabling Works (HT & LT)</h3>
+                <p>The integrity of your network relies on high-quality cabling. We provide professional services for
+                    all voltage levels, ensuring durable and efficient power transmission.</p>
+                <ul>
+                    <li>HT & LT Underground Cable Laying</li>
+                    <li>HT & LT Overhead Cable Laying</li>
+                    <li>Precision HT & LT Cable Jointing</li>
+                </ul>
+            </div>
+
+            <div id="modal-testing" class="modal">
+                <img src="images/service-testing.png"
+                    alt="An engineer performing electrical testing on a control panel">
+                <h3>Electrical Testing & Safety</h3>
+                <p>To ensure compliance, safety, and operational integrity, we conduct a range of diagnostic tests on
+                    your electrical systems. Key services include:</p>
+                <ul>
+                    <li>HIGH-POT (High Potential) Testing</li>
+                    <li>Tan Delta Testing</li>
+                    <li>Comprehensive Transformer Testing</li>
+                    <li>Substation Testing & Health Audits (for new and existing substations)</li>
+                </ul>
+            </div>
+
+            <div id="modal-liasoning" class="modal">
+                <img src="images/service-liasoning-consulting.png"
+                    alt="Architectural drawings and a hard hat on a desk">
+                <h3>Liasoning & Regulatory Consulting</h3>
+                <p>Navigating the complex regulatory landscape can be challenging. We act as your expert intermediary to
+                    secure all necessary approvals, saving you time and ensuring compliance.</p>
+                <ul>
+                    <li>Professional Electrical Drawing & Design</li>
+                    <li>Statutory Approvals from PWD (Electrical Inspectorate)</li>
+                    <li>Utility Liasoning & Coordination (MSEDCL, MSETCL & Torrent Power)</li>
+                    <li>Solar Liasoning and Grid Connectivity Approvals</li>
+                </ul>
+            </div>
+
+            <div id="modal-projects" class="modal">
+                <img src="images/service-special-projects.png"
+                    alt="An industrial construction site with heavy machinery">
+                <h3>Turnkey Projects & Special Works</h3>
+                <p>Beyond standard installations, we manage specialized, large-scale electrical projects that require
+                    unique expertise and meticulous planning.</p>
+                <ul>
+                    <li>Express Feeder Liasoning and Commissioning</li>
+                    <li>High Voltage Overhead Line Shifting</li>
+                    <li>Complete Lift Erection Services</li>
+                </ul>
+            </div>
+
+            <div id="modal-solar" class="modal">
+                <img src="images/service-solar-power.png" alt="Solar panels on the roof of a commercial building">
+                <h3>Solar Power Solutions</h3>
+                <p>Embrace sustainable energy with our end-to-end solar solutions. We help you reduce operating costs
+                    and meet your environmental goals through renewable energy.</p>
+                <ul>
+                    <li>Solar Power System Design & Installation</li>
+                    <li>Regulatory Liasoning for Solar Projects</li>
+                    <li>Grid Connectivity & Commissioning</li>
+                </ul>
+            </div>
+
+            <div id="modal-earthing" class="modal">
+                <img src="images/service-earthing-solutions.png"
+                    alt="A close-up of an industrial earthing installation">
+                <h3>Earthing Solutions</h3>
+                <p>A robust earthing system is critical for the safety of your personnel and the protection of your
+                    expensive equipment. We provide reliable and long-lasting solutions.</p>
+                <ul>
+                    <li>Advanced Chemical Earthing</li>
+                    <li>Traditional Coal Earthing</li>
+                </ul>
+            </div>
+
+            <div id="modal-privacy" class="modal" role="dialog" aria-modal="true"
+                aria-labelledby="privacy-policy-title">
+                <h3 id="privacy-policy-title">Privacy Policy for Gayatri Electrical Services</h3>
+                <p><strong>Last Updated: August 10, 2025</strong></p>
+                <p>Gayatri Electrical Services ("we", "us", or "our") is committed to protecting the privacy of visitors
+                    to our website. This Privacy Policy outlines how we collect, use, and protect information when you
+                    visit our website, in compliance with applicable Indian laws, including the Digital Personal Data
+                    Protection Act, 2023.</p>
+                <p>By using our website, you agree to the collection and use of information in accordance with this
+                    policy.</p>
+                <h4>1. Information We Collect</h4>
+                <p>We collect information that you provide to us directly through our contact form. This is the only way
+                    we collect personally identifiable information from you on this website. The types of personal data
+                    we collect when you submit an inquiry include:</p>
+                <ul>
+                    <li><strong>Your Name</strong></li>
+                    <li><strong>Your Email Address</strong></li>
+                    <li><strong>Your Mobile Number</strong></li>
+                    <li><strong>The Message/Inquiry you provide</strong></li>
+                </ul>
+                <p>This data is processed and sent to us via a third-party service called Formspree.</p>
+                <p>We also automatically collect non-personally identifiable information through Google Analytics to
+                    understand how visitors use our site, as detailed in Section 2.</p>
+                <h4>2. How We Use Your Information</h4>
+                <p>We use the information you provide through the contact form solely for the purpose for which it was
+                    submitted: to respond to your inquiry, provide a consultation, and communicate with you about our
+                    services.</p>
+                <p>The anonymous usage data collected by Google Analytics helps us to improve our website's performance,
+                    understand visitor trends, and enhance your overall user experience.</p>
+                <h4>3. Cookies</h4>
+                <p>Our website uses cookies for Google Analytics to function. Cookies are small text files placed on
+                    your device that help Google Analytics track your interaction with our site. We do not use any other
+                    cookies for tracking or advertising purposes.</p>
+                <p>You have the ability to control and manage cookies through your web browser settings. You can choose
+                    to block or delete cookies, but doing so may affect the functionality of some websites.</p>
+                <h4>4. Your Rights Under Indian Law</h4>
+                <p>As a "data principal" under the Digital Personal Data Protection Act, 2023, you have several rights
+                    concerning your personal data. These rights include:</p>
+                <ul>
+                    <li><strong>Right to Access:</strong> You have the right to request access to the personal data we
+                        hold about you. You can do this by contacting our Grievance Officer.</li>
+                    <li><strong>Right to Correction & Erasure:</strong> You have the right to ask us to correct any
+                        inaccuracies in your personal data or to request the erasure of your personal data.</li>
+                    <li><strong>Right to Grievance Redressal:</strong> If you have any concerns about our data handling
+                        practices, you have the right to contact our Grievance Officer.</li>
+                </ul>
+                <h4>5. Data Security</h4>
+                <p>We take reasonable measures to protect the personal data we collect from unauthorized access, loss,
+                    misuse, or alteration. However, please be aware that no method of transmission over the internet or
+                    method of electronic storage is 100% secure.</p>
+                <h4>6. Third-Party Disclosure</h4>
+                <p>We use a third-party service, Formspree, to securely process your contact form submissions. Your form
+                    data is handled by them on our behalf and may be subject to their own data retention policies. We
+                    encourage you to review their privacy policy for more details. We do not share any of the personal
+                    information you provide through our contact form with any other third parties, except as required by
+                    law. The anonymous data collected through Google Analytics is only shared with Google for the
+                    purpose of the analytics service itself and is never sold or used for targeted advertising.</p>
+                <h4>7. Changes to this Privacy Policy</h4>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices or relevant
+                    laws. Any updates will be posted on this page with a revised "Last Updated" date.</p>
+                <h4>8. Contact Us</h4>
+                <p>If you have any questions or concerns about this Privacy Policy, or if you would like to exercise
+                    your rights, please contact our Grievance Officer:</p>
+                <p><strong>Grievance Officer</strong><br>
+                    <strong>Gayatri Electrical Services</strong><br>
+                    <strong>Email:</strong> support@gayatrielectrical.in<br>
+                    <strong>Address:</strong> Shop No 7, Tirupati Heights, Sonale Pipeline Rd, Bhadwad, Bhiwandi,
+                    Maharashtra - 421302
+                </p>
+            </div>
+
+
+            <div id="modal-terms" class="modal" role="dialog" aria-modal="true"
+                aria-labelledby="terms-of-service-title">
+                <h3 id="terms-of-service-title">Terms of Service</h3>
+                <p><strong>Last Updated:</strong> August 10, 2025</p>
+
+                <h4>1. Agreement to Terms</h4>
+                <p>Welcome to Gayatri Electrical Services. By accessing or using our website, located at
+                    gayatrielectrical.in, you agree to be bound by these Terms of Service. If you do not agree to these
+                    terms, you may not use our website.</p>
+
+                <h4>2. Our Services</h4>
+                <p>Gayatri Electrical Services is a provider of comprehensive electrical solutions for industrial and
+                    commercial sectors. This website is designed to provide information about our services, showcase our
+                    expertise, and offer a way for prospective clients to contact us.</p>
+
+                <h4>3. User Obligations</h4>
+                <p>When using our website, you agree not to:</p>
+                <ul>
+                    <li>Use our contact form for any purpose other than genuine business inquiries.</li>
+                    <li>Submit false, misleading, or spam-related information.</li>
+                    <li>Attempt to gain unauthorized access to any part of the website or its underlying systems.</li>
+                    <li>Engage in any activity that could disrupt or interfere with the website's functionality or
+                        security.</li>
+                    <li>Reproduce, duplicate, copy, sell, or exploit any portion of the service or its content without
+                        express written permission from us.</li>
+                </ul>
+
+                <h4>4. Intellectual Property</h4>
+                <p>All content on this website, including but not limited to text, images, logos, and service
+                    descriptions, is the intellectual property of Gayatri Electrical Services. The content is protected
+                    by copyright and other intellectual property laws. You may not use, copy, or distribute this content
+                    without our prior written consent.</p>
+
+                <h4>5. Disclaimer of Warranties</h4>
+                <p>Our website and its content are provided on an "as-is" and "as-available" basis without any
+                    warranties of any kind, whether express or implied. We do not guarantee that the website will be
+                    uninterrupted, error-free, or free of viruses or other harmful components.</p>
+
+                <h4>6. Limitation of Liability</h4>
+                <p>To the fullest extent permitted by law, Gayatri Electricals Services shall not be liable for any
+                    direct, indirect, incidental, special, or consequential damages resulting from the use or inability
+                    to use our website or its content.</p>
+
+                <h4>7. Governing Law</h4>
+                <p>These Terms of Service shall be governed by and construed in accordance with the laws of India,
+                    without regard to its conflict of law provisions. Any legal action or proceeding arising under these
+                    terms will be brought exclusively in the courts located in Bhiwandi, Maharashtra, India.</p>
+
+                <h4>8. Changes to Terms</h4>
+                <p>We reserve the right to modify or replace these Terms of Service at any time. We will post any
+                    changes on this page. By continuing to use the website after any revisions become effective, you
+                    agree to be bound by the updated terms.</p>
+
+                <h4>9. Contact Us</p>
+                    <ul>
+                        <li><strong>Email:</strong> support@gayatrielectrical.in</li>
+                        <li><strong>Address:</strong> Shop No 7, Tirupati Heights, Sonale Pipeline Rd, Bhadwad,
+                            Bhiwandi, Maharashtra - 421302</li>
+                    </ul>
+            </div>
+
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <a href="#home" class="logo">
+                        <img src="assets/logo.svg" alt="Gayatri Electricals Footer Logo">
+                    </a>
+                    <p>Powering progress with more than two decades of unwavering commitment to safety, efficiency, and innovative
+                        electrical solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+918693893333">+91 86938 93333</a></li>
+                        <li><a href="tel:+918390597000">+91 83905 97000</a></li>
+                        <li><a href="tel:+919822789699">+91 98227 89699</a></li>
+                        <li><a href="mailto:support@gayatrielectrical.in">support@gayatrielectrical.in</a></li>
+                        <li>
+                            <p><a
+                                    href="https://www.google.com/maps/place/Gayatri+Electricals+Services/@19.2877821,73.0817132,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!2sGayatri+Electricals+Services!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj!3m5!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D">
+                                    Shop No 7, Tirupati Heights,<br>Sonale Pipeline Rd, Bhadwad,<br>Bhiwandi,
+                                    Maharashtra
+                                    -
+                                    421302
+                                </a>
+                            </p>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg role="img" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                            </svg></a>
+                        <a href="#" aria-label="Instagram" title="Instagram"><svg role="img" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.48.77-2.126 1.414S.935 3.356.63 4.14C.333 4.905.13 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.26 2.148.558 2.913.306.783.77 1.48 1.414 2.126.646.646 1.343 1.11 2.126 1.414.766.296 1.636.498 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.783-.305 1.48-.77 2.126-1.414.646-.646 1.11-1.343 1.414-2.126.296-.765.498-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.305-.784-.77-1.48-1.414-2.126C21.314.935 20.617.47 19.834.166 19.068-.132 18.198-.333 16.92-.393 15.667-.45 15.26-.465 12-.465zM12 2.163c3.204 0 3.584.012 4.85.07 1.17.055 1.805.248 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.947c-.055 1.17-.248 1.805-.413 2.227-.217.562-.477.96-.896 1.381-.42.419-.819.679-1.381.896-.422-.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.805-.248-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.055-1.17.248-1.805.413-2.227.217-.562.477-.96.896-1.381.42-.419.819-.679-1.381-.896.422-.164 1.057-.36 2.227-.413C8.416 2.175 8.796 2.163 12 2.163zm0 3.882c-3.238 0-5.88 2.643-5.88 5.88s2.642 5.88 5.88 5.88 5.88-2.643 5.88-5.88-2.642-5.88-5.88-5.88zm0 9.635c-2.072 0-3.755-1.683-3.755-3.755s1.683-3.755 3.755-3.755 3.755 1.683 3.755 3.755-1.683 3.755-3.755 3.755zm6.406-9.695c-.776 0-1.405-.629-1.405-1.405s.629-1.405 1.405-1.405 1.405.629 1.405 1.405-.629 1.405-1.405 1.405z" />
+                            </svg></a>
+                        <a href="#" aria-label="YouTube" title="YouTube"><svg role="img" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
+                        <a href="#" aria-label="Facebook" title="Facebook"><svg role="img" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.29h-3.128v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325v-21.35C24 .59 23.41 0 22.675 0z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin: 0;">© 2025 Gayatri Electrical Services. All Rights Reserved. |
+                    <button id="privacy-policy-link" data-modal-target="#modal-privacy" class="footer-link">Privacy
+                        Policy</button> |
+                    <button id="terms-of-service-link" data-modal-target="#modal-terms" class="footer-link">Terms of
+                        Service</button>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0 &&
+                rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+                rect.right >= 0
+            );
+        }
+
+        const allAosElements = document.querySelectorAll('[data-aos]');
+
+        function handleScrollAnimations() {
+            allAosElements.forEach(function (el) {
+                if (isElementInViewport(el)) {
+                    el.classList.add('aos-animate');
+                } else {
+                    el.classList.remove('aos-animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScrollAnimations);
+
+        document.querySelectorAll('.nav-link-item').forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(() => {
+                    handleScrollAnimations();
+                }, 400);
+            });
+        });
+
+        const modalButtons = document.querySelectorAll('[data-modal-target]');
+        const modalContainer = document.getElementById('modal-container');
+        let activeModalButton = null;
+
+        modalButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const targetModalId = button.dataset.modalTarget;
+                const targetModal = document.querySelector(targetModalId);
+
+                document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+                targetModal.classList.add('active');
+                modalContainer.classList.add('active');
+                document.body.classList.add('no-scroll');
+
+                // Keep a reference to the button that opened the modal
+                activeModalButton = event.target;
+            });
+        });
+
+        function closeModal() {
+            modalContainer.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+
+            // Return focus to the button that opened the modal
+            if (activeModalButton) {
+                activeModalButton.focus();
+                activeModalButton = null;
+            }
+        }
+
+        modalContainer.querySelectorAll('.modal-close-btn').forEach(btn => {
+            btn.addEventListener('click', closeModal);
+        });
+
+        modalContainer.addEventListener('click', (e) => {
+            if (e.target === modalContainer) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalContainer.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinksItems = document.querySelectorAll('.nav-link-item');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    menuToggle.classList.remove('open');
+                    mobileMenu.classList.remove('open');
+                    document.body.classList.remove('no-scroll');
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('section, footer');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                let href = a.getAttribute('href')?.substring(1); // Added null check with optional chaining
+                if (href === current) {
+                    a.classList.add('active');
+                }
+            });
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                navLinks.forEach(a => a.classList.remove('active'));
+                const contactLink = document.querySelector('.nav-links a[href*="contact"]');
+                // Added a null check to prevent the TypeError
+                if (contactLink) {
+                    contactLink.classList.add('active');
+                }
+            }
+        });
+
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+        const slideInterval = setInterval(nextSlide, 5000);
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // --- START: NEW Phone Number Country Code Logic ---
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            initialCountry: "in",
+            showSearchBox: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        // --- END: NEW Phone Number Country Code Logic ---
+
+        const form = document.getElementById("contactForm");
+        const formStatus = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            // ADD THIS NEW LINE to get the full number with country code
+            document.querySelector("input[name='full_phone']").value = phoneInput.getNumber();
+
+            const submitButton = form.querySelector('button');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = "Sending...";
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formStatus.innerHTML = "Thank you! Your submission has been received.";
+                    formStatus.className = 'success';
+                    formStatus.style.opacity = 1;
+                    form.reset();
+                    submitButton.innerHTML = "Sent!";
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                        formStatus.style.opacity = 0;
+                    }, 5000);
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            formStatus.innerHTML = "Oops! There was a problem submitting your form";
+                        }
+                        formStatus.className = 'error';
+                        formStatus.style.opacity = 1;
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    })
+                }
+            }).catch(error => {
+                formStatus.innerHTML = "Oops! There was a problem submitting your form";
+                formStatus.className = 'error';
+                formStatus.style.opacity = 1;
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
+
 </html>
