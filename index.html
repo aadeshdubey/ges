@@ -13,6 +13,8 @@
         })(window, document, 'script', 'dataLayer', 'GTM-K2CN9DK5');</script>
     <!-- End Google Tag Manager -->
 
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfn-xksAAAAADNqkgOV8oBV6f3bzB6ulhvh1RHT"></script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -956,12 +958,15 @@
         .iti__country-name {
             color: var(--text-dark) !important;
         }
+
         .iti__dial-code {
             color: var(--text-muted) !important;
         }
+
         .iti__country-list {
             background-color: var(--white-bg);
         }
+
         .iti__search-input {
             color: var(--text-dark);
         }
@@ -2527,15 +2532,17 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script>
+        // 1. Initialize Animations
         AOS.init({
             duration: 800,
             once: true,
             offset: 50
         });
 
+        // 2. Scroll Animation Logic
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
@@ -2560,6 +2567,7 @@
 
         window.addEventListener('scroll', handleScrollAnimations);
 
+        // 3. Navigation & Modal Logic
         document.querySelectorAll('.nav-link-item').forEach(link => {
             link.addEventListener('click', () => {
                 setTimeout(() => {
@@ -2581,8 +2589,6 @@
                 targetModal.classList.add('active');
                 modalContainer.classList.add('active');
                 document.body.classList.add('no-scroll');
-
-                // Keep a reference to the button that opened the modal
                 activeModalButton = event.target;
             });
         });
@@ -2590,8 +2596,6 @@
         function closeModal() {
             modalContainer.classList.remove('active');
             document.body.classList.remove('no-scroll');
-
-            // Return focus to the button that opened the modal
             if (activeModalButton) {
                 activeModalButton.focus();
                 activeModalButton = null;
@@ -2630,17 +2634,14 @@
         const servicesToggle = document.querySelector('.services-toggle');
         const serviceMenuItems = document.querySelectorAll('.service-menu-item');
 
-        // Mobile menu toggle
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('open');
             mobileMenu.classList.toggle('open');
             document.body.classList.toggle('no-scroll');
         });
 
-        // Services dropdown toggle for mobile
         if (servicesToggle) {
             servicesToggle.addEventListener('click', (e) => {
-                // Only handle click for mobile view
                 if (window.innerWidth <= 820) {
                     e.preventDefault();
                     servicesDropdown.classList.toggle('open');
@@ -2648,7 +2649,6 @@
             });
         }
 
-        // Close mobile menu when clicking on nav links
         navLinksItems.forEach(link => {
             link.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('open')) {
@@ -2659,7 +2659,6 @@
             });
         });
 
-        // Service menu items functionality
         serviceMenuItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -2667,15 +2666,12 @@
                 const targetModal = document.querySelector(targetId);
 
                 if (targetModal) {
-                    // Close mobile menu if open
                     if (mobileMenu.classList.contains('open')) {
                         menuToggle.classList.remove('open');
                         mobileMenu.classList.remove('open');
                         servicesDropdown.classList.remove('open');
                         document.body.classList.remove('no-scroll');
                     }
-
-                    // Open the modal
                     document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
                     targetModal.classList.add('active');
                     document.getElementById('modal-container').classList.add('active');
@@ -2684,14 +2680,12 @@
             });
         });
 
-        // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (window.innerWidth > 820 && !servicesDropdown.contains(e.target)) {
                 servicesDropdown.classList.remove('open');
             }
         });
 
-        // Handle window resize
         window.addEventListener('resize', () => {
             if (window.innerWidth > 820) {
                 servicesDropdown.classList.remove('open');
@@ -2711,7 +2705,7 @@
             });
             navLinks.forEach(a => {
                 a.classList.remove('active');
-                let href = a.getAttribute('href')?.substring(1); // Added null check with optional chaining
+                let href = a.getAttribute('href')?.substring(1);
                 if (href === current) {
                     a.classList.add('active');
                 }
@@ -2719,7 +2713,6 @@
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
                 navLinks.forEach(a => a.classList.remove('active'));
                 const contactLink = document.querySelector('.nav-links a[href*="contact"]');
-                // Added a null check to prevent the TypeError
                 if (contactLink) {
                     contactLink.classList.add('active');
                 }
@@ -2728,7 +2721,7 @@
 
         const slides = document.querySelectorAll('.carousel-slide');
         let currentSlide = 0;
-        const slideInterval = setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 5000);
 
         function nextSlide() {
             slides[currentSlide].classList.remove('active');
@@ -2736,68 +2729,85 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // --- START: NEW Phone Number Country Code Logic ---
+        // 4. Phone Input Setup
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
             initialCountry: "in",
             showSearchBox: true,
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
-        // --- END: NEW Phone Number Country Code Logic ---
 
+        // 5. Form Submission with reCAPTCHA v3
         const form = document.getElementById("contactForm");
         const formStatus = document.getElementById("form-status");
 
+        // YOUR NEW v3 SITE KEY
+        const siteKey = "6Lfn-xksAAAAADNqkgOV8oBV6f3bzB6ulhvh1RHT";
+
         async function handleSubmit(event) {
             event.preventDefault();
-            // ADD THIS NEW LINE to get the full number with country code
+
+            // Populate the hidden full phone field
             document.querySelector("input[name='full_phone']").value = phoneInput.getNumber();
 
             const submitButton = form.querySelector('button');
             const originalButtonText = submitButton.innerHTML;
+
             submitButton.disabled = true;
             submitButton.innerHTML = "Sending...";
 
-            const data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    formStatus.innerHTML = "Thank you! Your submission has been received.";
-                    formStatus.className = 'success';
-                    formStatus.style.opacity = 1;
-                    form.reset();
-                    submitButton.innerHTML = "Sent!";
-                    setTimeout(() => {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = originalButtonText;
-                        formStatus.style.opacity = 0;
-                    }, 5000);
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                        } else {
-                            formStatus.innerHTML = "Oops! There was a problem submitting your form";
+            // Execute reCAPTCHA v3
+            grecaptcha.ready(function () {
+                grecaptcha.execute(siteKey, { action: 'submit' }).then(function (token) {
+
+                    // Once we have the token, create the form data
+                    const data = new FormData(event.target);
+                    // Attach the token to the form data
+                    data.append("g-recaptcha-response", token);
+
+                    // Send to Formspree
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
                         }
+                    }).then(response => {
+                        if (response.ok) {
+                            formStatus.innerHTML = "Thank you! Your submission has been received.";
+                            formStatus.className = 'success';
+                            formStatus.style.opacity = 1;
+                            form.reset();
+                            submitButton.innerHTML = "Sent!";
+                            setTimeout(() => {
+                                submitButton.disabled = false;
+                                submitButton.innerHTML = originalButtonText;
+                                formStatus.style.opacity = 0;
+                            }, 5000);
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                                } else {
+                                    formStatus.innerHTML = "Oops! There was a problem submitting your form";
+                                }
+                                formStatus.className = 'error';
+                                formStatus.style.opacity = 1;
+                                submitButton.disabled = false;
+                                submitButton.innerHTML = originalButtonText;
+                            })
+                        }
+                    }).catch(error => {
+                        formStatus.innerHTML = "Oops! There was a problem submitting your form";
                         formStatus.className = 'error';
                         formStatus.style.opacity = 1;
                         submitButton.disabled = false;
                         submitButton.innerHTML = originalButtonText;
-                    })
-                }
-            }).catch(error => {
-                formStatus.innerHTML = "Oops! There was a problem submitting your form";
-                formStatus.className = 'error';
-                formStatus.style.opacity = 1;
-                submitButton.disabled = false;
-                submitButton.innerHTML = originalButtonText;
+                    });
+                });
             });
         }
+
         form.addEventListener("submit", handleSubmit);
     </script>
 </body>
