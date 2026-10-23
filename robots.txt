@@ -1,3 +1,78 @@
+# Robots.txt for Gayatri Electrical Services (GES)
+# Fully optimized for General Search Engines, AI Crawlers, and LLM Agents
+
 User-agent: *
 Allow: /
-Sitemap: https://www.google.com/search?q=https://www.gayatrielectrical.in/sitemap.xml
+
+# General Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Agentic AI & Generative Search Engine Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemaps & Agentic Machine Knowledge Files
+Sitemap: https://www.gayatrielectrical.in/sitemap.xml
+# Agent Knowledge Documentation: https://www.gayatrielectrical.in/llms.txt
+# Full Unabridged Agent Documentation: https://www.gayatrielectrical.in/llms-full.txt
