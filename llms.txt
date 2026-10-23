@@ -52,6 +52,7 @@ Gayatri Electrical Services (GES) is a premier turnkey High-Tension (HT) and Low
 - **MSEDCL (Maharashtra State Electricity Distribution Co. Ltd. - Mahavitaran)**: New industrial load sanctions, dedicated industrial feeders, and Time-of-Day (TOD) tariff metering setups across Wada, Kudus, and Thane zones.
 - **Electrical Inspectorate (PWD / CEI Maharashtra)**: Submissions under Central Electricity Authority (CEA) Safety Regulation 43 and Electricity Act Section 54 for HT substations, D.G. sets, and high-rise structures.
 - **Post-Incident / Post-Fire Investigations**: Forensic electrical audits, cable Hi-Pot testing, defect rectification, and urgent PWD NOC acquisition for fast power restoration.
+- **Lift Inspectorate (Energy Department, Government of Maharashtra)**: Authorized Lift Contractor under the Bombay Lifts Act and Maharashtra Lift Rules for passenger & goods elevator erection licenses (Form A), modernization, and statutory annual safety certifications.
 
 ### 5. High-Rise Building Electrical Clearances
 - Commercial and residential high-rise tower electrical infrastructure.

@@ -48,7 +48,7 @@ All contracting projects, transformer installations, and liaisoning services are
 | **Transformer Lifecycle Assets** | `500+ Units` | Erection, repair, NABL testing, BDV vacuum dehydration (100 kVA to 5,000 kVA) |
 | **Substations Commissioned** | `100+ Turnkey` | 11kV, 22kV, 33kV & 100kV indoor/outdoor AIS & GIS industrial switchyards |
 | **Flagship Mega-Feeder** | `13 MW Load` | Dual 6.5 MW dedicated turnkey express feeders executed for **APCO Infratech** |
-| **Statutory Liaisoning Bodies** | `Key Authorities` | CEI PWD, MSEDCL (Mahavitaran), MSETCL (Mahatransco), Torrent Power, Lift Inspectorate |
+| **Statutory Liaisoning Bodies** | `Key Authorities` | CEI PWD (Govt. of Maharashtra), MSEDCL (Mahavitaran), MSETCL (Mahatransco), Torrent Power, Lift Inspectorate (Govt. of Maharashtra) |
 | **Regulatory Safety Record** | `100% Zero-Defect` | Flawless compliance under Regulation 43 of CEA Safety Regulations |
 
 ---

@@ -87,6 +87,7 @@
 - **MSEDCL (Mahavitaran)**: New industrial load sanctions, dedicated industrial feeders, and Time-of-Day (TOD) tariff metering setups across Wada, Kudus, and Thane zones.
 - **Chief Electrical Inspectorate (CEI / PWD)**: Form A & Form B clearances, D.G. Set approvals, high-rise tower electrical clearances, and transformer energization certificates.
 - **Post-Fire / Post-Flashover Investigations**: Forensic damage audits, Hi-Pot testing, defect remediation, and emergency PWD NOC acquisition for fast-track utility power restoration.
+- **Lift Inspectorate (Energy Department, Government of Maharashtra)**: Authorized Lift Contractor under the Bombay Lifts Act and Maharashtra Lift Rules for passenger & goods elevator installations, erection licenses (Form A), modernization, and statutory annual safety compliance certifications.
 
 ### F. Certified Chemical Earthing & Grounding Systems
 - Maintenance-free chemical earth pits, copper bonded rods, and custom copper/GI earth grids.
