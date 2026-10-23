@@ -394,6 +394,42 @@ body.formal-letter {
 
 ---
 
+### 5. Canva Pro Brand Kit & Typography Setup Guide
+
+> **Full Documentation**: For the complete template-by-template design matrix (Cover Letters, BOQ Quotations, Slide Decks, Social Posts, and Visiting Cards), see [`CANVA_BRAND_GUIDE.md`](file:///c:/aadesh/programming/git/ges/CANVA_BRAND_GUIDE.md).
+
+To maintain identical corporate branding across social media, pitch presentations, quotation folders, and Canva templates, configure your **Canva Pro Brand Kit** with these exact parameters:
+
+#### Canva Pro Brand Kit Fonts
+Both fonts are natively available in Canva Pro (search directly in Canva's font dropdown):
+- **Title Font**: `Khand Bold` (700) — *32pt default, Letter Spacing: +20, Line Spacing: 1.10*
+- **Subtitle Font**: `Khand SemiBold` (600) — *20pt default, Letter Spacing: +20, Line Spacing: 1.15*
+- **Heading Font**: `Rajdhani Bold` (700) — *16pt default, Letter Spacing: +25, Line Spacing: 1.20*
+- **Subheading Font**: `Rajdhani SemiBold` (600) — *13pt default, Letter Spacing: +20, Line Spacing: 1.25*
+- **Body Font**: `Rajdhani Medium` (500) — *11pt default, Letter Spacing: +15, Line Spacing: 1.40*
+- **Quote / Caption**: `Rajdhani SemiBold` (600) — *9.5pt default, Letter Spacing: +30 (All-Caps)*
+
+#### Canva Pro Brand Palette
+- **Primary Industrial Orange**: `#F69024` (Identity for "Gayatri", CTA buttons, badges, key metric highlights)
+- **Brand Grid Navy Blue**: `#0D1392` (Identity for "Electricals", headlines, dark banners, formal headers)
+- **Dark Slate / Text Charcoal**: `#1E293B` (Crisp, high-contrast body text)
+- **Muted Slate Grey**: `#64748B` (Subtitles, metadata, dates, document reference numbers)
+- **Divider & Border Light**: `#E2E8F0` (Card borders, dividers, subtle table gridlines)
+- **Warm Highlight Cream**: `#FFF8F0` (Background container for highlighted project cards)
+- **Pure Crisp White**: `#FFFFFF` (Document background, white text over navy)
+
+#### Canva Slider Calibration
+- **Letter Spacing Slider (-50 to 500)**:
+  - Body Text (`Rajdhani Medium`): Set to **`+10` to `+15`**
+  - Section Headings (`Khand SemiBold` / `Rajdhani Bold`): Set to **`+20` to `+25`**
+  - Badges, Ref Numbers, and Table Headers: Set to **`+30` to `+45`** (All-Caps)
+- **Line Spacing Slider (0.5 to 2.5)**:
+  - Multi-line Headlines (`Khand Bold`): Set to **`1.05` to `1.15`**
+  - Subheadings & Bullet Lists (`Rajdhani`): Set to **`1.20` to `1.25`**
+  - Body Prose & Formal Paragraphs (`Rajdhani Medium`): Set to **`1.35` to `1.45`**
+
+---
+
 <a id="multilingual"></a>
 ## Multilingual Architecture (i18n)
 
