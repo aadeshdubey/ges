@@ -1,6 +1,6 @@
 # Gayatri Electrical Services — Canva Pro Brand Kit & Typography Specification
 
-> **Official Design Guide for Canva Pro (Est. 2003)**  
+> **Official Design Guide for Canva Pro**  
 > This specification defines the exact font pairings, color palettes, spacing slider values, and layout hierarchies to maintain 100% brand consistency across all Canva Pro designs (Official Letterheads, Technical Proposals, Quotations, Tender Bids, Social Media Graphics, Presentations, and Business Cards).
 
 ---

@@ -1370,14 +1370,14 @@
             }
         }
 
-        .partnerships-container {
+        .liaisoning-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 28px;
             margin-top: 50px;
         }
 
-        .partnership-card {
+        .liaisoning-card {
             display: flex;
             flex-direction: column;
             background: #ffffff;
@@ -1390,7 +1390,7 @@
             overflow: hidden;
         }
 
-        .partnership-card::before {
+        .liaisoning-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1402,17 +1402,17 @@
             transition: height 0.3s ease;
         }
 
-        .partnership-card:hover {
+        .liaisoning-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 18px 42px rgba(13, 19, 146, 0.09), 0 4px 16px rgba(246, 144, 36, 0.12);
             border-color: rgba(246, 144, 36, 0.4);
         }
 
-        .partnership-card:hover::before {
+        .liaisoning-card:hover::before {
             height: 5px;
         }
 
-        .partnership-card-header {
+        .liaisoning-card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1420,7 +1420,7 @@
             width: 100%;
         }
 
-        .partnership-icon-box {
+        .liaisoning-icon-box {
             width: 54px;
             height: 54px;
             min-width: 54px;
@@ -1434,7 +1434,7 @@
             transition: all 0.35s ease;
         }
 
-        .partnership-icon-box svg {
+        .liaisoning-icon-box svg {
             width: 28px;
             height: 28px;
             stroke: var(--primary-orange);
@@ -1442,19 +1442,19 @@
             transition: transform 0.3s ease, stroke 0.3s ease;
         }
 
-        .partnership-card:hover .partnership-icon-box {
+        .liaisoning-card:hover .liaisoning-icon-box {
             background: linear-gradient(135deg, var(--primary-orange) 0%, #e07a12 100%);
             border-color: var(--primary-orange);
             box-shadow: 0 8px 22px rgba(246, 144, 36, 0.35);
             transform: scale(1.05);
         }
 
-        .partnership-card:hover .partnership-icon-box svg {
+        .liaisoning-card:hover .liaisoning-icon-box svg {
             stroke: #ffffff;
             transform: scale(1.08);
         }
 
-        .partnership-logo-badge {
+        .liaisoning-badge {
             font-family: var(--font-ui);
             font-size: 0.78rem;
             font-weight: 700;
@@ -1471,19 +1471,19 @@
             transition: all 0.25s ease;
         }
 
-        .partnership-card:hover .partnership-logo-badge {
+        .liaisoning-card:hover .liaisoning-badge {
             background: rgba(246, 144, 36, 0.18);
             border-color: rgba(246, 144, 36, 0.4);
         }
 
-        .partnership-info {
+        .liaisoning-info {
             padding: 0;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .partnership-info h3 {
+        .liaisoning-info h3 {
             color: var(--primary-orange);
             font-family: var(--font-ui);
             font-size: 0.92rem;
@@ -1493,7 +1493,7 @@
             letter-spacing: 0.05em;
         }
 
-        .partnership-info h4 {
+        .liaisoning-info h4 {
             font-family: var(--font-heading);
             font-size: 1.58rem;
             margin: 0 0 12px 0;
@@ -1503,7 +1503,7 @@
             letter-spacing: 0.01em;
         }
 
-        .partnership-info p {
+        .liaisoning-info p {
             margin-bottom: 20px;
             color: #4a5568;
             line-height: 1.6;
@@ -1512,7 +1512,7 @@
             font-family: var(--font-body);
         }
 
-        .partnership-features {
+        .liaisoning-features {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -1549,22 +1549,22 @@
             transition: all 0.25s ease;
         }
 
-        .partnership-card:hover .feature-icon {
+        .liaisoning-card:hover .feature-icon {
             background: var(--primary-orange);
             color: #ffffff;
         }
 
         @media (max-width: 1024px) {
-            .partnerships-container {
+            .liaisoning-container {
                 grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 640px) {
-            .partnership-card {
+            .liaisoning-card {
                 padding: 24px 20px 20px;
             }
-            .partnership-info h4 {
+            .liaisoning-info h4 {
                 font-size: 1.38rem;
             }
         }
@@ -3376,7 +3376,7 @@
                         a Govt. Authorized Electrical Contractor and Govt. Authorized Lift Contractor, our work is
                         backed by official credentials and a deep commitment to compliance and safety. We view every
                         project, from a critical emergency repair to a full-scale substation installation, as a
-                        partnership. We are dedicated to building a future where your operations are not only safer and
+                        dedicated collaboration. We are dedicated to building a future where your operations are not only safer and
                         more efficient but are also primed for the growth and technological demands of tomorrow.</p>
                     <p data-i18n="about_p3">We believe that reliable power is the foundation of progress. That's why we're constantly
                         adapting to new technologies, from advanced diagnostics to sustainable energy solutions like
@@ -4366,30 +4366,29 @@
         <section id="liaisoning" style="position: relative;">
             <span id="authorities" style="position: absolute; top: 0; left: 0; width: 0; height: 0; pointer-events: none; visibility: hidden;"></span>
             <span id="jurisdictions" style="position: absolute; top: 0; left: 0; width: 0; height: 0; pointer-events: none; visibility: hidden;"></span>
-            <span id="partnerships" style="position: absolute; top: 0; left: 0; width: 0; height: 0; pointer-events: none; visibility: hidden;"></span>
             <div class="container">
                 <h2 data-aos="fade-up">Statutory Liaisoning & Commissioning Approvals</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
                     As a Govt. Authorized Electrical Contractor (Est. 2003) and authorized Lift Contractor, we execute official engineering liaisoning, industrial load sanctions, electrical inspectorate clearances, and turnkey commissioning across Maharashtra's power utilities and regulatory boards.
                 </p>
 
-                <div class="partnerships-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="liaisoning-container" data-aos="fade-up" data-aos-delay="200">
                     <!-- 1. Torrent Power Limited -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <path d="M13 6l-4 7h6l-3 5"></path>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">Distribution Licensee</span>
+                            <span class="liaisoning-badge">Distribution Licensee</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>Bhiwandi Distribution Circle</h3>
                             <h4>Torrent Power Limited</h4>
                             <p>Govt. authorized HT and LT electrical contracting operations across Torrent Power's Bhiwandi franchise circle. We deliver turnkey HT/LT service connections, industrial load sanctions & enhancements, transformer overhauls, express feeders, and network engineering compliant with Torrent Power standards.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>Authorized HT & LT Contractor in Bhiwandi Circle</span>
@@ -4407,9 +4406,9 @@
                     </div>
 
                     <!-- 2. MSETCL (Mahatransco) -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="12" y1="2" x2="12" y2="4"></line>
                                     <path d="M12 4 L6 22"></path>
@@ -4431,13 +4430,13 @@
                                     <line x1="16.2" y1="16.5" x2="6" y2="22"></line>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">EHV Transmission</span>
+                            <span class="liaisoning-badge">EHV Transmission</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>State Transmission Grid</h3>
                             <h4>MSETCL (Mahatransco)</h4>
                             <p>Turnkey execution and liaisoning for high-capacity industrial power evacuation across 100kV and 220kV transmission networks. Sourcing power from dual EHV substations (as in our 13 MW APCO Infratech project), overhead line shifting, and transmission bay extension approvals.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>100kV & 220kV EHV Grid Connectivity & Feeder Sync</span>
@@ -4455,22 +4454,22 @@
                     </div>
 
                     <!-- 3. Electrical Inspectorate -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                     <path d="M12 8v5"></path>
                                     <circle cx="12" cy="16" r="1"></circle>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">Statutory Safety</span>
+                            <span class="liaisoning-badge">Statutory Safety</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>Chief Electrical Inspectorate</h3>
                             <h4>Electrical Inspector (Govt. of Maharashtra)</h4>
                             <p>End-to-end statutory coordination for initial and periodic inspection clearances under Central Electricity Authority (CEA) Safety Regulations. We handle drawing scrutiny, Form A/B submissions, HT charging permissions, D.G. Set sanctioning, and earth pit resistance compliance.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>CEA Regulation 43 & Section 54 Approvals (HT & D.G. Sets)</span>
@@ -4488,20 +4487,20 @@
                     </div>
 
                     <!-- 4. MSEDCL (Mahavitaran) -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">Power Distribution</span>
+                            <span class="liaisoning-badge">Power Distribution</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>State Distribution Licensee</h3>
                             <h4>MSEDCL (Mahavitaran)</h4>
                             <p>Comprehensive engineering liaisoning and electrical contracting for industrial power consumers across Wada, Kudus, Thane, and Palghar zones. Managing new HT/LT load sanctions, contract demand enhancements, dedicated industrial feeders, and TOD metering setups.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>HT & LT Industrial Load Sanctions (Wada, Kudus & Thane)</span>
@@ -4519,9 +4518,9 @@
                     </div>
 
                     <!-- 5. PWD & Fire Department -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M3 21h18"></path>
                                     <path d="M5 21V7l8-4v18"></path>
@@ -4531,13 +4530,13 @@
                                     <path d="M9 17h1"></path>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">Incident & High-Rise</span>
+                            <span class="liaisoning-badge">Incident & High-Rise</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>Electrical Inspectorate & PWD</h3>
                             <h4>Incident Clearances & High-Rise Permissions</h4>
                             <p>Specialized statutory liaisoning for industrial emergency power restoration and tall building electrical compliance. When a factory electrical fire or flashover occurs, we coordinate the Electrical Inspector's official investigation, implement statutory defect rectifications, and obtain official re-charging safety clearance. For commercial and residential high-rise towers, we manage complete PWD electrical permissions for HT substations, rising mains, and bus ducts.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>Factory Post-Incident / Fire Electrical Inspectorate Investigation Liaisoning</span>
@@ -4555,22 +4554,22 @@
                     </div>
 
                     <!-- 6. Lift Inspectorate -->
-                    <div class="partnership-card">
-                        <div class="partnership-card-header">
-                            <div class="partnership-icon-box">
+                    <div class="liaisoning-card">
+                        <div class="liaisoning-card-header">
+                            <div class="liaisoning-icon-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="5" y="2" width="14" height="20" rx="2"></rect>
                                     <path d="M9 10l3-3 3 3"></path>
                                     <path d="M9 14l3 3 3-3"></path>
                                 </svg>
                             </div>
-                            <span class="partnership-logo-badge">Authorized Lift Contractor</span>
+                            <span class="liaisoning-badge">Authorized Lift Contractor</span>
                         </div>
-                        <div class="partnership-info">
+                        <div class="liaisoning-info">
                             <h3>Lift & Escalator Safety Authority</h3>
                             <h4>Lift Inspectorate (Energy Department)</h4>
                             <p>As a Govt. Authorized Lift Contractor, we execute complete vertical transportation installations, passenger and goods lift erection, modernization, and annual safety compliance under the Bombay Lifts Act and Maharashtra Lift Inspectorate regulations.</p>
-                            <div class="partnership-features">
+                            <div class="liaisoning-features">
                                 <div class="feature">
                                     <span class="feature-icon">✓</span>
                                     <span>Govt. Authorized Lift Contractor Licensing & Approvals</span>
@@ -5206,7 +5205,7 @@
                     by copyright and other intellectual property laws. You may not use, copy, or distribute this content
                     without our prior written consent.</p>
 
-                <p>All organizational names, statutory titles, and utility references (including MSEDCL, MSETCL, Torrent Power, and the Electrical Inspectorate / PWD, Government of Maharashtra) displayed on this website are the property and trademarks of their respective government departments and corporations. They are referenced solely in a descriptive capacity to indicate the statutory authorities, licensing frameworks, and distribution circles within which Gayatri Electrical Services operates as an independent Government Authorized Electrical Contractor. Such references do not constitute or imply official sponsorship, government endorsement, or corporate partnership.</p>
+                <p>All organizational names, statutory titles, and utility references (including MSEDCL, MSETCL, Torrent Power, and the Electrical Inspectorate / PWD, Government of Maharashtra) displayed on this website are the property and trademarks of their respective government departments and corporations. They are referenced solely in a descriptive capacity to indicate the statutory authorities, licensing frameworks, and distribution circles within which Gayatri Electrical Services operates as an independent Government Authorized Electrical Contractor. Such references do not constitute or imply official sponsorship, government endorsement, or corporate affiliation.</p>
 
                 <p>Certain images used on this website are sourced from Canva under their appropriate license terms. All
                     rights to these images remain with Canva and their respective creators. These images are used in
@@ -5404,7 +5403,7 @@
         function smoothScrollTo(targetSelector) {
             let targetEl = document.querySelector(targetSelector);
             if (!targetEl) {
-                if (targetSelector === '#authorities' || targetSelector === '#jurisdictions' || targetSelector === '#partnerships') {
+                if (targetSelector === '#authorities' || targetSelector === '#jurisdictions' || targetSelector === '#liaisoning') {
                     targetEl = document.querySelector('#liaisoning') || document.querySelector('#authorities');
                 }
             }
@@ -5842,7 +5841,7 @@
                 metric_compliance_sub: "PWD CEI, Discom & Lift Approvals",
                 about_title: "The Current That Drives Progress",
                 about_p1: "For over two decades, Gayatri Electricals has been more than a service provider; we are the silent, steadfast current running through the core of industry and commerce. We don't just manage power—we empower potential. Our foundation is built on a legacy of unwavering commitment to excellence, translating complex electrical challenges into streamlined, robust solutions.",
-                about_p2: "Our team of seasoned professionals operates at the intersection of experience and innovation. As a Govt. Authorized Electrical Contractor and Govt. Authorized Lift Contractor, our work is backed by official credentials and a deep commitment to compliance and safety. We view every project, from a critical emergency repair to a full-scale substation installation, as a partnership. We are dedicated to building a future where your operations are not only safer and more efficient but are also primed for the growth and technological demands of tomorrow.",
+                about_p2: "Our team of seasoned professionals operates at the intersection of experience and innovation. As a Govt. Authorized Electrical Contractor and Govt. Authorized Lift Contractor, our work is backed by official credentials and a deep commitment to compliance and safety. We view every project, from a critical emergency repair to a full-scale substation installation, as a dedicated collaboration. We are dedicated to building a future where your operations are not only safer and more efficient but are also primed for the growth and technological demands of tomorrow.",
                 about_p3: "We believe that reliable power is the foundation of progress. That's why we're constantly adapting to new technologies, from advanced diagnostics to sustainable energy solutions like solar. Our goal is to ensure your operations are not only safer and more efficient today but are also primed for the growth and technological demands of tomorrow.",
                 footer_desc: "Powering progress with more than two decades of unwavering commitment to safety, efficiency, and innovative electrical solutions.",
                 footer_quick_links: "Quick Links",
@@ -6005,7 +6004,7 @@
                 metric_compliance_sub: "पीडब्ल्यूडी, सीईआई और डिस्कॉम मंजूरी",
                 about_title: "प्रगति को गति देने वाली शक्ति",
                 about_p1: "दो दशकों से अधिक समय से, गायत्री इलेक्ट्रिकल्स सिर्फ एक सेवा प्रदाता नहीं, बल्कि उद्योग और वाणिज्य के केंद्र में निरंतर बहने वाली एक विश्वसनीय शक्ति है। हम केवल विद्युत प्रबंधन नहीं करते, बल्कि संभावनाओं को सशक्त बनाते हैं। हमारा आधार निरंतर उत्कृष्टता पर बना है, जो जटिल विद्युत चुनौतियों को मजबूत व सुगम समाधानों में बदलता है।",
-                about_p2: "हमारी अनुभवी टीम दक्षता और आधुनिक तकनीक के साथ काम करती है। शासकीय अधिकृत विद्युत एवं लिफ्ट कंत्राटदार के रूप में, हमारा हर कार्य आधिकारिक प्रमाणन, सुरक्षा और पूर्ण गुणवत्ता से परिपूर्ण है। हम आपातकालीन मरम्मत से लेकर पूर्ण सबस्टेशन निर्माण तक हर परियोजना को एक साझेदारी के रूप में देखते हैं।",
+                about_p2: "हमारी अनुभवी टीम दक्षता और आधुनिक तकनीक के साथ काम करती है। शासकीय अधिकृत विद्युत एवं लिफ्ट कंत्राटदार के रूप में, हमारा हर कार्य आधिकारिक प्रमाणन, सुरक्षा और पूर्ण गुणवत्ता से परिपूर्ण है। हम आपातकालीन मरम्मत से लेकर पूर्ण सबस्टेशन निर्माण तक हर परियोजना को एक विश्वसनीय तकनीकी सहयोग के रूप में देखते हैं।",
                 about_p3: "हम मानते हैं कि निरंतर और सुरक्षित बिजली ही औद्योगिक प्रगति की नींव है। इसलिए हम अत्याधुनिक डायग्नोस्टिक्स से लेकर सौर ऊर्जा तक नए तकनीकी समाधानों को लगातार अपना रहे हैं, जिससे आपका उद्योग निरंतर आगे बढ़ता रहे।",
                 footer_desc: "सुरक्षा, दक्षता और आधुनिक विद्युत समाधानों के प्रति दो दशकों से अधिक समय से समर्पित।",
                 footer_quick_links: "त्वरित लिंक्स",
@@ -6168,7 +6167,7 @@
                 metric_compliance_sub: "पीडब्ल्यूडी, सीईआय व महावितरण परवानग्या",
                 about_title: "प्रगतीची ऊर्जा, अखंड विश्वास",
                 about_p1: "गेल्या दोन दशकांपासून अधिक काळ, गायत्री इलेक्ट्रिकल्स केवळ एक सेवा प्रदाता नसून, उद्योग आणि व्यापाराच्या विकासाचा एक मजबूत आधारस्तंभ आहे. आम्ही केवळ ऊर्जेचे व्यवस्थापन करत नाही, तर आपल्या उद्योगाच्या क्षमतांना नवी दिशा देतो. जटिल विद्युत आव्हानांवर मात करून सुरक्षित, अखंडित आणि दर्जेदार उपाय पुरवणे हेच आमचे ध्येय आहे.",
-                about_p2: "आमची तज्ज्ञ अभियंत्यांची टीम प्रदीर्घ अनुभव आणि आधुनिक तंत्रज्ञानाच्या आधारे काम करते. महाराष्ट्र शासनाचे अधिकृत विद्युत कंत्राटदार आणि लिफ्ट कंत्राटदार म्हणून आमचे प्रत्येक काम अधिकृत परवाने, सुरक्षा मानके आणि गुणवत्तेने परिपूर्ण असते. आपत्कालीन ब्रेकडाउन दुरुस्तीपासून ते महाकाय सबस्टेशन उभारणीपर्यंत आम्ही प्रत्येक कामात विश्वासार्ह भागीदार म्हणून उभे राहतो.",
+                about_p2: "आमची तज्ज्ञ अभियंत्यांची टीम प्रदीर्घ अनुभव आणि आधुनिक तंत्रज्ञानाच्या आधारे काम करते. महाराष्ट्र शासनाचे अधिकृत विद्युत कंत्राटदार आणि लिफ्ट कंत्राटदार म्हणून आमचे प्रत्येक काम अधिकृत परवाने, सुरक्षा मानके आणि गुणवत्तेने परिपूर्ण असते. आपत्कालीन ब्रेकडाउन दुरुस्तीपासून ते महाकाय सबस्टेशन उभारणीपर्यंत आम्ही प्रत्येक कामात विश्वासार्ह तांत्रिक सहकारी म्हणून उभे राहतो.",
                 about_p3: "आमचा ठाम विश्वास आहे की अखंड आणि सुरक्षित वीज हाच औद्योगिक प्रगतीचा खरा पाया आहे. म्हणूनच प्रगत चाचणी पद्धतींपासून सौर ऊर्जेपर्यंत सर्व अत्याधुनिक तंत्रज्ञान आम्ही आत्मसात केले आहे, जेणेकरून आपले उद्योग अखंड कार्यरत राहतील.",
                 footer_desc: "सुरक्षा, कार्यक्षमता आणि प्रगत विद्युत उपायांसाठी दोन दशकांहून अधिक काळ कटिबद्ध.",
                 footer_quick_links: "महत्त्वाच्या लिंक्स",
@@ -6428,10 +6427,10 @@
                 const lSub = document.querySelector('#liaisoning .section-subtitle');
                 if (lSub) lSub.textContent = t.liaisoning_section.subtitle;
 
-                const lCards = document.querySelectorAll('#liaisoning .partnerships-container .partnership-card');
+                const lCards = document.querySelectorAll('#liaisoning .liaisoning-container .liaisoning-card');
                 t.liaisoning_section.cards.forEach((cardData, idx) => {
                     if (lCards[idx]) {
-                        const badge = lCards[idx].querySelector('.partnership-logo-badge');
+                        const badge = lCards[idx].querySelector('.liaisoning-badge');
                         const h3 = lCards[idx].querySelector('h3');
                         const h4 = lCards[idx].querySelector('h4');
                         const p = lCards[idx].querySelector('p');
@@ -6440,9 +6439,9 @@
                         if (h4) h4.textContent = cardData.subtitle;
                         if (p) p.textContent = cardData.desc;
 
-                        // Update partnership features (ticks)
+                        // Update liaisoning features (ticks)
                         if (cardData.features && cardData.features.length) {
-                            const feats = lCards[idx].querySelectorAll('.partnership-features .feature span:last-child');
+                            const feats = lCards[idx].querySelectorAll('.liaisoning-features .feature span:last-child');
                             cardData.features.forEach((featText, fIdx) => {
                                 if (feats[fIdx]) {
                                     feats[fIdx].textContent = featText;
