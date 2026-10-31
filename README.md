@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://gayatrielectrical.in">
-    <img src="assets/logo.svg" alt="Gayatri Electrical Services Official Emblem" width="130" height="130">
+    <img src="assets/logo.png" alt="Gayatri Electrical Services Official Emblem" width="130" height="130">
   </a>
 </p>
 
