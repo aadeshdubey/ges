@@ -14,6 +14,7 @@
 <p align="center">
   <a href="https://gayatrielectrical.in"><img src="https://img.shields.io/badge/Live_Site-gayatrielectrical.in-0d1392?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Website"></a>
   <a href="#agentic-ai-seo"><img src="https://img.shields.io/badge/Agentic_AI_Ready-OpenAI_%7C_Claude_%7C_Perplexity_%7C_Gemini_%7C_Apple_%7C_Meta_%7C_DeepSeek-8A2BE2?style=for-the-badge&logo=openai&logoColor=white" alt="Agentic AI Ready"></a>
+  <a href="#pwa-web-standards"><img src="https://img.shields.io/badge/PWA_%26_Standards-RFC_9116_%7C_OpenSearch_%7C_Offline_SW-10b981?style=for-the-badge" alt="PWA and Web Standards"></a>
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
   <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.01-0d1392?style=for-the-badge" alt="Version v26.11.01"></a>
@@ -23,10 +24,14 @@
   <a href="#executive-summary">Executive Summary</a> •
   <a href="#key-metrics">Key Metrics</a> •
   <a href="#services">Services</a> •
-  <a href="#industrial-sectors">Industries Powered</a> •
+  <a href="#industrial-sectors">Industries</a> •
   <a href="#statutory-liaisoning">Statutory Liaisoning</a> •
   <a href="#agentic-ai-seo">Agentic AI & SEO</a> •
-  <a href="#development">Development</a>
+  <a href="#pwa-web-standards">PWA & Standards</a> •
+  <a href="#typography">Typography</a> •
+  <a href="#multilingual">Multilingual</a> •
+  <a href="#repository-structure">Architecture</a> •
+  <a href="#version-management">Sync & CI/CD</a>
 </p>
 
 ---
@@ -182,11 +187,12 @@ This repository implements a **comprehensive Dual-Engine Search Architecture** e
 
 ```
 gayatrielectrical.in/
-├── robots.txt         <-- Full indexation directives for standard and AI search bots
-├── sitemap.xml        <-- Canonical URL indexing with priority and lastmod timestamps
+├── robots.txt         <-- Whitelist directives for traditional crawlers & 10+ AI search engines
+├── sitemap.xml        <-- Canonical URL indexing with lastmod timestamps & priority weights
 ├── llms.txt           <-- Structured Markdown knowledge base tailored for LLM reasoning engines
-├── llms-full.txt      <-- Comprehensive technical & commercial data corpus for agentic queries
-└── index.html         <-- Rich Schema.org JSON-LD Graph (ElectricalContractor, FAQPage, Service)
+├── llms-full.txt      <-- Comprehensive technical, regulatory & BOQ corpus for agentic queries
+├── opensearch.xml     <-- Browser omnibox address bar direct search integration
+└── data/schema.json   <-- Enterprise JSON-LD Graph (ElectricalContractor, FAQPage, Service)
 ```
 
 ### 1. `llms.txt` — Machine-Readable Corporate Knowledge Base
@@ -227,6 +233,63 @@ gayatrielectrical.in/
 - **`FAQPage`**: 17 technical and commercial questions directly synchronized in JSON-LD format for Google Rich Results and AI direct answers.
 - **`Service`**: 8 primary service catalog entities with granular parameters.
 - **`BreadcrumbList` & `Organization`**: Structural hierarchy metadata for search indexing.
+
+---
+
+<a id="pwa-web-standards"></a>
+## Progressive Web App (PWA) & Core Web Standards Architecture
+
+The site adheres to rigorous modern web standards for mobile installation, offline reliability, security transparency, and browser integration:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   CORE WEB STANDARDS & RESILIENCE                      │
+├──────────────────┬───────────────────┬─────────────────────────────────┤
+│ Web Standard     │ File / Endpoint   │ Engineering Role & Behavior     │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ PWA App Manifest │ site.webmanifest  │ Standalone mobile installation, │
+│                  │                   │ theme #f69024, maskable icons   │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ Service Worker   │ sw.js             │ Stale-While-Revalidate caching, │
+│                  │                   │ offline UI, precached assets    │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ Security Policy  │ security.txt /    │ RFC 9116 compliant security &   │
+│                  │ .well-known/      │ vulnerability disclosure        │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ Web Authorship   │ humans.txt        │ Standards-based credits, 2003   │
+│                  │                   │ founding, Bhiwandi headquarters │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ Omnibox Search   │ opensearch.xml    │ Native browser address bar      │
+│                  │                   │ direct service search query     │
+├──────────────────┼───────────────────┼─────────────────────────────────┤
+│ Circuit-Breaker  │ 404.html          │ Branded error recovery with     │
+│ 404 Recovery     │                   │ auto-redirect & hotlines        │
+└──────────────────┴───────────────────┴─────────────────────────────────┘
+```
+
+### 1. `site.webmanifest` — Progressive Web App Engine
+- Enables native "Add to Home Screen" installation on Android, iOS, Windows, and macOS with an enterprise app aesthetic.
+- Branded with theme color `#f69024` and background `#ffffff` in `standalone` display mode.
+- Declares high-resolution 192x192 and 512x512 maskable application icons.
+
+### 2. `sw.js` — Offline Resilience & Stale-While-Revalidate Engine
+- Pre-caches core application shell assets on initial visit (`index.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, and all 3 language bundles).
+- Implements **Stale-While-Revalidate** caching for lightning-fast loads on subsequent visits and complete offline availability.
+- Automatically clears stale caches on version upgrades via `ges-cache-v*` cache naming.
+
+### 3. `security.txt` & `.well-known/security.txt` — RFC 9116 Security Policy
+- Provides official machine-readable vulnerability disclosure channels at `support@gayatrielectrical.in`.
+- Declares canonical security endpoints, preferred languages (`en`, `hi`, `mr`), and strict validity expiration timestamps.
+
+### 4. `humans.txt` — Engineering Credits & Authorship
+- Documents organizational authorship, contractor licensing credentials, Bhiwandi headquarters coordinates, Indian Type Foundry typography pairing, and static PWA architecture.
+
+### 5. `opensearch.xml` — Native Browser Omnibox Search
+- Registers Gayatri Electrical Services with compliant web browsers (Chrome, Edge, Firefox), enabling users to type queries into their address bar to search GES HT/LT engineering solutions.
+
+### 6. `404.html` — Custom Branded Circuit-Breaker Recovery Page
+- Themed as *"Circuit Disconnected"* with animated glowing breaker icons and corporate typography (`Khand` + `Rajdhani`).
+- Features automated 8-second countdown redirect to homepage, direct emergency telephone hotlines, WhatsApp chat link, and emergency breakdown contacts.
 
 ---
 
@@ -432,12 +495,114 @@ Both fonts are natively available in Canva Pro (search directly in Canva's font 
 ---
 
 <a id="multilingual"></a>
-## Multilingual Architecture (i18n)
+## Multilingual Architecture (i18n) & Dynamic Data Layer
 
-The application provides an instant client-side localization engine supporting 3 languages with complete electrical engineering terminology:
+The platform features an instant client-side localization engine supporting 3 primary languages with specialized electrical engineering terminology:
 - **English (`en`)** — Default corporate international engineering dialect.
 - **Hindi (`hi`)** — *शासकीय अधिकृत विद्युत कंत्राटदार* technical Devanagari dictionary.
 - **Marathi (`mr`)** — Official Maharashtra state utility (MSEDCL/CEI) dialect.
+
+### Asynchronous Data Layer
+- **Decoupled Locale Bundles**: Located in [`data/locales/`](data/locales/) (`en.json`, `hi.json`, `mr.json`), keeping the main HTML document lean while enabling seamless text updates without touching layout code.
+- **Dynamic Asynchronous Fetching**: The localization engine in [`js/main.js`](js/main.js) and [`js/main.min.js`](js/main.min.js) fetches the requested locale bundle dynamically on user interaction or browser language detection.
+- **Embedded Fallback Resilience**: If network connectivity fails, the engine seamlessly falls back to embedded strings and cached Service Worker responses without interface disruption.
+- **Consolidated Master Dictionary**: [`data/translations.json`](data/translations.json) provides a central reference for translation auditing and parity verification.
+
+---
+
+<a id="repository-structure"></a>
+## Repository Architecture & Directory Layout
+
+The repository is organized into a modular, production-ready structure:
+
+```
+ges/
+├── .github/
+│   └── workflows/
+│       └── validate.yml      <-- Automated CI quality & standards verification
+├── .well-known/
+│   └── security.txt          <-- RFC 9116 well-known security endpoint
+├── assets/                   <-- Brand emblems, vector icons, favicons
+├── css/
+│   ├── style.css             <-- Unminified corporate stylesheet
+│   └── style.min.css         <-- Production minified stylesheet
+├── data/
+│   ├── locales/
+│   │   ├── en.json           <-- English UI locale strings
+│   │   ├── hi.json           <-- Hindi UI locale strings
+│   │   └── mr.json           <-- Marathi UI locale strings
+│   ├── schema.json           <-- JSON-LD structured data graph
+│   └── translations.json     <-- Master translation dictionary
+├── docs/
+│   └── CANVA_BRAND_GUIDE.md  <-- Canva Pro Brand Kit specification
+├── images/
+│   ├── brand/                <-- Team, corporate identity & backgrounds
+│   ├── carousel/             <-- High-voltage hero carousel slides (WebP)
+│   └── services/             <-- Turnkey engineering domain photographs
+├── js/
+│   ├── main.js               <-- Enterprise application engine (unminified)
+│   └── main.min.js           <-- Optimized production application engine
+├── scripts/
+│   ├── sync-version.js       <-- Automated version & date propagation utility
+│   └── validate.js           <-- 4-stage local & CI repository validator
+├── 404.html                  <-- Custom branded circuit-breaker 404 page
+├── CNAME                     <-- Custom domain mapping (gayatrielectrical.in)
+├── humans.txt                <-- Web authorship & engineering credits
+├── index.html                <-- Semantic HTML5 enterprise homepage
+├── llms.txt                  <-- Concise agentic AI knowledge base
+├── llms-full.txt             <-- Comprehensive technical corpus for LLMs
+├── opensearch.xml            <-- Browser omnibox address bar search
+├── package.json              <-- NPM scripts for syncing & validation
+├── robots.txt                <-- Search engine & AI crawler whitelist
+├── security.txt              <-- RFC 9116 security policy
+├── site.webmanifest          <-- Progressive Web App (PWA) manifest
+├── sitemap.xml               <-- XML sitemap with lastmod timestamps
+├── sw.js                     <-- Offline service worker resilience engine
+├── version.json              <-- Single source of truth for version & dates
+└── .gitignore                <-- Git ignore rules for node, OS, IDEs & secrets
+```
+
+---
+
+<a id="version-management"></a>
+## Automated Version & Date Synchronization
+
+The repository uses [`version.json`](version.json) as the **single source of truth** for release versions, dates, cache busters, and sitemap modification timestamps.
+
+### How Synchronization Works
+When you update `version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 13 tracked files** in one atomic pass:
+
+```bash
+# Propagate version.json across all repository files:
+node scripts/sync-version.js
+# Or with npm:
+npm run version:sync
+
+# Update version and date directly in one command:
+node scripts/sync-version.js --set-version 26.11.02 --set-date 2026-11-02
+
+# Verify all files are in sync (used in GitHub Actions CI):
+node scripts/sync-version.js --check
+# Or with npm:
+npm run version:check
+```
+
+### Local & CI Quality Validation Pipeline
+[`scripts/validate.js`](scripts/validate.js) executes a multi-stage verification suite mirroring GitHub Actions:
+
+```bash
+# Run complete 4-stage validation suite:
+node scripts/validate.js
+# Or with npm:
+npm test
+```
+
+### GitHub Actions CI/CD Pipeline
+Every pull request and push to `main` triggers [`.github/workflows/validate.yml`](.github/workflows/validate.yml) on Ubuntu runners, executing:
+1. **JavaScript Syntax Verification** (`node -c` on all application and script files).
+2. **JSON Integrity & Schema Parsing** (all locale bundles, schema graphs, and web manifests).
+3. **Core Web Standards & Endpoints Verification** (ensuring all 14 required files are present).
+4. **Automated Version Synchronization Verification** (`node scripts/sync-version.js --check`).
 
 ---
 
@@ -459,29 +624,6 @@ npx serve -l 8000 .
 ```
 
 Open your browser at **`http://127.0.0.1:8000/`**.
-
----
-
-<a id="version-management"></a>
-## Automated Version & Date Synchronization
-
-The repository uses [`version.json`](version.json) as the **single source of truth** for release versions, dates, cache busters, and sitemap modification timestamps.
-
-When releasing an update, edit `version.json` (or pass arguments to the script) and run:
-
-```bash
-# Automatically propagate version and date across all 13 repository files:
-node scripts/sync-version.js
-
-# Or update version and date directly in one command:
-node scripts/sync-version.js --set-version 26.11.02 --set-date 2026-11-02
-
-# Verify all files are in sync (used in GitHub Actions CI):
-node scripts/sync-version.js --check
-
-# Run full repository validation (Syntax, JSON schemas, web standards, version sync):
-node scripts/validate.js
-```
 
 ---
 
