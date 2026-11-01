@@ -73,7 +73,8 @@ const requiredFiles = [
     'opensearch.xml',
     'site.webmanifest',
     'sw.js',
-    'version.json'
+    'version.json',
+    '.gitignore'
 ];
 
 for (const rel of requiredFiles) {
