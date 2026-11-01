@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Circuit Disconnected | Gayatri Electrical Services</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="The electrical route or page you are looking for has been shifted, disconnected, or does not exist.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <meta name="theme-color" content="#f69024">
+
+    <!-- Corporate Typography: Khand & Rajdhani -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-orange: #f69024;
+            --primary-orange-dark: #e07a12;
+            --brand-blue: #0d1392;
+            --text-dark: #212529;
+            --light-bg: #f8fafc;
+            --font-heading: 'Khand', sans-serif;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .error-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(246, 144, 36, 0.35);
+            border-radius: 20px;
+            padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
+            max-width: 680px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(246, 144, 36, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-orange) 0%, #ffaa48 50%, var(--brand-blue) 100%);
+        }
+
+        .logo-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            text-decoration: none;
+        }
+
+        .logo-wrap img {
+            height: 46px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: 1.1;
+        }
+
+        .logo-text .orange {
+            color: var(--primary-orange);
+        }
+
+        .logo-text .blue {
+            color: #60a5fa;
+        }
+
+        .badge-404 {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(246, 144, 36, 0.15);
+            border: 1px solid rgba(246, 144, 36, 0.45);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #ffa726;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(4.5rem, 12vw, 7.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+            color: var(--primary-orange);
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+            text-shadow: 0 0 35px rgba(246, 144, 36, 0.45);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #f1f5f9;
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 13px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-dark) 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 18px rgba(246, 144, 36, 0.4);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(246, 144, 36, 0.55);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .emergency-bar {
+            margin-top: 18px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.02rem;
+            color: #94a3b8;
+        }
+
+        .emergency-bar a {
+            color: #ffa726;
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .emergency-bar a:hover {
+            color: #ffb74d;
+            text-decoration: underline;
+        }
+
+        .countdown-notice {
+            margin-top: 14px;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-card">
+        <a href="index.html" class="logo-wrap" title="Gayatri Electrical Services">
+            <img src="assets/logo.png" alt="Gayatri Electrical Services Official Logo">
+            <div class="logo-text">
+                <span class="orange">Gayatri</span> <span class="blue">Electricals</span>
+            </div>
+        </a>
+
+        <div class="badge-404">⚡ Circuit Fault / Route Disconnected</div>
+        <div class="error-code">404</div>
+        <h1>Line Open / Page Not Found</h1>
+        <p>The electrical path or webpage you requested has shifted, tripped, or does not exist on this server. Let us route you back to our active industrial grid.</p>
+
+        <div class="action-buttons">
+            <a href="index.html" class="btn btn-primary">
+                ⚡ Return to Homepage
+            </a>
+            <a href="index.html#services" class="btn btn-secondary">
+                Explore Services
+            </a>
+            <a href="https://wa.me/918693893333?text=Hello%20Gayatri%20Electrical%20Services,%20I%20arrived%20at%20a%20404%20broken%20link." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                WhatsApp Support
+            </a>
+        </div>
+
+        <div class="emergency-bar">
+            24x7 Industrial Emergency Breakdown:
+            <a href="tel:+918693893333">+91 86938 93333</a> | <a href="tel:+918390597000">+91 83905 97000</a>
+        </div>
+
+        <div class="countdown-notice" id="redirectNotice">
+            Auto-routing to homepage in <span id="countdown">12</span> seconds...
+        </div>
+    </div>
+
+    <script>
+        let seconds = 12;
+        const countdownEl = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            if (countdownEl) countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+name: GES Site Quality & Standards Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Code & Schema Integrity Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JavaScript Syntax
+        run: |
+          echo "Validating JavaScript syntax..."
+          node -c js/main.js
+          node -c js/main.min.js
+          node -c sw.js
+          echo "All JavaScript files passed syntax verification."
+
+      - name: Validate JSON Data & Schema Files
+        run: |
+          echo "Validating JSON data files..."
+          node -e "
+            const fs = require('fs');
+            const files = [
+              'data/schema.json',
+              'data/translations.json',
+              'data/locales/en.json',
+              'data/locales/hi.json',
+              'data/locales/mr.json',
+              'site.webmanifest'
+            ];
+            for (const file of files) {
+              try {
+                JSON.parse(fs.readFileSync(file, 'utf-8'));
+                console.log('Valid JSON: ' + file);
+              } catch (e) {
+                console.error('Invalid JSON in ' + file + ':', e.message);
+                process.exit(1);
+              }
+            }
+          "
+
+      - name: Verify Web Standards & Core Endpoints
+        run: |
+          echo "Verifying required root files..."
+          required=(
+            "index.html"
+            "404.html"
+            "CNAME"
+            "robots.txt"
+            "sitemap.xml"
+            "llms.txt"
+            "llms-full.txt"
+            "humans.txt"
+            "security.txt"
+            "opensearch.xml"
+            "site.webmanifest"
+            "sw.js"
+          )
+          for file in "${required[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required file: $file"
+              exit 1
+            fi
+            echo "Found: $file"
+          done
+          echo "All 12 core web standard files present and accounted for!"
