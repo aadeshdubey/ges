@@ -4,9 +4,10 @@
  * Single Source of Truth: version.json
  *
  * Usage:
- *   node scripts/sync-version.js                # Syncs all files with version.json
+ *   node scripts/sync-version.js                # Syncs all files to match version.json
+ *   node scripts/sync-version.js --bump         # Auto-detects date + bumps daily build number
  *   node scripts/sync-version.js --check        # Verifies all files are in sync (CI check)
- *   node scripts/sync-version.js --set-version 26.11.01 --set-date 2026-11-01
+ *   node scripts/sync-version.js --set-version 26.11.01.1 --set-date 2026-11-01
  */
 
 const fs = require('fs');
@@ -14,6 +15,14 @@ const path = require('path');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const VERSION_FILE = path.join(ROOT_DIR, 'version.json');
+
+function getTodayIso() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 
 function formatDate(isoDate) {
     const parts = isoDate.split('-').map(Number);
@@ -32,6 +41,7 @@ function parseArgs() {
     const args = process.argv.slice(2);
     const options = {
         check: false,
+        bump: false,
         setVersion: null,
         setDate: null
     };
@@ -39,6 +49,8 @@ function parseArgs() {
     for (let i = 0; i < args.length; i++) {
         if (args[i] === '--check') {
             options.check = true;
+        } else if (args[i] === '--bump') {
+            options.bump = true;
         } else if (args[i] === '--set-version' && i + 1 < args.length) {
             options.setVersion = args[++i].replace(/^v/, '');
         } else if (args[i] === '--set-date' && i + 1 < args.length) {
@@ -51,11 +63,15 @@ Usage:
   node scripts/sync-version.js
       Syncs all repository files to match version.json.
 
+  node scripts/sync-version.js --bump
+      Auto-detects current date and increments build number (e.g. 26.11.01.1 -> 26.11.01.2).
+      Resets build to 1 if the day has changed.
+
   node scripts/sync-version.js --check
       Checks if all repository files are synchronized with version.json (exits 1 if out of sync).
 
   node scripts/sync-version.js --set-version <v> --set-date <YYYY-MM-DD>
-      Updates version.json with new version and date, then syncs all repository files.
+      Updates version.json with specific version and date, then syncs all repository files.
 `);
             process.exit(0);
         }
@@ -73,6 +89,31 @@ function loadVersionConfig() {
 
 function saveVersionConfig(config) {
     fs.writeFileSync(VERSION_FILE, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+}
+
+function autoBump(config) {
+    const today = getTodayIso();
+    const [year, month, day] = today.split('-');
+    const yy = year.slice(-2);
+    const datePrefix = `${yy}.${month}.${day}`;
+
+    if (config.releaseDate === today) {
+        // Same day: increment build number
+        config.build = (config.build || 0) + 1;
+    } else {
+        // New day: update date and reset build count to 1
+        config.releaseDate = today;
+        config.build = 1;
+    }
+
+    config.version = `${datePrefix}.${config.build}`;
+    config.versionBadge = `v${config.version}`;
+    config.cacheBuster = `v=${config.version}`;
+    config.serviceWorkerCacheName = `ges-cache-v${config.version}`;
+    config.formattedDate = formatDate(config.releaseDate);
+    config.lastUpdated = config.releaseDate;
+
+    return config;
 }
 
 function getSyncRules(config) {
@@ -254,6 +295,12 @@ function main() {
     let config = loadVersionConfig();
 
     let configUpdated = false;
+
+    if (options.bump) {
+        config = autoBump(config);
+        configUpdated = true;
+    }
+
     if (options.setVersion) {
         config.version = options.setVersion;
         config.versionBadge = `v${options.setVersion}`;

@@ -1,0 +1,27 @@
+#!/bin/sh
+# Gayatri Electrical Services (GES) — Pre-Commit Automation Hook
+# Automatically increments daily build number and synchronizes all files before committing.
+
+echo ""
+echo "=== [GES Pre-Commit] Auto-bumping build version & synchronizing files ==="
+node scripts/sync-version.js --bump
+
+if [ $? -ne 0 ]; then
+  echo "Error: Version synchronization failed!"
+  exit 1
+fi
+
+# Automatically stage files updated by the sync script
+git add -u
+
+# Validate repository integrity before commit proceeds
+node scripts/validate.js
+
+if [ $? -ne 0 ]; then
+  echo "Error: Repository validation failed!"
+  exit 1
+fi
+
+echo "=== [GES Pre-Commit] Version bumped & validated successfully ==="
+echo ""
+exit 0

@@ -17,7 +17,7 @@
   <a href="#pwa-web-standards"><img src="https://img.shields.io/badge/PWA_%26_Standards-RFC_9116_%7C_OpenSearch_%7C_Offline_SW-10b981?style=for-the-badge" alt="PWA and Web Standards"></a>
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.01-0d1392?style=for-the-badge" alt="Version v26.11.01"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.01.1-0d1392?style=for-the-badge" alt="Version v26.11.01.1"></a>
 </p>
 
 <p align="center">
