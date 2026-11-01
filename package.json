@@ -1,0 +1,22 @@
+{
+  "name": "ges-website",
+  "version": "26.11.01",
+  "private": true,
+  "description": "Gayatri Electrical Services (GES) Official Enterprise Website & PWA",
+  "scripts": {
+    "version:sync": "node scripts/sync-version.js",
+    "version:check": "node scripts/sync-version.js --check",
+    "validate": "node scripts/validate.js",
+    "test": "node scripts/validate.js"
+  },
+  "keywords": [
+    "electrical-contractor",
+    "ges",
+    "bhiwandi",
+    "turnkey-engineering",
+    "substation",
+    "pwa"
+  ],
+  "author": "Gayatri Electrical Services",
+  "license": "UNLICENSED"
+}

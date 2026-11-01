@@ -7,8 +7,8 @@ const CACHE_NAME = 'ges-cache-v26.11.01';
 const PRECACHE_URLS = [
     './',
     './index.html',
-    'css/style.min.css?v=26.10.31',
-    'js/main.min.js?v=26.10.31',
+    'css/style.min.css?v=26.11.01',
+    'js/main.min.js?v=26.11.01',
     'assets/logo.png',
     'assets/favicon.svg',
     'data/schema.json',

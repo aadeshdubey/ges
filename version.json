@@ -1,0 +1,15 @@
+{
+  "version": "26.11.01",
+  "versionBadge": "v26.11.01",
+  "releaseDate": "2026-11-01",
+  "formattedDate": "Sunday, November 1, 2026",
+  "cacheBuster": "v=26.11.01",
+  "serviceWorkerCacheName": "ges-cache-v26.11.01",
+  "lastUpdated": "2026-11-01",
+  "meta": {
+    "organization": "Gayatri Electrical Services",
+    "established": 2003,
+    "license": "Government Authorized Electrical & Licensed Lift Contractor",
+    "location": "Bhiwandi, Thane, Maharashtra 421302, India"
+  }
+}

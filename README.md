@@ -16,7 +16,7 @@
   <a href="#agentic-ai-seo"><img src="https://img.shields.io/badge/Agentic_AI_Ready-OpenAI_%7C_Claude_%7C_Perplexity_%7C_Gemini_%7C_Apple_%7C_Meta_%7C_DeepSeek-8A2BE2?style=for-the-badge&logo=openai&logoColor=white" alt="Agentic AI Ready"></a>
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.10.31-0d1392?style=for-the-badge" alt="Version v26.10.31"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.01-0d1392?style=for-the-badge" alt="Version v26.11.01"></a>
 </p>
 
 <p align="center">
@@ -459,6 +459,29 @@ npx serve -l 8000 .
 ```
 
 Open your browser at **`http://127.0.0.1:8000/`**.
+
+---
+
+<a id="version-management"></a>
+## Automated Version & Date Synchronization
+
+The repository uses [`version.json`](version.json) as the **single source of truth** for release versions, dates, cache busters, and sitemap modification timestamps.
+
+When releasing an update, edit `version.json` (or pass arguments to the script) and run:
+
+```bash
+# Automatically propagate version and date across all 13 repository files:
+node scripts/sync-version.js
+
+# Or update version and date directly in one command:
+node scripts/sync-version.js --set-version 26.11.02 --set-date 2026-11-02
+
+# Verify all files are in sync (used in GitHub Actions CI):
+node scripts/sync-version.js --check
+
+# Run full repository validation (Syntax, JSON schemas, web standards, version sync):
+node scripts/validate.js
+```
 
 ---
 

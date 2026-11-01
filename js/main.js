@@ -1,6 +1,6 @@
 /**
  * Gayatri Electrical Services — Enterprise Application Engine
- * Version: 26.10.31 | Release Date: 2026-10-31
+ * Version: 26.11.01 | Release Date: 2026-11-01
  */
 // Google Tag Manager
 (function (w, d, s, l, i) {
