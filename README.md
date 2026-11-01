@@ -16,6 +16,7 @@
   <a href="#agentic-ai-seo"><img src="https://img.shields.io/badge/Agentic_AI_Ready-OpenAI_%7C_Claude_%7C_Perplexity_%7C_Gemini_%7C_Apple_%7C_Meta_%7C_DeepSeek-8A2BE2?style=for-the-badge&logo=openai&logoColor=white" alt="Agentic AI Ready"></a>
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.10.31-0d1392?style=for-the-badge" alt="Version v26.10.31"></a>
 </p>
 
 <p align="center">
@@ -396,7 +397,7 @@ body.formal-letter {
 
 ### 5. Canva Pro Brand Kit & Typography Setup Guide
 
-> **Full Documentation**: For the complete template-by-template design matrix (Cover Letters, BOQ Quotations, Slide Decks, Social Posts, and Visiting Cards), see [`CANVA_BRAND_GUIDE.md`](file:///c:/aadesh/programming/git/ges/CANVA_BRAND_GUIDE.md).
+> **Full Documentation**: For the complete template-by-template design matrix (Cover Letters, BOQ Quotations, Slide Decks, Social Posts, and Visiting Cards), see [`docs/CANVA_BRAND_GUIDE.md`](file:///c:/aadesh/programming/git/ges/docs/CANVA_BRAND_GUIDE.md).
 
 To maintain identical corporate branding across social media, pitch presentations, quotation folders, and Canva templates, configure your **Canva Pro Brand Kit** with these exact parameters:
 

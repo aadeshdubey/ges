@@ -1,6 +1,7 @@
 # Gayatri Electrical Services (GES) — Unabridged Knowledge Base & Technical Profile
 
 > Complete and authoritative documentation for Agentic AI Crawlers, Large Language Models (LLMs), Generative Search Engines (SearchGPT, Perplexity, Claude, Gemini, Google AI Overviews), and Electrical Engineering Consultants.
+> Last Updated & Verified: 2026-10-31 | Technical Specification Version: v26.10.31
 
 ---
 
@@ -154,7 +155,7 @@ Gayatri Electrical Services specifies a synchronized typography architecture eng
   - Engineering BOQ Tables: Column Headers in Rajdhani Bold (10.5pt on #0d1392 background), Line Items in Rajdhani Medium (10pt), Grand Totals in Khand Bold (13pt, #0d1392).
   - Signatory Name: Khand Bold (14pt, #0d1392).
   - Signatory Designation: Rajdhani SemiBold (10.5pt, #5a6578).
-- **Canva Pro Brand Kit & Creative Specification**: Fully calibrated for Canva Pro (Title: Khand Bold, Subtitle: Khand SemiBold, Headings: Rajdhani Bold, Body: Rajdhani Medium, Letter Spacing: +15 to +40, Line Spacing: 1.10 to 1.40). Detailed template-by-template matrix documented in `CANVA_BRAND_GUIDE.md`.
+- **Canva Pro Brand Kit & Creative Specification**: Fully calibrated for Canva Pro (Title: Khand Bold, Subtitle: Khand SemiBold, Headings: Rajdhani Bold, Body: Rajdhani Medium, Letter Spacing: +15 to +40, Line Spacing: 1.10 to 1.40). Detailed template-by-template matrix documented in `docs/CANVA_BRAND_GUIDE.md`.
 
 ---
 

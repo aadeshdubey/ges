@@ -1,0 +1,16 @@
+/* TEAM */
+Organization: Gayatri Electrical Services (GES)
+Role: Government Authorized Electrical & Licensed Lift Contractor
+Location: Shop No 7, Tirupati Heights, Sonale Pipeline Rd, Bhadwad, Bhiwandi, Maharashtra 421302, India
+Founded: 2003
+Website: https://www.gayatrielectrical.in
+Contact: support@gayatrielectrical.in
+
+/* SITE & ENGINEERING */
+Last Updated: 2026-11-01
+Standards: HTML5 Semantic, CSS3 (Custom Properties & Responsive Clamp), ES6+ Vanilla JavaScript
+Design Aesthetic: High Voltage Meets High Intelligence Enterprise System
+Typography: Khand (Display/Headings) & Rajdhani (UI/Body) by Indian Type Foundry (ITF)
+Architecture: Static PWA, Dynamic Asynchronous Locale Engine (English, Hindi, Marathi)
+Data Layer: JSON-LD Schema (LocalBusiness, ElectricalContractor, ProfessionalService), OpenSearch, RFC 9116
+Host: GitHub Pages with Custom SSL / DNS

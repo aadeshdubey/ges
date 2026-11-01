@@ -1,0 +1,455 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ElectricalContractor", "Electrician", "GeneralContractor", "ProfessionalService", "LocalBusiness"],
+      "@id": "https://www.gayatrielectrical.in/#organization",
+      "name": "Gayatri Electrical Services",
+      "legalName": "Gayatri Electrical Services",
+      "slogan": "High Voltage Meets High Intelligence",
+      "alternateName": [
+        "GES",
+        "Gayatri Electricals",
+        "Gayatri Electrical Services Bhiwandi",
+        "गायत्री इलेक्ट्रिकल सर्व्हिसेस",
+        "गायत्री इलेक्ट्रिकल सर्विसेज"
+      ],
+      "image": "https://www.gayatrielectrical.in/images/brand/about-us-team.png",
+      "logo": "https://www.gayatrielectrical.in/assets/logo.png",
+      "url": "https://www.gayatrielectrical.in/",
+      "telephone": "+918693893333",
+      "email": "support@gayatrielectrical.in",
+      "foundingDate": "2003",
+      "dateModified": "2026-10-31",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "156",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "₹₹ - ₹₹₹₹",
+      "paymentAccepted": "Bank Transfer, RTGS, NEFT, Cheque, Corporate UPI (Official GST Tax Invoiced B2B Transactions)",
+      "currenciesAccepted": "INR",
+      "knowsAbout": [
+        "13 MW Turnkey Industrial Power Infrastructure",
+        "6.5 MW Dedicated Express Feeders",
+        "11kV 22kV 33kV High Tension Substations",
+        "EHV Grid Substation Liaisoning 100kV and 220kV",
+        "Torrent Power Bhiwandi Circle Statutory Clearances",
+        "MSETCL Transmission Approvals & Bay Extensions",
+        "MSEDCL Industrial Load Sanctions Wada Kudus",
+        "Turnkey Solar Liaisoning & Net-Metering Approvals",
+        "Chief Electrical Inspectorate CEI Clearances",
+        "Form A and Form B Submissions CEA Safety Regulations",
+        "D.G. Set Statutory Clearances and Interlocks",
+        "High-Rise Building Electrical Approvals and Busducts",
+        "Post-Fire PWD Investigation & Clearances",
+        "Transformer On-Site BDV Oil Filtration >60kV",
+        "Emergency Mobile Transformer Rentals 100kVA to 2000kVA",
+        "Automatic Power Factor Correction APFC Panels",
+        "Harmonic Mitigation Detuned Filter Reactors",
+        "Vacuum Circuit Breaker VCB Testing",
+        "Bombay Lifts Act Elevator Compliance",
+        "Chemical Earthing & Copper Grounding Grids"
+      ],
+      "description": "Government Authorized Electrical Contractor (Est. 2003) & Licensed Lift Contractor in Maharashtra specializing in HT & LT Electrical Contracting, 13 MW Turnkey Express Feeders (APCO Infratech Bhiwandi), Torrent Power & MSETCL grid approvals, Electrical Inspector statutory commissioning, Transformer Lifecycle Management, High-Rise Permissions, Post-Fire PWD Clearances, and industrial power infrastructure across Bhiwandi, Kudus, Wada & Thane.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No 7, Tirupati Heights, Sonale Pipeline Rd, Bhadwad",
+        "addressLocality": "Bhiwandi",
+        "addressRegion": "Maharashtra",
+        "postalCode": "421302",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.2877771,
+        "longitude": 73.0842881
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Government License",
+          "name": "Govt. Authorized Electrical Contractor License",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "Licensing Board, Industry, Energy and Labour Department, Government of Maharashtra"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Government License",
+          "name": "Govt. Authorized Lift Contractor License",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "Lift Inspectorate, Energy Department, Government of Maharashtra"
+          }
+        }
+      ],
+      "potentialAction": [
+        {
+          "@type": "QuoteAction",
+          "name": "Request Turnkey Electrical Quote or Load Sanction Consultation",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.gayatrielectrical.in/#contact"
+          }
+        },
+        {
+          "@type": "CommunicateAction",
+          "name": "Emergency Breakdown & WhatsApp Hotline",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://wa.me/918693893333"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Bhiwandi" },
+        { "@type": "Place", "name": "Sonale, Bhiwandi" },
+        { "@type": "Place", "name": "Val, Bhiwandi" },
+        { "@type": "Place", "name": "Mankoli, Bhiwandi" },
+        { "@type": "Place", "name": "Padgha, Bhiwandi" },
+        { "@type": "Place", "name": "Bhadwad, Bhiwandi" },
+        { "@type": "Place", "name": "Dapoda, Bhiwandi" },
+        { "@type": "Place", "name": "Rahnal, Bhiwandi" },
+        { "@type": "Place", "name": "Anjurphata, Bhiwandi" },
+        { "@type": "Place", "name": "Kudus Industrial Area" },
+        { "@type": "Place", "name": "Wada Industrial Area" },
+        { "@type": "City", "name": "Thane" },
+        { "@type": "City", "name": "Mumbai" },
+        { "@type": "City", "name": "Navi Mumbai" },
+        { "@type": "City", "name": "Kalyan" },
+        { "@type": "City", "name": "Dombivli" },
+        { "@type": "City", "name": "Ambernath" },
+        { "@type": "City", "name": "Badlapur" },
+        { "@type": "City", "name": "Shahpur" },
+        { "@type": "State", "name": "Maharashtra" }
+      ],
+      "sameAs": [
+        "https://www.google.com/search?q=Gayatri%20Electricals%20Services&stick=H4sIAAAAAAAAAONgU1I1qDBOSjVPSjFNMrVMS7E0NEyyAgqZmVokmyVZpFqkmaVYJiUuYpVxT6xMLCnKVHDNSU0G0smJOcUKwalFZZnJqcUAlKxjBkgAAAA",
+        "https://www.indiamart.com/gayatri-electrical-services/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical & Lift Contracting Services Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Voltage (HT) Substation Erection & 11kV/22kV/33kV Turnkey Commissioning",
+              "description": "Turnkey HT substation erection, VCB breakers, step-down transformers, and statutory CEI charging permissions across Maharashtra."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "13 MW Turnkey Express Feeders & EHV Grid Synchronization",
+              "description": "Multi-megawatt dedicated express feeder construction, 100kV and 220kV MSETCL transmission grid integration, bay erection, and CEI commissioning."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Torrent Power & MSEDCL Industrial Load Sanctions & Liaisoning",
+              "description": "Official authorized contractor for new HT/LT power connections, demand enhancements, TOD metering, and charging clearances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Electrical Inspector (PWD / CEI) Statutory Clearances & Form A/B",
+              "description": "Statutory drawing scrutiny, Single Line Diagram (SLD) approval, Form A & B filing, earth resistance certification, and D.G. Set clearances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformer Lifecycle Management & On-Site BDV Oil Filtration",
+              "description": "Power transformer supply, preventive maintenance, on-site high-vacuum oil dehydration, BDV dielectric testing, and mobile rental transformers."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial APFC Harmonic Panels & Power Factor Optimization",
+              "description": "Automatic Power Factor Correction panels with detuned harmonic filters to maintain PF >0.98 and eliminate monthly utility penalties."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Govt. Authorized Lift Contractor & Safety Testing under Bombay Lifts Act",
+              "description": "Passenger and goods elevator installation, modernization, and annual safety inspection certificate renewals with the Lift Inspectorate (Energy Department, Govt. of Maharashtra)."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Post-Incident Forensic Electrical Inspection & PWD Restoration",
+              "description": "Post-fire and flashover electrical damage audits, cable Hi-Pot testing, remediation, and urgent Electrical Inspector re-energization clearances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Turnkey Solar Power EPC, Net-Metering Liaisoning & CEI Charging Permissions",
+              "description": "Turnkey rooftop and ground-mounted industrial solar EPC, grid feasibility, Torrent Power & MSEDCL bi-directional net-metering approvals, and CEI Form A/B charging clearances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "HT & LT Underground Cable Laying, Precision Jointing & Fault Detection",
+              "description": "Trenching, laying, and termination of 1.1kV LT up to 33kV HT XLPE armored cables, Raychem heat-shrink straight-through jointing, and precision DC Hi-Pot fault location."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance-Free Chemical Earthing & Copper Grounding Grids",
+              "description": "Advanced chemical earthing electrode installation, copper earth grid construction, soil resistivity testing, earth resistance certification, and neutral grounding."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diesel Generator (D.G. Set) Approvals & CEA Regulation 43 Clearances",
+              "description": "End-to-end statutory liaisoning, Single Line Diagram (SLD) approval, acoustic enclosure safety inspection, dual-source AMF interlock verification, and Electrical Inspector approvals."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Main LT Power Control Centers (PCC) & Motor Control Centers (MCC)",
+              "description": "Custom design, assembly, busbar trunking, and commissioning of Main LT Power Control Centers (PCC), Motor Control Centers (MCC), and flameproof (FLP / Ex-d) switchboards."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diagnostic Electrical Testing, Hi-Pot & Substation Health Audits",
+              "description": "Comprehensive on-site diagnostic testing including DC Hi-Pot testing, Tan-Delta dissipation factor testing, transformer winding resistance, and VCB relay calibration."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Substation & Plant Annual Maintenance Contracts (AMC)",
+              "description": "Comprehensive and preventive maintenance contracts (AMCs) for industrial manufacturing plants, continuous HT substation health monitoring, and 24/7 emergency breakdown support."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Rise Commercial & Residential Building Electrical Clearances",
+              "description": "Electrical infrastructure design and clearances for high-rise towers, sandwich rising main busduct installations, dedicated fire pump dual-source wiring, and PWD clearances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Overhead Transmission Line Shifting & EHV Right-of-Way (ROW) Clearance",
+              "description": "High-voltage and extra-high-voltage (EHV) overhead power line shifting, tower erection, conductor stringing, Right-of-Way (ROW) statutory permissions, and MSETCL synchronization."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mobile Emergency Transformer Rentals (100 kVA to 2000 kVA+)",
+              "description": "Rapid-deployment temporary mobile power transformer supply and rental services (100 kVA to 2000 kVA+) with on-site commissioning to eliminate prolonged plant shutdown."
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Govt. Authorized Electrical Contractor Maharashtra",
+        "Govt. Authorized Lift Contractor Maharashtra",
+        "HT Substation Erection 11kV 22kV 33kV",
+        "13 MW Turnkey Express Feeder Project APCO Infratech",
+        "Torrent Power Bhiwandi Authorized Contractor",
+        "MSETCL 100kV 220kV Substation Bay Extension",
+        "MSEDCL Industrial Load Sanction Wada Kudus",
+        "Electrical Inspector PWD Form A Form B Charging Permission",
+        "D.G. Set Approval under CEA Regulation 43",
+        "Transformer Oil Filtration BDV Testing Rental",
+        "APFC Capacitor Banks Harmonic Detuned Filters PF Correction",
+        "High-Rise Building Electrical Clearances Rising Main Busduct",
+        "Post-Fire Electrical Forensic Investigation PWD Clearances",
+        "Industrial Power for Glass Printing Paper Textiles Chemical Plastics Cold Storage",
+        "Underground HT Cable Fault Location DC Hi-Pot Testing",
+        "Chemical Earthing Copper Grid Installation",
+        "Turnkey Solar Net-Metering Approvals Torrent Power MSEDCL",
+        "Raychem HT Cable Jointing and End Terminations",
+        "Industrial Substation Preventive AMC 24x7 Breakdown Response",
+        "Overhead High Voltage Transmission Line Shifting",
+        "Flameproof FLP Ex-d Electrical Switchboards",
+        "New Industrial Power Connection Application & Load Sanction",
+        "Factory Load Extension and Contract Demand Enhancement Consultant",
+        "Low Power Factor Penalty Elimination & MSEDCL Rebate Optimization",
+        "Transformer on Rent 100 kVA to 2000 kVA Bhiwandi Thane",
+        "On-Site Transformer Oil BDV Testing and High Vacuum Filtration",
+        "PWD Electrical Inspector Form A and Form B Clearances",
+        "Bombay Lifts Act Commercial Lift License Renewal & Inspection",
+        "Godown and Warehouse Electrical Wiring Contractor Bhiwandi",
+        "Raychem Heat Shrink HT Cable Jointing Kit Installation",
+        "नवीन वीज कनेक्शन व लोड मंजुरी (New Power Connection & Load Sanction)",
+        "वीज बिलातील पॉवर फॅक्टर पेनल्टी निवारण (Power Factor Penalty Reduction)",
+        "ट्रान्सफॉर्मर ऑइल फिल्ट्रेशन व टेस्टिंग (Transformer Oil Filtration & Testing)",
+        "सरकारी मान्यताप्राप्त इलेक्ट्रिकल व लिफ्ट कॉन्ट्रॅक्टर (Govt Authorized Electrical & Lift Contractor)",
+        "सोलर नेट मीटरिंग मंजुरी महावितरण व टॉरेंट पॉवर (Solar Net Metering Approval)"
+      ]
+    },
+    {
+      "@type": "Project",
+      "@id": "https://www.gayatrielectrical.in/#apco-project",
+      "name": "APCO Infratech 13 MW Turnkey Power Sanction & Dual 6.5 MW Express Feeders",
+      "description": "Landmark 13 MW turnkey industrial power infrastructure project in Bhiwandi sourced across two distinct transmission hubs (100kV Substation and 220kV EHV Grid Substation), dual 6.5 MW express feeder lines, vacuum circuit breakers, dual-incomer synchronization, and statutory commissioning under the Electrical Inspector.",
+      "provider": {
+        "@id": "https://www.gayatrielectrical.in/#organization"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Bhiwandi, Maharashtra"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.gayatrielectrical.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What statutory approvals are required from the Electrical Inspector (PWD) for HT installations and D.G. sets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Regulation 43 of the Central Electricity Authority (CEA) Safety Regulations and Section 54 of the Electricity Act, any High Tension (HT) installation (11kV, 22kV, 33kV) and Diesel Generator (D.G.) set must undergo drawing approval, physical inspection, earth resistance verification, and interlock checking by the Electrical Inspector (PWD) before charging. Gayatri Electrical Services handles drawing submissions, Form A/B clearances, and complete liaisoning to obtain official charging permissions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What HT and LT electrical contracting services do you provide under Torrent Power and MSEDCL jurisdictions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a licensed Govt. Authorized Electrical Contractor, we execute turnkey HT and LT contracting across Torrent Power (Bhiwandi Circle) and MSEDCL (Mahavitaran). Our services include new HT/LT service connections, load enhancements, overhead and underground cable laying, substation erection, transformer commissioning, Express Feeder execution, and CT/PT metering cubicle testing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which manufacturing and process industries do you provide electrical infrastructure for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide specialized power solutions for heavy manufacturing and continuous process plants, including Printing & Packaging, Irrigation & Agricultural Piping, Rubber & Polymer Manufacturing, Office Furniture & Precision Components, Chemical & Bulk Drug Plants (flameproof FLP), Textiles & Auto-Looms, Cold Storage & Ammonia Compressors, and Stone Quarries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is it mandatory to hire a Govt. Authorized Electrical Contractor in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By law under Indian Electricity Rules, execution, testing, and certification of HT installations, substations, and lifts must be carried out by a licensed contractor authorized by the State Government Licensing Board (Govt. of Maharashtra) to ensure statutory safety compliance and valid utility energization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the procedure for obtaining D.G. Set (Diesel Generator) approval from the Electrical Inspector (PWD)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "D.G. set approval requires formal single-line diagram (SLD) approval, physical inspection, earth pit resistance testing (separate neutral and body earthing), acoustic enclosure verification, and electrical/mechanical interlock validation to prevent backfeeding to the utility grid. We prepare all drawings, file Form A/B submissions, and secure final charging permission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help manufacturing plants avoid Low Power Factor (PF) penalties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operating below 0.90 power factor results in heavy monthly utility penalties, while maintaining PF above 0.95 yields bill incentives. We design, install, and calibrate Automatic Power Factor Correction (APFC) panels with detuned harmonic filters to counter harmonics generated by VFDs, extrusion motors, and welding equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide Annual Maintenance Contracts (AMCs) for industrial substations, transformers, and HT/LT panels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide Comprehensive and Non-Comprehensive Annual Maintenance Contracts (AMCs) covering HT substations, transformer oil filtration, BDV dielectric testing, VCB/SF6 breaker servicing, protection relay calibration, LT distribution panels, APFC capacitor bank maintenance, and earth pit audits across Bhiwandi, Kudus, Wada, and Thane."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide emergency breakdown assistance for industrial transformers and HT panels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide rapid-response emergency electrical services for industrial clients across Bhiwandi, Kudus, Wada, Thane, and Mumbai for transformer overhauls, on-site BDV dielectric oil testing, high-vacuum oil filtration, HT cable fault location & jointing, and switchgear repairs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which industrial areas and regions in Maharashtra do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We actively serve industrial and commercial clients throughout Bhiwandi (Sonale, Val, Mankoli, Padgha, Bhadwad, Dapoda, Rahnal), the Kudus and Wada industrial corridors, Thane, Kalyan, Dombivli, Ambernath, Badlapur, Shahapur, Navi Mumbai, and the wider Mumbai Metropolitan Region (MMR)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your pricing terms and accepted payment methods?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gayatri Electrical Services is a legally registered GST engineering firm adhering to statutory compliance. We provide transparent, competitive project estimates based on an itemized engineering Bill of Quantities (BOQ). All contracting transactions, milestone disbursements, and AMC retainers are billed through formal GST Tax Invoices and settled via institutional banking channels: Bank Transfer (RTGS / NEFT / IMPS), Account Payee Cheques, or Verified Corporate UPI. This guarantees 100% financial audit compliance and ensures that corporate clients can claim full GST Input Tax Credit (ITC)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.gayatrielectrical.in/#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gayatrielectrical.in/" },
+        { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.gayatrielectrical.in/#about" },
+        { "@type": "ListItem", "position": 3, "name": "Services", "item": "https://www.gayatrielectrical.in/#services" },
+        { "@type": "ListItem", "position": 4, "name": "Industries", "item": "https://www.gayatrielectrical.in/#industries" },
+        { "@type": "ListItem", "position": 5, "name": "Statutory Liaisoning", "item": "https://www.gayatrielectrical.in/#liaisoning" },
+        { "@type": "ListItem", "position": 6, "name": "FAQ", "item": "https://www.gayatrielectrical.in/#faq" },
+        { "@type": "ListItem", "position": 7, "name": "Contact", "item": "https://www.gayatrielectrical.in/#contact" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.gayatrielectrical.in/#website",
+      "url": "https://www.gayatrielectrical.in/",
+      "name": "Gayatri Electrical Services",
+      "alternateName": "GES",
+      "description": "Government Authorized Electrical Contractor (Est. 2003) & Licensed Lift Contractor in Maharashtra.",
+      "publisher": { "@id": "https://www.gayatrielectrical.in/#organization" },
+      "inLanguage": ["en-IN", "hi-IN", "mr-IN"],
+      "datePublished": "2003-01-01",
+      "dateModified": "2026-10-31"
+    }
+  ]
+}

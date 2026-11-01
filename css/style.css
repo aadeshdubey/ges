@@ -1,3 +1,8 @@
+/**
+ * Gayatri Electrical Services — Corporate Stylesheet
+ * Version: 26.10.31 | Release Date: 2026-10-31
+ * Typography: Khand + Rajdhani (Indian Type Foundry)
+ */
 :root {
             --primary-orange: #f69024;
             --primary-orange-dark: #e07a12;
@@ -271,9 +276,9 @@
         }
 
         .logo-text-group {
-            display: flex;
+            display: inline-flex;
             flex-direction: column;
-            line-height: 1.18;
+            width: fit-content;
         }
 
         .logo-title {
@@ -281,10 +286,11 @@
             font-weight: 700;
             font-size: clamp(1.22rem, 1.35vw + 0.35rem, 1.55rem);
             letter-spacing: 0.03em;
-            display: inline-flex;
-            gap: 0.35em;
+            display: flex;
             align-items: baseline;
+            gap: 0.35em;
             line-height: 1;
+            white-space: nowrap;
         }
 
         .logo-title .brand-gayatri {
@@ -302,38 +308,50 @@
             letter-spacing: 0.035em;
         }
 
-        .logo-tagline {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 0.72rem;
+        .logo-tagline,
+        .footer-logo-tagline {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 2px;
+            line-height: 1;
+            font-family: var(--font-heading);
+            font-size: 0.65rem;
             font-weight: 700;
-            letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: #566072;
+            letter-spacing: 0.03em;
+            pointer-events: none;
+            user-select: none;
             white-space: nowrap;
-            margin-top: 3px;
-            line-height: 1.15;
-            transition: color 0.3s ease;
         }
 
-        .logo:hover .logo-tagline {
+        .logo-tagline .tagline-voltage,
+        .footer-logo-tagline .tagline-voltage {
             color: var(--primary-orange);
+            letter-spacing: 0.03em;
+        }
+
+        .logo-tagline .tagline-meets,
+        .footer-logo-tagline .tagline-meets {
+            color: #64748b;
+            font-size: 0.54rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            opacity: 0.9;
+            padding: 0 2px;
+        }
+
+        .logo-tagline .tagline-intelligence,
+        .footer-logo-tagline .tagline-intelligence {
+            color: var(--brand-blue);
+            letter-spacing: 0.03em;
         }
 
         @media (max-width: 992px) {
             .logo-tagline {
                 display: none;
             }
-        }
-
-        .footer-logo-tagline {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 0.74rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #566072;
-            margin-top: 4px;
-            display: block;
         }
 
         /* Footer Logo Branding */
@@ -2031,7 +2049,7 @@
         /* Parallax Section */
         .parallax-section {
             padding: 120px 0;
-            background-image: url('images/parallax-background.webp');
+            background-image: url('../images/brand/parallax-background.webp');
             min-height: 400px;
             background-attachment: fixed;
             background-position: center;

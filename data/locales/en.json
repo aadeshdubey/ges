@@ -1,0 +1,487 @@
+{
+  "logo_subtitle": "Govt. Auth. Electrical Contractor",
+  "logo_tagline": "<span class=\"tagline-voltage\">HIGH VOLTAGE</span> <span class=\"tagline-meets\">MEETS</span> <span class=\"tagline-intelligence\">HIGH INTELLIGENCE</span>",
+  "nav_home": "Home",
+  "nav_about": "About Us",
+  "nav_services": "Services",
+  "services_full_overview": "⚡ Full Services Overview",
+  "srv_transformer": "Transformer Management",
+  "srv_ht": "HT Substations",
+  "srv_panels": "Panel Systems",
+  "srv_cabling": "Cabling Works",
+  "srv_testing": "Testing & Safety",
+  "srv_liasoning": "Liasoning & Consulting",
+  "srv_projects": "Special Projects",
+  "srv_solar": "Solar Power",
+  "srv_earthing": "Earthing Solutions",
+  "nav_industries": "Industries",
+  "nav_liaisoning": "Liaisoning",
+  "nav_flagship_project": "13 MW Feeder",
+  "nav_faq": "FAQ",
+  "nav_contact": "Contact",
+  "hero_tagline": "<span class=\"hv-word\">High Voltage</span> <span class=\"connector-word\">Meets</span> <span class=\"hi-word\">High Intelligence</span>",
+  "hero_title": "Engineering the Future of Power",
+  "hero_subtitle": "Authoritative, reliable, and innovative electrical solutions for industrial and commercial projects of all sizes.",
+  "hero_cta": "Get a Consultation",
+  "metric_exp": "Years Experience",
+  "metric_exp_sub": "Established 2003 in Bhiwandi",
+  "metric_substations": "Turnkey Substations",
+  "metric_substations_sub": "New HT/LT Projects Executed",
+  "metric_trans": "Transformers Serviced",
+  "metric_trans_sub": "Overhauls, BDV Testing & Filtration",
+  "metric_amc": "Active Industrial AMCs",
+  "metric_amc_sub": "Comprehensive & Preventive Contracts",
+  "metric_panels": "HT/LT Panels Built",
+  "metric_panels_sub": "PCC/MCC & APFC Capacitor Banks",
+  "metric_compliance": "Statutory Clearances",
+  "metric_compliance_sub": "PWD CEI, Discom & Lift Approvals",
+  "about_title": "The Current That Drives Progress",
+  "about_p1": "For over two decades, Gayatri Electricals has been more than a service provider; we are the silent, steadfast current running through the core of industry and commerce. We don't just manage power—we empower potential. Our foundation is built on a legacy of unwavering commitment to excellence, translating complex electrical challenges into streamlined, robust solutions.",
+  "about_p2": "Our team of seasoned professionals operates at the intersection of experience and innovation. As a Govt. Authorized Electrical Contractor and Govt. Authorized Lift Contractor, our work is backed by official credentials and a deep commitment to compliance and safety. We view every project, from a critical emergency repair to a full-scale substation installation, as a dedicated collaboration. We are dedicated to building a future where your operations are not only safer and more efficient but are also primed for the growth and technological demands of tomorrow.",
+  "about_p3": "We believe that reliable power is the foundation of progress. That's why we're constantly adapting to new technologies, from advanced diagnostics to sustainable energy solutions like solar. Our goal is to ensure your operations are not only safer and more efficient today but are also primed for the growth and technological demands of tomorrow.",
+  "footer_desc": "Powering progress with more than two decades of unwavering commitment to safety, efficiency, and innovative electrical solutions.",
+  "footer_quick_links": "Quick Links",
+  "footer_contact_us": "Contact Us",
+  "footer_follow_us": "Follow Us",
+  "contact_office_addr": "Shop No 7, Tirupati Heights,<br>Sonale Pipeline Rd, Bhadwad,<br>Bhiwandi, Maharashtra - 421302",
+  "footer_rights": "© 2026 Gayatri Electrical Services. All Rights Reserved. | <button id=\"privacy-policy-link\" data-modal-target=\"#modal-privacy\" class=\"footer-link\">Privacy Policy</button> | <button id=\"terms-of-service-link\" data-modal-target=\"#modal-terms\" class=\"footer-link\">Terms of Service</button>",
+  "parallax_title": "Ready to Power Up Your Project?",
+  "parallax_sub": "Let our expertise be your asset. Partner with the best.",
+  "parallax_cta": "Discuss Your Needs",
+  "contact_title": "Contact Us",
+  "contact_sub": "Let's discuss how we can power your project's success. Reach out for a consultation.",
+  "contact_get_in_touch": "Get In Touch",
+  "contact_send_email": "Send an Email",
+  "contact_give_call": "Give Us a Call",
+  "contact_office": "Our Office",
+  "contact_form_title": "Send Us a Message",
+  "contact_form_name": "Your Name",
+  "contact_form_email": "Your Email",
+  "contact_form_phone": "Your Mobile No.",
+  "contact_form_industry": "Select Your Industry / Project Sector",
+  "contact_form_msg": "Your Message / Project Requirements",
+  "contact_form_btn": "Submit Inquiry",
+  "whatsapp_tooltip": "Quick Chat on WhatsApp",
+  "services_section": {
+    "title": "Our Areas of Expertise",
+    "subtitle": "We provide a complete spectrum of electrical solutions, organized by our core specializations for clarity and precision.",
+    "cards": [
+      {
+        "title": "Transformer Lifecycle Management",
+        "desc": "Complete end-to-end services for your most critical assets, from supply and repair to ongoing maintenance."
+      },
+      {
+        "title": "High-Voltage (HV) Substations",
+        "desc": "Turnkey solutions for MV & HV substation erection, testing, and commissioning of both AIS and GIS bays."
+      },
+      {
+        "title": "Industrial Panel Systems (HT, LT & APFC)",
+        "desc": "Design, manufacturing, and installation of custom electrical control panels for optimal power distribution and factor correction."
+      },
+      {
+        "title": "Industrial Cabling Works (HT & LT)",
+        "desc": "Precision cable laying, termination, and jointing for high and low-tension industrial applications."
+      },
+      {
+        "title": "Electrical Testing & Safety",
+        "desc": "Comprehensive diagnostic services, including Transformer testing, Substation testing, and specialized HIGH-POT testing."
+      },
+      {
+        "title": "Liasoning & Regulatory Consulting",
+        "desc": "Seamless administrative liasoning with PWD (CEI / Electrical Inspector for HT & D.G. sets), MSEDCL, MSETCL & Torrent Power."
+      },
+      {
+        "title": "Turnkey Projects & Special Works",
+        "desc": "End-to-end management of complex electrical engineering projects, from express feeders to overhead line shifting."
+      },
+      {
+        "title": "Solar Power Solutions",
+        "desc": "Harness renewable energy with our end-to-end solar installation and liasoning services for your property."
+      },
+      {
+        "title": "Earthing Solutions",
+        "desc": "A robust earthing system is critical for the safety of your personnel and the protection of your expensive equipment. We provide reliable and long-lasting solutions."
+      }
+    ]
+  },
+  "industries_section": {
+    "title": "Heavy Power Infrastructure for Industries & Manufacturing",
+    "subtitle": "We deliver the mission-critical HT and LT electrical infrastructure—dedicated 11kV/22kV substations, main power distribution switchboards, PCC/MCC panels, APFC capacitor banks, express feeders, and statutory utility liaisoning—powering heavy manufacturing facilities across Maharashtra.",
+    "filters": [
+      "All Sectors",
+      "Glass & Materials",
+      "Packaging & Printing",
+      "Textiles & Looms",
+      "Polymers & Rubber",
+      "Chemical & Pharma",
+      "Cold Chain & Logistics",
+      "Heavy Grid & Turnkey"
+    ],
+    "cards": [
+      {
+        "badge": "Tempering & Furnaces",
+        "title": "Glass & Toughened Processing",
+        "desc": "We execute dedicated 11kV/22kV HT substations, power step-down transformers, and heavy Main LT Distribution Panels (PCC) with detuned APFC harmonic capacitor banks. Delivering reliable bulk power up to the plant's main LT distribution panels and quench blower starter boards.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Power Transformers & PCC Panels",
+          "APFC Harmonic Capacitor Banks"
+        ],
+        "cta": "Inquire for Glass Industry"
+      },
+      {
+        "badge": "Kilns & Refractory",
+        "title": "Ceramics, Refractory & Glass Moulding",
+        "desc": "We execute dedicated HT substation switchyards, high-capacity step-down transformers, and heavy-duty Main LT Switchboards (PCC/MCC). Delivering high-temperature-rated bulk power trunking up to the plant's main LT panels and electric tunnel kiln thyristor feeds, backed by APFC correction.",
+        "feature_tags": [
+          "Dedicated HT Transformer Bays",
+          "Main LT Switchboards (PCC/MCC)",
+          "Kiln Feed APFC Power Factor Control"
+        ],
+        "cta": "Inquire for Ceramics & Refractory"
+      },
+      {
+        "badge": "Presses & Tubes",
+        "title": "Printing & Flexible Packaging",
+        "desc": "We execute dedicated 11kV/22kV HT substations, power step-down transformers, and heavy Main LT Distribution Switchboards (PCC) with fast-switched APFC capacitor banks. Sinking harmonics and delivering clean, uninterrupted power up to the plant's main LT distribution bus.",
+        "feature_tags": [
+          "11kV/22kV Substation & Transformers",
+          "Main LT Distribution Panels (PCC)",
+          "Detuned APFC Harmonic Filtering"
+        ],
+        "cta": "Inquire for Printing & Packaging"
+      },
+      {
+        "badge": "Pulping & Corrugation",
+        "title": "Paper Mills & Corrugated Packaging",
+        "desc": "We execute dedicated heavy-duty HT transformer yards, HT vacuum circuit breakers, and plant-wide Main Power Distribution Switchboards (PCC) with automatic APFC capacitor correction. Delivering high-uptime bulk power directly up to the mill's main LT panels and MCC motor starter racks.",
+        "feature_tags": [
+          "Turnkey HT Substation Erection",
+          "Heavy-Duty PCC & MCC LT Panels",
+          "Multi-Stage APFC Capacitor Banks"
+        ],
+        "cta": "Inquire for Paper & Corrugated"
+      },
+      {
+        "badge": "Spinning & Looms",
+        "title": "Textiles & Automatic Looms",
+        "desc": "We execute dedicated 11kV/22kV HT substations, distribution transformers, and heavy Main LT Distribution Panels (PCC) with fast-switched detuned APFC capacitor banks. Delivering balanced 3-phase power up to the plant's main LT distribution bus and shedding voltage sags across high-speed loom sheds.",
+        "feature_tags": [
+          "11kV/22kV Substation & Transformer",
+          "Main LT Distribution Switchboards",
+          "Fast-Switching APFC Banks (>0.98 PF)"
+        ],
+        "cta": "Inquire for Textile Power Setup"
+      },
+      {
+        "badge": "Dyeing & Autoclaves",
+        "title": "Yarn Processing & Fabric Dyeing",
+        "desc": "We execute dedicated outdoor HT transformer substations, step-down transformers, and IP55-rated Main LT Power Distribution Boards (PCC/MCC) with heavy APFC correction. Delivering moisture-resistant bulk power trunking up to the plant's main LT panels and wet-finishing distribution boards.",
+        "feature_tags": [
+          "HT Transformer Substation Erection",
+          "Moisture-Sealed PCC/MCC Panels",
+          "High-Capacity APFC Banks & Earthing"
+        ],
+        "cta": "Inquire for Yarn & Dyeing Setup"
+      },
+      {
+        "badge": "Extrusion Lines",
+        "title": "Agricultural Pipes & Irrigation Extrusion",
+        "desc": "We execute dedicated 11kV/22kV HT substations, step-down power transformers, and heavy Main LT Power Distribution Centers (PCC) with detuned APFC capacitor banks. Delivering clean bulk power up to the plant's main LT distribution panels and barrel-heater MCC panels.",
+        "feature_tags": [
+          "Dedicated 11kV/22kV Substation",
+          "Heavy PCC Main LT Distribution Panels",
+          "APFC Banks for Extrusion Harmonics"
+        ],
+        "cta": "Inquire for Pipe Extrusion Plants"
+      },
+      {
+        "badge": "Moulding & Vulcanization",
+        "title": "Rubber & Polymer Manufacturing",
+        "desc": "We execute dedicated HT transformer substations, heavy-duty step-down transformers, and Main LT Distribution Switchboards (PCC/MCC) with APFC harmonic filters. Delivering high-inrush bulk power directly up to the plant's main LT distribution panels and hydraulic press pump drives.",
+        "feature_tags": [
+          "HT Substation & Transformer Setup",
+          "Shock-Resilient PCC/MCC Switchboards",
+          "Heavy-Duty APFC Capacitor Banks"
+        ],
+        "cta": "Inquire for Rubber & Polymers"
+      },
+      {
+        "badge": "Injection Moulding",
+        "title": "Office Furniture & Precision Polymers",
+        "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and centralized Main LT Power Distribution Switchboards (PCC) with detuned APFC capacitor banks. Delivering stable power directly up to the facility's main LT distribution panels and hydraulic injection moulding MCCs.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Main LT Distribution Switchboards",
+          "Harmonic-Filtered APFC Banks"
+        ],
+        "cta": "Inquire for Furniture & Moulding"
+      },
+      {
+        "badge": "Flameproof / FLP",
+        "title": "Chemical & Pharmaceutical Plants",
+        "desc": "We execute dedicated HT substations, oil-cooled step-down transformers, and certified flameproof (FLP) Main LT Distribution Switchboards (PCC/MCC) with APFC capacitor correction. Delivering statutory safety power trunking up to the plant's main LT distribution panels and reactor motor feeder boards.",
+        "feature_tags": [
+          "11kV/22kV HT Substation & Transformers",
+          "Main LT Switchboards (PCC/MCC)",
+          "Chemical Earthing & APFC Banks"
+        ],
+        "cta": "Inquire for Pharma & Chemical"
+      },
+      {
+        "badge": "Zone-1 Solvent Processing",
+        "title": "Paints, Resins & Solvent Formulations",
+        "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and explosion-proof Ex-d/FLP Main LT Power Distribution Switchboards (PCC) with detuned APFC banks. Delivering certified bulk power directly up to the facility's main LT panels and high-shear disperser drives.",
+        "feature_tags": [
+          "Dedicated HT Substation & Transformers",
+          "Main LT Distribution Panels (PCC)",
+          "Static Earthing & APFC Control"
+        ],
+        "cta": "Inquire for Paints & Solvents"
+      },
+      {
+        "badge": "Ammonia Compressors",
+        "title": "Cold Storage & Refrigerated Logistics",
+        "desc": "We execute dedicated 11kV/22kV HT substations, dual-incomer step-down transformers, and heavy Main LT Power Distribution Centers (PCC) with D.G. set emergency synchronization and APFC capacitor banks. Delivering continuous power up to the facility's main LT panels and refrigeration compressor panels.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Dual-Incomer Main LT Panels (PCC)",
+          "High-kVAR APFC Capacitor Banks"
+        ],
+        "cta": "Inquire for Cold Storage Power"
+      },
+      {
+        "badge": "Multi-Tier Distribution",
+        "title": "Warehousing & Logistics Parks",
+        "desc": "We execute dedicated HT substations, distribution transformers, and centralized Main LT Power Distribution Centers (PCC) with APFC banks. Delivering scalable 3-phase power up to the logistics park's main LT distribution panels and high-bay dock feeder boards.",
+        "feature_tags": [
+          "Turnkey HT Substation & Transformers",
+          "Main LT Distribution Panels (PCC)",
+          "APFC Banks & Charging Distribution"
+        ],
+        "cta": "Inquire for Warehousing Infrastructure"
+      },
+      {
+        "badge": "Grain & Feed Processing",
+        "title": "Food Processing & Commercial Agro Mills",
+        "desc": "We execute dedicated 11kV/22kV HT substations, food-grade distribution transformers, and dust-tight IP55 Main LT Distribution Switchboards (PCC/MCC) with APFC capacitor banks. Delivering continuous power up to the mill's main LT distribution panels and silo motor starter racks.",
+        "feature_tags": [
+          "Dedicated HT Substation Bays",
+          "Main LT Distribution Panels (PCC)",
+          "Multi-Stage APFC Capacitor Banks"
+        ],
+        "cta": "Inquire for Agro & Food Processing"
+      },
+      {
+        "badge": "Crushers & Induction Furnaces",
+        "title": "Stone Quarries, Crushers & Steel Mills",
+        "desc": "We execute heavy-duty 11kV/22kV/33kV HT substations, high-capacity step-down transformers, and heavy-gauge Main LT Switchboards (PCC/MCC) with dynamic APFC banks. Delivering high-shock-load bulk power directly up to the facility's main LT distribution panels and induction furnace buses.",
+        "feature_tags": [
+          "11kV/22kV/33kV Substations",
+          "Shock-Rated PCC/MCC Switchboards",
+          "Heavy-Duty APFC Capacitor Banks"
+        ],
+        "cta": "Inquire for Quarries & Rolling Mills"
+      },
+      {
+        "badge": "Heavy Machinery & Towers",
+        "title": "Engineering Fabrication & Commercial Towers",
+        "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, rising main sandwich busducts, and heavy Main LT Distribution Switchboards (PCC) with detuned APFC banks. Delivering safe, fully sanctioned bulk power directly up to the facility's main LT distribution switchrooms.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Dual-Incomer Main LT Panels (PCC)",
+          "APFC Banks & PWD Electrical Clearances"
+        ],
+        "cta": "Inquire for Towers & Fabrication"
+      },
+      {
+        "badge": "Die Casting & Robotics",
+        "title": "Automotive Ancillaries & Precision Die Casting",
+        "desc": "We design and install dedicated 11kV/22kV HT substations, dual-ratio step-down transformers, shock-rated Main LT Switchboards (PCC/MCC), and fast-acting APFC harmonic filtration banks, powering high-tonnage pressure die-casting machines, robotic welding cells, and CNC lines without voltage sags.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Shock-Rated PCC/MCC & Busducts",
+          "Fast-Switching APFC Harmonic Banks"
+        ],
+        "cta": "Inquire for Auto & Casting"
+      },
+      {
+        "badge": "Tier-III/IV Redundancy",
+        "title": "Data Centers & Enterprise Server Hubs",
+        "desc": "We execute turnkey dual-source 22kV/33kV express HT substations, rapid-acting Vacuum Circuit Breakers, static transfer switchgear (STS), and fault-tolerant Main LT Distribution Switchboards (PCC) with PWD CEI statutory clearances, guaranteeing 99.999% power availability for enterprise data hubs.",
+        "feature_tags": [
+          "22kV/33kV Dual Express Feeder Bays",
+          "Fault-Tolerant PCC/MCC Switchboards",
+          "CEI Statutory Redundancy Clearances"
+        ],
+        "cta": "Inquire for Data Centers"
+      }
+    ],
+    "spotlight": {
+      "live_badge": "Live Ongoing Project",
+      "featured_badge": "Featured Mega Turnkey Project",
+      "dual_badge": "Dual-Substation EHV Feed",
+      "location_badge": "Bhiwandi Infrastructure",
+      "client_label": "Client: APCO Infratech (National Infrastructure Developer)",
+      "title": "13 MW Turnkey Power Sanctioning & Dual <span>6.5 MW Express Feeders</span>",
+      "desc": "Gayatri Electrical Services is currently executing and sanctioning a landmark <strong>13 MW turnkey power infrastructure project</strong> for national infrastructure leader <strong>APCO Infratech</strong> in Bhiwandi. Sourced across two distinct utility transmission hubs—a 100kV Substation and a 220kV EHV Grid Substation—we are establishing two dedicated <strong>6.5 MW express feeder lines (13 MW total capacity)</strong> with complete turnkey bay erection, line construction, vacuum circuit breakers, dual-incomer bus-coupler synchronization, Torrent Power and MSETCL grid approvals, and statutory commissioning under the Electrical Inspector.",
+      "m1_lbl": "Total Sanctioned Load",
+      "m2_lbl": "Dedicated Express Feeders",
+      "m3_lbl": "Dual EHV Grid Substations",
+      "m4_lbl": "Torrent Power, MSETCL & Electrical Inspector Clearances",
+      "highlights": [
+        "APCO Infratech Enterprise Infrastructure",
+        "Dual Incomer Synchronization",
+        "Torrent Power & MSETCL Grid Liaisoning",
+        "Electrical Inspector Statutory Commissioning"
+      ],
+      "cta": "Consult on Mega Turnkey Projects"
+    }
+  },
+  "liaisoning_section": {
+    "title": "Statutory Liaisoning & Commissioning Approvals",
+    "subtitle": "As a Govt. Authorized Electrical Contractor (Est. 2003) and authorized Lift Contractor, we execute official engineering liaisoning, industrial load sanctions, electrical inspectorate clearances, and turnkey commissioning across Maharashtra's power utilities and regulatory boards.",
+    "cards": [
+      {
+        "badge": "Distribution Licensee",
+        "title": "Bhiwandi Distribution Circle",
+        "subtitle": "Torrent Power Limited",
+        "desc": "Govt. authorized HT and LT electrical contracting operations across Torrent Power's Bhiwandi franchise circle. We deliver turnkey HT/LT service connections, industrial load sanctions & enhancements, transformer overhauls, express feeders, and network engineering compliant with Torrent Power standards.",
+        "features": [
+          "Authorized HT & LT Contractor in Bhiwandi Circle",
+          "Fast-Track HT/LT Load Sanctions & Demand Enhancements",
+          "Substation Erection, Transformer Maintenance & Charging Clearances"
+        ]
+      },
+      {
+        "badge": "EHV Transmission",
+        "title": "State Transmission Grid",
+        "subtitle": "MSETCL (Mahatransco)",
+        "desc": "Turnkey execution and liaisoning for high-capacity industrial power evacuation across 100kV and 220kV transmission networks. Sourcing power from dual EHV substations (as in our 13 MW APCO Infratech project), overhead line shifting, and transmission bay extension approvals.",
+        "features": [
+          "100kV & 220kV EHV Grid Connectivity & Feeder Sync",
+          "EHV Transmission Line Shifting & Bay Extension Approvals",
+          "Right-of-Way (ROW) Compliance & Grid Evacuation Clearances"
+        ]
+      },
+      {
+        "badge": "Statutory Safety",
+        "title": "Chief Electrical Inspectorate",
+        "subtitle": "Electrical Inspector (Govt. of Maharashtra)",
+        "desc": "End-to-end statutory coordination for initial and periodic inspection clearances under Central Electricity Authority (CEA) Safety Regulations. We handle drawing scrutiny, Form A/B submissions, HT charging permissions, D.G. Set sanctioning, and earth pit resistance compliance.",
+        "features": [
+          "Form A & Form B Submissions for Initial & Periodic Clearances",
+          "High-Tension (11kV/22kV/33kV) Charging Permission & Safety Approvals",
+          "D.G. Set Statutory Clearances & Earthing Grid Resistance Testing"
+        ]
+      },
+      {
+        "badge": "Power Distribution",
+        "title": "State Distribution Licensee",
+        "subtitle": "MSEDCL (Mahavitaran)",
+        "desc": "Comprehensive engineering liaisoning and electrical contracting for industrial power consumers across Wada, Kudus, Thane, and Palghar zones. Managing new HT/LT load sanctions, contract demand enhancements, dedicated industrial feeders, and TOD metering setups.",
+        "features": [
+          "New HT/LT Industrial Connections across Wada & Kudus Belts",
+          "Contract Demand Sanctioning, Extension & Rationalization",
+          "Dedicated Industrial Feeders & TOD Tariff Metering Setup"
+        ]
+      },
+      {
+        "badge": "Incident & High-Rise",
+        "title": "Electrical Inspectorate & PWD",
+        "subtitle": "Incident Clearances & High-Rise Permissions",
+        "desc": "Specialized statutory liaisoning for industrial emergency power restoration and tall building electrical compliance. When a factory electrical fire occurs, we coordinate the Electrical Inspector's investigation and obtain re-charging safety clearance. For high-rise towers, we manage complete PWD electrical permissions.",
+        "features": [
+          "Emergency Forensic Inspection following Industrial Fires",
+          "Cable Hi-Pot, Insulation Resistance & Switchgear Health Audits",
+          "Electrical Inspectorate NOC & Fast-Track Power Restoration"
+        ]
+      },
+      {
+        "badge": "Authorized Lift Contractor",
+        "title": "Lift & Escalator Safety Authority",
+        "subtitle": "Lift Inspectorate (Energy Department, Govt. of Maharashtra)",
+        "desc": "As a Govt. Authorized Lift Contractor, we execute complete vertical transportation installations, passenger and goods lift erection, modernization, and annual safety compliance under the Bombay Lifts Act and Maharashtra Lift Inspectorate regulations.",
+        "features": [
+          "Govt. Authorized Lift Contractor under Bombay Lifts Act",
+          "Passenger & Heavy Goods Elevator Erection & Modernization",
+          "Statutory Annual Lift Inspection & Safety Certification"
+        ]
+      }
+    ]
+  },
+  "faq_section": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Key insights regarding statutory approvals, D.G. set clearances, utility liaisons, and emergency electrical services.",
+    "items": [
+      {
+        "q": "What statutory approvals are required from the Electrical Inspector (PWD) for HT installations and D.G. sets?",
+        "a": "<p>Under Regulation 43 of the Central Electricity Authority (CEA) Safety Regulations and Section 54 of the Electricity Act, any electrical installation operating at High Tension (11kV, 22kV, 33kV) as well as Diesel Generator (D.G.) sets above statutory capacities require formal drawing scrutiny, earth pit resistance testing, interlock validation, and on-site physical inspection by the Electrical Inspectorate (PWD) before energization. Gayatri Electrical Services manages end-to-end liaisoning, submits Form A / Form B, and secures official charging permissions.</p>"
+      },
+      {
+        "q": "What HT and LT electrical contracting services do you provide under Torrent Power and MSEDCL supply circles?",
+        "a": "<p>As a licensed Govt. Authorized Electrical Contractor, we execute turnkey HT and LT contracting across Torrent Power (Bhiwandi Circle) and MSEDCL (Mahavitaran). Our contracting scope includes new HT/LT industrial service connections, contract demand enhancement and reduction, dedicated overhead and underground HT cable laying, transformer and substation erection, Express Feeder commissioning, and CT/PT metering cubicle testing and charging approvals.</p>"
+      },
+      {
+        "q": "Which manufacturing and process industries do you provide electrical infrastructure for?",
+        "a": "<p>We provide specialized HT/LT power engineering for diverse continuous manufacturing sectors, including Glass & Toughened Processing, Printing & Flexible Packaging, Agricultural Pipes & Drip Irrigation, Rubber & Polymers, Office Furniture & Wheel Moulding, Chemical & FLP Pharma Plants, Cold Storage & Warehousing, Automatic Textile Looms, and Stone Crushers & Steel Mills.</p>"
+      },
+      {
+        "q": "Why is it mandatory to hire a Govt. Authorized Electrical Contractor in Maharashtra?",
+        "a": "<p>Under Indian Electricity Rules, only licensed electrical contractors authorized by the Maharashtra State Government Licensing Board (Industries, Energy & Labour Department) are legally permitted to execute, test, and certify HT/LT installations, substations, and passenger/freight lifts. Engaging an authorized contractor ensures full statutory compliance, insurance validity, and official acceptance of test certificates by utility authorities.</p>"
+      },
+      {
+        "q": "What is the procedure for obtaining D.G. Set (Diesel Generator) approval from the Electrical Inspector (PWD)?",
+        "a": "<p>Obtaining statutory D.G. Set approval requires submitting an engineering Single Line Diagram (SLD) depicting the changeover switchgear, mechanical/electrical interlock verification to ensure no utility back-feeding, measurement of dedicated neutral and body earthing pits, acoustic enclosure noise compliance, and an on-site physical inspection by the Electrical Inspector (PWD). We prepare all engineering drawings, file statutory Form A and Form B, and secure final charging permission.</p>"
+      },
+      {
+        "q": "Do you handle High-Rise Building Electrical Permissions & Substation Clearances?",
+        "a": "<p>Yes. Commercial and residential high-rise towers require specialized statutory scrutiny from the Electrical Inspectorate (Govt. of Maharashtra). We execute complete rising main busduct designs, D.G. set emergency changeovers, life-safety pump electrical panels, dual power source interlocks, and transformer substations, managing all PWD drawing approvals, on-site testing, and official final charging permissions.</p>"
+      },
+      {
+        "q": "How do you handle Electrical Inspector investigation clearances after a factory fire or electrical flashover?",
+        "a": "<p>Following an industrial electrical fire or flashover, utility discoms cannot restore power without statutory clearance from the Electrical Inspector (Govt. of Maharashtra). Our senior engineers conduct emergency forensic damage assessments, perform Hi-Pot and Megger insulation resistance testing across cables and switchgear, draft remedial Single Line Diagrams (SLDs), rectify damaged distribution boards, and coordinate directly with the Electrical Inspectorate to obtain official inspection clearance and prompt power restoration.</p>"
+      },
+      {
+        "q": "Do you provide Emergency Transformer Rental Services for industrial plants?",
+        "a": "<p>Yes. We provide emergency and temporary industrial transformer rentals (ranging from 100 kVA to 2000 kVA+) across Bhiwandi, Wada, Kudus, Thane, and Navi Mumbai. If your factory power transformer suffers an unexpected breakdown, winding flashover, or is undergoing major overhauls, our mobile emergency team swiftly delivers, mounts, cables, tests, and commissions a replacement rental transformer to eliminate manufacturing downtime.</p>"
+      },
+      {
+        "q": "What Transformer Testing and On-Site Vacuum Oil Filtration services do you offer?",
+        "a": "<p>We provide complete NABL-traceable transformer diagnostic testing and servicing: Breakdown Voltage (BDV) dielectric oil strength test, Insulation Resistance (Megger 5kV/1kV), Winding Resistance, Voltage Ratio (Turns Ratio), Magnetic Balance, and Tan Delta / Capacitance testing. Our mobile high-vacuum oil filtration units perform continuous online/offline transformer oil heating, degassing, moisture extraction, and dehydration directly on-site to restore transformer dielectric strength to >60kV.</p>"
+      },
+      {
+        "q": "What HT Substation Testing and Switchgear Maintenance do you perform?",
+        "a": "<p>Our licensed testing engineers carry out comprehensive preventive and statutory HT substation health audits: Vacuum Circuit Breaker (VCB) & SF6 breaker contact resistance and closing/tripping time testing, numerical protection relay calibration (overcurrent, earth fault, differential), CT/PT ratio and knee-point excitation verification, HT cable DC Hi-Pot and surge testing, and calibrated 4-terminal Earth Megger resistance audits of neutral and body earthing grids.</p>"
+      },
+      {
+        "q": "Do you provide Annual Maintenance Contracts (AMCs) for industrial substations, transformers, and HT/LT panels?",
+        "a": "<p>Yes. We offer both <strong>Comprehensive and Non-Comprehensive Annual Maintenance Contracts (AMCs)</strong> across Bhiwandi, Kudus, Wada, Thane, and Mumbai. Our AMC packages cover HT Substation & Switchyard Servicing, Transformer Health & High-Vacuum Oil Conditioning (>60 kV BDV), LT Distribution & APFC Panel Calibration (guaranteeing PF >0.98), Protection Relay Testing, Earth Grid Safety Audits, and 24x7 Emergency Breakdown Priority Mobilization.</p>"
+      },
+      {
+        "q": "Can you execute large-scale Turnkey Express Feeders and multi-megawatt industrial load sanctions (such as 13 MW projects)?",
+        "a": "<p>Yes. We have proven turnkey engineering capacity for multi-megawatt industrial infrastructure. A prime showcase is our current <strong>13 MW turnkey project for APCO Infratech in Bhiwandi</strong>, featuring dual 6.5 MW express feeders sourced from two separate transmission hubs—a 100kV Substation and a 220kV EHV Grid Substation. We manage right-of-way (ROW), tower/pole line construction, substation bay erection, vacuum circuit breakers, dual-incomer synchronization, and statutory MSEDCL/MSETCL/PWD commissioning.</p>"
+      },
+      {
+        "q": "How do you help manufacturing plants avoid Low Power Factor (PF) penalties?",
+        "a": "<p>Operating with a power factor below 0.90 attracts severe monthly penalties on utility bills from MSEDCL and Torrent Power, while maintaining a PF above 0.95 earns substantial incentives. We design, install, and calibrate Automatic Power Factor Correction (APFC) capacitor banks equipped with detuned harmonic filters to neutralize harmonics created by VFDs, extruders, and moulding machines, keeping your plant consistently at 0.99+ PF.</p>"
+      },
+      {
+        "q": "Do you provide emergency breakdown assistance and on-site transformer oil filtration?",
+        "a": "<p>Yes. We offer rapid emergency breakdown assistance across Bhiwandi, Kudus, Wada, Thane, and Navi Mumbai. Our mobile maintenance team provides on-site transformer diagnostics, BDV dielectric oil testing, high-vacuum oil filtration & dehydration, silica gel replacement, OLTC servicing, and high-voltage underground cable fault tracing and jointing.</p>"
+      },
+      {
+        "q": "Which industrial areas and regions in Maharashtra do you serve?",
+        "a": "<p>We actively serve industrial and commercial clients throughout Bhiwandi (Sonale, Val, Mankoli, Padgha, Bhadwad), the major industrial belts of Kudus and Wada, as well as Thane, Kalyan, Dombivli, Ambernath, Badlapur, Shahapur, Navi Mumbai, and the wider Mumbai Metropolitan Region (MMR).</p>"
+      },
+      {
+        "q": "Do you handle Solar Net-Metering Approvals and Statutory CEI Liaisoning for industrial rooftop solar plants?",
+        "a": "<p>Yes. Gayatri Electrical Services is a premier specialist in <strong>turnkey Solar Liaisoning, Net-Metering Approvals, and Chief Electrical Inspectorate (CEI / PWD) statutory charging clearances</strong> for industrial and commercial rooftop and ground-mounted solar installations across Bhiwandi, Wada, Kudus, Thane, and Maharashtra. We handle utility grid technical feasibility applications with Torrent Power (Bhiwandi Circle) and MSEDCL (Mahavitaran), statutory drawing scrutiny, solar inverter earthing grid compliance, and bi-directional TOD net-meter installation.</p>"
+      },
+      {
+        "q": "What are your commercial terms, pricing structure, and accepted payment modes?",
+        "a": "<p>Gayatri Electrical Services is a legally registered GST engineering firm adhering to statutory corporate compliance. We provide transparent, competitive project estimates based on an itemized engineering Bill of Quantities (BOQ). All contracting transactions, milestone disbursements, and AMC retainers are billed through formal GST Tax Invoices and settled via institutional electronic banking: Bank Transfer (RTGS / NEFT / IMPS), Account Payee Cheques, or Verified Corporate UPI. This ensures 100% financial and auditing transparency, and enables our corporate clients to claim full GST Input Tax Credit (ITC) benefits.</p>"
+      }
+    ]
+  }
+}

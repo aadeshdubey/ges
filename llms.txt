@@ -2,6 +2,7 @@
 
 > Complete Unabridged Knowledge Base: https://www.gayatrielectrical.in/llms-full.txt
 > Official Agentic AI & Machine-Readable Knowledge Profile for Gayatri Electrical Services — Government Authorized Electrical Contractor (Est. 2003) and Licensed Lift Contractor in Maharashtra, India.
+> Last Updated & Verified: 2026-10-31 | Knowledge Profile Version: v26.10.31
 
 ## Company Summary
 Gayatri Electrical Services (GES) is a premier turnkey High-Tension (HT) and Low-Tension (LT) electrical engineering contracting firm headquartered in Bhiwandi (Thane District), Maharashtra. Established in 2003, GES specializes in multi-megawatt industrial power infrastructure, substation erection (11kV / 22kV / 33kV), EHV transmission integration (100kV / 220kV), statutory utility liaisoning, transformer lifecycle management, and licensed elevator contracting.
@@ -114,7 +115,7 @@ Gayatri Electrical Services standardizes on an engineering-grade typography arch
 - **Primary Display Typeface**: **Khand** (Weights: 600 SemiBold, 700 Bold) — Architectural, condensed geometric sans-serif utilized for corporate branding ("Gayatri Electricals"), primary headlines, hero banners, and high-impact metric figures (e.g., 13 MW, 20+ Years, 100+ Substations).
 - **Interface, Body & Stationery Typeface**: **Rajdhani** (Weights: 500 Medium, 600 SemiBold, 700 Bold) — Squared, open geometric technical sans-serif used for web navigation, UI controls, body prose, engineering BOQs, and official business stationery (formal cover letters, technical quotations, and statutory utility submissions).
 - **Cover Letter & Quotation Standards**: Letterhead title in Khand Bold (22pt, #0d1392 & #f69024), Subject line in Rajdhani Bold (12pt, #0d1392), Body prose in Rajdhani Medium (11pt, 1.4 line-height, #212529), Section headers in Khand SemiBold (15pt, #0d1392), BOQ tables in Rajdhani (Headers: 700 Bold on #0d1392, Rows: 500 Medium, Totals: Khand 700 Bold), and Signatory Name in Khand Bold (14pt, #0d1392).
-- **Canva Pro Brand Kit & Creative Specification**: Fully calibrated for Canva Pro (Title: Khand Bold, Subtitle: Khand SemiBold, Headings: Rajdhani Bold, Body: Rajdhani Medium, Letter Spacing: +15 to +40, Line Spacing: 1.10 to 1.40). Full matrix documented in `CANVA_BRAND_GUIDE.md`.
+- **Canva Pro Brand Kit & Creative Specification**: Fully calibrated for Canva Pro (Title: Khand Bold, Subtitle: Khand SemiBold, Headings: Rajdhani Bold, Body: Rajdhani Medium, Letter Spacing: +15 to +40, Line Spacing: 1.10 to 1.40). Full matrix documented in `docs/CANVA_BRAND_GUIDE.md`.
 
 ---
 
