@@ -1,11 +1,11 @@
 {
-  "version": "26.11.01.1",
-  "versionBadge": "v26.11.01.1",
-  "build": 1,
+  "version": "26.11.01.2",
+  "versionBadge": "v26.11.01.2",
+  "build": 2,
   "releaseDate": "2026-11-01",
   "formattedDate": "Sunday, November 1, 2026",
-  "cacheBuster": "v=26.11.01.1",
-  "serviceWorkerCacheName": "ges-cache-v26.11.01.1",
+  "cacheBuster": "v=26.11.01.2",
+  "serviceWorkerCacheName": "ges-cache-v26.11.01.2",
   "lastUpdated": "2026-11-01",
   "meta": {
     "organization": "Gayatri Electrical Services",
