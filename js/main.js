@@ -1,24 +1,57 @@
 /**
  * Gayatri Electrical Services — Enterprise Application Engine
- * Version: 26.11.01.2 | Release Date: 2026-11-01
+ * Version: 26.11.02.1 | Release Date: 2026-11-02
  */
-// Google Tag Manager
-(function (w, d, s, l, i) {
-    w[l] = w[l] || []; w[l].push({
-        'gtm.start': new Date().getTime(), event: 'gtm.js'
-    }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-K2CN9DK5');
+// Performance Optimization: Idle & Interaction Third-Party Script Loaders
+let gtmLoaded = false;
+function loadGTM() {
+    if (gtmLoaded) return;
+    gtmLoaded = true;
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K2CN9DK5');
+}
 
-// Dynamic reCAPTCHA v3 Loader
-(function loadRecaptcha() {
+let recaptchaLoaded = false;
+function loadRecaptcha() {
+    if (recaptchaLoaded) return;
+    recaptchaLoaded = true;
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js?render=6Lfn-xksAAAAADNqkgOV8oBV6f3bzB6ulhvh1RHT';
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
-})();
+}
+
+function triggerThirdPartyScripts() {
+    loadGTM();
+    loadRecaptcha();
+    ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
+        window.removeEventListener(evt, triggerThirdPartyScripts);
+    });
+}
+
+// User interaction triggers
+['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
+    window.addEventListener(evt, triggerThirdPartyScripts, { passive: true, once: true });
+});
+
+// Fallback idle loader
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () {
+        loadGTM();
+        loadRecaptcha();
+    }, { timeout: 3500 });
+} else {
+    setTimeout(function () {
+        loadGTM();
+        loadRecaptcha();
+    }, 3500);
+}
 
 // Dynamic JSON-LD Schema Injection
 (function loadSchema() {
@@ -338,12 +371,35 @@
 
         const slides = document.querySelectorAll('.carousel-slide');
         let currentSlide = 0;
-        setInterval(nextSlide, 5000);
+
+        function hydrateSlide(slide) {
+            if (!slide) return;
+            const img = slide.querySelector('img[data-src]');
+            if (img) {
+                img.src = img.getAttribute('data-src');
+                img.removeAttribute('data-src');
+            }
+        }
 
         function nextSlide() {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
+            hydrateSlide(slides[currentSlide]);
+            const upcomingSlide = (currentSlide + 1) % slides.length;
+            hydrateSlide(slides[upcomingSlide]);
             slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000);
+
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function () {
+                slides.forEach(hydrateSlide);
+            }, { timeout: 4000 });
+        } else {
+            setTimeout(function () {
+                slides.forEach(hydrateSlide);
+            }, 3000);
         }
 
         // 4. Phone Input Setup
@@ -356,6 +412,10 @@
 
         // 5. Form Submission with reCAPTCHA v3
         const form = document.getElementById("contactForm");
+        if (form) {
+            form.addEventListener('focusin', loadRecaptcha, { once: true, passive: true });
+            form.addEventListener('mouseenter', loadRecaptcha, { once: true, passive: true });
+        }
         const formStatus = document.getElementById("form-status");
 
         // YOUR NEW v3 SITE KEY

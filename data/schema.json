@@ -20,7 +20,7 @@
       "telephone": "+918693893333",
       "email": "support@gayatrielectrical.in",
       "foundingDate": "2003",
-      "dateModified": "2026-11-01",
+      "dateModified": "2026-11-02",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -449,7 +449,7 @@
       "publisher": { "@id": "https://www.gayatrielectrical.in/#organization" },
       "inLanguage": ["en-IN", "hi-IN", "mr-IN"],
       "datePublished": "2003-01-01",
-      "dateModified": "2026-11-01"
+      "dateModified": "2026-11-02"
     }
   ]
 }
