@@ -1,15 +1,22 @@
-name: GES Site Quality & Standards Validation
+name: GES Site Quality, Standards & Deprecation Audit
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    # Weekly automated watchdog scan every Monday at 09:00 AM IST (03:30 UTC)
+    - cron: '30 3 * * 1'
   workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
 
 jobs:
   validate:
-    name: Code, Schema & Version Integrity Check
+    name: Quality, Security & Deprecation Audit
     runs-on: ubuntu-latest
 
     steps:
@@ -21,5 +28,45 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Execute Full Integrity Validator
+      - name: Execute 5-Stage Integrity & Deprecation Validator
+        id: validator
         run: node scripts/validate.js
+
+      - name: Notify Failure via Automated GitHub Issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const title = `🚨 [Automated Audit Alert] Standards or Deprecation Check Failed (${new Date().toISOString().split('T')[0]})`;
+            const body = `### Automated GES Audit Alert
+            
+            The automated quality, web standards, or deprecation validator encountered a failure during run [${context.runId}](${runUrl}).
+            
+            - **Trigger**: \`${context.eventName}\`
+            - **Commit**: \`${context.sha.substring(0, 7)}\`
+            - **Branch**: \`${context.ref}\`
+            - **Workflow Log**: [View Execution Details](${runUrl})
+            
+            Please review the log and resolve any deprecated tags or broken assets.`;
+
+            // Search for existing open issue to avoid duplicates
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['audit-alert']
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['audit-alert', 'bug']
+              });
+              console.log('Successfully created automated audit alert issue.');
+            } else {
+              console.log('An open audit-alert issue already exists. Skipping duplicate.');
+            }

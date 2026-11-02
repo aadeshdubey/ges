@@ -87,7 +87,7 @@ for (const rel of requiredFiles) {
 }
 
 // 4. Version & Date Synchronization Verification
-console.log('\n[4/4] Verifying version & date synchronization across repository...');
+console.log('\n[4/5] Verifying version & date synchronization across repository...');
 try {
     const syncScript = path.join(ROOT_DIR, 'scripts', 'sync-version.js');
     execSync(`node "${syncScript}" --check`, { stdio: 'inherit' });
@@ -96,4 +96,57 @@ try {
     process.exit(1);
 }
 
-console.log('\n=== All 4 verification stages passed successfully! ===\n');
+// 5. Browser Deprecations, Obsolete Standards & Asset Link Integrity Audit
+console.log('\n[5/5] Auditing browser deprecations, web standards & asset links...');
+const htmlFiles = ['index.html', '404.html'];
+
+for (const rel of htmlFiles) {
+    const fullPath = path.join(ROOT_DIR, rel);
+    const content = fs.readFileSync(fullPath, 'utf-8');
+
+    // Check 1: PWA Mobile-Web-App-Capable deprecation
+    if (content.includes('apple-mobile-web-app-capable') && !content.includes('mobile-web-app-capable')) {
+        console.error(`  ✗ Deprecation warning in ${rel}: <meta name="apple-mobile-web-app-capable"> requires <meta name="mobile-web-app-capable">`);
+        process.exit(1);
+    }
+
+    // Check 2: Obsolete HTML tags
+    const obsoleteTags = ['<font', '<center', '<marquee', '<blink', '<basefont', '<applet', '<frameset'];
+    for (const tag of obsoleteTags) {
+        if (content.toLowerCase().includes(tag)) {
+            console.error(`  ✗ Obsolete HTML tag found in ${rel}: ${tag}>`);
+            process.exit(1);
+        }
+    }
+
+    // Check 3: Mixed content (insecure http:// in src or href, excluding xmlns and DTDs)
+    const insecureRegex = /(?:src|href)=["']http:\/\/[^"']+/gi;
+    const insecureMatches = content.match(insecureRegex) || [];
+    if (insecureMatches.length > 0) {
+        console.error(`  ✗ Insecure mixed-content URLs found in ${rel}:`, insecureMatches);
+        process.exit(1);
+    }
+
+    // Check 4: Local asset link integrity (src, data-src, href)
+    const assetRegex = /(?:src|href|data-src)=["']([^"':#?]+)(?:\?[^"']*)?["']/gi;
+    let match;
+    let checkedAssets = 0;
+    while ((match = assetRegex.exec(content)) !== null) {
+        const rawUrl = match[1].trim();
+        // Skip javascript, data uris, mailto, tel, anchors, external schemas
+        if (rawUrl.startsWith('data:') || rawUrl.startsWith('mailto:') || rawUrl.startsWith('tel:') || rawUrl.startsWith('javascript:') || rawUrl.startsWith('#') || rawUrl.startsWith('http')) {
+            continue;
+        }
+        // Normalize relative path
+        const cleanedPath = rawUrl.replace(/^\.\//, '');
+        const targetPath = path.join(ROOT_DIR, cleanedPath);
+        if (!fs.existsSync(targetPath)) {
+            console.error(`  ✗ Broken asset reference in ${rel}: ${rawUrl} (file not found: ${cleanedPath})`);
+            process.exit(1);
+        }
+        checkedAssets++;
+    }
+    console.log(`  ✓ ${rel}: 0 deprecations, 0 obsolete tags, verified ${checkedAssets} local asset links`);
+}
+
+console.log('\n=== All 5 verification stages passed successfully! ===\n');
