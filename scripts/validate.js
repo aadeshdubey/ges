@@ -19,7 +19,8 @@ const jsFiles = [
     'js/main.min.js',
     'sw.js',
     'scripts/sync-version.js',
-    'scripts/validate.js'
+    'scripts/validate.js',
+    'scripts/ping-sitemap.js'
 ];
 
 for (const rel of jsFiles) {

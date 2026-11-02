@@ -52,3 +52,7 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify Search Engines for Instant Indexing (IndexNow & Googlebot)
+        if: steps.check_tag.outputs.exists == 'false'
+        run: node scripts/ping-sitemap.js
