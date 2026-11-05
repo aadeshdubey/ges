@@ -18,7 +18,7 @@
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary_(All_Rights_Reserved)-dc3545?style=for-the-badge" alt="Proprietary License"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.05.1-0d1392?style=for-the-badge" alt="Version v26.11.05.1"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.05.2-0d1392?style=for-the-badge" alt="Version v26.11.05.2"></a>
 </p>
 
 <p align="center">
