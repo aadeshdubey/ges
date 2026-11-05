@@ -1,15 +1,17 @@
 {
   "name": "ges-website",
-  "version": "26.11.01.1",
+  "version": "26.11.05.1",
   "private": true,
   "description": "Gayatri Electrical Services (GES) Official Enterprise Website & PWA",
   "scripts": {
+    "build": "node scripts/build.js",
     "bump": "node scripts/sync-version.js --bump",
     "version:sync": "node scripts/sync-version.js",
     "version:check": "node scripts/sync-version.js --check",
     "validate": "node scripts/validate.js",
     "test": "node scripts/validate.js",
-    "ping:sitemap": "node scripts/ping-sitemap.js"
+    "ping:sitemap": "node scripts/ping-sitemap.js",
+    "deploy": "node scripts/deploy.js"
   },
   "keywords": [
     "electrical-contractor",

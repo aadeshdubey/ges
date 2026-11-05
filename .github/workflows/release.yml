@@ -41,6 +41,17 @@ jobs:
             echo "Tag $TAG does not exist. Proceeding with release."
           fi
 
+      - name: Build Production Release Bundle (.zip)
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          BUNDLE="ges-${{ steps.get_version.outputs.tag }}-production.zip"
+          zip -r "$BUNDLE" \
+            index.html 404.html CNAME robots.txt sitemap.xml \
+            llms.txt llms-full.txt humans.txt security.txt \
+            opensearch.xml site.webmanifest sw.js version.json \
+            ges2026indexnowkeybhiwandi9999.txt \
+            assets/ css/ data/ images/ js/
+
       - name: Create Git Tag & GitHub Release
         if: steps.check_tag.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
@@ -50,9 +61,19 @@ jobs:
           generate_release_notes: true
           draft: false
           prerelease: false
+          files: ges-${{ steps.get_version.outputs.tag }}-production.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Notify Search Engines for Instant Indexing (IndexNow & Googlebot)
         if: steps.check_tag.outputs.exists == 'false'
         run: node scripts/ping-sitemap.js
+
+      - name: Publish Release Summary
+        if: always()
+        run: |
+          echo "### 🚀 Gayatri Electrical Services — Release Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Target Tag**: \`${{ steps.get_version.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Release Date**: \`${{ steps.get_version.outputs.date }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Already Tagged**: \`${{ steps.check_tag.outputs.exists }}\`" >> $GITHUB_STEP_SUMMARY

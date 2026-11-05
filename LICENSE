@@ -1,0 +1,67 @@
+PROPRIETARY COPYRIGHT NOTICE & THIRD-PARTY ATTRIBUTIONS
+================================================================================
+
+Copyright (c) 2003-2026 Gayatri Electrical Services (GES).
+All Rights Reserved.
+
+--------------------------------------------------------------------------------
+PART I: PROPRIETARY CODE, CONTENT & BRANDING (ALL RIGHTS RESERVED)
+--------------------------------------------------------------------------------
+
+All original source code, website architecture, engineering copy, service
+descriptions, multi-language translations (English, Hindi, and Marathi),
+JSON-LD schemas, automation scripts, and Gayatri Electrical Services brand
+elements (names, logos, emblems, and trade dress) in this repository are the
+exclusive proprietary property of Gayatri Electrical Services.
+
+This repository is NOT licensed as open-source software. Viewing or accessing
+this repository does not grant any permission or license to:
+  1. Copy, clone, fork, redistribute, or republish the original source code,
+     layout, or written content of this website;
+  2. Use the Gayatri Electrical Services name, logo, credentials, or project
+     portfolios for any commercial, competitive, or public purpose;
+  3. Create derivative works or templates from the proprietary portions of
+     this repository without prior written permission from Gayatri Electrical
+     Services.
+
+--------------------------------------------------------------------------------
+PART II: THIRD-PARTY FONTS, LIBRARIES & MEDIA ATTRIBUTIONS
+--------------------------------------------------------------------------------
+
+Gayatri Electrical Services does not claim ownership over third-party fonts,
+open-source libraries, or licensed stock media used in this project. All such
+components remain the property of their respective copyright holders and are
+used in accordance with their applicable licenses:
+
+1. Typefaces — Khand & Rajdhani (SIL Open Font License 1.1)
+   - Copyright (c) Indian Type Foundry (ITF), https://www.indiantypefoundry.com
+   - Licensed under the SIL Open Font License, Version 1.1 (OFL-1.1).
+   - Full license text: https://scripts.sil.org/OFL
+
+2. Open-Source Frontend Libraries (MIT License)
+   - AOS (Animate On Scroll) — Copyright (c) Michal Sajnog (MIT License).
+   - intl-tel-input — Copyright (c) Jack O'Connor (MIT License).
+   - Standard UI SVG Icons — Adapted from Feather / Lucide Icons (MIT License).
+
+3. Licensed Visual & Graphic Assets
+   - Certain stock photographs, illustrations, and graphic elements used on
+     this website are sourced from Canva under Canva's Content License
+     Agreement. All rights in those underlying stock assets remain with Canva
+     and their respective creators.
+
+--------------------------------------------------------------------------------
+PART III: THIRD-PARTY TRADEMARKS & STATUTORY REFERENCES DISCLAIMER
+--------------------------------------------------------------------------------
+
+All third-party company names, brand logos, utility corporations, and
+government regulatory bodies referenced in this repository—including but not
+limited to MSEDCL (Mahavitaran), MSETCL (Mahatransco), Torrent Power Limited,
+the Chief Electrical Inspectorate / PWD (Government of Maharashtra), APCO
+Infratech, Google, IndiaMART, WhatsApp, and Formspree—are the trademarks or
+property of their respective owners.
+
+They are referenced solely in a descriptive, nominative capacity to identify
+the utility jurisdictions, regulatory frameworks, client projects, and
+external platforms with which Gayatri Electrical Services operates as an
+independent Government Authorized Electrical & Lift Contractor. No ownership
+over any third-party trademark is claimed.

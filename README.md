@@ -17,7 +17,8 @@
   <a href="#pwa-web-standards"><img src="https://img.shields.io/badge/PWA_%26_Standards-RFC_9116_%7C_OpenSearch_%7C_Offline_SW-10b981?style=for-the-badge" alt="PWA and Web Standards"></a>
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.02.4-0d1392?style=for-the-badge" alt="Version v26.11.02.4"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary_(All_Rights_Reserved)-dc3545?style=for-the-badge" alt="Proprietary License"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.05.1-0d1392?style=for-the-badge" alt="Version v26.11.05.1"></a>
 </p>
 
 <p align="center">
@@ -133,11 +134,11 @@ graph TD
 | **06** | **Yarn Processing & Dyeing Facilities** | Substation erection, chemical-resistant feeder cabling, central power distribution switchboards |
 | **07** | **Agricultural Pipes & Irrigation Extrusion** | High-capacity transformer yards, heavy main LT distribution boards, power factor correction |
 | **08** | **Rubber & Polymer Moulding Plants** | HT transformer setup, main LT switchgear, high-inrush APFC banks |
-| **09** | **Office Furniture & Precision Casting** | Incomer HT switchyard, busduct risers, factory floor main LT power panels |
-| **10** | **Chemical & Pharmaceutical Plants** | Complete HT substation, flameproof (FLP / Ex-d) distribution panels, dedicated earth grids |
-| **11** | **Paints, Resins & Solvents Formulations** | Zone-1 compliant power distribution panels, static grounding grids, transformer bays |
-| **12** | **Cold Storage Multi-Chamber Logistics** | Dual-source HT incomers, transformer setups, automatic AMF changeover panels |
-| **13** | **Multi-Tier Warehousing & Logistics Parks** | Large-scale HT power distribution, main LT switchgear, energy-efficient power busways |
+| **09** | **Chemical & Pharmaceutical Plants** | Complete HT substation, flameproof (FLP / Ex-d) distribution panels, dedicated earth grids |
+| **10** | **Paints, Resins & Solvents Formulations** | Zone-1 compliant power distribution panels, static grounding grids, transformer bays |
+| **11** | **Cold Storage Multi-Chamber Logistics** | Dual-source HT incomers, transformer setups, automatic AMF changeover panels |
+| **12** | **Multi-Tier Warehousing & Logistics Parks** | Large-scale HT power distribution, main LT switchgear, energy-efficient power busways |
+| **13** | **Office Furniture & Precision Casting** | Incomer HT switchyard, busduct risers, factory floor main LT power panels |
 | **14** | **Commercial Food Processing Mills** | Clean-room LT power switchboards, dedicated transformer substation, earthing networks |
 | **15** | **Stone Quarries & Steel Induction Mills** | Heavy HT/EHV incomers, high-current transformer switchgear, vibration-resistant panels |
 | **16** | **Commercial Towers & High-Rise Hubs** | Multi-tier electrical rising mains, busduct systems, dual-source emergency switchgear |
@@ -187,12 +188,13 @@ This repository implements a **comprehensive Dual-Engine Search Architecture** e
 
 ```
 gayatrielectrical.in/
-├── robots.txt         <-- Whitelist directives for traditional crawlers & 10+ AI search engines
-├── sitemap.xml        <-- Canonical URL indexing with lastmod timestamps & priority weights
-├── llms.txt           <-- Structured Markdown knowledge base tailored for LLM reasoning engines
-├── llms-full.txt      <-- Comprehensive technical, regulatory & BOQ corpus for agentic queries
-├── opensearch.xml     <-- Browser omnibox address bar direct search integration
-└── data/schema.json   <-- Enterprise JSON-LD Graph (ElectricalContractor, FAQPage, Service)
+├── robots.txt                          <-- Whitelist directives for traditional crawlers & 10+ AI search engines
+├── sitemap.xml                         <-- Canonical URL indexing with lastmod timestamps & priority weights
+├── ges2026indexnowkeybhiwandi9999.txt  <-- IndexNow verification key for instant Bing, Yandex & Naver indexing
+├── llms.txt                            <-- Structured Markdown knowledge base tailored for LLM reasoning engines
+├── llms-full.txt                       <-- Comprehensive technical, regulatory & BOQ corpus for agentic queries
+├── opensearch.xml                      <-- Browser omnibox address bar direct search integration
+└── data/schema.json                    <-- Enterprise JSON-LD Graph (ElectricalContractor, FAQPage, Service)
 ```
 
 ### 1. `llms.txt` — Machine-Readable Corporate Knowledge Base
@@ -224,15 +226,16 @@ gayatrielectrical.in/
 
 - Directly references `Sitemap: https://gayatrielectrical.in/sitemap.xml` and links to `llms.txt` and `llms-full.txt`.
 
-### 4. `sitemap.xml` — Complete Search Engine Indexation
+### 4. `sitemap.xml` & IndexNow Instant Indexing (`scripts/ping-sitemap.js`)
 - Maps all primary site section anchors (`#home`, `#about`, `#services`, `#industries`, `#liaisoning`, `#contact`).
 - Fully indexes machine-readable AI files (`/llms.txt` and `/llms-full.txt`) with updated `lastmod` timestamps to ensure immediate re-crawling.
+- Paired with [`ges2026indexnowkeybhiwandi9999.txt`](ges2026indexnowkeybhiwandi9999.txt) and [`scripts/ping-sitemap.js`](scripts/ping-sitemap.js) to push instant URL updates to IndexNow (Bing, Yandex, Seznam, Naver) and Googlebot on every release.
 
-### 5. Schema.org JSON-LD Graph (`index.html`)
-- **`Electrician` / `ElectricalContractor`**: Complete corporate entity definition, physical geo-coordinates (`19.2877821, 73.0817132`), opening hours, government licensing, review rating (`4.9/5.0`), and institutional payment methods.
+### 5. Schema.org JSON-LD Graph (`data/schema.json`)
+- **`Electrician` / `ElectricalContractor`**: Complete corporate entity definition, physical geo-coordinates (`19.2877771, 73.0842881`), opening hours, government licensing, unified 25-topic `knowsAbout` expertise array, review rating (`4.9/5.0`), and institutional payment methods.
 - **`FAQPage`**: 17 technical and commercial questions directly synchronized in JSON-LD format for Google Rich Results and AI direct answers.
-- **`Service`**: 8 primary service catalog entities with granular parameters.
-- **`BreadcrumbList` & `Organization`**: Structural hierarchy metadata for search indexing.
+- **`Service` & `OfferCatalog`**: 9 primary service catalog entities with granular technical parameters.
+- **`BreadcrumbList`, `WebSite` & `WebPage`**: Structural hierarchy metadata for search indexing.
 
 ---
 
@@ -273,12 +276,12 @@ The site adheres to rigorous modern web standards for mobile installation, offli
 - Declares high-resolution 192x192 and 512x512 maskable application icons.
 
 ### 2. `sw.js` — Offline Resilience & Stale-While-Revalidate Engine
-- Pre-caches core application shell assets on initial visit (`index.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, and all 3 language bundles).
+- Pre-caches core application shell assets on initial visit (`index.html`, `404.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, and all 3 language bundles).
 - Implements **Stale-While-Revalidate** caching for lightning-fast loads on subsequent visits and complete offline availability.
 - Automatically clears stale caches on version upgrades via `ges-cache-v*` cache naming.
 
-### 3. `security.txt` & `.well-known/security.txt` — RFC 9116 Security Policy
-- Provides official machine-readable vulnerability disclosure channels at `support@gayatrielectrical.in`.
+### 3. `security.txt`, `.well-known/security.txt` & `.github/SECURITY.md` — Security Policy
+- Provides official RFC 9116 machine-readable vulnerability disclosure channels at `support@gayatrielectrical.in` plus a native GitHub Security Policy (`.github/SECURITY.md`).
 - Declares canonical security endpoints, preferred languages (`en`, `hi`, `mr`), and strict validity expiration timestamps.
 
 ### 4. `humans.txt` — Engineering Credits & Authorship
@@ -289,7 +292,7 @@ The site adheres to rigorous modern web standards for mobile installation, offli
 
 ### 6. `404.html` — Custom Branded Circuit-Breaker Recovery Page
 - Themed as *"Circuit Disconnected"* with animated glowing breaker icons and corporate typography (`Khand` + `Rajdhani`).
-- Features automated 8-second countdown redirect to homepage, direct emergency telephone hotlines, WhatsApp chat link, and emergency breakdown contacts.
+- Features automated 12-second countdown redirect to homepage, direct emergency telephone hotlines, WhatsApp chat link, and emergency breakdown contacts.
 
 ---
 
@@ -460,7 +463,7 @@ body.formal-letter {
 
 ### 5. Canva Pro Brand Kit & Typography Setup Guide
 
-> **Full Documentation**: For the complete template-by-template design matrix (Cover Letters, BOQ Quotations, Slide Decks, Social Posts, and Visiting Cards), see [`docs/CANVA_BRAND_GUIDE.md`](file:///c:/aadesh/programming/git/ges/docs/CANVA_BRAND_GUIDE.md).
+> **Full Documentation**: For the complete template-by-template design matrix (Cover Letters, BOQ Quotations, Slide Decks, Social Posts, and Visiting Cards), see [`docs/CANVA_BRAND_GUIDE.md`](docs/CANVA_BRAND_GUIDE.md).
 
 To maintain identical corporate branding across social media, pitch presentations, quotation folders, and Canva templates, configure your **Canva Pro Brand Kit** with these exact parameters:
 
@@ -502,11 +505,10 @@ The platform features an instant client-side localization engine supporting 3 pr
 - **Hindi (`hi`)** — *शासकीय अधिकृत विद्युत कंत्राटदार* technical Devanagari dictionary.
 - **Marathi (`mr`)** — Official Maharashtra state utility (MSEDCL/CEI) dialect.
 
-### Asynchronous Data Layer
-- **Decoupled Locale Bundles**: Located in [`data/locales/`](data/locales/) (`en.json`, `hi.json`, `mr.json`), keeping the main HTML document lean while enabling seamless text updates without touching layout code.
-- **Dynamic Asynchronous Fetching**: The localization engine in [`js/main.js`](js/main.js) and [`js/main.min.js`](js/main.min.js) fetches the requested locale bundle dynamically on user interaction or browser language detection.
-- **Embedded Fallback Resilience**: If network connectivity fails, the engine seamlessly falls back to embedded strings and cached Service Worker responses without interface disruption.
-- **Consolidated Master Dictionary**: [`data/translations.json`](data/translations.json) provides a central reference for translation auditing and parity verification.
+### Hybrid Localization & Instant Embedded Data Layer
+- **Modular Locale Source Files**: Located in [`data/locales/`](data/locales/) (`en.json`, `hi.json`, `mr.json`), covering 68 top-level keys, all **18 industrial sector cards**, all **9 service detail modals** (`service_modals`), **5 statutory liaisoning authorities**, and **17 technical FAQs**.
+- **Zero-Latency Embedded + Fetch Engine**: [`scripts/build.js`](scripts/build.js) synchronizes `data/locales/{en,hi,mr}.json` into [`data/translations.json`](data/translations.json) and embeds the complete dictionary directly into [`js/main.js`](js/main.js) and [`js/main.min.js`](js/main.min.js), ensuring **0 ms language switching** across `file://`, `localhost`, and production even when offline.
+- **Google Translate Hybrid Protection**: Curated electrical engineering sections and modals are protected with `.notranslate` so literal machine translation never corrupts technical Maharashtra utility terminology, while `window.triggerGoogleTranslate` automatically translates long-form legal modals (`#modal-privacy` and `#modal-terms`).
 
 ---
 
@@ -518,11 +520,24 @@ The repository is organized into a modular, production-ready structure:
 ```
 ges/
 ├── .github/
-│   └── workflows/
-│       └── validate.yml      <-- Automated CI quality & standards verification
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md     <-- Structured bug report template
+│   │   ├── feature_request.md<-- Enhancement & feature proposal template
+│   │   └── config.yml        <-- Direct support & security contact links
+│   ├── workflows/
+│   │   ├── codeql.yml        <-- Automated CodeQL security & vulnerability scan
+│   │   ├── lighthouse.yml    <-- Automated Lighthouse CI & Web Vitals audit
+│   │   ├── release.yml       <-- CalVer auto-tagging, zip bundle & IndexNow release
+│   │   ├── uptime.yml        <-- Scheduled 6-hour production endpoint & SSL watchdog
+│   │   └── validate.yml      <-- Automated 6-stage CI quality & standards verification
+│   ├── CODEOWNERS            <-- Mandatory review ownership rules
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── SECURITY.md           <-- GitHub Security Policy & vulnerability disclosure
+│   ├── dependabot.yml        <-- Weekly npm & GitHub Actions dependency updates
+│   └── release.yml           <-- Categorized release notes generator
 ├── .well-known/
 │   └── security.txt          <-- RFC 9116 well-known security endpoint
-├── assets/                   <-- Brand emblems, vector icons, favicons
+├── assets/                   <-- Brand emblems, vector icons, favicons & WOFF2 fonts
 ├── css/
 │   ├── style.css             <-- Unminified corporate stylesheet
 │   └── style.min.css         <-- Production minified stylesheet
@@ -543,16 +558,22 @@ ges/
 │   ├── main.js               <-- Enterprise application engine (unminified)
 │   └── main.min.js           <-- Optimized production application engine
 ├── scripts/
+│   ├── build.js              <-- Automated locale bundler & JS minifier
+│   ├── deploy.js             <-- One-command local build, bump, validate, commit & push
+│   ├── download-fonts.js     <-- Self-hosted WOFF2 font subset utility
+│   ├── ping-sitemap.js       <-- IndexNow & Googlebot search engine notifier
 │   ├── sync-version.js       <-- Automated version & date propagation utility
-│   └── validate.js           <-- 4-stage local & CI repository validator
+│   └── validate.js           <-- 6-stage local & CI repository validator
 ├── 404.html                  <-- Custom branded circuit-breaker 404 page
 ├── CNAME                     <-- Custom domain mapping (gayatrielectrical.in)
+├── LICENSE                   <-- Proprietary All Rights Reserved copyright notice
+├── ges2026indexnowkeybhiwandi9999.txt <-- IndexNow root verification key
 ├── humans.txt                <-- Web authorship & engineering credits
 ├── index.html                <-- Semantic HTML5 enterprise homepage
 ├── llms.txt                  <-- Concise agentic AI knowledge base
 ├── llms-full.txt             <-- Comprehensive technical corpus for LLMs
 ├── opensearch.xml            <-- Browser omnibox address bar search
-├── package.json              <-- NPM scripts for syncing & validation
+├── package.json              <-- NPM scripts for building, syncing, validating & deploying
 ├── robots.txt                <-- Search engine & AI crawler whitelist
 ├── security.txt              <-- RFC 9116 security policy
 ├── site.webmanifest          <-- Progressive Web App (PWA) manifest
@@ -565,12 +586,31 @@ ges/
 ---
 
 <a id="version-management"></a>
-## Automated Version & Date Synchronization
+## Automated Version, Build & One-Command Deployment
 
 The repository uses [`version.json`](version.json) as the **single source of truth** for release versions, dates, cache busters, and sitemap modification timestamps.
 
+### One-Command Local Build, Commit & Deploy (`npm run deploy`)
+[`scripts/deploy.js`](scripts/deploy.js) automates your entire local release workflow in a single command:
+1. Bundles `data/locales/{en,hi,mr}.json` into `data/translations.json` and `js/main.js`, and regenerates `js/main.min.js` (`scripts/build.js`).
+2. Auto-increments the CalVer version in `version.json` and syncs all **14 tracked files** (`scripts/sync-version.js --bump`).
+3. Runs the **6-stage integrity & standards validator** (`scripts/validate.js`).
+4. Stages all changes (`git add -A`) and commits using your exact commit convention: `GES v<VERSION> : <Commit Summary>`.
+5. Pushes to `origin main` and pings IndexNow & Googlebot (`scripts/ping-sitemap.js`).
+
+```bash
+# Deploy with a custom commit message (automatically prefixed with "GES v<VERSION> : "):
+npm run deploy -- "Update Bhiwandi geolocation coordinates and synchronize locales"
+
+# Or let the script auto-generate the commit summary from modified files:
+npm run deploy
+
+# Preview build, bump & validation without committing/pushing:
+node scripts/deploy.js --dry-run
+```
+
 ### How Synchronization Works
-When you update `version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 13 tracked files** in one atomic pass:
+When you update `version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 14 tracked files** in one atomic pass:
 
 ```bash
 # Propagate version.json across all repository files:
@@ -588,21 +628,22 @@ npm run version:check
 ```
 
 ### Local & CI Quality Validation Pipeline
-[`scripts/validate.js`](scripts/validate.js) executes a multi-stage verification suite mirroring GitHub Actions:
+[`scripts/validate.js`](scripts/validate.js) executes a 6-stage verification suite mirroring GitHub Actions:
 
 ```bash
-# Run complete 4-stage validation suite:
+# Run complete 6-stage validation suite:
 node scripts/validate.js
 # Or with npm:
 npm test
 ```
 
-### GitHub Actions CI/CD Pipeline
-Every pull request and push to `main` triggers [`.github/workflows/validate.yml`](.github/workflows/validate.yml) on Ubuntu runners, executing:
-1. **JavaScript Syntax Verification** (`node -c` on all application and script files).
-2. **JSON Integrity & Schema Parsing** (all locale bundles, schema graphs, and web manifests).
-3. **Core Web Standards & Endpoints Verification** (ensuring all 14 required files are present).
-4. **Automated Version Synchronization Verification** (`node scripts/sync-version.js --check`).
+### GitHub Actions CI/CD & Watchdog Pipelines
+Every pull request and push to `main` triggers the automated GitHub Actions suite:
+1. **Quality, Security & Deprecation Audit ([`validate.yml`](.github/workflows/validate.yml))**: Verifies JS syntax, JSON integrity, 100% EN/HI/MR locale parity, core web/governance files, version sync, and 0 HTML deprecations/broken asset links.
+2. **CodeQL Static Security Analysis ([`codeql.yml`](.github/workflows/codeql.yml))**: Runs extended JavaScript/TypeScript security and quality queries on push, PR, and weekly schedule.
+3. **Lighthouse CI & Web Vitals Audit ([`lighthouse.yml`](.github/workflows/lighthouse.yml))**: Audits Performance, Accessibility, Best Practices, and SEO in headless Chrome and publishes a score card to the Actions summary.
+4. **Automated CalVer Release Engine ([`release.yml`](.github/workflows/release.yml))**: Auto-tags new versions from `version.json`, packages a production `.zip` bundle, publishes categorized release notes, and triggers IndexNow indexing.
+5. **Production Uptime & SSL Watchdog ([`uptime.yml`](.github/workflows/uptime.yml))**: Verifies live HTTP 200 status and latency across core production endpoints every 6 hours and opens an automated issue alert on outage.
 
 ---
 

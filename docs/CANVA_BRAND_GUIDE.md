@@ -2,7 +2,7 @@
 
 > **Official Design Guide for Canva Pro**  
 > This specification defines the exact font pairings, color palettes, spacing slider values, and layout hierarchies to maintain 100% brand consistency across all Canva Pro designs (Official Letterheads, Technical Proposals, Quotations, Tender Bids, Social Media Graphics, Presentations, and Business Cards).  
-> Last Updated: 2026-11-02 | Guide Version: v26.11.02.4
+> Last Updated: 2026-11-05 | Guide Version: v26.11.05.1
 
 ---
 

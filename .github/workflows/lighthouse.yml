@@ -1,0 +1,59 @@
+name: "GES Lighthouse CI & Web Vitals Audit"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Lighthouse Performance, A11y & SEO Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Start Local Static HTTP Server & Run Lighthouse Audit
+        id: lh
+        run: |
+          npx --yes http-server . -p 8080 -s &
+          SERVER_PID=$!
+          sleep 2
+          npx --yes lighthouse http://127.0.0.1:8080/index.html \
+            --output=json \
+            --output-path=./lighthouse-report.json \
+            --chrome-flags="--headless=new --no-sandbox --disable-gpu" \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --quiet
+          kill $SERVER_PID || true
+
+          PERF=$(node -p "Math.round(require('./lighthouse-report.json').categories.performance.score * 100)")
+          A11Y=$(node -p "Math.round(require('./lighthouse-report.json').categories.accessibility.score * 100)")
+          BP=$(node -p "Math.round(require('./lighthouse-report.json').categories['best-practices'].score * 100)")
+          SEO=$(node -p "Math.round(require('./lighthouse-report.json').categories.seo.score * 100)")
+
+          echo "perf=$PERF" >> $GITHUB_OUTPUT
+          echo "a11y=$A11Y" >> $GITHUB_OUTPUT
+          echo "bp=$BP" >> $GITHUB_OUTPUT
+          echo "seo=$SEO" >> $GITHUB_OUTPUT
+
+          echo "### ⚡ Gayatri Electrical Services — Lighthouse Audit Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Category | Score | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :---: | :---: |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Performance** | **${PERF}/100** | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Accessibility** | **${A11Y}/100** | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Best Practices** | **${BP}/100** | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| **SEO** | **${SEO}/100** | ✅ |" >> $GITHUB_STEP_SUMMARY
+

@@ -43,7 +43,7 @@
     "footer_desc": "Powering progress with more than two decades of unwavering commitment to safety, efficiency, and innovative electrical solutions.",
     "footer_quick_links": "Quick Links",
     "footer_contact_us": "Contact Us",
-    "footer_follow_us": "Follow Us",
+    "footer_follow_us": "Follow & Verify Us",
     "contact_office_addr": "Shop No 7, Tirupati Heights,<br>Sonale Pipeline Rd, Bhadwad,<br>Bhiwandi, Maharashtra - 421302",
     "footer_rights": "© 2026 Gayatri Electrical Services. All Rights Reserved. | <button id=\"privacy-policy-link\" data-modal-target=\"#modal-privacy\" class=\"footer-link\">Privacy Policy</button> | <button id=\"terms-of-service-link\" data-modal-target=\"#modal-terms\" class=\"footer-link\">Terms of Service</button>",
     "parallax_title": "Ready to Power Up Your Project?",
@@ -208,17 +208,6 @@
           "cta": "Inquire for Rubber & Polymers"
         },
         {
-          "badge": "Injection Moulding",
-          "title": "Office Furniture & Precision Polymers",
-          "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and centralized Main LT Power Distribution Switchboards (PCC) with detuned APFC capacitor banks. Delivering stable power directly up to the facility's main LT distribution panels and hydraulic injection moulding MCCs.",
-          "feature_tags": [
-            "11kV/22kV HT Substation Erection",
-            "Main LT Distribution Switchboards",
-            "Harmonic-Filtered APFC Banks"
-          ],
-          "cta": "Inquire for Furniture & Moulding"
-        },
-        {
           "badge": "Flameproof / FLP",
           "title": "Chemical & Pharmaceutical Plants",
           "desc": "We execute dedicated HT substations, oil-cooled step-down transformers, and certified flameproof (FLP) Main LT Distribution Switchboards (PCC/MCC) with APFC capacitor correction. Delivering statutory safety power trunking up to the plant's main LT distribution panels and reactor motor feeder boards.",
@@ -261,6 +250,17 @@
             "APFC Banks & Charging Distribution"
           ],
           "cta": "Inquire for Warehousing Infrastructure"
+        },
+        {
+          "badge": "Injection Moulding",
+          "title": "Office Furniture & Precision Polymers",
+          "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and centralized Main LT Power Distribution Switchboards (PCC) with detuned APFC capacitor banks. Delivering stable power directly up to the facility's main LT distribution panels and hydraulic injection moulding MCCs.",
+          "feature_tags": [
+            "11kV/22kV HT Substation Erection",
+            "Main LT Distribution Switchboards",
+            "Harmonic-Filtered APFC Banks"
+          ],
+          "cta": "Inquire for Furniture & Moulding"
         },
         {
           "badge": "Grain & Feed Processing",
@@ -484,6 +484,94 @@
           "a": "<p>Gayatri Electrical Services is a legally registered GST engineering firm adhering to statutory corporate compliance. We provide transparent, competitive project estimates based on an itemized engineering Bill of Quantities (BOQ). All contracting transactions, milestone disbursements, and AMC retainers are billed through formal GST Tax Invoices and settled via institutional electronic banking: Bank Transfer (RTGS / NEFT / IMPS), Account Payee Cheques, or Verified Corporate UPI. This ensures 100% financial and auditing transparency, and enables our corporate clients to claim full GST Input Tax Credit (ITC) benefits.</p>"
         }
       ]
+    },
+    "service_modals": {
+      "modal-transformer": {
+        "title": "Transformer Lifecycle Management",
+        "desc": "Complete end-to-end services for your most critical assets, from supply and repair to ongoing maintenance.",
+        "items": [
+          "Transformer Supply (New & Service Units)",
+          "Comprehensive Repair & Refurbishment",
+          "Preventative Maintenance Programs",
+          "Advanced Oil Filtration & Dehydration",
+          "Diagnostic Transformer Testing"
+        ]
+      },
+      "modal-ht": {
+        "title": "High-Tension (HT) Substations",
+        "desc": "We specialize in the design and execution of high-tension infrastructure, the core of industrial power distribution. Our expertise includes:",
+        "items": [
+          "Outdoor & Indoor HT Sub-Station Erection",
+          "Comprehensive HT Sub-station Testing",
+          "Air Insulated (AIS) Bay Installation & Commissioning",
+          "Gas Insulated (GIS) Bay Installation & Commissioning"
+        ]
+      },
+      "modal-panels": {
+        "title": "Panel Systems (HT, LT & APFC)",
+        "desc": "We supply, install, and maintain the full spectrum of electrical panels that control and protect your operations. Our offerings cover:",
+        "items": [
+          "HT Panel Supply, Installation & Maintenance",
+          "LT Panel Supply, Installation & Maintenance",
+          "Automatic Power Factor Correction (APFC) Panel Supply & Maintenance"
+        ]
+      },
+      "modal-cabling": {
+        "title": "Cabling Works (HT & LT)",
+        "desc": "The integrity of your network relies on high-quality cabling. We provide professional services for all voltage levels, ensuring durable and efficient power transmission.",
+        "items": [
+          "HT & LT Underground Cable Laying",
+          "HT & LT Overhead Cable Laying",
+          "Precision HT & LT Cable Jointing"
+        ]
+      },
+      "modal-testing": {
+        "title": "Electrical Testing & Safety",
+        "desc": "To ensure compliance, safety, and operational integrity, we conduct a range of diagnostic tests on your electrical systems. Key services include:",
+        "items": [
+          "HIGH-POT (High Potential) Testing",
+          "Tan Delta Testing",
+          "Comprehensive Transformer Testing",
+          "Substation Testing & Health Audits (for new and existing substations)"
+        ]
+      },
+      "modal-liasoning": {
+        "title": "Liasoning & Regulatory Consulting",
+        "desc": "Navigating the complex regulatory landscape can be challenging. We act as your expert intermediary to secure all necessary approvals, saving you time and ensuring compliance.",
+        "items": [
+          "Professional Electrical Drawing & Design (Single Line Diagrams - SLD)",
+          "Statutory Approvals from PWD (Electrical Inspectorate)",
+          "D.G. (Diesel Generator) Set Liasoning, Approvals & Safety Clearances",
+          "Utility Liasoning & Coordination (MSEDCL, MSETCL & Torrent Power)",
+          "Solar Liasoning and Grid Connectivity Approvals"
+        ]
+      },
+      "modal-projects": {
+        "title": "Turnkey Projects & Special Works",
+        "desc": "Beyond standard installations, we manage specialized, large-scale electrical projects that require unique expertise and meticulous planning.",
+        "items": [
+          "Express Feeder Liasoning and Commissioning",
+          "High Voltage Overhead Line Shifting",
+          "Complete Lift Erection Services"
+        ]
+      },
+      "modal-solar": {
+        "title": "Solar Power Solutions",
+        "desc": "Embrace sustainable energy with our end-to-end solar solutions. We help you reduce operating costs and meet your environmental goals through renewable energy.",
+        "items": [
+          "Solar Power System Design & Installation",
+          "Regulatory Liasoning for Solar Projects",
+          "Grid Connectivity & Commissioning"
+        ]
+      },
+      "modal-earthing": {
+        "title": "Earthing Solutions",
+        "desc": "A robust earthing system is critical for the safety of your personnel and the protection of your expensive equipment. We provide reliable and long-lasting solutions.",
+        "items": [
+          "Advanced Chemical Earthing",
+          "Traditional Coal Earthing"
+        ]
+      }
     }
   },
   "hi": {
@@ -695,17 +783,6 @@
           "cta": "रबर व पॉलिमर हेतु पूछताछ"
         },
         {
-          "badge": "इंजेक्शन मोल्डिंग",
-          "title": "ऑफिस फर्नीचर और प्रिसिजन पॉलिमर पार्ट्स",
-          "desc": "हम समर्पित ११केवी/२२केवी सबस्टेशन, स्टेप-डाउन ट्रांसफार्मर और केंद्रीकृत मुख्य एलटी वितरण स्विचबोर्ड (पीसीसी) का निर्माण करते हैं, जिससे इंजेक्शन मोल्डिंग मशीनों और असेंबली लाइनों को बिना रुकावट बिजली मिलती है।",
-          "feature_tags": [
-            "११केवी/२२केवी एचटी सबस्टेशन निर्माण",
-            "मुख्य एलटी वितरण स्विचबोर्ड",
-            "हार्मोनिक-फिल्टर्ड एपीएफसी बैंक"
-          ],
-          "cta": "फर्नीचर मोल्डिंग हेतु पूछताछ"
-        },
-        {
           "badge": "फ्लेमप्रूफ / एफएलपी",
           "title": "केमिकल और बल्क ड्रग फार्मा प्लांट्स",
           "desc": "हम समर्पित एचटी सबस्टेशन, ऑइल-कूल्ड ट्रांसफार्मर और प्रमाणित फ्लेमप्रूफ (एफएलपी) मुख्य एलटी स्विचबोर्ड (पीसीसी/एमसीसी) का निर्माण करते हैं, जिससे खतरनाक केमिकल रिएक्टरों और ब्लोअर्स को वैधानिक सुरक्षा मानकों के साथ पावर मिलती है।",
@@ -748,6 +825,17 @@
             "एपीएफसी बैंक व चार्जिंग वितरण"
           ],
           "cta": "वेयरहाउसिंग हेतु पूछताछ करें"
+        },
+        {
+          "badge": "इंजेक्शन मोल्डिंग",
+          "title": "ऑफिस फर्नीचर और प्रिसिजन पॉलिमर पार्ट्स",
+          "desc": "हम समर्पित ११केवी/२२केवी सबस्टेशन, स्टेप-डाउन ट्रांसफार्मर और केंद्रीकृत मुख्य एलटी वितरण स्विचबोर्ड (पीसीसी) का निर्माण करते हैं, जिससे इंजेक्शन मोल्डिंग मशीनों और असेंबली लाइनों को बिना रुकावट बिजली मिलती है।",
+          "feature_tags": [
+            "११केवी/२२केवी एचटी सबस्टेशन निर्माण",
+            "मुख्य एलटी वितरण स्विचबोर्ड",
+            "हार्मोनिक-फिल्टर्ड एपीएफसी बैंक"
+          ],
+          "cta": "फर्नीचर मोल्डिंग हेतु पूछताछ"
         },
         {
           "badge": "अनाज व खाद्य प्रसंस्करण",
@@ -971,6 +1059,94 @@
           "a": "<p>गायत्री इलेक्ट्रिकल सर्विसेज एक शासकीय जीएसटी-पंजीकृत इंजीनियरिंग फर्म है। हमारी परियोजना लागत इंजीनियरिंग बिल ऑफ क्वांटिटीज (BOQ) के आधार पर पारदर्शी और प्रतिस्पर्धी होती है। सभी व्यावसायिक अनुबंध, माइलस्टोन भुगतान और एएमसी शुल्क आधिकारिक जीएसटी टैक्स इनवॉइस के विरुद्ध संस्थागत इलेक्ट्रॉनिक बैंकिंग चैनलों के माध्यम से स्वीकार किए जाते हैं: बैंक ट्रांसफर (RTGS / NEFT / IMPS), अकाउंट पेयी चेक, अथवा अधिकृत कॉर्पोरेट यूपीआई। इससे १००% वित्तीय व ऑडिटिंग पारदर्शिता सुनिश्चित होती है और कॉर्पोरेट ग्राहकों को पूर्ण जीएसटी इनपुट टैक्स क्रेडिट (ITC) का लाभ मिलता है।</p>"
         }
       ]
+    },
+    "service_modals": {
+      "modal-transformer": {
+        "title": "ट्रांसफार्मर लाइफसाइकिल प्रबंधन",
+        "desc": "आपकी सबसे महत्वपूर्ण विद्युत संपत्तियों के लिए आपूर्ति, मरम्मत और निरंतर रखरखाव तक संपूर्ण एंड-टू-एंड सेवाएं।",
+        "items": [
+          "ट्रांसफार्मर आपूर्ति (नए और रेंटल/सर्विस यूनिट्स)",
+          "व्यापक मरम्मत और ओवरहालिंग",
+          "निवारक रखरखाव कार्यक्रम (AMC)",
+          "उन्नत हाई-वैक्यूम ऑइल फिल्टरेशन और डिहाइड्रेशन",
+          "डायग्नोस्टिक ट्रांसफार्मर परीक्षण (BDV, मेगर, टैन डेल्टा)"
+        ]
+      },
+      "modal-ht": {
+        "title": "हाई-टेंशन (HT) सबस्टेशन",
+        "desc": "हम औद्योगिक विद्युत वितरण के मुख्य आधार—हाई-टेंशन इन्फ्रास्ट्रक्चर के डिजाइन और निष्पादन में विशेषज्ञ हैं:",
+        "items": [
+          "आउटडोर और इनडोर एचटी सब-स्टेशन निर्माण",
+          "व्यापक एचटी सब-स्टेशन परीक्षण और ऑडिट",
+          "एयर इंसुलेटेड (AIS) बे स्थापना और कमीशनिंग",
+          "गैस इंसुलेटेड (GIS) बे स्थापना और कमीशनिंग"
+        ]
+      },
+      "modal-panels": {
+        "title": "पैनल सिस्टम (HT, LT और APFC)",
+        "desc": "हम आपके उद्योग के संचालन को नियंत्रित और सुरक्षित रखने वाले सभी प्रकार के विद्युत पैनलों की आपूर्ति, स्थापना और रखरखाव करते हैं:",
+        "items": [
+          "एचटी (HT) पैनल आपूर्ति, स्थापना और रखरखाव",
+          "एलटी (PCC/MCC) पैनल आपूर्ति, स्थापना और रखरखाव",
+          "ऑटोमैटिक पावर फैक्टर करेक्शन (APFC) पैनल आपूर्ति और रखरखाव"
+        ]
+      },
+      "modal-cabling": {
+        "title": "केबलिंग कार्य (HT और LT)",
+        "desc": "आपके विद्युत नेटवर्क की मजबूती उच्च-गुणवत्ता वाली केबलिंग पर निर्भर करती है। हम सभी वोल्टेज स्तरों के लिए टिकाऊ केबलिंग सेवाएं प्रदान करते हैं:",
+        "items": [
+          "एचटी और एलटी भूमिगत (Underground) केबल बिछाना",
+          "एचटी और एलटी ओवरहेड केबल कार्य",
+          "सटीक एचटी और एलटी केबल जॉइंटिंग और टर्मिनेशन"
+        ]
+      },
+      "modal-testing": {
+        "title": "विद्युत परीक्षण और सुरक्षा",
+        "desc": "वैधानिक अनुपालन, सुरक्षा और परिचालन अखंडता सुनिश्चित करने के लिए हम आपके विद्युत सिस्टम पर व्यापक डायग्नोस्टिक परीक्षण करते हैं:",
+        "items": [
+          "हाई-पॉट (HIGH-POT) परीक्षण",
+          "टैन डेल्टा (Tan Delta) परीक्षण",
+          "व्यापक ट्रांसफार्मर डायग्नोस्टिक परीक्षण",
+          "सबस्टेशन परीक्षण और सुरक्षा ऑडिट (नए और मौजूदा सबस्टेशनों के लिए)"
+        ]
+      },
+      "modal-liasoning": {
+        "title": "लायझनिंग और नियामक परामर्श",
+        "desc": "हम सभी आवश्यक सरकारी और बिजली कंपनी स्वीकृतियां दिलाने के लिए आपके विशेषज्ञ प्रतिनिधि के रूप में कार्य करते हैं:",
+        "items": [
+          "पेशेवर इलेक्ट्रिकल ड्राइंग और डिजाइन (सिंगल लाइन डायग्राम - SLD)",
+          "पीडब्ल्यूडी (विद्युत निरीक्षणालय / CEI) से वैधानिक स्वीकृतियां",
+          "डी.जी. (डीजल जनरेटर) सेट लायझनिंग, स्वीकृतियां और सुरक्षा क्लीयरेंस",
+          "पावर यूटिलिटी लायझनिंग (MSEDCL, MSETCL और Torrent Power)",
+          "सोलर लायझनिंग और नेट-मीटरिंग ग्रिड कनेक्टिविटी स्वीकृतियां"
+        ]
+      },
+      "modal-projects": {
+        "title": "टर्नकी प्रोजेक्ट्स और विशेष कार्य",
+        "desc": "मानक इंस्टॉलेशन से आगे बढ़कर, हम विशेष और बड़े पैमाने की विद्युत परियोजनाओं का संपूर्ण प्रबंधन करते हैं:",
+        "items": [
+          "एक्सप्रेस फीडर लायझनिंग और कमीशनिंग",
+          "हाई-वोल्टेज ओवरहेड लाइन शिफ्टिंग",
+          "संपूर्ण लिफ्ट इरेक्शन और लाइसेंसिंग सेवाएं"
+        ]
+      },
+      "modal-solar": {
+        "title": "सौर ऊर्जा समाधान (Solar Power)",
+        "desc": "हमारे एंड-टू-एंड सोलर समाधानों के साथ स्वच्छ ऊर्जा अपनाएं और अपने परिचालन बिजली खर्च को कम करें:",
+        "items": [
+          "सोलर पावर सिस्टम डिजाइन और इंस्टॉलेशन",
+          "सोलर परियोजनाओं के लिए सीईआई और डिस्कॉम नियामक लायझनिंग",
+          "नेट-मीटरिंग ग्रिड कनेक्टिविटी और कमीशनिंग"
+        ]
+      },
+      "modal-earthing": {
+        "title": "अर्थिंग समाधान (Earthing Solutions)",
+        "desc": "आपके कर्मचारियों की सुरक्षा और महंगे उपकरणों के बचाव के लिए एक मजबूत अर्थिंग सिस्टम अत्यंत आवश्यक है:",
+        "items": [
+          "उन्नत मेंटेनेंस-फ्री केमिकल अर्थिंग",
+          "पारंपरिक कोयला और नमक अर्थिंग"
+        ]
+      }
     }
   },
   "mr": {
@@ -1182,17 +1358,6 @@
           "cta": "रबर व पॉलिमरसाठी चौकशी"
         },
         {
-          "badge": "इंजेक्‍शन मोल्डिंग",
-          "title": "ऑफिस फर्निचर आणि प्रिसिजन पॉलिमर पार्ट्स",
-          "desc": "आम्ही स्वतंत्र ११केव्ही/२२केव्ही सबस्टेशन्स, स्टेप-डाऊन ट्रान्सफॉर्मर्स आणि मुख्य एलटी वितरण स्विचबोर्ड (पीसीसी) उभारतो, ज्यामुळे इंजेक्‍शन मोल्डिंग मशिन्स आणि असेंब्ली लाईन्सना विनाअडथळा वीज मिळते.",
-          "feature_tags": [
-            "११केव्ही/२२केव्ही एचटी सबस्टेशन उभारणी",
-            "मुख्य एलटी वितरण स्विचबोर्ड",
-            "हार्मोनिक-फिल्टर्ड एपीएफसी बँक्स"
-          ],
-          "cta": "फर्निचर मोल्डिंगसाठी चौकशी"
-        },
-        {
           "badge": "फ्लेमप्रूफ / एफएलपी",
           "title": "केमिकल आणि बल्क ड्रग फार्मा प्लांट्स",
           "desc": "आम्ही स्वतंत्र एचटी सबस्टेशन्स, ऑइल-कूल्ड ट्रान्सफॉर्मर्स आणि प्रमाणित फ्लेमप्रूफ (एफएलपी) मुख्य एलटी स्विचबोर्ड (पीसीसी/एमसीसी) उभारतो, ज्यामुळे धोकादायक केमिकल रिॲक्टर्सना वैधानिक सुरक्षा मानकांसह वीज मिळते.",
@@ -1235,6 +1400,17 @@
             "एपीएफसी बँक्स व चार्जिंग डिस्ट्रिब्युशन"
           ],
           "cta": "वेअरहाउसिंगसाठी चौकशी करा"
+        },
+        {
+          "badge": "इंजेक्‍शन मोल्डिंग",
+          "title": "ऑफिस फर्निचर आणि प्रिसिजन पॉलिमर पार्ट्स",
+          "desc": "आम्ही स्वतंत्र ११केव्ही/२२केव्ही सबस्टेशन्स, स्टेप-डाऊन ट्रान्सफॉर्मर्स आणि मुख्य एलटी वितरण स्विचबोर्ड (पीसीसी) उभारतो, ज्यामुळे इंजेक्‍शन मोल्डिंग मशिन्स आणि असेंब्ली लाईन्सना विनाअडथळा वीज मिळते.",
+          "feature_tags": [
+            "११केव्ही/२२केव्ही एचटी सबस्टेशन उभारणी",
+            "मुख्य एलटी वितरण स्विचबोर्ड",
+            "हार्मोनिक-फिल्टर्ड एपीएफसी बँक्स"
+          ],
+          "cta": "फर्निचर मोल्डिंगसाठी चौकशी"
         },
         {
           "badge": "धान्य व अन्न प्रक्रिया",
@@ -1458,6 +1634,94 @@
           "a": "<p>गायत्री इलेक्ट्रिकल सर्व्हिसेस ही अधिकृत जीएसटी-नोंदणीकृत अभियांत्रिकी संस्था आहे. आमचे प्रकल्प शुल्क पारदर्शी आणि स्पर्धात्मक इंजिनिअरिंग बिल ऑफ क्वांटिटीज (BOQ) नुसार असते. सर्व व्यावसायिक बिले अधिकृत जीएसटी टॅक्स इन्व्हॉइससह दिली जातात आणि पेमेंट केवळ संस्थागत इलेक्ट्रॉनिक बँकिंगद्वारेच स्वीकारले जाते: बँक ट्रान्सफर (RTGS / NEFT / IMPS), अकाउंट पेयी धनादेश (चेक) किंवा कॉर्पोरेट यूपीआय. यामुळे कॉर्पोरेट ग्राहकांना १००% कायदेशीर व ऑडिटिंग पारदर्शकता आणि जीएसटी इनपुट टॅक्स क्रेडिट (ITC) चा पूर्ण लाभ मिळतो.</p>"
         }
       ]
+    },
+    "service_modals": {
+      "modal-transformer": {
+        "title": "ट्रान्सफॉर्मर लाइफसायकल व्यवस्थापन",
+        "desc": "तुमच्या सर्वात महत्त्वाच्या विद्युत यंत्रणेसाठी पुरवठा, दुरुस्ती आणि नियमित देखभालीपर्यंत संपूर्ण सेवा.",
+        "items": [
+          "ट्रान्सफॉर्मर पुरवठा (नवीन आणि रेंटल/सर्व्हिस युनिट्स)",
+          "सर्वसमावेशक दुरुस्ती आणि नूतनीकरण (Overhauling)",
+          "प्रतिबंधात्मक देखभाल कार्यक्रम (AMC)",
+          "प्रगत हाय-व्हॅक्यूम ऑइल फिल्टरेशन आणि डिहायड्रेशन",
+          "डायग्नोस्टिक ट्रान्सफॉर्मर चाचणी (BDV, मेगर, टॅन डेल्टा)"
+        ]
+      },
+      "modal-ht": {
+        "title": "हाय-टेन्शन (HT) सबस्टेशन्स",
+        "desc": "औद्योगिक वीज वितरणाचा कणा असलेल्या हाय-टेन्शन इन्फ्रास्ट्रक्चरच्या डिझाइन आणि उभारणीत आम्ही तज्ज्ञ आहोत:",
+        "items": [
+          "आउटडोअर आणि इनडोअर एचटी सब-स्टेशन उभारणी",
+          "सर्वसमावेशक एचटी सब-स्टेशन चाचणी आणि तपासणी",
+          "एअर इन्सुलेटेड (AIS) बे इन्स्टॉलेशन आणि कमिशनिंग",
+          "गॅस इन्सुलेटेड (GIS) बे इन्स्टॉलेशन आणि कमिशनिंग"
+        ]
+      },
+      "modal-panels": {
+        "title": "पॅनेल सिस्टीम्स (HT, LT आणि APFC)",
+        "desc": "तुमच्या उद्योगाचे कार्य नियंत्रित आणि सुरक्षित ठेवणाऱ्या सर्व प्रकारच्या इलेक्ट्रिकल पॅनेल्सचा आम्ही पुरवठा, उभारणी आणि देखभाल करतो:",
+        "items": [
+          "एचटी (HT) पॅनेल पुरवठा, इन्स्टॉलेशन आणि देखभाल",
+          "एलटी (PCC/MCC) पॅनेल पुरवठा, इन्स्टॉलेशन आणि देखभाल",
+          "ऑटोमॅटिक पॉवर फॅक्टर करेक्शन (APFC) पॅनेल पुरवठा आणि देखभाल"
+        ]
+      },
+      "modal-cabling": {
+        "title": "केबलिंग कामे (HT आणि LT)",
+        "desc": "तुमच्या विद्युत नेटवर्कची सुरक्षितता दर्जेदार केबलिंगवर अवलंबून असते. आम्ही सर्व व्होल्टेज स्तरांसाठी व्यावसायिक सेवा पुरवतो:",
+        "items": [
+          "एचटी आणि एलटी भूमिगत (Underground) केबल लेईंग",
+          "एचटी आणि एलटी ओव्हरहेड केबल लेईंग",
+          "अचूक एचटी आणि एलटी केबल जॉइंटिंग आणि टर्मिनेशन"
+        ]
+      },
+      "modal-testing": {
+        "title": "विद्युत चाचणी आणि सुरक्षा",
+        "desc": "शासकीय नियमांचे पालन, सुरक्षा आणि अखंड कार्यक्षमता सुनिश्चित करण्यासाठी आम्ही खालील डायग्नोस्टिक चाचण्या करतो:",
+        "items": [
+          "हाय-पॉट (HIGH-POT) चाचणी",
+          "टॅन डेल्टा (Tan Delta) चाचणी",
+          "सर्वसमावेशक ट्रान्सफॉर्मर टेस्टिंग",
+          "सबस्टेशन टेस्टिंग आणि हेल्थ ऑडिट (नवीन आणि जुन्या सबस्टेशन्ससाठी)"
+        ]
+      },
+      "modal-liasoning": {
+        "title": "लायझनिंग आणि शासकीय सल्लागार",
+        "desc": "सर्व आवश्यक शासकीय आणि वीज कंपनी परवानग्या वेळेत मिळवून देण्यासाठी आम्ही तुमचे अधिकृत तांत्रिक प्रतिनिधी म्हणून काम करतो:",
+        "items": [
+          "व्यावसायिक इलेक्ट्रिकल ड्रॉइंग आणि डिझाइन (सिंगल लाईन डायग्राम - SLD)",
+          "पीडब्ल्यूडी (विद्युत निरीक्षणालय / CEI) कडून शासकीय मंजुरी",
+          "डी.जी. (डिझेल जनरेटर) सेट लायझनिंग, परवानग्या आणि सुरक्षा क्लिअरन्स",
+          "पॉवर युटिलिटी लायझनिंग व समन्वय (MSEDCL, MSETCL आणि Torrent Power)",
+          "सोलर लायझनिंग आणि नेट-मीटरिंग ग्रिड कनेक्टिव्हिटी मंजुरी"
+        ]
+      },
+      "modal-projects": {
+        "title": "टर्नकी प्रकल्प आणि विशेष कामे",
+        "desc": "विशेष कौशल्य आणि सूक्ष्म नियोजनाची गरज असलेले मोठ्या प्रमाणावरील विद्युत प्रकल्प आम्ही टर्नकी पद्धतीने पूर्ण करतो:",
+        "items": [
+          "एक्सप्रेस फीडर लायझनिंग आणि कमिशनिंग",
+          "हाय-व्होल्टेज ओव्हरहेड लाईन शिफ्टिंग",
+          "संपूर्ण लिफ्ट उभारणी आणि शासकीय परवाना सेवा"
+        ]
+      },
+      "modal-solar": {
+        "title": "सौर ऊर्जा उपाय (Solar Power)",
+        "desc": "आमच्या एंड-टू-एंड सोलर उपायांसह शाश्वत ऊर्जा स्वीकारा आणि आपल्या कारखान्याचा वीज खर्च कमी करा:",
+        "items": [
+          "सोलर पॉवर सिस्टीम डिझाइन आणि इन्स्टॉलेशन",
+          "सोलर प्रकल्पांसाठी सीईआय आणि महावितरण/टोरेंट पॉवर लायझनिंग",
+          "नेट-मीटरिंग ग्रिड कनेक्टिव्हिटी आणि कमिशनिंग"
+        ]
+      },
+      "modal-earthing": {
+        "title": "अर्थिंग सोल्यूशन्स (Earthing Solutions)",
+        "desc": "तुमच्या कर्मचाऱ्यांच्या सुरक्षिततेसाठी आणि महागड्या यंत्रसामग्रीच्या संरक्षणासाठी मजबूत अर्थिंग सिस्टीम अत्यंत आवश्यक आहे:",
+        "items": [
+          "प्रगत मेंटेनन्स-फ्री केमिकल अर्थिंग",
+          "पारंपारिक कोळसा आणि मीठ अर्थिंग"
+        ]
+      }
     }
   }
 }

@@ -286,6 +286,16 @@ function getSyncRules(config) {
                     to: `Last Updated: ${date}`
                 }
             ]
+        },
+        {
+            file: 'package.json',
+            description: 'package.json version field',
+            replace: [
+                {
+                    from: /"version":\s*"[^"]*"/,
+                    to: `"version": "${ver}"`
+                }
+            ]
         }
     ];
 }

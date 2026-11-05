@@ -1,0 +1,15 @@
+# Gayatri Electrical Services (GES) — Repository Code Owners
+# Automatically requests review from the repository owner on pull requests affecting core files.
+
+*                       @aadeshdubey
+/index.html             @aadeshdubey
+/404.html               @aadeshdubey
+/CNAME                  @aadeshdubey
+/sw.js                  @aadeshdubey
+/version.json           @aadeshdubey
+/data/                  @aadeshdubey
+/js/                    @aadeshdubey
+/css/                   @aadeshdubey
+/scripts/               @aadeshdubey
+/.github/               @aadeshdubey
+

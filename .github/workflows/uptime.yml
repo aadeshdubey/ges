@@ -1,0 +1,79 @@
+name: "GES Production Uptime, Endpoint & SSL Watchdog"
+
+on:
+  schedule:
+    # Runs every 6 hours to verify production availability and SSL health
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  uptime:
+    name: Production Endpoint & SSL Health Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verify Production Endpoints & SSL Certificate
+        id: check
+        run: |
+          echo "### 🌐 Gayatri Electrical Services — Live Production Health Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Endpoint | HTTP Status | Latency (s) | Result |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :---: | :---: | :---: |" >> $GITHUB_STEP_SUMMARY
+
+          FAILED=0
+          ENDPOINTS=(
+            "https://www.gayatrielectrical.in/"
+            "https://www.gayatrielectrical.in/sitemap.xml"
+            "https://www.gayatrielectrical.in/robots.txt"
+            "https://www.gayatrielectrical.in/llms.txt"
+            "https://www.gayatrielectrical.in/data/schema.json"
+            "https://www.gayatrielectrical.in/version.json"
+          )
+
+          for URL in "${ENDPOINTS[@]}"; do
+            RESULT=$(curl -L -s -o /dev/null -w "%{http_code} %{time_total}" --max-time 15 "$URL" || echo "000 15.0")
+            STATUS=$(echo "$RESULT" | awk '{print $1}')
+            TIME=$(echo "$RESULT" | awk '{print $2}')
+            if [ "$STATUS" = "200" ]; then
+              echo "| \`$URL\` | \`$STATUS\` | \`${TIME}s\` | ✅ Healthy |" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "| \`$URL\` | \`$STATUS\` | \`${TIME}s\` | ❌ Unreachable |" >> $GITHUB_STEP_SUMMARY
+              FAILED=1
+            fi
+          done
+
+          if [ "$FAILED" -ne 0 ]; then
+            echo "One or more production endpoints failed health verification."
+            exit 1
+          fi
+
+      - name: Create Alert Issue on Production Outage
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const title = `🚨 [Production Uptime Alert] Endpoint Check Failed (${new Date().toISOString().split('T')[0]})`;
+            const body = `### Automated GES Production Uptime Alert\n\nOne or more production endpoints on **https://www.gayatrielectrical.in** did not return HTTP 200 OK during scheduled watchdog run [${context.runId}](${runUrl}).\n\n- **Workflow Log**: [View Details](${runUrl})`;
+
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: ['uptime-alert']
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['uptime-alert', 'bug']
+              });
+            }
+

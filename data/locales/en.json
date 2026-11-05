@@ -42,7 +42,7 @@
   "footer_desc": "Powering progress with more than two decades of unwavering commitment to safety, efficiency, and innovative electrical solutions.",
   "footer_quick_links": "Quick Links",
   "footer_contact_us": "Contact Us",
-  "footer_follow_us": "Follow Us",
+  "footer_follow_us": "Follow & Verify Us",
   "contact_office_addr": "Shop No 7, Tirupati Heights,<br>Sonale Pipeline Rd, Bhadwad,<br>Bhiwandi, Maharashtra - 421302",
   "footer_rights": "© 2026 Gayatri Electrical Services. All Rights Reserved. | <button id=\"privacy-policy-link\" data-modal-target=\"#modal-privacy\" class=\"footer-link\">Privacy Policy</button> | <button id=\"terms-of-service-link\" data-modal-target=\"#modal-terms\" class=\"footer-link\">Terms of Service</button>",
   "parallax_title": "Ready to Power Up Your Project?",
@@ -207,17 +207,6 @@
         "cta": "Inquire for Rubber & Polymers"
       },
       {
-        "badge": "Injection Moulding",
-        "title": "Office Furniture & Precision Polymers",
-        "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and centralized Main LT Power Distribution Switchboards (PCC) with detuned APFC capacitor banks. Delivering stable power directly up to the facility's main LT distribution panels and hydraulic injection moulding MCCs.",
-        "feature_tags": [
-          "11kV/22kV HT Substation Erection",
-          "Main LT Distribution Switchboards",
-          "Harmonic-Filtered APFC Banks"
-        ],
-        "cta": "Inquire for Furniture & Moulding"
-      },
-      {
         "badge": "Flameproof / FLP",
         "title": "Chemical & Pharmaceutical Plants",
         "desc": "We execute dedicated HT substations, oil-cooled step-down transformers, and certified flameproof (FLP) Main LT Distribution Switchboards (PCC/MCC) with APFC capacitor correction. Delivering statutory safety power trunking up to the plant's main LT distribution panels and reactor motor feeder boards.",
@@ -260,6 +249,17 @@
           "APFC Banks & Charging Distribution"
         ],
         "cta": "Inquire for Warehousing Infrastructure"
+      },
+      {
+        "badge": "Injection Moulding",
+        "title": "Office Furniture & Precision Polymers",
+        "desc": "We execute dedicated 11kV/22kV HT substations, step-down transformers, and centralized Main LT Power Distribution Switchboards (PCC) with detuned APFC capacitor banks. Delivering stable power directly up to the facility's main LT distribution panels and hydraulic injection moulding MCCs.",
+        "feature_tags": [
+          "11kV/22kV HT Substation Erection",
+          "Main LT Distribution Switchboards",
+          "Harmonic-Filtered APFC Banks"
+        ],
+        "cta": "Inquire for Furniture & Moulding"
       },
       {
         "badge": "Grain & Feed Processing",
@@ -483,5 +483,93 @@
         "a": "<p>Gayatri Electrical Services is a legally registered GST engineering firm adhering to statutory corporate compliance. We provide transparent, competitive project estimates based on an itemized engineering Bill of Quantities (BOQ). All contracting transactions, milestone disbursements, and AMC retainers are billed through formal GST Tax Invoices and settled via institutional electronic banking: Bank Transfer (RTGS / NEFT / IMPS), Account Payee Cheques, or Verified Corporate UPI. This ensures 100% financial and auditing transparency, and enables our corporate clients to claim full GST Input Tax Credit (ITC) benefits.</p>"
       }
     ]
+  },
+  "service_modals": {
+    "modal-transformer": {
+      "title": "Transformer Lifecycle Management",
+      "desc": "Complete end-to-end services for your most critical assets, from supply and repair to ongoing maintenance.",
+      "items": [
+        "Transformer Supply (New & Service Units)",
+        "Comprehensive Repair & Refurbishment",
+        "Preventative Maintenance Programs",
+        "Advanced Oil Filtration & Dehydration",
+        "Diagnostic Transformer Testing"
+      ]
+    },
+    "modal-ht": {
+      "title": "High-Tension (HT) Substations",
+      "desc": "We specialize in the design and execution of high-tension infrastructure, the core of industrial power distribution. Our expertise includes:",
+      "items": [
+        "Outdoor & Indoor HT Sub-Station Erection",
+        "Comprehensive HT Sub-station Testing",
+        "Air Insulated (AIS) Bay Installation & Commissioning",
+        "Gas Insulated (GIS) Bay Installation & Commissioning"
+      ]
+    },
+    "modal-panels": {
+      "title": "Panel Systems (HT, LT & APFC)",
+      "desc": "We supply, install, and maintain the full spectrum of electrical panels that control and protect your operations. Our offerings cover:",
+      "items": [
+        "HT Panel Supply, Installation & Maintenance",
+        "LT Panel Supply, Installation & Maintenance",
+        "Automatic Power Factor Correction (APFC) Panel Supply & Maintenance"
+      ]
+    },
+    "modal-cabling": {
+      "title": "Cabling Works (HT & LT)",
+      "desc": "The integrity of your network relies on high-quality cabling. We provide professional services for all voltage levels, ensuring durable and efficient power transmission.",
+      "items": [
+        "HT & LT Underground Cable Laying",
+        "HT & LT Overhead Cable Laying",
+        "Precision HT & LT Cable Jointing"
+      ]
+    },
+    "modal-testing": {
+      "title": "Electrical Testing & Safety",
+      "desc": "To ensure compliance, safety, and operational integrity, we conduct a range of diagnostic tests on your electrical systems. Key services include:",
+      "items": [
+        "HIGH-POT (High Potential) Testing",
+        "Tan Delta Testing",
+        "Comprehensive Transformer Testing",
+        "Substation Testing & Health Audits (for new and existing substations)"
+      ]
+    },
+    "modal-liasoning": {
+      "title": "Liasoning & Regulatory Consulting",
+      "desc": "Navigating the complex regulatory landscape can be challenging. We act as your expert intermediary to secure all necessary approvals, saving you time and ensuring compliance.",
+      "items": [
+        "Professional Electrical Drawing & Design (Single Line Diagrams - SLD)",
+        "Statutory Approvals from PWD (Electrical Inspectorate)",
+        "D.G. (Diesel Generator) Set Liasoning, Approvals & Safety Clearances",
+        "Utility Liasoning & Coordination (MSEDCL, MSETCL & Torrent Power)",
+        "Solar Liasoning and Grid Connectivity Approvals"
+      ]
+    },
+    "modal-projects": {
+      "title": "Turnkey Projects & Special Works",
+      "desc": "Beyond standard installations, we manage specialized, large-scale electrical projects that require unique expertise and meticulous planning.",
+      "items": [
+        "Express Feeder Liasoning and Commissioning",
+        "High Voltage Overhead Line Shifting",
+        "Complete Lift Erection Services"
+      ]
+    },
+    "modal-solar": {
+      "title": "Solar Power Solutions",
+      "desc": "Embrace sustainable energy with our end-to-end solar solutions. We help you reduce operating costs and meet your environmental goals through renewable energy.",
+      "items": [
+        "Solar Power System Design & Installation",
+        "Regulatory Liasoning for Solar Projects",
+        "Grid Connectivity & Commissioning"
+      ]
+    },
+    "modal-earthing": {
+      "title": "Earthing Solutions",
+      "desc": "A robust earthing system is critical for the safety of your personnel and the protection of your expensive equipment. We provide reliable and long-lasting solutions.",
+      "items": [
+        "Advanced Chemical Earthing",
+        "Traditional Coal Earthing"
+      ]
+    }
   }
 }

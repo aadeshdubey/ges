@@ -13,7 +13,16 @@
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Corporate Typography: Self-Hosted Khand & Rajdhani -->
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css" id="ges-fonts-css">
+    <script>
+        // Ensure fonts and assets resolve properly when 404.html is served from any nested URL path on production
+        (function () {
+            if (window.location.protocol !== 'file:') {
+                var fontLink = document.getElementById('ges-fonts-css');
+                if (fontLink) fontLink.href = '/assets/fonts/fonts.css';
+            }
+        })();
+    </script>
 
     <style>
         :root {
@@ -73,31 +82,87 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
+            padding: 10px 20px 10px 14px;
+            background: rgba(255, 255, 255, 0.97);
+            border: 1.5px solid rgba(246, 144, 36, 0.45);
+            border-radius: 999px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28), 0 0 16px rgba(246, 144, 36, 0.18);
             text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .logo-wrap:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35), 0 0 22px rgba(246, 144, 36, 0.32);
         }
 
         .logo-wrap img {
-            height: 46px;
-            width: auto;
+            height: 44px;
+            width: 44px;
+            object-fit: contain;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: block;
         }
 
-        .logo-text {
+        .logo-text-group {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: fit-content;
+        }
+
+        .logo-title {
             font-family: var(--font-heading);
-            font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            text-align: left;
-            line-height: 1.1;
+            font-size: 1.5rem;
+            letter-spacing: 0.03em;
+            display: flex;
+            align-items: baseline;
+            gap: 0.32em;
+            line-height: 1;
+            white-space: nowrap;
         }
 
-        .logo-text .orange {
+        .logo-title .brand-gayatri {
+            color: var(--primary-orange);
+            letter-spacing: 0.04em;
+        }
+
+        .logo-title .brand-electricals {
+            color: var(--brand-blue);
+            letter-spacing: 0.035em;
+        }
+
+        .logo-tagline {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 3px;
+            line-height: 1;
+            font-family: var(--font-heading);
+            font-size: 0.64rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .logo-tagline .tagline-voltage {
             color: var(--primary-orange);
         }
 
-        .logo-text .blue {
-            color: #60a5fa;
+        .logo-tagline .tagline-meets {
+            color: #64748b;
+            font-size: 0.54rem;
+            font-weight: 600;
+            padding: 0 3px;
+        }
+
+        .logo-tagline .tagline-intelligence {
+            color: var(--brand-blue);
         }
 
         .badge-404 {
@@ -224,12 +289,16 @@
 
 <body>
     <div class="error-card">
-        <a href="index.html" class="logo-wrap" title="Gayatri Electrical Services">
-            <img src="assets/logo.png" alt="Gayatri Electrical Services Official Logo">
-            <div class="logo-text">
-                <span class="orange">Gayatri</span> <span class="blue">Electrical</span>
-            </div>
-        </a>
+        <div>
+            <a href="index.html" id="home-logo-link" class="logo-wrap" title="Gayatri Electrical Services">
+                <img src="assets/logo.png" id="ges-404-logo" alt="Gayatri Electrical Services Official Logo" width="44" height="44" decoding="async"
+                    onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='/assets/logo.png';}">
+                <div class="logo-text-group">
+                    <span class="logo-title"><span class="brand-gayatri">Gayatri</span> <span class="brand-electricals">Electrical</span></span>
+                    <span class="logo-tagline"><span class="tagline-voltage">HIGH VOLTAGE</span> <span class="tagline-meets">MEETS</span> <span class="tagline-intelligence">HIGH INTELLIGENCE</span></span>
+                </div>
+            </a>
+        </div>
 
         <div class="badge-404">⚡ Circuit Fault / Route Disconnected</div>
         <div class="error-code">404</div>
@@ -237,10 +306,10 @@
         <p>The electrical path or webpage you requested has shifted, tripped, or does not exist on this server. Let us route you back to our active industrial grid.</p>
 
         <div class="action-buttons">
-            <a href="index.html" class="btn btn-primary">
+            <a href="index.html" id="home-btn-link" class="btn btn-primary">
                 ⚡ Return to Homepage
             </a>
-            <a href="index.html#services" class="btn btn-secondary">
+            <a href="index.html#services" id="services-btn-link" class="btn btn-secondary">
                 Explore Services
             </a>
             <a href="https://wa.me/918693893333?text=Hello%20Gayatri%20Electrical%20Services,%20I%20arrived%20at%20a%20404%20broken%20link." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
@@ -259,6 +328,17 @@
     </div>
 
     <script>
+        // Normalize logo and navigation links when served on HTTP/HTTPS from any path depth
+        const isHosted = window.location.protocol !== 'file:';
+        const homeTarget = isHosted ? '/' : 'index.html';
+        if (isHosted) {
+            const logoImg = document.getElementById('ges-404-logo');
+            if (logoImg) logoImg.src = '/assets/logo.png';
+            document.getElementById('home-logo-link').href = '/';
+            document.getElementById('home-btn-link').href = '/';
+            document.getElementById('services-btn-link').href = '/#services';
+        }
+
         let seconds = 12;
         const countdownEl = document.getElementById('countdown');
         const interval = setInterval(() => {
@@ -266,7 +346,7 @@
             if (countdownEl) countdownEl.textContent = seconds;
             if (seconds <= 0) {
                 clearInterval(interval);
-                window.location.href = 'index.html';
+                window.location.href = homeTarget;
             }
         }, 1000);
     </script>

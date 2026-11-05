@@ -13,11 +13,13 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 console.log('=== Gayatri Electrical Services (GES) Integrity Verification ===\n');
 
 // 1. JavaScript Syntax Verification
-console.log('[1/4] Verifying JavaScript syntax...');
+console.log('[1/6] Verifying JavaScript syntax...');
 const jsFiles = [
     'js/main.js',
     'js/main.min.js',
     'sw.js',
+    'scripts/build.js',
+    'scripts/deploy.js',
     'scripts/sync-version.js',
     'scripts/validate.js',
     'scripts/ping-sitemap.js'
@@ -35,7 +37,7 @@ for (const rel of jsFiles) {
 }
 
 // 2. JSON Integrity Verification
-console.log('\n[2/4] Verifying JSON data & manifest files...');
+console.log('\n[2/6] Verifying JSON data & manifest files...');
 const jsonFiles = [
     'version.json',
     'package.json',
@@ -59,12 +61,36 @@ for (const rel of jsonFiles) {
     }
 }
 
-// 3. Web Standards & Required Endpoints Verification
-console.log('\n[3/4] Verifying core web standards & root files...');
+// 3. Multi-Language (EN / HI / MR) Key Parity Verification
+console.log('\n[3/6] Verifying multi-language (EN / HI / MR) key & card parity...');
+const enLocale = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data/locales/en.json'), 'utf-8'));
+const hiLocale = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data/locales/hi.json'), 'utf-8'));
+const mrLocale = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data/locales/mr.json'), 'utf-8'));
+
+const enKeys = Object.keys(enLocale).sort();
+const hiKeys = Object.keys(hiLocale).sort();
+const mrKeys = Object.keys(mrLocale).sort();
+
+if (JSON.stringify(enKeys) !== JSON.stringify(hiKeys) || JSON.stringify(enKeys) !== JSON.stringify(mrKeys)) {
+    console.error('  ✗ Locale top-level key mismatch across en.json, hi.json, mr.json!');
+    process.exit(1);
+}
+if (
+    enLocale.industries_section.cards.length !== hiLocale.industries_section.cards.length ||
+    enLocale.industries_section.cards.length !== mrLocale.industries_section.cards.length
+) {
+    console.error('  ✗ Industry cards count mismatch across locales!');
+    process.exit(1);
+}
+console.log(`  ✓ 100% Parity: ${enKeys.length} top-level keys, ${enLocale.industries_section.cards.length} industry cards, ${Object.keys(enLocale.service_modals || {}).length} service modals across EN/HI/MR`);
+
+// 4. Web Standards, Governance & Required Endpoints Verification
+console.log('\n[4/6] Verifying core web standards, GitHub governance & root files...');
 const requiredFiles = [
     'index.html',
     '404.html',
     'CNAME',
+    'LICENSE',
     'robots.txt',
     'sitemap.xml',
     'llms.txt',
@@ -75,7 +101,13 @@ const requiredFiles = [
     'site.webmanifest',
     'sw.js',
     'version.json',
-    '.gitignore'
+    'ges2026indexnowkeybhiwandi9999.txt',
+    '.gitignore',
+    '.github/SECURITY.md',
+    '.github/CODEOWNERS',
+    '.github/release.yml',
+    '.github/dependabot.yml',
+    '.github/PULL_REQUEST_TEMPLATE.md'
 ];
 
 for (const rel of requiredFiles) {
@@ -87,8 +119,8 @@ for (const rel of requiredFiles) {
     console.log(`  ✓ Found: ${rel}`);
 }
 
-// 4. Version & Date Synchronization Verification
-console.log('\n[4/5] Verifying version & date synchronization across repository...');
+// 5. Version & Date Synchronization Verification
+console.log('\n[5/6] Verifying version & date synchronization across repository...');
 try {
     const syncScript = path.join(ROOT_DIR, 'scripts', 'sync-version.js');
     execSync(`node "${syncScript}" --check`, { stdio: 'inherit' });
@@ -97,8 +129,8 @@ try {
     process.exit(1);
 }
 
-// 5. Browser Deprecations, Obsolete Standards & Asset Link Integrity Audit
-console.log('\n[5/5] Auditing browser deprecations, web standards & asset links...');
+// 6. Browser Deprecations, Obsolete Standards & Asset Link Integrity Audit
+console.log('\n[6/6] Auditing browser deprecations, web standards & asset links...');
 const htmlFiles = ['index.html', '404.html'];
 
 for (const rel of htmlFiles) {
@@ -150,4 +182,4 @@ for (const rel of htmlFiles) {
     console.log(`  ✓ ${rel}: 0 deprecations, 0 obsolete tags, verified ${checkedAssets} local asset links`);
 }
 
-console.log('\n=== All 5 verification stages passed successfully! ===\n');
+console.log('\n=== All 6 verification stages passed successfully! ===\n');

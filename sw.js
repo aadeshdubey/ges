@@ -1,14 +1,15 @@
 /**
  * Gayatri Electrical Services — Enterprise Service Worker
- * Version: 26.11.02.4 | Offline Resilience Engine
+ * Version: 26.11.05.1 | Offline Resilience Engine
  */
 
-const CACHE_NAME = 'ges-cache-v26.11.02.4';
+const CACHE_NAME = 'ges-cache-v26.11.05.1';
 const PRECACHE_URLS = [
     './',
     './index.html',
-    'css/style.min.css?v=26.11.02.4',
-    'js/main.min.js?v=26.11.02.4',
+    './404.html',
+    'css/style.min.css?v=26.11.05.1',
+    'js/main.min.js?v=26.11.05.1',
     'assets/logo.png',
     'assets/favicon.svg',
     'data/schema.json',

@@ -20,7 +20,7 @@
       "telephone": "+918693893333",
       "email": "support@gayatrielectrical.in",
       "foundingDate": "2003",
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-05",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -31,28 +31,6 @@
       "priceRange": "₹₹ - ₹₹₹₹",
       "paymentAccepted": "Bank Transfer, RTGS, NEFT, Cheque, Corporate UPI (Official GST Tax Invoiced B2B Transactions)",
       "currenciesAccepted": "INR",
-      "knowsAbout": [
-        "13 MW Turnkey Industrial Power Infrastructure",
-        "6.5 MW Dedicated Express Feeders",
-        "11kV 22kV 33kV High Tension Substations",
-        "EHV Grid Substation Liaisoning 100kV and 220kV",
-        "Torrent Power Bhiwandi Circle Statutory Clearances",
-        "MSETCL Transmission Approvals & Bay Extensions",
-        "MSEDCL Industrial Load Sanctions Wada Kudus",
-        "Turnkey Solar Liaisoning & Net-Metering Approvals",
-        "Chief Electrical Inspectorate CEI Clearances",
-        "Form A and Form B Submissions CEA Safety Regulations",
-        "D.G. Set Statutory Clearances and Interlocks",
-        "High-Rise Building Electrical Approvals and Busducts",
-        "Post-Fire PWD Investigation & Clearances",
-        "Transformer On-Site BDV Oil Filtration >60kV",
-        "Emergency Mobile Transformer Rentals 100kVA to 2000kVA",
-        "Automatic Power Factor Correction APFC Panels",
-        "Harmonic Mitigation Detuned Filter Reactors",
-        "Vacuum Circuit Breaker VCB Testing",
-        "Bombay Lifts Act Elevator Compliance",
-        "Chemical Earthing & Copper Grounding Grids"
-      ],
       "description": "Government Authorized Electrical Contractor (Est. 2003) & Licensed Lift Contractor in Maharashtra specializing in HT & LT Electrical Contracting, 13 MW Turnkey Express Feeders (APCO Infratech Bhiwandi), Torrent Power & MSETCL grid approvals, Electrical Inspector statutory commissioning, Transformer Lifecycle Management, High-Rise Permissions, Post-Fire PWD Clearances, and industrial power infrastructure across Bhiwandi, Kudus, Wada & Thane.",
       "address": {
         "@type": "PostalAddress",
@@ -290,6 +268,26 @@
         ]
       },
       "knowsAbout": [
+        "13 MW Turnkey Industrial Power Infrastructure",
+        "6.5 MW Dedicated Express Feeders",
+        "11kV 22kV 33kV High Tension Substations",
+        "EHV Grid Substation Liaisoning 100kV and 220kV",
+        "Torrent Power Bhiwandi Circle Statutory Clearances",
+        "MSETCL Transmission Approvals & Bay Extensions",
+        "MSEDCL Industrial Load Sanctions Wada Kudus",
+        "Turnkey Solar Liaisoning & Net-Metering Approvals",
+        "Chief Electrical Inspectorate CEI Clearances",
+        "Form A and Form B Submissions CEA Safety Regulations",
+        "D.G. Set Statutory Clearances and Interlocks",
+        "High-Rise Building Electrical Approvals and Busducts",
+        "Post-Fire PWD Investigation & Clearances",
+        "Transformer On-Site BDV Oil Filtration >60kV",
+        "Emergency Mobile Transformer Rentals 100kVA to 2000kVA",
+        "Automatic Power Factor Correction APFC Panels",
+        "Harmonic Mitigation Detuned Filter Reactors",
+        "Vacuum Circuit Breaker VCB Testing",
+        "Bombay Lifts Act Elevator Compliance",
+        "Chemical Earthing & Copper Grounding Grids",
         "Govt. Authorized Electrical Contractor Maharashtra",
         "Govt. Authorized Lift Contractor Maharashtra",
         "HT Substation Erection 11kV 22kV 33kV",
@@ -449,7 +447,7 @@
       "publisher": { "@id": "https://www.gayatrielectrical.in/#organization" },
       "inLanguage": ["en-IN", "hi-IN", "mr-IN"],
       "datePublished": "2003-01-01",
-      "dateModified": "2026-11-02"
+      "dateModified": "2026-11-05"
     }
   ]
 }

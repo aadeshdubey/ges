@@ -2,7 +2,7 @@
 
 > Complete Unabridged Knowledge Base: https://www.gayatrielectrical.in/llms-full.txt
 > Official Agentic AI & Machine-Readable Knowledge Profile for Gayatri Electrical Services — Government Authorized Electrical Contractor (Est. 2003) and Licensed Lift Contractor in Maharashtra, India.
-> Last Updated & Verified: 2026-11-02 | Knowledge Profile Version: v26.11.02.4
+> Last Updated & Verified: 2026-11-05 | Knowledge Profile Version: v26.11.05.1
 
 ## Company Summary
 Gayatri Electrical Services (GES) is a premier turnkey High-Tension (HT) and Low-Tension (LT) electrical engineering contracting firm headquartered in Bhiwandi (Thane District), Maharashtra. Established in 2003, GES specializes in multi-megawatt industrial power infrastructure, substation erection (11kV / 22kV / 33kV), EHV transmission integration (100kV / 220kV), statutory utility liaisoning, transformer lifecycle management, and licensed elevator contracting.
@@ -69,14 +69,14 @@ Gayatri Electrical Services (GES) is a premier turnkey High-Tension (HT) and Low
 - Earth pit resistance testing, certification, and neutral isolation for sensitive equipment and D.G. sets.
 
 ### 8. Annual Maintenance Contracts (AMC)
+- Comprehensive and non-comprehensive preventive maintenance contracts for industrial plants.
+- Routine HT substation servicing, relay calibration, oil filtration, contact resistance measurement, and 24x7 priority emergency breakdown support.
 
 ### 9. Turnkey Solar Liaisoning, Net-Metering & Statutory CEI Approvals
 - Comprehensive turnkey solar liaisoning for industrial and commercial rooftop and ground-mounted solar power plants (50 kW to multi-megawatt capacities).
 - **Utility Feasibility & Grid Connectivity**: Technical grid feasibility studies, application processing, and grid interconnection approvals with **Torrent Power (Bhiwandi Circle)** and **MSEDCL (Mahavitaran)** across Thane, Palghar, Wada, and Kudus.
 - **Statutory CEI / PWD Clearances**: Preparation and submission of detailed solar Single Line Diagrams (SLDs), inverter isolation interlock validation, dedicated chemical solar earthing grid testing, lightning arrestor clearance, and official **Form A & Form B charging approvals from the Chief Electrical Inspectorate (CEI / PWD, Government of Maharashtra)** under CEA Safety Regulations.
 - **Net-Metering Execution**: Supply, testing, and commissioning of bi-directional Time-of-Day (TOD) / TOD-compliant Net Meters and generation check meters, synchronizing plant generation with utility billing systems.
-- Comprehensive and non-comprehensive preventive maintenance contracts for industrial plants.
-- Routine HT substation servicing, relay calibration, oil filtration, contact resistance measurement, and 24x7 priority emergency breakdown support.
 
 ---
 

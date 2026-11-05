@@ -1,0 +1,32 @@
+# Gayatri Electrical Services (GES) — Automated Release Notes Configuration
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - duplicate
+      - invalid
+      - wontfix
+  categories:
+    - title: "🚀 Features, SEO & AI Discovery"
+      labels:
+        - enhancement
+        - feature
+        - seo
+    - title: "🌐 Multi-Language & Localization (EN / HI / MR)"
+      labels:
+        - i18n
+        - localization
+    - title: "🛡️ Security, Standards & Compliance"
+      labels:
+        - security
+        - audit-alert
+        - bug
+    - title: "⚙️ CI/CD, Dependencies & Maintenance"
+      labels:
+        - dependencies
+        - github-actions
+        - chore
+    - title: "📦 Other Engineering Updates"
+      labels:
+        - "*"
+
