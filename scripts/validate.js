@@ -20,6 +20,7 @@ const jsFiles = [
     'sw.js',
     'scripts/build.js',
     'scripts/deploy.js',
+    'scripts/preview.js',
     'scripts/sync-version.js',
     'scripts/validate.js',
     'scripts/ping-sitemap.js'
@@ -91,6 +92,8 @@ const requiredFiles = [
     '404.html',
     'CNAME',
     'LICENSE',
+    'deploy.ps1',
+    'deploy.bat',
     'robots.txt',
     'sitemap.xml',
     'llms.txt',

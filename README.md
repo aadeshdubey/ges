@@ -18,7 +18,7 @@
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary_(All_Rights_Reserved)-dc3545?style=for-the-badge" alt="Proprietary License"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.05.2-0d1392?style=for-the-badge" alt="Version v26.11.05.2"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.06.1-0d1392?style=for-the-badge" alt="Version v26.11.06.1"></a>
 </p>
 
 <p align="center">
@@ -559,14 +559,17 @@ ges/
 │   └── main.min.js           <-- Optimized production application engine
 ├── scripts/
 │   ├── build.js              <-- Automated locale bundler & JS minifier
-│   ├── deploy.js             <-- One-command local build, bump, validate, commit & push
+│   ├── deploy.js             <-- Branching (dev -> main), build, bump, validate & deploy engine
 │   ├── download-fonts.js     <-- Self-hosted WOFF2 font subset utility
 │   ├── ping-sitemap.js       <-- IndexNow & Googlebot search engine notifier
+│   ├── preview.js            <-- Local + Wi-Fi QR code live preview server (port 8080)
 │   ├── sync-version.js       <-- Automated version & date propagation utility
 │   └── validate.js           <-- 6-stage local & CI repository validator
 ├── 404.html                  <-- Custom branded circuit-breaker 404 page
 ├── CNAME                     <-- Custom domain mapping (gayatrielectrical.in)
 ├── LICENSE                   <-- Proprietary All Rights Reserved copyright notice
+├── deploy.bat                <-- One-click Windows deployment & preview launcher
+├── deploy.ps1                <-- PowerShell deployment, preview & branch promotion wrapper
 ├── ges2026indexnowkeybhiwandi9999.txt <-- IndexNow root verification key
 ├── humans.txt                <-- Web authorship & engineering credits
 ├── index.html                <-- Semantic HTML5 enterprise homepage
@@ -586,28 +589,48 @@ ges/
 ---
 
 <a id="version-management"></a>
-## Automated Version, Build & One-Command Deployment
+## Automated Version, Branching Strategy (`dev` → `main`) & One-Command Deployment
 
-The repository uses [`version.json`](version.json) as the **single source of truth** for release versions, dates, cache busters, and sitemap modification timestamps.
+The repository uses a two-branch workflow (**`dev`** for daily development/testing and **`main`** for live GitHub Pages production) paired with [`deploy.ps1`](deploy.ps1), [`deploy.bat`](deploy.bat), and [`version.json`](version.json) as the **single source of truth**.
 
-### One-Command Local Build, Commit & Deploy (`npm run deploy`)
-[`scripts/deploy.js`](scripts/deploy.js) automates your entire local release workflow in a single command:
+### PowerShell & Batch Wrapper (`deploy.ps1` / `deploy.bat`)
+You can double-click **`deploy.bat`** for an interactive menu or run **`.\deploy.ps1`** directly in PowerShell without typing `node`:
+
+```powershell
+# 1. Interactive Menu (choose Preview, Check, Save to dev, or Promote to main):
+.\deploy.ps1
+
+# 2. Live Preview Mode (validates, starts port 8080 server, prints Mobile Wi-Fi QR Code, & closes port cleanly on Enter):
+.\deploy.ps1 -Preview
+# Or via npm:
+npm run preview
+
+# 3. Validation-Only Mode (bundles locales + runs 6-stage validator without committing):
+.\deploy.ps1 -Check
+# Or via npm:
+npm run check
+
+# 4. Save Work-in-Progress to 'dev' Branch Only (live 'main' site stays untouched):
+.\deploy.ps1 -Save "Draft updates to service cards"
+# Or auto-generate commit summary:
+.\deploy.ps1 -Save
+# Or via npm:
+npm run save
+
+# 5. Promote 'dev' -> 'main' Live Production (validates, bumps CalVer, merges dev -> main, pushes & returns to dev):
+.\deploy.ps1 -Promote "Update Bhiwandi geolocation coordinates and synchronize locales"
+# Or simply:
+.\deploy.ps1
+# Or via npm:
+npm run deploy
+```
+
+### How `scripts/deploy.js` Automates Releases
 1. Bundles `data/locales/{en,hi,mr}.json` into `data/translations.json` and `js/main.js`, and regenerates `js/main.min.js` (`scripts/build.js`).
 2. Auto-increments the CalVer version in `version.json` and syncs all **14 tracked files** (`scripts/sync-version.js --bump`).
 3. Runs the **6-stage integrity & standards validator** (`scripts/validate.js`).
-4. Stages all changes (`git add -A`) and commits using your exact commit convention: `GES v<VERSION> : <Commit Summary>`.
-5. Pushes to `origin main` and pings IndexNow & Googlebot (`scripts/ping-sitemap.js`).
-
-```bash
-# Deploy with a custom commit message (automatically prefixed with "GES v<VERSION> : "):
-npm run deploy -- "Update Bhiwandi geolocation coordinates and synchronize locales"
-
-# Or let the script auto-generate the commit summary from modified files:
-npm run deploy
-
-# Preview build, bump & validation without committing/pushing:
-node scripts/deploy.js --dry-run
-```
+4. Stages all changes (`git add -A`) on `dev` and commits using your exact commit convention: `GES v<VERSION> : <Auto-Generated or Custom Summary>`.
+5. On `-Promote` (or default deploy), merges `dev` → `main`, pushes both branches to GitHub, pings IndexNow & Googlebot (`scripts/ping-sitemap.js`), and switches your workspace back to `dev`.
 
 ### How Synchronization Works
 When you update `version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 14 tracked files** in one atomic pass:
