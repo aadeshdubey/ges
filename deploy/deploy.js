@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
- * Gayatri Electrical Services (GES) — Branching, Build, Validation & Deployment Engine
+ * Gayatri Electrical Services (GES) — Release Management, Branch Promotion & Deployment Engine
+ * Location: deploy/deploy.js
  *
  * Supported Modes:
- *   node scripts/deploy.js --check                # Run build + 6-stage validator only
- *   node scripts/deploy.js --save [msg]           # Build, bump CalVer, validate, commit & push to 'dev' branch only
- *   node scripts/deploy.js --promote [msg]        # Build, bump CalVer, validate, commit on 'dev', merge 'dev' -> 'main', push both & ping IndexNow
- *   node scripts/deploy.js [msg]                  # Default: same as --promote (full production deployment + return to 'dev')
- *   node scripts/deploy.js --dry-run [msg]        # Build, bump & validate without committing or pushing
+ *   node deploy/deploy.js --check                # Run build + 6-stage validator only
+ *   node deploy/deploy.js --save [msg]           # Build, bump CalVer, validate, commit & push to 'dev' branch only
+ *   node deploy/deploy.js --promote [msg]        # Build, bump CalVer, validate, commit on 'dev', merge 'dev' -> 'main', push both & ping IndexNow
+ *   node deploy/deploy.js [msg]                  # Default: same as --promote (full production deployment + return to 'dev')
+ *   node deploy/deploy.js --dry-run [msg]        # Build, bump & validate without committing or pushing
  */
 
 const { execSync } = require('child_process');
@@ -15,14 +16,60 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
+const LOG_DIR = path.join(__dirname, 'logs');
+const VERSION_FILE = path.join(ROOT_DIR, 'data', 'version.json');
+
+if (!fs.existsSync(LOG_DIR)) {
+    fs.mkdirSync(LOG_DIR, { recursive: true });
+}
+
+const LOG_TIMESTAMP = new Date().toISOString().replace(/[:.]/g, '-');
+const LOG_FILE = path.join(LOG_DIR, `deploy-${LOG_TIMESTAMP}.log`);
+
+function writeLog(level, message) {
+    const ts = new Date().toISOString();
+    const line = `[${ts}] [${level}] ${message}\n`;
+    try {
+        fs.appendFileSync(LOG_FILE, line, 'utf-8');
+    } catch (e) {}
+}
+
+function logBanner(title) {
+    console.log('\n================================================================');
+    console.log(`  ${title}`);
+    console.log(`  Log File: deploy/logs/${path.basename(LOG_FILE)}`);
+    console.log('================================================================\n');
+    writeLog('INFO', `=== ${title} ===`);
+}
 
 function run(cmd, options = {}) {
-    return execSync(cmd, {
-        cwd: ROOT_DIR,
-        stdio: options.silent ? 'pipe' : 'inherit',
-        encoding: 'utf-8',
-        env: { ...process.env, ...(options.env || {}) }
-    });
+    writeLog('CMD', cmd);
+    try {
+        const out = execSync(cmd, {
+            cwd: ROOT_DIR,
+            stdio: 'pipe',
+            encoding: 'utf-8',
+            env: { ...process.env, ...(options.env || {}) }
+        });
+        if (out) {
+            writeLog('STDOUT', out.trimEnd());
+            if (!options.silent) {
+                process.stdout.write(out);
+            }
+        }
+        return out || '';
+    } catch (err) {
+        if (err.stdout) {
+            writeLog('STDOUT', String(err.stdout).trimEnd());
+            if (!options.silent) process.stdout.write(String(err.stdout));
+        }
+        if (err.stderr) {
+            writeLog('STDERR', String(err.stderr).trimEnd());
+            if (!options.silent) process.stderr.write(String(err.stderr));
+        }
+        writeLog('ERROR', `Command failed: ${cmd} (exit code ${err.status || 1})`);
+        throw err;
+    }
 }
 
 function getCurrentBranch() {
@@ -53,9 +100,9 @@ function getAheadCommitCount(fromRef, toRef) {
 
 function isVersionAlreadyBumped() {
     try {
-        const headVersionRaw = run('git show HEAD:version.json', { silent: true });
+        const headVersionRaw = run('git show HEAD:data/version.json', { silent: true });
         const headConfig = JSON.parse(headVersionRaw);
-        const currentConfig = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'version.json'), 'utf-8'));
+        const currentConfig = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf-8'));
         return headConfig.version !== currentConfig.version;
     } catch (e) {
         return false;
@@ -78,8 +125,11 @@ function generateAutoSummary(changedFiles) {
     } else if (changedFiles.some(f => f.startsWith('js/'))) {
         items.push('frontend client scripts');
     }
-    if (changedFiles.some(f => f === 'deploy.ps1' || f === 'deploy.bat' || f.startsWith('scripts/'))) {
-        items.push('PowerShell deployment wrapper and preview workflow');
+    if (changedFiles.some(f => f.startsWith('deploy/') || f.startsWith('scripts/'))) {
+        items.push('release management and deployment pipeline');
+    }
+    if (changedFiles.some(f => f.startsWith('assets/'))) {
+        items.push('web manifest and static assets');
     }
     if (changedFiles.some(f => f.startsWith('.github/'))) {
         items.push('GitHub Actions CI/CD workflows');
@@ -109,6 +159,7 @@ function generateAutoSummary(changedFiles) {
 function ensureBranchExists(branchName) {
     if (!branchExistsLocally(branchName)) {
         console.log(`  [Branch Manager] Creating '${branchName}' branch...`);
+        writeLog('INFO', `Creating '${branchName}' branch`);
         run(`git branch ${branchName}`);
     }
 }
@@ -125,15 +176,13 @@ function main() {
     const messageArgs = rawArgs.filter(a => !flags.has(a));
     const customSummary = messageArgs.join(' ').trim();
 
-    console.log('\n================================================================');
     if (isCheckOnly) {
-        console.log('  Gayatri Electrical Services (GES) — Build & Integrity Check');
+        logBanner('Gayatri Electrical Services (GES) — Build & Integrity Check');
     } else if (isSaveOnly) {
-        console.log('  Gayatri Electrical Services (GES) — Save to DEV Branch');
+        logBanner('Gayatri Electrical Services (GES) — Save to DEV Branch');
     } else {
-        console.log('  Gayatri Electrical Services (GES) — Production Promote & Deploy');
+        logBanner('Gayatri Electrical Services (GES) — Production Promote & Deploy');
     }
-    console.log('================================================================\n');
 
     // Mode 1: Check Only
     if (isCheckOnly) {
@@ -141,8 +190,10 @@ function main() {
         run('node scripts/build.js');
         console.log('\n>>> [Step 2/2] Running 6-stage integrity & standards validator...');
         run('node scripts/validate.js');
+        writeLog('SUCCESS', 'All local build & validation checks passed');
         console.log('================================================================');
         console.log('  SUCCESS: All local build & validation checks passed!');
+        console.log(`  Log saved: deploy/logs/${path.basename(LOG_FILE)}`);
         console.log('================================================================\n');
         process.exit(0);
     }
@@ -154,6 +205,7 @@ function main() {
 
     if (!statusOutput && !customSummary && !(isPromote && devAheadOfMain > 0)) {
         console.log('No uncommitted changes or unpromoted dev commits detected. Nothing to deploy.');
+        writeLog('INFO', 'No uncommitted changes or unpromoted dev commits detected.');
         process.exit(0);
     }
 
@@ -184,11 +236,12 @@ function main() {
     console.log('>>> [Step 3/5] Running 6-stage integrity & standards validator...');
     run('node scripts/validate.js');
 
-    const versionConfig = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'version.json'), 'utf-8'));
+    const versionConfig = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf-8'));
     const version = versionConfig.version;
 
     if (isDryRun) {
         console.log(`[DRY RUN] Target Version: v${version}. Skipping git commit and push.`);
+        writeLog('INFO', `[DRY RUN] Completed for v${version}`);
         process.exit(0);
     }
 
@@ -205,6 +258,7 @@ function main() {
 
         console.log(`>>> [Step 4/5] Staging changes & committing on 'dev' as:`);
         console.log(`    "${commitMessage}"\n`);
+        writeLog('INFO', `Committing on dev: ${commitMessage}`);
 
         run('git add -A');
         run(`git commit -m ${JSON.stringify(commitMessage)}`, {
@@ -216,6 +270,7 @@ function main() {
 
     if (isNoPush) {
         console.log('\n[NO-PUSH] Commit created locally on dev.');
+        writeLog('INFO', `[NO-PUSH] Commit created locally on dev for v${version}`);
         process.exit(0);
     }
 
@@ -223,9 +278,11 @@ function main() {
     if (isSaveOnly) {
         console.log('\n>>> [Step 5/5] Pushing changes to origin/dev (live main site untouched)...');
         run('git push -u origin dev');
+        writeLog('SUCCESS', `Saved GES v${version} to origin/dev`);
         console.log('\n================================================================');
         console.log(`  SUCCESS: Saved GES v${version} to 'dev' branch on GitHub!`);
-        console.log('  Run `.\\deploy.ps1 -Promote` when ready to publish to main.');
+        console.log('  Run `.\\deploy\\deploy.ps1 -Promote` when ready to publish to main.');
+        console.log(`  Log saved: deploy/logs/${path.basename(LOG_FILE)}`);
         console.log('================================================================\n');
         process.exit(0);
     }
@@ -246,9 +303,11 @@ function main() {
         console.warn('Notice: Search engine ping skipped or offline.');
     }
 
+    writeLog('SUCCESS', `Promoted & Deployed GES v${version} (dev -> main)`);
     console.log('\n================================================================');
     console.log(`  SUCCESS: Promoted & Deployed GES v${version} (dev -> main)!`);
     console.log(`  Active Local Branch: dev (in sync with main)`);
+    console.log(`  Log saved: deploy/logs/${path.basename(LOG_FILE)}`);
     console.log('================================================================\n');
 }
 

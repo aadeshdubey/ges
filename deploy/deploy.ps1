@@ -1,15 +1,17 @@
 <#
 .SYNOPSIS
     Gayatri Electrical Services (GES) - PowerShell Build, Preview, Validation and Branch Deployment Wrapper
+    Location: deploy/deploy.ps1
 
 .DESCRIPTION
-    Provides a zero-friction CLI and interactive menu for the GES dev -> main workflow:
-      - .\deploy.ps1 -Preview             : Build, run 6-stage validator, start local + Wi-Fi QR server on port 8080, and close port gracefully on exit.
-      - .\deploy.ps1 -Check               : Build and run the 6-stage validator only.
-      - .\deploy.ps1 -Save ["msg"]        : Build, bump CalVer, validate, auto-format commit message, and push to dev branch only.
-      - .\deploy.ps1 -Promote ["msg"]     : Build, bump CalVer, validate, commit on dev, merge dev -> main, deploy to GitHub Pages, and return to dev.
-      - .\deploy.ps1 "Custom message"     : Direct shortcut for -Promote "Custom message".
-      - .\deploy.ps1                      : Launches an interactive 1-key menu when invoked with no parameters.
+    Provides a zero-friction CLI and interactive menu for the GES dev -> main release workflow,
+    with full execution logging to deploy/logs/:
+      - .\deploy\deploy.ps1 -Preview             : Build, run 6-stage validator, start local + Wi-Fi QR server on port 8080, and close port gracefully on exit.
+      - .\deploy\deploy.ps1 -Check               : Build and run the 6-stage validator only.
+      - .\deploy\deploy.ps1 -Save ["msg"]        : Build, bump CalVer, validate, auto-format commit message, and push to dev branch only.
+      - .\deploy\deploy.ps1 -Promote ["msg"]     : Build, bump CalVer, validate, commit on dev, merge dev -> main, deploy to GitHub Pages, and return to dev.
+      - .\deploy\deploy.ps1 "Custom message"     : Direct shortcut for -Promote "Custom message".
+      - .\deploy\deploy.ps1                      : Launches an interactive 1-key menu when invoked with no parameters.
 #>
 
 [CmdletBinding()]
@@ -25,7 +27,8 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-Set-Location -Path $PSScriptRoot
+$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+Set-Location -Path $RepoRoot
 
 $CustomMessage = ""
 if ($MessageParts) {
@@ -35,11 +38,11 @@ if ($MessageParts) {
 # Show interactive menu if no switches and no commit message were passed
 if (-not $Preview -and -not $Check -and -not $Save -and -not $Promote -and -not $DryRun -and [string]::IsNullOrWhiteSpace($CustomMessage)) {
     $Branch = (git rev-parse --abbrev-ref HEAD 2>$null)
-    $Version = (node -p "require('./version.json').version" 2>$null)
+    $Version = (node -p "require('./data/version.json').version" 2>$null)
 
     Write-Host ""
     Write-Host "================================================================" -ForegroundColor Cyan
-    Write-Host "  Gayatri Electrical Services (GES) - Deployment Control Center" -ForegroundColor Yellow
+    Write-Host "  Gayatri Electrical Services (GES) - Release Control Center" -ForegroundColor Yellow
     Write-Host "  Active Branch: $Branch  |  Current Build: v$Version" -ForegroundColor Gray
     Write-Host "================================================================" -ForegroundColor Cyan
     Write-Host "  [1] Preview Live Site (Laptop + Mobile Wi-Fi QR Code on :8080)" -ForegroundColor Green
@@ -71,16 +74,16 @@ if (-not $Preview -and -not $Check -and -not $Save -and -not $Promote -and -not 
 }
 
 if ($Preview) {
-    node "$PSScriptRoot\scripts\preview.js"
+    node "$PSScriptRoot\preview.js"
     exit $LASTEXITCODE
 }
 
 if ($Check) {
-    node "$PSScriptRoot\scripts\deploy.js" --check
+    node "$PSScriptRoot\deploy.js" --check
     exit $LASTEXITCODE
 }
 
-$NodeArgs = @("$PSScriptRoot\scripts\deploy.js")
+$NodeArgs = @("$PSScriptRoot\deploy.js")
 if ($Save) {
     $NodeArgs += "--save"
 } else {

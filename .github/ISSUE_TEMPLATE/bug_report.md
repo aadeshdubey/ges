@@ -13,8 +13,8 @@ A clear and concise description of what the issue or deprecation is.
 - [ ] Core HTML / Meta Tags (`index.html` / `404.html`)
 - [ ] Corporate Stylesheet (`css/style.css` / `css/style.min.css`)
 - [ ] JavaScript Application Engine (`js/main.js` / `js/main.min.js`)
-- [ ] PWA & Offline Service Worker (`sw.js` / `site.webmanifest`)
-- [ ] Versioning & Date Synchronization (`version.json` / `sync-version.js`)
+- [ ] PWA & Offline Service Worker (`sw.js` / `assets/site.webmanifest`)
+- [ ] Versioning & Date Synchronization (`data/version.json` / `sync-version.js`)
 - [ ] Schema & Data Profiles (`data/schema.json` / `llms.txt`)
 
 ### Steps to Reproduce

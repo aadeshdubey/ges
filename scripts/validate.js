@@ -18,9 +18,9 @@ const jsFiles = [
     'js/main.js',
     'js/main.min.js',
     'sw.js',
+    'deploy/deploy.js',
+    'deploy/preview.js',
     'scripts/build.js',
-    'scripts/deploy.js',
-    'scripts/preview.js',
     'scripts/sync-version.js',
     'scripts/validate.js',
     'scripts/ping-sitemap.js'
@@ -40,14 +40,14 @@ for (const rel of jsFiles) {
 // 2. JSON Integrity Verification
 console.log('\n[2/6] Verifying JSON data & manifest files...');
 const jsonFiles = [
-    'version.json',
     'package.json',
+    'data/version.json',
     'data/schema.json',
     'data/translations.json',
     'data/locales/en.json',
     'data/locales/hi.json',
     'data/locales/mr.json',
-    'site.webmanifest'
+    'assets/site.webmanifest'
 ];
 
 for (const rel of jsonFiles) {
@@ -92,20 +92,22 @@ const requiredFiles = [
     '404.html',
     'CNAME',
     'LICENSE',
-    'deploy.ps1',
-    'deploy.bat',
     'robots.txt',
     'sitemap.xml',
     'llms.txt',
     'llms-full.txt',
-    'humans.txt',
-    'security.txt',
-    'opensearch.xml',
-    'site.webmanifest',
     'sw.js',
-    'version.json',
     'ges2026indexnowkeybhiwandi9999.txt',
     '.gitignore',
+    '.well-known/security.txt',
+    'assets/humans.txt',
+    'assets/opensearch.xml',
+    'assets/site.webmanifest',
+    'data/version.json',
+    'deploy/deploy.ps1',
+    'deploy/deploy.bat',
+    'deploy/deploy.js',
+    'deploy/preview.js',
     '.github/SECURITY.md',
     '.github/CODEOWNERS',
     '.github/release.yml',

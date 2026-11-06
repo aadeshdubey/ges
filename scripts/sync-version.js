@@ -14,7 +14,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const VERSION_FILE = path.join(ROOT_DIR, 'version.json');
+const VERSION_FILE = path.join(ROOT_DIR, 'data', 'version.json');
 
 function getTodayIso() {
     const now = new Date();
@@ -278,8 +278,8 @@ function getSyncRules(config) {
             ]
         },
         {
-            file: 'humans.txt',
-            description: 'humans.txt Last Updated date',
+            file: 'assets/humans.txt',
+            description: 'assets/humans.txt Last Updated date',
             replace: [
                 {
                     from: /Last Updated: .*$/m,

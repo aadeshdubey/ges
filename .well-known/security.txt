@@ -6,4 +6,4 @@ Preferred-Languages: en, hi, mr
 Canonical: https://www.gayatrielectrical.in/.well-known/security.txt
 Policy: https://www.gayatrielectrical.in/#contact
 Hiring: https://www.gayatrielectrical.in/#about
-Acknowledgments: https://www.gayatrielectrical.in/humans.txt
+Acknowledgments: https://www.gayatrielectrical.in/assets/humans.txt

@@ -64,3 +64,8 @@ $RECYCLE.BIN/
 # AI Agents & Scratch Artifacts
 .gemini/
 .antigravity/
+
+# Local Deployment & Preview Execution Logs
+deploy/logs/
+logs/
+*.log

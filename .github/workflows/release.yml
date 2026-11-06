@@ -19,11 +19,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Extract Target Version from version.json
+      - name: Extract Target Version from data/version.json
         id: get_version
         run: |
-          VERSION=$(node -p "require('./version.json').version")
-          DATE=$(node -p "require('./version.json').releaseDate")
+          VERSION=$(node -p "require('./data/version.json').version")
+          DATE=$(node -p "require('./data/version.json').releaseDate")
           TAG="v$VERSION"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
@@ -47,10 +47,9 @@ jobs:
           BUNDLE="ges-${{ steps.get_version.outputs.tag }}-production.zip"
           zip -r "$BUNDLE" \
             index.html 404.html CNAME robots.txt sitemap.xml \
-            llms.txt llms-full.txt humans.txt security.txt \
-            opensearch.xml site.webmanifest sw.js version.json \
+            llms.txt llms-full.txt sw.js \
             ges2026indexnowkeybhiwandi9999.txt \
-            assets/ css/ data/ images/ js/
+            .well-known/ assets/ css/ data/ images/ js/
 
       - name: Create Git Tag & GitHub Release
         if: steps.check_tag.outputs.exists == 'false'

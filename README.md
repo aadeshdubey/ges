@@ -18,7 +18,7 @@
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary_(All_Rights_Reserved)-dc3545?style=for-the-badge" alt="Proprietary License"></a>
-  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.06.1-0d1392?style=for-the-badge" alt="Version v26.11.06.1"></a>
+  <a href="https://github.com/aadeshdubey/ges"><img src="https://img.shields.io/badge/Version-v26.11.06.2-0d1392?style=for-the-badge" alt="Version v26.11.06.2"></a>
 </p>
 
 <p align="center">
@@ -193,7 +193,7 @@ gayatrielectrical.in/
 ├── ges2026indexnowkeybhiwandi9999.txt  <-- IndexNow verification key for instant Bing, Yandex & Naver indexing
 ├── llms.txt                            <-- Structured Markdown knowledge base tailored for LLM reasoning engines
 ├── llms-full.txt                       <-- Comprehensive technical, regulatory & BOQ corpus for agentic queries
-├── opensearch.xml                      <-- Browser omnibox address bar direct search integration
+├── assets/opensearch.xml               <-- Browser omnibox address bar direct search integration
 └── data/schema.json                    <-- Enterprise JSON-LD Graph (ElectricalContractor, FAQPage, Service)
 ```
 
@@ -250,44 +250,44 @@ The site adheres to rigorous modern web standards for mobile installation, offli
 ├──────────────────┬───────────────────┬─────────────────────────────────┤
 │ Web Standard     │ File / Endpoint   │ Engineering Role & Behavior     │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
-│ PWA App Manifest │ site.webmanifest  │ Standalone mobile installation, │
-│                  │                   │ theme #f69024, maskable icons   │
+│ PWA App Manifest │ assets/           │ Standalone mobile installation, │
+│                  │ site.webmanifest  │ theme #f69024, maskable icons   │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
 │ Service Worker   │ sw.js             │ Stale-While-Revalidate caching, │
 │                  │                   │ offline UI, precached assets    │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
-│ Security Policy  │ security.txt /    │ RFC 9116 compliant security &   │
-│                  │ .well-known/      │ vulnerability disclosure        │
+│ Security Policy  │ .well-known/      │ RFC 9116 compliant security &   │
+│                  │ security.txt      │ vulnerability disclosure        │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
-│ Web Authorship   │ humans.txt        │ Standards-based credits, 2003   │
+│ Web Authorship   │ assets/humans.txt │ Standards-based credits, 2003   │
 │                  │                   │ founding, Bhiwandi headquarters │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
-│ Omnibox Search   │ opensearch.xml    │ Native browser address bar      │
-│                  │                   │ direct service search query     │
+│ Omnibox Search   │ assets/           │ Native browser address bar      │
+│                  │ opensearch.xml    │ direct service search query     │
 ├──────────────────┼───────────────────┼─────────────────────────────────┤
 │ Circuit-Breaker  │ 404.html          │ Branded error recovery with     │
 │ 404 Recovery     │                   │ auto-redirect & hotlines        │
 └──────────────────┴───────────────────┴─────────────────────────────────┘
 ```
 
-### 1. `site.webmanifest` — Progressive Web App Engine
+### 1. `assets/site.webmanifest` — Progressive Web App Engine
 - Enables native "Add to Home Screen" installation on Android, iOS, Windows, and macOS with an enterprise app aesthetic.
 - Branded with theme color `#f69024` and background `#ffffff` in `standalone` display mode.
 - Declares high-resolution 192x192 and 512x512 maskable application icons.
 
 ### 2. `sw.js` — Offline Resilience & Stale-While-Revalidate Engine
-- Pre-caches core application shell assets on initial visit (`index.html`, `404.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, and all 3 language bundles).
+- Pre-caches core application shell assets on initial visit (`index.html`, `404.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, `assets/site.webmanifest`, and all 3 language bundles).
 - Implements **Stale-While-Revalidate** caching for lightning-fast loads on subsequent visits and complete offline availability.
 - Automatically clears stale caches on version upgrades via `ges-cache-v*` cache naming.
 
-### 3. `security.txt`, `.well-known/security.txt` & `.github/SECURITY.md` — Security Policy
-- Provides official RFC 9116 machine-readable vulnerability disclosure channels at `support@gayatrielectrical.in` plus a native GitHub Security Policy (`.github/SECURITY.md`).
+### 3. `.well-known/security.txt` & `.github/SECURITY.md` — Security Policy
+- Provides official RFC 9116 machine-readable vulnerability disclosure channels plus a native GitHub Security Policy (`.github/SECURITY.md`).
 - Declares canonical security endpoints, preferred languages (`en`, `hi`, `mr`), and strict validity expiration timestamps.
 
-### 4. `humans.txt` — Engineering Credits & Authorship
+### 4. `assets/humans.txt` — Engineering Credits & Authorship
 - Documents organizational authorship, contractor licensing credentials, Bhiwandi headquarters coordinates, Indian Type Foundry typography pairing, and static PWA architecture.
 
-### 5. `opensearch.xml` — Native Browser Omnibox Search
+### 5. `assets/opensearch.xml` — Native Browser Omnibox Search
 - Registers Gayatri Electrical Services with compliant web browsers (Chrome, Edge, Firefox), enabling users to type queries into their address bar to search GES HT/LT engineering solutions.
 
 ### 6. `404.html` — Custom Branded Circuit-Breaker Recovery Page
@@ -537,7 +537,13 @@ ges/
 │   └── release.yml           <-- Categorized release notes generator
 ├── .well-known/
 │   └── security.txt          <-- RFC 9116 well-known security endpoint
-├── assets/                   <-- Brand emblems, vector icons, favicons & WOFF2 fonts
+├── assets/
+│   ├── fonts/                <-- Self-hosted WOFF2 Khand & Rajdhani subsets
+│   ├── favicon.svg           <-- Vector brand emblem
+│   ├── humans.txt            <-- Web authorship & engineering credits
+│   ├── logo.png              <-- Corporate brand emblem
+│   ├── opensearch.xml        <-- Browser omnibox address bar search
+│   └── site.webmanifest      <-- Progressive Web App (PWA) manifest
 ├── css/
 │   ├── style.css             <-- Unminified corporate stylesheet
 │   └── style.min.css         <-- Production minified stylesheet
@@ -547,7 +553,14 @@ ges/
 │   │   ├── hi.json           <-- Hindi UI locale strings
 │   │   └── mr.json           <-- Marathi UI locale strings
 │   ├── schema.json           <-- JSON-LD structured data graph
-│   └── translations.json     <-- Master translation dictionary
+│   ├── translations.json     <-- Master translation dictionary
+│   └── version.json          <-- Single source of truth for version & dates
+├── deploy/
+│   ├── logs/                 <-- Timestamped execution logs (git-ignored)
+│   ├── deploy.bat            <-- One-click Windows release & preview launcher
+│   ├── deploy.js             <-- Release management & dev -> main promotion engine
+│   ├── deploy.ps1            <-- PowerShell release, preview & branch promotion wrapper
+│   └── preview.js            <-- Local + Wi-Fi QR code live preview server (port 8080)
 ├── docs/
 │   └── CANVA_BRAND_GUIDE.md  <-- Canva Pro Brand Kit specification
 ├── images/
@@ -559,31 +572,22 @@ ges/
 │   └── main.min.js           <-- Optimized production application engine
 ├── scripts/
 │   ├── build.js              <-- Automated locale bundler & JS minifier
-│   ├── deploy.js             <-- Branching (dev -> main), build, bump, validate & deploy engine
 │   ├── download-fonts.js     <-- Self-hosted WOFF2 font subset utility
 │   ├── ping-sitemap.js       <-- IndexNow & Googlebot search engine notifier
-│   ├── preview.js            <-- Local + Wi-Fi QR code live preview server (port 8080)
 │   ├── sync-version.js       <-- Automated version & date propagation utility
 │   └── validate.js           <-- 6-stage local & CI repository validator
-├── 404.html                  <-- Custom branded circuit-breaker 404 page
+├── 404.html                  <-- Custom branded circuit-breaker 404 page (required in root by GitHub Pages)
 ├── CNAME                     <-- Custom domain mapping (gayatrielectrical.in)
-├── LICENSE                   <-- Proprietary All Rights Reserved copyright notice
-├── deploy.bat                <-- One-click Windows deployment & preview launcher
-├── deploy.ps1                <-- PowerShell deployment, preview & branch promotion wrapper
+├── LICENSE                   <-- Proprietary All Rights Reserved copyright & attributions
 ├── ges2026indexnowkeybhiwandi9999.txt <-- IndexNow root verification key
-├── humans.txt                <-- Web authorship & engineering credits
 ├── index.html                <-- Semantic HTML5 enterprise homepage
 ├── llms.txt                  <-- Concise agentic AI knowledge base
 ├── llms-full.txt             <-- Comprehensive technical corpus for LLMs
-├── opensearch.xml            <-- Browser omnibox address bar search
 ├── package.json              <-- NPM scripts for building, syncing, validating & deploying
 ├── robots.txt                <-- Search engine & AI crawler whitelist
-├── security.txt              <-- RFC 9116 security policy
-├── site.webmanifest          <-- Progressive Web App (PWA) manifest
 ├── sitemap.xml               <-- XML sitemap with lastmod timestamps
-├── sw.js                     <-- Offline service worker resilience engine
-├── version.json              <-- Single source of truth for version & dates
-└── .gitignore                <-- Git ignore rules for node, OS, IDEs & secrets
+├── sw.js                     <-- Offline service worker resilience engine (required in root for '/' scope)
+└── .gitignore                <-- Git ignore rules for node, OS, IDEs, logs & secrets
 ```
 
 ---
@@ -591,52 +595,52 @@ ges/
 <a id="version-management"></a>
 ## Automated Version, Branching Strategy (`dev` → `main`) & One-Command Deployment
 
-The repository uses a two-branch workflow (**`dev`** for daily development/testing and **`main`** for live GitHub Pages production) paired with [`deploy.ps1`](deploy.ps1), [`deploy.bat`](deploy.bat), and [`version.json`](version.json) as the **single source of truth**.
+The repository uses a two-branch workflow (**`dev`** for daily development/testing and **`main`** for live GitHub Pages production) paired with the dedicated [`deploy/`](deploy/) release directory ([`deploy/deploy.ps1`](deploy/deploy.ps1), [`deploy/deploy.bat`](deploy/deploy.bat), [`deploy/deploy.js`](deploy/deploy.js), [`deploy/preview.js`](deploy/preview.js)) and [`data/version.json`](data/version.json) as the **single source of truth**. Every release, check, and preview execution automatically writes a timestamped audit log to `deploy/logs/`.
 
-### PowerShell & Batch Wrapper (`deploy.ps1` / `deploy.bat`)
-You can double-click **`deploy.bat`** for an interactive menu or run **`.\deploy.ps1`** directly in PowerShell without typing `node`:
+### PowerShell & Batch Wrapper (`deploy/deploy.ps1` / `deploy/deploy.bat`)
+You can double-click **`deploy\deploy.bat`** for an interactive menu or run **`.\deploy\deploy.ps1`** directly in PowerShell without typing `node`:
 
 ```powershell
 # 1. Interactive Menu (choose Preview, Check, Save to dev, or Promote to main):
-.\deploy.ps1
+.\deploy\deploy.ps1
 
-# 2. Live Preview Mode (validates, starts port 8080 server, prints Mobile Wi-Fi QR Code, & closes port cleanly on Enter):
-.\deploy.ps1 -Preview
+# 2. Live Preview Mode (validates, starts port 8080 server, prints Mobile Wi-Fi QR Code, logs session, & closes port cleanly on Enter):
+.\deploy\deploy.ps1 -Preview
 # Or via npm:
 npm run preview
 
 # 3. Validation-Only Mode (bundles locales + runs 6-stage validator without committing):
-.\deploy.ps1 -Check
+.\deploy\deploy.ps1 -Check
 # Or via npm:
 npm run check
 
 # 4. Save Work-in-Progress to 'dev' Branch Only (live 'main' site stays untouched):
-.\deploy.ps1 -Save "Draft updates to service cards"
+.\deploy\deploy.ps1 -Save "Draft updates to service cards"
 # Or auto-generate commit summary:
-.\deploy.ps1 -Save
+.\deploy\deploy.ps1 -Save
 # Or via npm:
 npm run save
 
 # 5. Promote 'dev' -> 'main' Live Production (validates, bumps CalVer, merges dev -> main, pushes & returns to dev):
-.\deploy.ps1 -Promote "Update Bhiwandi geolocation coordinates and synchronize locales"
+.\deploy\deploy.ps1 -Promote "Update Bhiwandi geolocation coordinates and synchronize locales"
 # Or simply:
-.\deploy.ps1
+.\deploy\deploy.ps1 -Promote
 # Or via npm:
 npm run deploy
 ```
 
-### How `scripts/deploy.js` Automates Releases
+### How `deploy/deploy.js` Automates Releases
 1. Bundles `data/locales/{en,hi,mr}.json` into `data/translations.json` and `js/main.js`, and regenerates `js/main.min.js` (`scripts/build.js`).
-2. Auto-increments the CalVer version in `version.json` and syncs all **14 tracked files** (`scripts/sync-version.js --bump`).
+2. Auto-increments the CalVer version in `data/version.json` and syncs all **14 tracked files** (`scripts/sync-version.js --bump`).
 3. Runs the **6-stage integrity & standards validator** (`scripts/validate.js`).
 4. Stages all changes (`git add -A`) on `dev` and commits using your exact commit convention: `GES v<VERSION> : <Auto-Generated or Custom Summary>`.
-5. On `-Promote` (or default deploy), merges `dev` → `main`, pushes both branches to GitHub, pings IndexNow & Googlebot (`scripts/ping-sitemap.js`), and switches your workspace back to `dev`.
+5. On `-Promote` (or default deploy), merges `dev` → `main`, pushes both branches to GitHub, pings IndexNow & Googlebot (`scripts/ping-sitemap.js`), writes the complete execution log to `deploy/logs/`, and switches your workspace back to `dev`.
 
 ### How Synchronization Works
-When you update `version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 14 tracked files** in one atomic pass:
+When you update `data/version.json` (or use the CLI flags), [`scripts/sync-version.js`](scripts/sync-version.js) automatically propagates the version and date across **all 14 tracked files** in one atomic pass:
 
 ```bash
-# Propagate version.json across all repository files:
+# Propagate data/version.json across all repository files:
 node scripts/sync-version.js
 # Or with npm:
 npm run version:sync
@@ -665,7 +669,7 @@ Every pull request and push to `main` triggers the automated GitHub Actions suit
 1. **Quality, Security & Deprecation Audit ([`validate.yml`](.github/workflows/validate.yml))**: Verifies JS syntax, JSON integrity, 100% EN/HI/MR locale parity, core web/governance files, version sync, and 0 HTML deprecations/broken asset links.
 2. **CodeQL Static Security Analysis ([`codeql.yml`](.github/workflows/codeql.yml))**: Runs extended JavaScript/TypeScript security and quality queries on push, PR, and weekly schedule.
 3. **Lighthouse CI & Web Vitals Audit ([`lighthouse.yml`](.github/workflows/lighthouse.yml))**: Audits Performance, Accessibility, Best Practices, and SEO in headless Chrome and publishes a score card to the Actions summary.
-4. **Automated CalVer Release Engine ([`release.yml`](.github/workflows/release.yml))**: Auto-tags new versions from `version.json`, packages a production `.zip` bundle, publishes categorized release notes, and triggers IndexNow indexing.
+4. **Automated CalVer Release Engine ([`release.yml`](.github/workflows/release.yml))**: Auto-tags new versions from `data/version.json`, packages a production `.zip` bundle, publishes categorized release notes, and triggers IndexNow indexing.
 5. **Production Uptime & SSL Watchdog ([`uptime.yml`](.github/workflows/uptime.yml))**: Verifies live HTTP 200 status and latency across core production endpoints every 6 hours and opens an automated issue alert on outage.
 
 ---

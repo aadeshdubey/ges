@@ -35,8 +35,8 @@ jobs:
       - name: Generate GitHub Actions Audit Summary
         if: always()
         run: |
-          VER=$(node -p "require('./version.json').version")
-          DATE=$(node -p "require('./version.json').releaseDate")
+          VER=$(node -p "require('./data/version.json').version")
+          DATE=$(node -p "require('./data/version.json').releaseDate")
           EN_KEYS=$(node -p "Object.keys(require('./data/locales/en.json')).length")
           HI_KEYS=$(node -p "Object.keys(require('./data/locales/hi.json')).length")
           MR_KEYS=$(node -p "Object.keys(require('./data/locales/mr.json')).length")

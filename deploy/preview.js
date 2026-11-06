@@ -17,7 +17,18 @@ const os = require('os');
 const { execSync, exec } = require('child_process');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
+const LOG_DIR = path.join(__dirname, 'logs');
 const DEFAULT_PORT = parseInt(process.env.PORT || '8080', 10);
+
+if (!fs.existsSync(LOG_DIR)) {
+    fs.mkdirSync(LOG_DIR, { recursive: true });
+}
+const PREVIEW_LOG_FILE = path.join(LOG_DIR, `preview-${new Date().toISOString().replace(/[:.]/g, '-')}.log`);
+function writePreviewLog(msg) {
+    try {
+        fs.appendFileSync(PREVIEW_LOG_FILE, `[${new Date().toISOString()}] ${msg}\n`, 'utf-8');
+    } catch (e) {}
+}
 
 const MIME_TYPES = {
     '.html': 'text/html; charset=utf-8',
@@ -333,6 +344,7 @@ function main() {
 
         const safeRelPath = path.normalize(pathname).replace(/^(\.\.[/\\])+/, '').replace(/^[/\\]+/, '');
         const filePath = path.join(ROOT_DIR, safeRelPath);
+        writePreviewLog(`${req.method} ${pathname} (${req.socket.remoteAddress || 'local'})`);
 
         if (!filePath.startsWith(ROOT_DIR)) {
             res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
@@ -379,7 +391,9 @@ function main() {
             } catch (e) {}
         }
         server.close(() => {
+            writePreviewLog(`Port ${DEFAULT_PORT} closed and released cleanly (${reason}).`);
             console.log(`  ✓ Port ${DEFAULT_PORT} closed and released cleanly.`);
+            console.log(`  ✓ Preview log saved: deploy/logs/${path.basename(PREVIEW_LOG_FILE)}`);
             console.log('================================================================\n');
             process.exit(0);
         });
@@ -397,6 +411,8 @@ function main() {
         console.log(`  • Laptop URL      : ${localUrl}`);
         console.log(`  • 404 Page Test   : ${localUrl}/404.html`);
         console.log(`  • Mobile Wi-Fi URL: ${mobileUrl}`);
+        console.log(`  • Session Log     : deploy/logs/${path.basename(PREVIEW_LOG_FILE)}`);
+        writePreviewLog(`Server listening on ${localUrl} and ${mobileUrl}`);
         console.log('\n  Scan this QR code with your phone camera (on the same Wi-Fi):');
         console.log('');
         console.log(renderQrCodeToTerminal(mobileUrl));

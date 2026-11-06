@@ -1,10 +1,11 @@
 @echo off
 REM ============================================================================
-REM Gayatri Electrical Services (GES) — One-Click Windows Deployment Launcher
+REM Gayatri Electrical Services (GES) — One-Click Windows Release Launcher
+REM Location: deploy\deploy.bat
 REM Automatically bypasses PowerShell ExecutionPolicy for local script invocation
 REM ============================================================================
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0deploy.ps1" %*
 set EXIT_CODE=%ERRORLEVEL%
 if "%~1"=="" (

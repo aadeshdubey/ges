@@ -31,7 +31,7 @@ jobs:
             "https://www.gayatrielectrical.in/robots.txt"
             "https://www.gayatrielectrical.in/llms.txt"
             "https://www.gayatrielectrical.in/data/schema.json"
-            "https://www.gayatrielectrical.in/version.json"
+            "https://www.gayatrielectrical.in/data/version.json"
           )
 
           for URL in "${ENDPOINTS[@]}"; do
