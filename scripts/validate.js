@@ -106,6 +106,7 @@ const requiredFiles = [
     'assets/humans.txt',
     'assets/opensearch.xml',
     'assets/site.webmanifest',
+    'assets/gayatri-electrical.vcf',
     'data/version.json',
     'deploy/deploy.ps1',
     'deploy/deploy.bat',
@@ -237,7 +238,26 @@ for (const rel of htmlFiles) {
         }
         checkedAssets++;
     }
-    console.log(`  ✓ ${rel}: 0 deprecations, ${imgTags.length} <img> alt tags verified, ${checkedAssets} local asset links verified`);
+
+    // Check 6: External CDN <script> and <link rel="stylesheet"> tags must enforce Subresource Integrity (SRI)
+    const cdnTags = content.match(/<(?:script|link)\b[^>]+(?:src|href)=["']https:\/\/(?:cdnjs\.cloudflare\.com|unpkg\.com|cdn\.jsdelivr\.net)[^"']+["'][^>]*>/gi) || [];
+    for (const cdnTag of cdnTags) {
+        if (!/\bintegrity=["']sha(?:256|384|512)-[A-Za-z0-9+/=]+["']/i.test(cdnTag) || !/\bcrossorigin=["']anonymous["']/i.test(cdnTag)) {
+            console.error(`  ✗ Supply-Chain Security (SRI) violation in ${rel}: External CDN tag missing integrity="sha384-..." or crossorigin="anonymous": ${cdnTag}`);
+            process.exit(1);
+        }
+    }
+
+    // Check 7: External <a target="_blank"> links must include rel="noopener"
+    const blankLinks = content.match(/<a\b[^>]*\btarget=["']_blank["'][^>]*>/gi) || [];
+    for (const linkTag of blankLinks) {
+        if (!/\brel=["'][^"']*noopener[^"']*["']/i.test(linkTag)) {
+            console.error(`  ✗ Security/Tabnabbing violation in ${rel}: <a target="_blank"> missing rel="noopener": ${linkTag}`);
+            process.exit(1);
+        }
+    }
+
+    console.log(`  ✓ ${rel}: 0 deprecations, ${imgTags.length} <img> alt tags, ${cdnTags.length} SRI CDN hashes, ${blankLinks.length} target="_blank" links & ${checkedAssets} local assets verified`);
 }
 
 // 7. Cross-File Business Data Parity, Asset Size & Security Expiry Guard
@@ -264,7 +284,8 @@ const parityFiles = [
     'data/schema.json',
     'llms.txt',
     'llms-full.txt',
-    '.well-known/agent.json'
+    '.well-known/agent.json',
+    'assets/gayatri-electrical.vcf'
 ];
 const requiredTokens = [
     { label: 'Primary Hotline (86938)', regex: /86938\s*93333/ },
@@ -306,5 +327,15 @@ for (const file of mediaFiles) {
     }
 }
 console.log(`  ✓ Asset Size Guard: All ${mediaFiles.length} media/font files are within the 1.5 MB performance budget`);
+
+// 7d. Verify Production JavaScript Cleanliness (No stray debugger statements)
+for (const jsRel of ['js/main.js', 'js/main.min.js']) {
+    const jsContent = fs.readFileSync(path.join(ROOT_DIR, jsRel), 'utf-8');
+    if (/\bdebugger\s*;/.test(jsContent)) {
+        console.error(`  ✗ Production JS hygiene violation in ${jsRel}: Stray 'debugger;' statement detected`);
+        process.exit(1);
+    }
+}
+console.log('  ✓ Production JS Hygiene: 0 stray debugger statements in js/main.js & js/main.min.js');
 
 console.log('\n=== All 7 verification stages passed successfully! ===\n');

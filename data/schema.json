@@ -447,7 +447,18 @@
       "publisher": { "@id": "https://www.gayatrielectrical.in/#organization" },
       "inLanguage": ["en-IN", "hi-IN", "mr-IN"],
       "datePublished": "2003-01-01",
-      "dateModified": "2026-11-07"
+      "dateModified": "2026-11-07",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "#home h1",
+          "#home .subheadline",
+          "#about h2",
+          "#services h2",
+          "#liaisoning h2",
+          "#contact h2"
+        ]
+      }
     }
   ]
 }

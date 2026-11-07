@@ -90,13 +90,28 @@
     <!-- Corporate Typography: Self-Hosted Khand & Rajdhani -->
     <link rel="stylesheet" href="assets/fonts/fonts.css">
 
-    <!-- Non-Render-Blocking Third-Party Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"></noscript>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    <!-- Non-Render-Blocking Third-Party Stylesheets with Subresource Integrity (SRI) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" integrity="sha384-TXDx4BvGGuJDYIKlcgXfDntJ100A809RRLB4W72MhjXJzakfj3ptxy4zER5qsxZH" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" integrity="sha384-TXDx4BvGGuJDYIKlcgXfDntJ100A809RRLB4W72MhjXJzakfj3ptxy4zER5qsxZH" crossorigin="anonymous"></noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9" crossorigin="anonymous"></noscript>
 
-    <link rel="stylesheet" href="css/style.min.css?v=26.11.07.3">
+    <link rel="stylesheet" href="css/style.min.css?v=26.11.07.5">
+    <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "where": { "href_matches": "/*" },
+          "eagerness": "moderate"
+        }
+      ],
+      "prefetch": [
+        {
+          "urls": ["index.html", "404.html", "assets/gayatri-electrical.vcf"]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -1834,6 +1849,7 @@
                         <li><a href="tel:+918390597000">+91 83905 97000</a></li>
                         <li><a href="tel:+919822789699">+91 98227 89699</a></li>
                         <li><a href="mailto:support@gayatrielectrical.in">support@gayatrielectrical.in</a></li>
+                        <li><a href="assets/gayatri-electrical.vcf" download="Gayatri-Electrical-Services.vcf">📇 Save Digital Visiting Card (vCard)</a></li>
                         <li>
                             <p><a
                                     href="https://www.google.com/maps/place/Gayatri+Electricals+Services/@19.2877821,73.0817132,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!2sGayatri+Electricals+Services!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj!3m5!1s0x3be7bd5b59fd911b:0x3658c6b8e8f6d9ba!8m2!3d19.2877771!4d73.0842881!16s%2Fg%2F11f5ldgbxj?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
@@ -1911,9 +1927,9 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
-    <script src="js/main.min.js?v=26.11.07.3" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" integrity="sha384-d6C/Dc4YGOG7kgNRXiAb9oUq4Lv6Z0thbRHYdcqihPVyj52vkKCluruqbZYTmJaK" crossorigin="anonymous" defer></script>
+    <script src="js/main.min.js?v=26.11.07.5" defer></script>
     <!-- Refined Floating WhatsApp Button -->
     <a href="https://wa.me/918693893333?text=Hello%20Gayatri%20Electrical%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services."
         class="whatsapp-float"

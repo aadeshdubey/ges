@@ -23,6 +23,36 @@
       "type": "image/svg+xml"
     }
   ],
+  "shortcuts": [
+    {
+      "name": "24/7 Emergency Breakdown",
+      "short_name": "Emergency",
+      "description": "Immediate HT/LT breakdown support, mobile transformer rental & fault location",
+      "url": "/index.html#contact",
+      "icons": [{ "src": "/assets/logo.png", "sizes": "512x512", "type": "image/png" }]
+    },
+    {
+      "name": "HT Substations & Services",
+      "short_name": "Services",
+      "description": "11kV/22kV/33kV Substations, Transformer Oil Filtration, Cable Termination & APFC",
+      "url": "/index.html#services",
+      "icons": [{ "src": "/assets/logo.png", "sizes": "512x512", "type": "image/png" }]
+    },
+    {
+      "name": "Utility & CEI Liaisoning",
+      "short_name": "Liaisoning",
+      "description": "Torrent Power, MSEDCL, MSETCL, Solar Net-Metering & Lift Inspectorate Approvals",
+      "url": "/index.html#liaisoning",
+      "icons": [{ "src": "/assets/logo.png", "sizes": "512x512", "type": "image/png" }]
+    },
+    {
+      "name": "Save Digital vCard",
+      "short_name": "Save Contact",
+      "description": "Download Gayatri Electrical Services contact card (.vcf) to phone book",
+      "url": "/assets/gayatri-electrical.vcf",
+      "icons": [{ "src": "/assets/logo.png", "sizes": "512x512", "type": "image/png" }]
+    }
+  ],
   "categories": [
     "business",
     "utilities",

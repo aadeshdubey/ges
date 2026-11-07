@@ -18,7 +18,7 @@
   <a href="#typography"><img src="https://img.shields.io/badge/Typography-Khand_%26_Rajdhani_(ITF_System)-f69024?style=for-the-badge&logo=google-fonts&logoColor=white" alt="Typography"></a>
   <a href="#multilingual"><img src="https://img.shields.io/badge/Languages-EN_%7C_हिं_%7C_म-10b981?style=for-the-badge" alt="Languages"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary_(All_Rights_Reserved)-dc3545?style=for-the-badge" alt="Proprietary License"></a>
-  <a href="https://github.com/aadeshdubey/ges/releases"><img src="https://img.shields.io/badge/Version-v26.11.07.3-0d1392?style=for-the-badge" alt="Version v26.11.07.3"></a>
+  <a href="https://github.com/aadeshdubey/ges/releases"><img src="https://img.shields.io/badge/Version-v26.11.07.5-0d1392?style=for-the-badge" alt="Version v26.11.07.5"></a>
 </p>
 
 <p align="center">
@@ -270,27 +270,34 @@ The site adheres to rigorous modern web standards for mobile installation, offli
 └──────────────────┴───────────────────┴─────────────────────────────────┘
 ```
 
-### 1. `assets/site.webmanifest` — Progressive Web App Engine
+### 1. `assets/site.webmanifest` — Progressive Web App Engine & Native App Shortcuts
 - Enables native "Add to Home Screen" installation on Android, iOS, Windows, and macOS with an enterprise app aesthetic.
 - Branded with theme color `#f69024` and background `#ffffff` in `standalone` display mode.
-- Declares high-resolution 192x192 and 512x512 maskable application icons.
+- Declares high-resolution 192x192 and 512x512 maskable application icons plus 4 native OS jump-list `shortcuts` (*24/7 Emergency Breakdown*, *HT Substations & Services*, *Utility & CEI Liaisoning*, and *Save Digital vCard*).
 
 ### 2. `sw.js` — Offline Resilience & Stale-While-Revalidate Engine
-- Pre-caches core application shell assets on initial visit (`index.html`, `404.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, `assets/site.webmanifest`, and all 3 language bundles).
+- Pre-caches core application shell assets on initial visit (`index.html`, `404.html`, `css/style.min.css`, `js/main.min.js`, `data/schema.json`, `assets/site.webmanifest`, `assets/gayatri-electrical.vcf`, and all 3 language bundles).
 - Implements **Stale-While-Revalidate** caching for lightning-fast loads on subsequent visits and complete offline availability.
 - Automatically clears stale caches on version upgrades via `ges-cache-v*` cache naming.
 
-### 3. `.well-known/security.txt` & `.github/SECURITY.md` — Security Policy
+### 3. `.well-known/security.txt`, Subresource Integrity (SRI) & Supply-Chain Security
 - Provides official RFC 9116 machine-readable vulnerability disclosure channels plus a native GitHub Security Policy (`.github/SECURITY.md`).
-- Declares canonical security endpoints, preferred languages (`en`, `hi`, `mr`), and strict validity expiration timestamps.
+- Enforces cryptographic **Subresource Integrity (`integrity="sha384-..." crossorigin="anonymous"`)** on all external CDN stylesheets and scripts (`intl-tel-input` & `AOS`), validated automatically in Stage 6 of `scripts/validate.js`.
+- Generates cryptographic **SLSA Build Provenance Attestations** (`actions/attest-build-provenance`) on every production `.zip` release bundle.
 
-### 4. `assets/humans.txt` — Engineering Credits & Authorship
-- Documents organizational authorship, contractor licensing credentials, Bhiwandi headquarters coordinates, Indian Type Foundry typography pairing, and static PWA architecture.
+### 4. `assets/gayatri-electrical.vcf` — One-Tap Digital Visiting Card (vCard 3.0)
+- Allows industrial procurement managers, site engineers, and facility heads to save Gayatri Electrical Services' official contact card (all 3 hotlines, official email, Bhiwandi office address, and GPS coordinates) directly to iOS/Android contacts with a single tap—even offline.
 
-### 5. `assets/opensearch.xml` — Native Browser Omnibox Search
-- Registers Gayatri Electrical Services with compliant web browsers (Chrome, Edge, Firefox), enabling users to type queries into their address bar to search GES HT/LT engineering solutions.
+### 5. Speculation Rules API, CSS View Transitions & Voice `SpeakableSpecification`
+- **Speculation Rules API (`<script type="speculationrules">`)**: Instructs modern browsers to prerender/prefetch internal navigation targets in the background for 0 ms page transitions.
+- **Native CSS View Transitions (`@view-transition { navigation: auto; }`)**: Delivers smooth hardware-accelerated cross-fade transitions across pages (`index.html` ↔ `404.html`).
+- **Google Assistant Voice Search (`SpeakableSpecification`)**: Embedded in `data/schema.json` (`WebPage.speakable`) so voice assistants can read aloud GES's core summary and 24/7 hotline.
 
-### 6. `404.html` — Custom Branded Circuit-Breaker Recovery Page
+### 6. `assets/humans.txt` & `assets/opensearch.xml` — Web Authorship & Omnibox Search
+- `assets/humans.txt` documents organizational authorship, contractor licensing credentials, Bhiwandi headquarters coordinates, Indian Type Foundry typography pairing, and static PWA architecture.
+- `assets/opensearch.xml` registers Gayatri Electrical Services with compliant web browsers (Chrome, Edge, Firefox), enabling users to type queries into their address bar to search GES HT/LT engineering solutions.
+
+### 7. `404.html` — Custom Branded Circuit-Breaker Recovery Page
 - Themed as *"Circuit Disconnected"* with animated glowing breaker icons and corporate typography (`Khand` + `Rajdhani`).
 - Features automated 12-second countdown redirect to homepage, direct emergency telephone hotlines, WhatsApp chat link, and emergency breakdown contacts.
 
@@ -543,10 +550,11 @@ ges/
 ├── assets/
 │   ├── fonts/                <-- Self-hosted WOFF2 Khand & Rajdhani subsets
 │   ├── favicon.svg           <-- Vector brand emblem
+│   ├── gayatri-electrical.vcf<-- One-tap vCard 3.0 digital visiting card
 │   ├── humans.txt            <-- Web authorship & engineering credits
 │   ├── logo.png              <-- Corporate brand emblem
 │   ├── opensearch.xml        <-- Browser omnibox address bar search
-│   └── site.webmanifest      <-- Progressive Web App (PWA) manifest
+│   └── site.webmanifest      <-- Progressive Web App (PWA) manifest & app shortcuts
 ├── css/
 │   ├── style.css             <-- Unminified corporate stylesheet
 │   └── style.min.css         <-- Production minified stylesheet

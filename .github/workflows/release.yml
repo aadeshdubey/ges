@@ -8,6 +8,8 @@ on:
 permissions:
   contents: write
   models: read
+  id-token: write
+  attestations: write
 
 jobs:
   release:
@@ -110,6 +112,13 @@ jobs:
             llms.txt llms-full.txt sw.js \
             ges2026indexnowkeybhiwandi9999.txt \
             .well-known/ assets/ css/ data/ images/ js/
+
+      - name: Attest Build Provenance (SLSA Cryptographic Signature)
+        if: steps.check_tag.outputs.exists == 'false'
+        continue-on-error: true
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: ges-${{ steps.get_version.outputs.tag }}-production.zip
 
       - name: Create Git Tag & GitHub Release
         if: steps.check_tag.outputs.exists == 'false'

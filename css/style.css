@@ -1,8 +1,12 @@
 /**
  * Gayatri Electrical Services — Corporate Stylesheet
- * Version: 26.11.07.3 | Release Date: 2026-11-07
+ * Version: 26.11.07.5 | Release Date: 2026-11-07
  * Typography: Khand + Rajdhani (Indian Type Foundry)
  */
+@view-transition {
+            navigation: auto;
+        }
+
 :root {
             --primary-orange: #f69024;
             --primary-orange-dark: #e07a12;
