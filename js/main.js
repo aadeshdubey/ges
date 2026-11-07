@@ -1,6 +1,6 @@
 /**
  * Gayatri Electrical Services — Enterprise Application Engine
- * Version: 26.11.07.5 | Release Date: 2026-11-07
+ * Version: 26.11.07.6 | Release Date: 2026-11-07
  */
 // Performance Optimization: Idle & Interaction Third-Party Script Loaders
 let gtmLoaded = false;

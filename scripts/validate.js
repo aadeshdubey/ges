@@ -287,13 +287,15 @@ const parityFiles = [
     '.well-known/agent.json',
     'assets/gayatri-electrical.vcf'
 ];
-const requiredTokens = [
-    { label: 'Primary Hotline (86938)', regex: /86938\s*93333/ },
-    { label: 'Official Email', regex: /support@gayatrielectrical\.in/ },
-    { label: 'Canonical Domain', regex: /www\.gayatrielectrical\.in/ },
-    { label: 'Bhiwandi Latitude (19.287777)', regex: /19\.287777/ },
-    { label: 'Bhiwandi Longitude (73.084288)', regex: /73\.084288/ }
-];
+    const requiredTokens = [
+        { label: 'Primary Hotline (86938 93333)', regex: /86938[\s-]*93333/ },
+        { label: 'Secondary Hotline (83905 97000)', regex: /83905[\s-]*97000/ },
+        { label: 'Technical Hotline (98227 89699)', regex: /98227[\s-]*89699/ },
+        { label: 'Official Email', regex: /support@gayatrielectrical\.in/ },
+        { label: 'Canonical Domain', regex: /www\.gayatrielectrical\.in/ },
+        { label: 'Bhiwandi Latitude (19.287777)', regex: /19\.287777/ },
+        { label: 'Bhiwandi Longitude (73.084288)', regex: /73\.084288/ }
+    ];
 
 for (const file of parityFiles) {
     const text = fs.readFileSync(path.join(ROOT_DIR, file), 'utf-8');
@@ -304,7 +306,7 @@ for (const file of parityFiles) {
         }
     }
 }
-console.log(`  ✓ 100% Business Entity Parity (Hotline, Email, Domain, Bhiwandi Geo-Coordinates) across ${parityFiles.length} discovery files`);
+console.log(`  ✓ 100% Business Entity Parity (All 3 Hotlines, Email, Domain, Bhiwandi Geo-Coordinates) across ${parityFiles.length} discovery files`);
 
 // 7c. Verify image file size budget (< 1.5 MB per image)
 const MAX_IMAGE_BYTES = 1536 * 1024;

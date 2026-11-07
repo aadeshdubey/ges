@@ -1,6 +1,6 @@
 /**
  * Gayatri Electrical Services — Corporate Stylesheet
- * Version: 26.11.07.5 | Release Date: 2026-11-07
+ * Version: 26.11.07.6 | Release Date: 2026-11-07
  * Typography: Khand + Rajdhani (Indian Type Foundry)
  */
 @view-transition {
@@ -2947,4 +2947,115 @@
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             border: 0;
+        }
+
+        /* WCAG 2.2 Keyboard Accessibility: Skip to Main Content Link */
+        .skip-to-content {
+            position: fixed;
+            top: -100px;
+            left: 16px;
+            z-index: 10000;
+            background: var(--brand-blue);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid var(--primary-orange);
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            transition: top 0.2s ease;
+        }
+
+        .skip-to-content:focus,
+        .skip-to-content:focus-visible {
+            top: 14px;
+            outline: 3px solid var(--primary-orange);
+            outline-offset: 2px;
+        }
+
+        /* Offscreen Rendering Optimization (Core Web Vitals INP / TBT) */
+        #services,
+        #industries,
+        #liaisoning,
+        #faq,
+        #contact {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 700px;
+        }
+
+        /* WCAG 2.2 Reduced Motion Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* B2B Vendor Registration & Tender Profile Print / Save-as-PDF Stylesheet */
+        @media print {
+            .main-header,
+            .whatsapp-float,
+            .contact-form,
+            .modal-container,
+            .industry-category-filters,
+            .carousel-container,
+            .hero-overlay,
+            .parallax-section,
+            .map-container,
+            .skip-to-content {
+                display: none !important;
+            }
+
+            body,
+            section,
+            #services,
+            #industries,
+            #liaisoning,
+            #faq,
+            #contact,
+            footer {
+                background: #ffffff !important;
+                color: #000000 !important;
+                content-visibility: visible !important;
+                padding: 20px 0 !important;
+                box-shadow: none !important;
+            }
+
+            #home {
+                height: auto !important;
+                padding: 24px 0 !important;
+                border-bottom: 2px solid #000000;
+            }
+
+            .hero-content h1,
+            .hero-content .subheadline,
+            #contact h2,
+            #contact .section-subtitle,
+            .project-spotlight-card,
+            .spotlight-title,
+            .spotlight-desc {
+                color: #000000 !important;
+                text-shadow: none !important;
+                background: #ffffff !important;
+            }
+
+            .service-card,
+            .industry-card,
+            .liaisoning-card,
+            .metric-card,
+            .project-spotlight-card,
+            .faq-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                border: 1px solid #cbd5e1 !important;
+                box-shadow: none !important;
+            }
         }

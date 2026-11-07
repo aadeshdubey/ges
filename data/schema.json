@@ -18,6 +18,29 @@
       "logo": "https://www.gayatrielectrical.in/assets/logo.png",
       "url": "https://www.gayatrielectrical.in/",
       "telephone": "+918693893333",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-86938-93333",
+          "contactType": "customer service",
+          "areaServed": "IN-MH",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-83905-97000",
+          "contactType": "technical support",
+          "areaServed": "IN-MH",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-98227-89699",
+          "contactType": "emergency",
+          "areaServed": "IN-MH",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        }
+      ],
       "email": "support@gayatrielectrical.in",
       "foundingDate": "2003",
       "dateModified": "2026-11-07",

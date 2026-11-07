@@ -7,7 +7,8 @@
  * 2. Embeds the synchronized {en,hi,mr} locale dictionary into js/main.js
  *    (so translations work 100% instantly on file://, localhost, and production)
  * 3. Regenerates js/main.min.js from js/main.js
- * 4. Strictly preserves original line endings (CRLF / LF) and only writes to disk
+ * 4. Regenerates css/style.min.css from css/style.css
+ * 5. Strictly preserves original line endings (CRLF / LF) and only writes to disk
  *    when meaningful content has changed, preventing false git dirty states.
  */
 
@@ -77,6 +78,21 @@ function main() {
         .join('\n');
     writeIfChanged(minJsPath, minJs);
     console.log('  ✓ Regenerated js/main.min.js from js/main.js');
+
+    // 4. Regenerate css/style.min.css from css/style.css only if changed
+    const verConfig = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data/version.json'), 'utf-8'));
+    const styleCssPath = path.join(ROOT_DIR, 'css/style.css');
+    const minCssPath = path.join(ROOT_DIR, 'css/style.min.css');
+    const rawCss = fs.readFileSync(styleCssPath, 'utf-8').replace(/\r\n/g, '\n');
+    const minifiedBody = rawCss
+        .replace(/\/\*[\s\S]*?\*\//g, '')
+        .replace(/\s+/g, ' ')
+        .replace(/\s*([{}:;,])\s*/g, '$1')
+        .replace(/;}/g, '}')
+        .trim();
+    const minCssHeader = `/* GES Corporate Stylesheet v${verConfig.version} (${verConfig.releaseDate}) */`;
+    writeIfChanged(minCssPath, `${minCssHeader}${minifiedBody}`);
+    console.log('  ✓ Regenerated css/style.min.css from css/style.css');
 
     console.log('=== Build completed successfully ===\n');
 }

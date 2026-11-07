@@ -127,6 +127,7 @@ function getSyncRules(config) {
     const badge = config.versionBadge || `v${ver}`;
     const date = config.releaseDate;
     const formattedDate = config.formattedDate || formatDate(date);
+    const legalDate = formattedDate.replace(/^[A-Za-z]+,\s*/, '');
     const cacheBuster = config.cacheBuster || `v=${ver}`;
     const swCacheName = config.serviceWorkerCacheName || `ges-cache-v${ver}`;
     const [relYear, relMonth, relDay] = date.split('-').map(Number);
@@ -166,6 +167,10 @@ function getSyncRules(config) {
                 {
                     from: /src="js\/main\.min\.js\?v=[^"]*"/g,
                     to: `src="js/main.min.js?${cacheBuster}"`
+                },
+                {
+                    from: /<span data-sync-legal-date>.*?<\/span>/g,
+                    to: `<span data-sync-legal-date>${legalDate}</span>`
                 }
             ]
         },
