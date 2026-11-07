@@ -88,7 +88,13 @@ function loadVersionConfig() {
 }
 
 function saveVersionConfig(config) {
-    fs.writeFileSync(VERSION_FILE, JSON.stringify(config, null, 2) + '\n', 'utf-8');
+    let eol = '\n';
+    if (fs.existsSync(VERSION_FILE)) {
+        const raw = fs.readFileSync(VERSION_FILE, 'utf-8');
+        if (raw.includes('\r\n')) eol = '\r\n';
+    }
+    const content = (JSON.stringify(config, null, 2) + '\n').replace(/\n/g, eol);
+    fs.writeFileSync(VERSION_FILE, content, 'utf-8');
 }
 
 function autoBump(config) {

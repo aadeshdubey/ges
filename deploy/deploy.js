@@ -200,26 +200,35 @@ function main() {
 
     ensureBranchExists('dev');
     const activeBranch = getCurrentBranch();
-    const statusOutput = run('git status --porcelain', { silent: true }).trim();
+
+    // Ignore pure CRLF/LF line-ending-only diffs so repeated runs never trigger false commits
+    const diffTracked = run('git diff --ignore-cr-at-eol --name-only', { silent: true }).trim();
+    const diffStaged = run('git diff --cached --ignore-cr-at-eol --name-only', { silent: true }).trim();
+    const untracked = run('git ls-files --others --exclude-standard', { silent: true }).trim();
+    const rawPorcelain = run('git status --porcelain', { silent: true }).trim();
+    if (rawPorcelain && !diffTracked && !diffStaged && !untracked) {
+        run('git checkout -- .', { silent: true });
+    }
+
+    const modifiedFiles = Array.from(new Set([
+        ...diffTracked.split(/\r?\n/).filter(Boolean),
+        ...diffStaged.split(/\r?\n/).filter(Boolean),
+        ...untracked.split(/\r?\n/).filter(Boolean)
+    ]));
     const devAheadOfMain = getAheadCommitCount('main', 'dev');
 
-    if (!statusOutput && !customSummary && !(isPromote && devAheadOfMain > 0)) {
+    if (modifiedFiles.length === 0 && !customSummary && !(isPromote && devAheadOfMain > 0)) {
         console.log('No uncommitted changes or unpromoted dev commits detected. Nothing to deploy.');
         writeLog('INFO', 'No uncommitted changes or unpromoted dev commits detected.');
         process.exit(0);
     }
-
-    const modifiedFiles = statusOutput
-        .split('\n')
-        .filter(Boolean)
-        .map(line => line.slice(3).trim());
 
     // Step 1: Run asset & locale bundler (scripts/build.js)
     console.log('>>> [Step 1/5] Bundling locales & regenerating minified assets...');
     run('node scripts/build.js');
 
     // Step 2: Auto-bump CalVer version if there are uncommitted changes (or custom summary)
-    const hasWorkingChanges = Boolean(statusOutput || customSummary);
+    const hasWorkingChanges = Boolean(modifiedFiles.length > 0 || customSummary);
     if (hasWorkingChanges) {
         console.log('>>> [Step 2/5] Synchronizing CalVer version across repository...');
         if (isVersionAlreadyBumped()) {
