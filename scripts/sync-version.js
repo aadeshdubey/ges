@@ -129,6 +129,8 @@ function getSyncRules(config) {
     const formattedDate = config.formattedDate || formatDate(date);
     const cacheBuster = config.cacheBuster || `v=${ver}`;
     const swCacheName = config.serviceWorkerCacheName || `ges-cache-v${ver}`;
+    const [relYear, relMonth, relDay] = date.split('-').map(Number);
+    const securityExpires = `${relYear + 1}-${String(relMonth).padStart(2, '0')}-${String(relDay).padStart(2, '0')}T00:00:00.000Z`;
 
     return [
         {
@@ -300,6 +302,30 @@ function getSyncRules(config) {
                 {
                     from: /"version":\s*"[^"]*"/,
                     to: `"version": "${ver}"`
+                }
+            ]
+        },
+        {
+            file: '.well-known/agent.json',
+            description: '.well-known/agent.json version and lastUpdated fields',
+            replace: [
+                {
+                    from: /"version":\s*"[^"]*"/,
+                    to: `"version": "${ver}"`
+                },
+                {
+                    from: /"lastUpdated":\s*"[^"]*"/,
+                    to: `"lastUpdated": "${date}"`
+                }
+            ]
+        },
+        {
+            file: '.well-known/security.txt',
+            description: '.well-known/security.txt rolling 1-year Expires timestamp',
+            replace: [
+                {
+                    from: /^Expires: .*$/m,
+                    to: `Expires: ${securityExpires}`
                 }
             ]
         }

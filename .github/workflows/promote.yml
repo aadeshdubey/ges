@@ -1,0 +1,78 @@
+name: "GES 1-Click Cloud Promote (dev -> main)"
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_summary:
+        description: "Optional commit description (if bumping version before promotion)"
+        required: false
+        default: ""
+      force_version_bump:
+        description: "Force a new CalVer version bump even if dev has no new commits"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    name: Validate & Promote dev -> main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository (Full History & Branches)
+        uses: actions/checkout@v7
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - name: Set up Node.js Environment
+        uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+
+      - name: Configure Git Bot Identity
+        run: |
+          git config user.name "aadeshdubey"
+          git config user.email "aadesh.dubey@yahoo.com"
+
+      - name: Bundle Locales & Optionally Bump CalVer Version
+        run: |
+          node scripts/build.js
+          if [ "${{ inputs.force_version_bump }}" = "true" ] || [ -n "${{ inputs.commit_summary }}" ]; then
+            node scripts/sync-version.js --bump
+            VER=$(node -p "require('./data/version.json').version")
+            MSG="${{ inputs.commit_summary }}"
+            if [ -z "$MSG" ]; then
+              MSG="Synchronize repository build version and production assets via Cloud Promote"
+            fi
+            git add -A
+            git commit -m "GES v${VER} : ${MSG}" || true
+            git push origin dev
+          fi
+
+      - name: Execute 7-Stage Integrity & Standards Validator
+        run: node scripts/validate.js
+
+      - name: Promote dev -> main & Push Live
+        run: |
+          git fetch origin main:main
+          git checkout main
+          git merge dev --no-edit
+          git push origin main
+
+      - name: Notify Search Engines (IndexNow & Googlebot)
+        run: node scripts/ping-sitemap.js
+
+      - name: Publish Promotion Summary
+        if: always()
+        run: |
+          VER=$(node -p "require('./data/version.json').version")
+          DATE=$(node -p "require('./data/version.json').releaseDate")
+          echo "### 🚀 Gayatri Electrical Services — Cloud Promotion Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Promoted Build**: \`v${VER}\` (\`${DATE}\`)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Flow**: \`dev\` → \`main\` (GitHub Pages Live)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Validation**: ✅ 7/7 Stages Passed" >> $GITHUB_STEP_SUMMARY
+

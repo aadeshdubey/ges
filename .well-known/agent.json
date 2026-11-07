@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "agentProtocol": "A2A-1.0",
+  "version": "26.11.07.2",
+  "lastUpdated": "2026-11-07",
+  "name": "Gayatri Electrical Services (GES)",
+  "legalName": "Gayatri Electrical Services",
+  "slogan": "High Voltage Meets High Intelligence",
+  "foundingYear": 2003,
+  "description": "Government Authorized Electrical Contractor (Est. 2003) and Licensed Lift Contractor in Maharashtra. Specializing in 13 MW turnkey industrial express feeders, 11kV/22kV/33kV HT substation erection & diagnostic testing, HT/LT underground XLPE cable laying & Raychem heat-shrink end terminations/jointing, on-site high-vacuum transformer BDV oil filtration (>60 kV), transformer maintenance & emergency mobile rentals (100 kVA to 2000 kVA+), Torrent Power & MSETCL/MSEDCL liaisoning, CEI PWD Form A/B & D.G. Set Regulation 43 clearances, solar rooftop net-metering liaisoning, licensed lift erection & annual safety renewals, APFC harmonic filter panels, and industrial electrification across Bhiwandi, Kudus, Wada, Thane, and MMR.",
+  "url": "https://www.gayatrielectrical.in/",
+  "logo": "https://www.gayatrielectrical.in/assets/logo.png",
+  "contact": {
+    "email": "support@gayatrielectrical.in",
+    "phones": [
+      "+91 86938 93333",
+      "+91 83905 97000",
+      "+91 98227 89699"
+    ],
+    "whatsapp": "https://wa.me/918693893333",
+    "headquarters": {
+      "streetAddress": "Shop No. 7, Tirupati Heights, Sonale Pipeline Road, Bhadwad",
+      "addressLocality": "Bhiwandi",
+      "addressRegion": "Maharashtra",
+      "postalCode": "421302",
+      "addressCountry": "IN",
+      "geo": {
+        "latitude": 19.2877771,
+        "longitude": 73.0842881
+      }
+    }
+  },
+  "licensesAndAuthorizations": [
+    "Government Authorized Electrical Contractor License (State Licensing Board, Industry, Energy and Labour Department, Government of Maharashtra)",
+    "Government Authorized Lift Contractor License (Lift Inspectorate, Energy Department, Government of Maharashtra — Bombay Lifts Act)",
+    "Authorized Statutory Liaisoning Agent for Chief Electrical Inspectorate (CEI / PWD Maharashtra), Torrent Power, MSEDCL (Mahavitaran), and MSETCL (Mahatransco)"
+  ],
+  "knowledgeEndpoints": {
+    "conciseProfile": "https://www.gayatrielectrical.in/llms.txt",
+    "unabridgedCorpus": "https://www.gayatrielectrical.in/llms-full.txt",
+    "jsonLdGraph": "https://www.gayatrielectrical.in/data/schema.json",
+    "sitemap": "https://www.gayatrielectrical.in/sitemap.xml",
+    "securityPolicy": "https://www.gayatrielectrical.in/.well-known/security.txt"
+  },
+  "supportedLanguages": [
+    "en",
+    "hi",
+    "mr"
+  ],
+  "serviceAreas": [
+    "Bhiwandi (Sonale, Val, Mankoli, Padgha, Bhadwad, Dapoda, Rahnal, Anjurphata, Purna, Saravali)",
+    "Kudus Industrial Area",
+    "Wada Industrial Corridor",
+    "Thane & Wagle Estate MIDC",
+    "Mumbai Metropolitan Region (MMR), Navi Mumbai (TTC/Airoli/Rabale/Mahape), Kalyan, Dombivli, Ambernath, Badlapur, Shahapur, Murbad, and across Maharashtra"
+  ],
+  "capabilities": [
+    "High-Voltage (HT) Substation Erection & Commissioning (11kV, 22kV, 33kV Indoor/Outdoor Switchyards, DP/4-Pole Structures, AIS/GIS Bays, VCB & SF6 Breakers, Ring Main Units)",
+    "HT Substation Diagnostic Testing & Health Audits (DC Hi-Pot Testing, Tan-Delta Dissipation Factor, Transformer Winding Resistance, Turns Ratio, Megger IR, Earth Pit Testing, VCB Relay Calibration & Primary/Secondary Injection)",
+    "13 MW Turnkey Express Feeders & EHV Grid Integration (Landmark Dual 6.5 MW Express Feeders for APCO Infratech, 100kV/220kV MSETCL Substation Bay Extension & ABT/TOD Metering)",
+    "On-Site High-Vacuum Transformer Oil Filtration, Dehydration, Degassing & NABL Dielectric BDV Testing (>60 kV Breakdown Voltage Restoration, Acidity/Moisture Removal & dissolved gas diagnostics)",
+    "Transformer Lifecycle Maintenance, Overhauling & Repair (100 kVA to 20 MVA+ Power & Distribution Transformers, OLTC/OCTD servicing, gasket replacement, oil leak arresting, Buchholz relay & OTI/WTI calibration, silica gel breather regeneration)",
+    "Emergency Mobile Transformer Rentals (24/7 rapid-dispatch 100 kVA to 2000 kVA+ temporary skid/mobile power transformers on rent to eliminate factory breakdown downtime)",
+    "HT & LT Underground Cable Laying, Termination & Straight-Through Jointing (1.1kV LT up to 11kV/22kV/33kV HT XLPE armored cables, Raychem / 3M heat-shrink indoor & outdoor end terminations, straight-through joints, trenching & cable tray networks)",
+    "Underground HT/LT Cable Fault Location & Diagnostic Pinpointing (Thumper / Surge Wave Receiver, Time Domain Reflectometry TDR, DC Hi-Pot & sheath fault pinpointing)",
+    "Turnkey Solar Rooftop & Ground-Mounted Liaisoning & Net-Metering Approvals (Technical feasibility, bi-directional ABT/Net-Metering sanctions with Torrent Power & MSEDCL, solar harmonics & anti-islanding compliance, CEI Form A/B solar charging permissions)",
+    "Licensed Lift Contracting, Erection & Statutory Lift Liaisoning (Passenger elevators, heavy industrial goods/freight lifts, initial Lift Erection Permission, Form A/B filings, and Annual Lift License Renewal under the Bombay Lifts Act & Maharashtra Lift Rules)",
+    "Torrent Power & MSEDCL (Mahavitaran) Industrial Load Sanctions & Liaisoning (New HT/LT industrial power connections, contract demand enhancement, factory load extension, tariff optimization, and express feeder approvals)",
+    "Chief Electrical Inspectorate (CEI / PWD Maharashtra) Statutory Clearances (Single Line Diagram SLD scrutiny, Form A & Form B completions, initial and periodic HV/LV charging permissions under CEA Safety Regulations)",
+    "Diesel Generator (D.G. Set) Statutory Approvals & CEA Regulation 43 Clearances (62.5 kVA to 2500 kVA+ DG sets, SLD approval, acoustic enclosure earthing, dual-source AMF/ACB mechanical & electrical interlock certification)",
+    "Automatic Power Factor Correction (APFC) Panels & Harmonic Mitigation (5.67%, 7%, and 14% detuned copper/aluminum series reactors, heavy-duty MPP/APP capacitor banks, thyristor/contactor switching to maintain PF 0.99+ and eliminate KVAh/PF utility penalties)",
+    "Main LT Power Control Centers (PCC), Motor Control Centers (MCC), Busbar Trunking / Rising Mains & Flameproof (FLP / Ex-d) Switchboards for Hazardous Chemical/Pharma Zones",
+    "Maintenance-Free Chemical Earthing & Double-Grid Copper/GI Grounding Systems (IS 3043 compliant dedicated transformer neutral, body, LA, and instrumentation earthing pits with < 1.0 Ohm resistance certification)",
+    "High-Rise Commercial & Residential Building Electrical Approvals (Sandwich rising main busduct permissions, dual-source fire-fighting pump electrical clearances, transformer yard safety, and PWD Occupancy NOCs)",
+    "Post-Fire & Post-Accident Forensic Electrical Investigation, Re-Testing & Urgent PWD / CEI Re-Energization Clearances",
+    "Overhead HT/EHV Transmission Line Shifting, Tower Erection, Underground Conversion & Statutory Right-of-Way (ROW) Clearances",
+    "Industrial Substation & Manufacturing Plant Annual Maintenance Contracts (Comprehensive & Preventive AMCs with 24/7 emergency breakdown engineering support)"
+  ],
+  "industriesServed": [
+    "Glass Manufacturing & Continuous Electric Furnaces",
+    "Printing, Corrugated Packaging & Converting Plants",
+    "Paper Mills & Pulp Processing",
+    "Textile Powerlooms, Sizing, Dyeing & Processing Units",
+    "Chemical, Petrochemical, Paint & Solvent Plants (FLP / Ex-d Zones)",
+    "Plastics, Injection/Blow Molding & Extrusion Factories",
+    "Cold Storage, Food Processing & Automated Logistics/Warehousing Hubs",
+    "Pharmaceuticals, Healthcare Hospitals & Cleanroom Facilities",
+    "Heavy Infrastructure, Tunneling & Metro/Highway Construction (APCO Infratech 13 MW)",
+    "Steel Rolling, Engineering Workshops, Foundries & Metal Fabrication",
+    "High-Rise Residential Towers, Commercial IT Parks & Shopping Complexes"
+  ]
+}

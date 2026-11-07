@@ -23,6 +23,15 @@ const DEFAULT_PORT = parseInt(process.env.PORT || '8080', 10);
 if (!fs.existsSync(LOG_DIR)) {
     fs.mkdirSync(LOG_DIR, { recursive: true });
 }
+try {
+    const logFiles = fs.readdirSync(LOG_DIR)
+        .filter(f => f.endsWith('.log'))
+        .map(f => ({ fullPath: path.join(LOG_DIR, f), mtime: fs.statSync(path.join(LOG_DIR, f)).mtimeMs }))
+        .sort((a, b) => b.mtime - a.mtime);
+    for (const old of logFiles.slice(14)) {
+        try { fs.unlinkSync(old.fullPath); } catch (e) {}
+    }
+} catch (e) {}
 const PREVIEW_LOG_FILE = path.join(LOG_DIR, `preview-${new Date().toISOString().replace(/[:.]/g, '-')}.log`);
 function writePreviewLog(msg) {
     try {

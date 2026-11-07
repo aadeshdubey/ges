@@ -12,11 +12,11 @@ permissions:
 
 jobs:
   uptime:
-    name: Production Endpoint & SSL Health Check
+    name: Production Endpoint & SSL Expiry Health Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: Verify Production Endpoints & SSL Certificate
+      - name: Verify Production Endpoints & SSL Certificate Expiry
         id: check
         run: |
           echo "### 🌐 Gayatri Electrical Services — Live Production Health Report" >> $GITHUB_STEP_SUMMARY
@@ -32,6 +32,7 @@ jobs:
             "https://www.gayatrielectrical.in/llms.txt"
             "https://www.gayatrielectrical.in/data/schema.json"
             "https://www.gayatrielectrical.in/data/version.json"
+            "https://www.gayatrielectrical.in/.well-known/agent.json"
           )
 
           for URL in "${ENDPOINTS[@]}"; do
@@ -46,19 +47,34 @@ jobs:
             fi
           done
 
+          # Check SSL Certificate Remaining Days on www.gayatrielectrical.in
+          EXPIRY_RAW=$(echo | openssl s_client -servername www.gayatrielectrical.in -connect www.gayatrielectrical.in:443 2>/dev/null | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2 || echo "")
+          if [ -n "$EXPIRY_RAW" ]; then
+            EXPIRY_EPOCH=$(date -d "$EXPIRY_RAW" +%s 2>/dev/null || echo 0)
+            NOW_EPOCH=$(date +%s)
+            DAYS_LEFT=$(( (EXPIRY_EPOCH - NOW_EPOCH) / 86400 ))
+            echo "" >> $GITHUB_STEP_SUMMARY
+            if [ "$DAYS_LEFT" -lt 14 ]; then
+              echo "- **🔒 SSL Certificate Status**: ⚠️ Expiring soon (\`$DAYS_LEFT days remaining\` — Renew before \`$EXPIRY_RAW\`)" >> $GITHUB_STEP_SUMMARY
+              FAILED=1
+            else
+              echo "- **🔒 SSL Certificate Status**: ✅ Valid (\`$DAYS_LEFT days remaining\`, expires \`$EXPIRY_RAW\`)" >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
+
           if [ "$FAILED" -ne 0 ]; then
-            echo "One or more production endpoints failed health verification."
+            echo "One or more production endpoints or SSL checks failed health verification."
             exit 1
           fi
 
-      - name: Create Alert Issue on Production Outage
+      - name: Create Alert Issue on Production Outage or SSL Expiry
         if: failure()
         uses: actions/github-script@v9
         with:
           script: |
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const title = `🚨 [Production Uptime Alert] Endpoint Check Failed (${new Date().toISOString().split('T')[0]})`;
-            const body = `### Automated GES Production Uptime Alert\n\nOne or more production endpoints on **https://www.gayatrielectrical.in** did not return HTTP 200 OK during scheduled watchdog run [${context.runId}](${runUrl}).\n\n- **Workflow Log**: [View Details](${runUrl})`;
+            const title = `🚨 [Production Uptime / SSL Alert] Check Failed (${new Date().toISOString().split('T')[0]})`;
+            const body = `### Automated GES Production Uptime & SSL Alert\n\nOne or more production endpoints or SSL certificate checks on **https://www.gayatrielectrical.in** failed during scheduled watchdog run [${context.runId}](${runUrl}).\n\n- **Workflow Log**: [View Details](${runUrl})`;
 
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
@@ -76,4 +92,3 @@ jobs:
                 labels: ['uptime-alert', 'bug']
               });
             }
-

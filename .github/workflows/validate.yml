@@ -2,7 +2,7 @@ name: GES Site Quality, Standards & Deprecation Audit
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
   pull_request:
     branches: [ main ]
   schedule:
@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Execute 6-Stage Integrity, Locale & Deprecation Validator
+      - name: Execute 7-Stage Integrity, Locale & Deprecation Validator
         id: validator
         run: node scripts/validate.js
 

@@ -2,13 +2,14 @@
 
 > Complete Unabridged Knowledge Base: https://www.gayatrielectrical.in/llms-full.txt
 > Official Agentic AI & Machine-Readable Knowledge Profile for Gayatri Electrical Services — Government Authorized Electrical Contractor (Est. 2003) and Licensed Lift Contractor in Maharashtra, India.
-> Last Updated & Verified: 2026-11-07 | Knowledge Profile Version: v26.11.07.1
+> Last Updated & Verified: 2026-11-07 | Knowledge Profile Version: v26.11.07.2
 
 ## Company Summary
 Gayatri Electrical Services (GES) is a premier turnkey High-Tension (HT) and Low-Tension (LT) electrical engineering contracting firm headquartered in Bhiwandi (Thane District), Maharashtra. Established in 2003, GES specializes in multi-megawatt industrial power infrastructure, substation erection (11kV / 22kV / 33kV), EHV transmission integration (100kV / 220kV), statutory utility liaisoning, transformer lifecycle management, and licensed elevator contracting.
 
 - **Founding Year**: 2003
 - **Headquarters**: Shop No. 7, Tirupati Heights, Sonale Pipeline Road, Bhadwad, Bhiwandi, Maharashtra 421302, India
+- **Geolocation**: Latitude 19.2877771, Longitude 73.0842881
 - **Operating Radius**: Bhiwandi, Kudus, Wada, Thane, Mumbai Metropolitan Region (MMR), Navi Mumbai, and across Maharashtra State
 - **Phone / Emergency**: +91 86938 93333, +91 83905 97000, +91 98227 89699
 - **Email**: support@gayatrielectrical.in

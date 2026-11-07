@@ -7,10 +7,11 @@ on:
 
 permissions:
   contents: write
+  models: read
 
 jobs:
   release:
-    name: Auto-Tag & Publish Release
+    name: Auto-Tag, AI Summary & Publish Release
     runs-on: ubuntu-latest
 
     steps:
@@ -41,6 +42,65 @@ jobs:
             echo "Tag $TAG does not exist. Proceeding with release."
           fi
 
+      - name: Generate AI Executive Release Summary (GitHub Models)
+        id: ai_notes
+        if: steps.check_tag.outputs.exists == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COMMITS=$(git log -n 5 --pretty=format:"- %s (%h)" | tr '\n' ' ')
+          cat << 'EOF' > generate_notes.js
+          const https = require('https');
+          const fs = require('fs');
+          const ver = process.env.REL_VER;
+          const date = process.env.REL_DATE;
+          const commits = process.env.REL_COMMITS || '';
+          const fallback = `### Gayatri Electrical Services — Release v${ver} (${date})\n\nAutomated production deployment validated across all 7 repository integrity, locale parity (EN/HI/MR), and web standards stages.\n`;
+          fs.writeFileSync('release-notes.md', fallback, 'utf-8');
+
+          const payload = JSON.stringify({
+            model: 'openai/gpt-4o-mini',
+            messages: [
+              { role: 'system', content: 'You are a concise release notes writer for Gayatri Electrical Services (GES), an enterprise electrical contractor website. Write a 3-bullet markdown summary of the recent commit log.' },
+              { role: 'user', content: `Version: v${ver} (${date}). Recent commits: ${commits}` }
+            ],
+            max_tokens: 220,
+            temperature: 0.2
+          });
+
+          const req = https.request('https://models.github.ai/inference/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+              'Content-Type': 'application/json',
+              'Content-Length': Buffer.byteLength(payload)
+            },
+            timeout: 8000
+          }, (res) => {
+            let body = '';
+            res.on('data', d => body += d);
+            res.on('end', () => {
+              try {
+                if (res.statusCode === 200) {
+                  const parsed = JSON.parse(body);
+                  const aiText = parsed.choices && parsed.choices[0] && parsed.choices[0].message && parsed.choices[0].message.content;
+                  if (aiText) {
+                    fs.writeFileSync('release-notes.md', `### 🤖 AI Release Summary — GES v${ver} (${date})\n\n${aiText.trim()}\n`, 'utf-8');
+                    console.log('Generated AI release summary via GitHub Models.');
+                  }
+                }
+              } catch (e) {}
+              process.exit(0);
+            });
+          });
+          req.on('error', () => process.exit(0));
+          req.on('timeout', () => { req.destroy(); process.exit(0); });
+          req.write(payload);
+          req.end();
+          EOF
+          REL_VER="${{ steps.get_version.outputs.version }}" REL_DATE="${{ steps.get_version.outputs.date }}" REL_COMMITS="$COMMITS" node generate_notes.js
+          rm -f generate_notes.js
+
       - name: Build Production Release Bundle (.zip)
         if: steps.check_tag.outputs.exists == 'false'
         run: |
@@ -57,6 +117,7 @@ jobs:
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}
           name: "Gayatri Electrical Services ${{ steps.get_version.outputs.tag }} (${{ steps.get_version.outputs.date }})"
+          body_path: release-notes.md
           generate_release_notes: true
           draft: false
           prerelease: false
@@ -76,3 +137,8 @@ jobs:
           echo "- **Target Tag**: \`${{ steps.get_version.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Release Date**: \`${{ steps.get_version.outputs.date }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Already Tagged**: \`${{ steps.check_tag.outputs.exists }}\`" >> $GITHUB_STEP_SUMMARY
+          if [ -f release-notes.md ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            cat release-notes.md >> $GITHUB_STEP_SUMMARY
+            rm -f release-notes.md
+          fi
