@@ -15,9 +15,15 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const URL_LIST = [
     `https://${HOST}/`,
+    `https://${HOST}/?lang=en`,
+    `https://${HOST}/?lang=hi`,
+    `https://${HOST}/?lang=mr`,
     `https://${HOST}/sitemap.xml`,
     `https://${HOST}/llms.txt`,
-    `https://${HOST}/llms-full.txt`
+    `https://${HOST}/llms-full.txt`,
+    `https://${HOST}/data/schema.json`,
+    `https://${HOST}/.well-known/agent.json`,
+    `https://${HOST}/assets/gayatri-electrical.vcf`
 ];
 
 function submitIndexNow() {

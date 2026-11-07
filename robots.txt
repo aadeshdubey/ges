@@ -72,7 +72,18 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 # Sitemaps & Agentic Machine Knowledge Files
 Sitemap: https://www.gayatrielectrical.in/sitemap.xml
 # Agent Knowledge Documentation: https://www.gayatrielectrical.in/llms.txt
 # Full Unabridged Agent Documentation: https://www.gayatrielectrical.in/llms-full.txt
+# A2A Agent Discovery Manifest: https://www.gayatrielectrical.in/.well-known/agent.json
+# Structured Data Graph (JSON-LD): https://www.gayatrielectrical.in/data/schema.json

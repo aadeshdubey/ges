@@ -1,15 +1,15 @@
 /**
  * Gayatri Electrical Services — Enterprise Service Worker
- * Version: 26.11.07.6 | Offline Resilience Engine
+ * Version: 26.11.07.7 | Offline Resilience Engine
  */
 
-const CACHE_NAME = 'ges-cache-v26.11.07.6';
+const CACHE_NAME = 'ges-cache-v26.11.07.7';
 const PRECACHE_URLS = [
     './',
     './index.html',
     './404.html',
-    'css/style.min.css?v=26.11.07.6',
-    'js/main.min.js?v=26.11.07.6',
+    'css/style.min.css?v=26.11.07.7',
+    'js/main.min.js?v=26.11.07.7',
     'assets/logo.png',
     'assets/favicon.svg',
     'data/schema.json',
@@ -18,7 +18,9 @@ const PRECACHE_URLS = [
     'data/locales/mr.json',
     'assets/site.webmanifest',
     'assets/gayatri-electrical.vcf',
-    'assets/fonts/fonts.css'
+    'assets/fonts/fonts.css',
+    'assets/fonts/khand-700-sub9.woff2',
+    'assets/fonts/rajdhani-500-sub12.woff2'
 ];
 
 // Install Event - Pre-cache critical application shell

@@ -1,6 +1,6 @@
 {
   "name": "ges-website",
-  "version": "26.11.07.6",
+  "version": "26.11.07.7",
   "private": true,
   "description": "Gayatri Electrical Services (GES) Official Enterprise Website & PWA",
   "scripts": {

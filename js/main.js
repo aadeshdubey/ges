@@ -1,6 +1,6 @@
 /**
  * Gayatri Electrical Services — Enterprise Application Engine
- * Version: 26.11.07.6 | Release Date: 2026-11-07
+ * Version: 26.11.07.7 | Release Date: 2026-11-07
  */
 // Performance Optimization: Idle & Interaction Third-Party Script Loaders
 let gtmLoaded = false;
@@ -78,13 +78,18 @@ if ('requestIdleCallback' in window) {
     }
 })();
 
-        // 1. Initialize Animations
-
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
+        // 1. Initialize Animations (with offline / CDN-blocked resilience guard)
+        if (typeof AOS !== 'undefined' && typeof AOS.init === 'function') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        } else {
+            document.querySelectorAll('[data-aos]').forEach(function (el) {
+                el.classList.add('aos-animate');
+            });
+        }
 
         // 2. Scroll Animation Logic
         function isElementInViewport(el) {
